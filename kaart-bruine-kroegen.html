@@ -6,16 +6,15 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Leaflet CSS (kaartbibliotheek) -->
+  <!-- Leaflet CSS -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
 
   <style>
-    /* Kaartcontainer */
     #kaart {
-      height: 500px;
+      height: 550px;
       margin-top: 30px;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -44,31 +43,93 @@
 
     <p>
       Op deze kaart zijn de door Stichting De Bruine Kroeg geselecteerde
-      traditionele cafés weergegeven. U kunt in- en uitzoomen van landelijk
-      niveau tot op straatniveau. Door op een markering te klikken, krijgt u
-      aanvullende informatie over het betreffende café.
+      traditionele cafés weergegeven. U kunt in- en uitzoomen van
+      Nederland tot op straatniveau. Klik op een markering voor meer
+      informatie of om het café in de lijst te bekijken.
     </p>
 
-    <!-- Kaart -->
     <div id="kaart"></div>
 
   </div>
 
   <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
-    // Kaart initialiseren (midden Nederland)
+    // Kaart starten op Nederland
     var kaart = L.map('kaart').setView([52.1326, 5.2913], 7);
 
-    // OpenStreetMap kaartlaag
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap-bijdragers'
     }).addTo(kaart);
 
-    // (Pins komen hier later)
+    // --- Kroegen (alle huidige steden) ---
+    var kroegen = [
+      // AMSTERDAM
+      {
+        naam: "Café De Druif",
+        stad: "Amsterdam",
+        coords: [52.3665, 4.9126],
+        link: "lijst-bruine-kroegen.html#cafe-de-druif"
+      },
+      {
+        naam: "Café ’t Doktertje",
+        stad: "Amsterdam",
+        coords: [52.3702, 4.8916],
+        link: "lijst-bruine-kroegen.html#cafe-t-doktertje"
+      },
+      {
+        naam: "Café De Hegeraad",
+        stad: "Amsterdam",
+        coords: [52.3830, 4.8839],
+        link: "lijst-bruine-kroegen.html#cafe-de-hegeraad"
+      },
+      {
+        naam: "Café Lowietje",
+        stad: "Amsterdam",
+        coords: [52.3784, 4.8822],
+        link: "lijst-bruine-kroegen.html#cafe-lowietje"
+      },
+      {
+        naam: "Café ’t Papeneiland",
+        stad: "Amsterdam",
+        coords: [52.3826, 4.8833],
+        link: "lijst-bruine-kroegen.html#cafe-t-papeneiland"
+      },
+
+      // ROTTERDAM
+      {
+        naam: "Café ’t Haventje",
+        stad: "Rotterdam",
+        coords: [51.9109, 4.5029],
+        link: "lijst-bruine-kroegen.html#cafe-t-haventje"
+      },
+      {
+        naam: "Café De Pui",
+        stad: "Rotterdam",
+        coords: [51.9184, 4.5097],
+        link: "lijst-bruine-kroegen.html#cafe-de-pui"
+      },
+
+      // UTRECHT
+      {
+        naam: "Café Vredenburg",
+        stad: "Utrecht",
+        coords: [52.0924, 5.1122],
+        link: "lijst-bruine-kroegen.html#cafe-vredenburg"
+      }
+    ];
+
+    // Pins toevoegen
+    kroegen.forEach(function(kroeg) {
+      L.marker(kroeg.coords)
+        .addTo(kaart)
+        .bindPopup(
+          "<strong>" + kroeg.naam + "</strong><br>" +
+          kroeg.stad + "<br>" +
+          "<a href='" + kroeg.link + "'>Bekijk in lijst</a>"
+        );
+    });
   </script>
 
 </body>
