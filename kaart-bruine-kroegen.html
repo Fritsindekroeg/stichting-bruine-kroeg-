@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaart Bruine Kroegen – Stichting De Bruine Kroeg</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS (kaartbibliotheek) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    /* Kaartcontainer */
+    #kaart {
+      height: 500px;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="max-width:900px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg" style="max-width:400px;">
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="bruine-kroeg.html">Bruine Kroeg</a> |
+      <a href="evenementen.html">Evenementen</a> |
+      <a href="lijst-bruine-kroegen.html">Lijst Bruine Kroegen</a> |
+      <a href="kaart-bruine-kroegen.html">Kaart</a> |
+      <a href="over-contact.html">Over & Contact</a>
+    </nav>
+    <hr>
+
+    <h1>Kaart van Bruine Kroegen</h1>
+
+    <p>
+      Op deze kaart zijn de door Stichting De Bruine Kroeg geselecteerde
+      traditionele cafés weergegeven. U kunt in- en uitzoomen van landelijk
+      niveau tot op straatniveau. Door op een markering te klikken, krijgt u
+      aanvullende informatie over het betreffende café.
+    </p>
+
+    <!-- Kaart -->
+    <div id="kaart"></div>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
+
+  <script>
+    // Kaart initialiseren (midden Nederland)
+    var kaart = L.map('kaart').setView([52.1326, 5.2913], 7);
+
+    // OpenStreetMap kaartlaag
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap-bijdragers'
+    }).addTo(kaart);
+
+    // (Pins komen hier later)
+  </script>
+
+</body>
+</html>
