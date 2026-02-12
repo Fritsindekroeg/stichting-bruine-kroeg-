@@ -162,18 +162,24 @@ var kroegen = [
    MARKERS PLAATSEN
 ========================= */
 
-kroegen.forEach(function(kroeg){
+var markers = [];
 
-  var marker = L.marker(kroeg.coords).addTo(kaart);
+kroegen.forEach(function(kroeg) {
+  var marker = L.marker(kroeg.coords)
+    .addTo(kaart)
+    .bindPopup(
+      "<strong>" + kroeg.naam + "</strong><br>" +
+      kroeg.stad + "<br>" +
+      "<a href='" + kroeg.link + "'>Bekijk in lijst</a>"
+    );
 
-  marker.bindPopup(
-    "<strong>"+kroeg.naam+"</strong><br>"+kroeg.stad+
-    "<br><a href='"+kroeg.link+"'>Bekijk in lijst</a>"
-  );
-
-  bounds.push(kroeg.coords);
-
+  markers.push(marker);
 });
+
+// kaart automatisch passend maken voor alle pins
+var group = new L.featureGroup(markers);
+kaart.fitBounds(group.getBounds(), {padding:[50,50]});
+
 
 /* automatisch inzoomen op alles */
 kaart.fitBounds(bounds,{padding:[40,40]});
