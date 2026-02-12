@@ -219,10 +219,26 @@ div[style*="max-width"] {
 }
 
 /* stad visueel duidelijker */
+/* ===== STAD TITELS ===== */
+
 .city-section h2 {
   position: sticky;
   top: 0;
-  background: #faf8f5;
-  padding: 12px 0;
-  z-index: 5;
+  background: linear-gradient(to bottom, #faf8f5 80%, rgba(250,248,245,0));
+  padding: 14px 0 10px 0;
+  margin-top: 50px;
+  font-size: 1.9em;
+  letter-spacing: 1px;
+  color: #3b2f2a;
+  border-bottom: 2px solid #e2d9cd;
 }
+
+/* subtiele lijn boven de stad */
+.city-section h2::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #e8e1d8;
+  margin-bottom: 18px;
+}
+
