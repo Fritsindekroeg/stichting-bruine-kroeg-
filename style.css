@@ -187,3 +187,42 @@ p {
 div[style*="max-width"] {
   padding: 0 15px;
 }
+/* ---------- CAFE BLOKKEN ---------- */
+
+.cafe {
+  background: #ffffff;
+  padding: 18px 22px;
+  margin: 22px 0;
+  border-radius: 10px;
+  border: 1px solid #e5e0d8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+/* lichte hover (voelt modern maar rustig) */
+.cafe:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* titel */
+.cafe h3 {
+  margin-top: 0;
+  color: #2f2622;
+}
+
+/* adres subtieler */
+.cafe .adres {
+  margin-top: 10px;
+  color: #6b5b50;
+  font-size: 0.95em;
+}
+
+/* stad visueel duidelijker */
+.city-section h2 {
+  position: sticky;
+  top: 0;
+  background: #faf8f5;
+  padding: 12px 0;
+  z-index: 5;
+}
