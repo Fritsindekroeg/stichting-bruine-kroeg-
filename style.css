@@ -222,23 +222,26 @@ div[style*="max-width"] {
 /* ===== STAD TITELS ===== */
 
 .city-section h2 {
-  position: sticky;
-  top: 0;
-  background: linear-gradient(to bottom, #faf8f5 80%, rgba(250,248,245,0));
-  padding: 14px 0 10px 0;
-  margin-top: 50px;
-  font-size: 1.9em;
-  letter-spacing: 1px;
-  color: #3b2f2a;
-  border-bottom: 2px solid #e2d9cd;
+ position: static;          /* NIET meer blijven hangen */
+  background: none;          /* geen balk */
+  border: none;              /* geen lijn links */
+  box-shadow: none;
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 25px;
+
+  font-size: 2em;
+  text-align: left;
+  color: #2f2622;
 }
 
-/* subtiele lijn boven de stad */
-.city-section h2::before {
+/* subtiele scheidingslijn onder de stad */
+.city-section h2::after {
   content: "";
   display: block;
-  height: 1px;
-  background: #e8e1d8;
-  margin-bottom: 18px;
+  height: 2px;
+  background: #e5dfd6;
+  margin-top: 8px;
+  width: 120px;
 }
 
