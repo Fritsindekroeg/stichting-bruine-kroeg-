@@ -576,35 +576,24 @@ De geschiedenis van het café gaat terug tot 1901. Bas Lubberhuizen nam het caf�
 </div>
     
   </div>
+
 <script>
 document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
 
   const id = cafe.dataset.cafe;
-  const name = cafe.querySelector("h3").innerText;
-
   const localImage = "/fotos/" + id + ".jpg";
 
-  const img = document.createElement("img");
-  img.className = "cafe-foto";
+  const testImg = new Image();
 
-  // eerst lokale foto proberen
-  img.src = localImage;
-
-  img.onerror = function() {
-
-    // fallback via Wikipedia thumbnail API (snel en stopt altijd)
-    const search = encodeURIComponent(name + " Amsterdam cafe");
-    img.src = "https://commons.wikimedia.org/w/index.php?title=Special:MediaSearch&go=Go&type=image&search=" + search;
-
-    // tweede fallback als ook dat geen directe afbeelding is
-    setTimeout(() => {
-      if (!img.complete || img.naturalWidth === 0) {
-        img.src = "https://picsum.photos/600/400?random=" + id;
-      }
-    }, 1200);
+  testImg.onload = function () {
+    const img = document.createElement("img");
+    img.src = localImage;
+    img.className = "cafe-foto";
+    cafe.prepend(img);
   };
 
-  cafe.prepend(img);
+  // alleen laden proberen — geen fallback meer
+  testImg.src = localImage;
 });
 </script>
 
