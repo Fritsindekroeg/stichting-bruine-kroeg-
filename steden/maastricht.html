@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Bruine kroegen in Amsterdam – Stichting De Bruine Kroeg</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
 
+<body>
+  <div style="max-width:900px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <img src="../logo2.JPG" alt="Logo Stichting De Bruine Kroeg" style="max-width:400px;">
+    </div>
+
+     <nav>
+      <a href="../index.html">Home</a> |
+      <a href="../bruine-kroeg.html">Bruine Kroeg</a> |
+      <a href="../evenementen.html">Evenementen</a> |
+      <a href="../lijst-bruine-kroegen.html">Lijst Bruine Kroegen</a> |
+      <a href="../kaart-bruine-kroegen.html">Kaart</a> |
+      <a href="../over-contact.html">Over & Contact</a>
+    </nav>
+    <hr>
+
+    <h1>Bruine Kroegen in Amsterdam</h1>
+<div class="terug-balk">
+  <a href="../lijst-bruine-kroegen.html" class="terug-knop">
+    ← Terug naar overzicht met steden
+  </a>
+</div>
+
+  <!-- MAASTRICHT -->
+    <div class="city-section">
+      
+      <div class="cafe" data-cafe="cafe-de-pieter">
+      <h3 id="cafe-de-pieter">Café De Pieter</h3>
+      <p>
+         Aan de bar en de houten tafels zijn talloze glazen bier en wijn gedronken, en is vaak – vol overtuiging maar zelden met succes – geprobeerd iemand van mening te laten veranderen.
+      </p>
+      <p class="adres"><strong>Adres:</strong> Sint Pieterstraat 22</p>
+    </div>
+ </div>
+    
+ 
+<script>
+document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
+
+  const id = cafe.dataset.cafe;
+  const extensions = ["jpg","jpeg","png","webp"];
+
+  function tryNext(i){
+    if(i >= extensions.length) return;
+
+    const imgPath = "/fotos/" + id + "." + extensions[i];
+    const creditPath = "/fotos/" + id + ".txt";
+
+    const testImg = new Image();
+
+    testImg.onload = function () {
+
+      const img = document.createElement("img");
+      img.src = imgPath;
+      img.className = "cafe-foto";
+      cafe.prepend(img);
+
+      fetch(creditPath)
+        .then(r => r.ok ? r.text() : null)
+        .then(name => {
+          if (name) {
+            const credit = document.createElement("div");
+            credit.className = "foto-credit";
+            credit.innerText = "Foto: " + name.trim();
+            img.after(credit);
+          }
+        });
+    };
+
+    testImg.onerror = function(){
+      tryNext(i+1);
+    };
+
+    testImg.src = imgPath;
+  }
+
+  tryNext(0);
+});
+</script>
+    
+</body>
+</html>
