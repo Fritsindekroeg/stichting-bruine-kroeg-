@@ -580,19 +580,32 @@ De geschiedenis van het café gaat terug tot 1901. Bas Lubberhuizen nam het caf�
 document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
 
   const id = cafe.dataset.cafe;
-  const localImage = "/fotos/" + id + ".jpg";
+  const imgPath = "/fotos/" + id + ".jpg";
+  const creditPath = "/fotos/" + id + ".txt";
 
   const testImg = new Image();
 
   testImg.onload = function () {
+
     const img = document.createElement("img");
-    img.src = localImage;
+    img.src = imgPath;
     img.className = "cafe-foto";
     cafe.prepend(img);
+
+    // credit laden
+    fetch(creditPath)
+      .then(r => r.ok ? r.text() : null)
+      .then(name => {
+        if (name) {
+          const credit = document.createElement("div");
+          credit.className = "foto-credit";
+          credit.innerText = "Foto: " + name.trim();
+          img.after(credit);
+        }
+      });
   };
 
-  // alleen laden proberen — geen fallback meer
-  testImg.src = localImage;
+  testImg.src = imgPath;
 });
 </script>
 
