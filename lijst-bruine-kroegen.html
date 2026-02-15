@@ -587,36 +587,45 @@ De geschiedenis van het cafÃ© gaat terug tot 1901. Bas Lubberhuizen nam het cafÃ
 document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
 
   const id = cafe.dataset.cafe;
-  const imgPath = "/fotos/" + id + ".jpg";
-  const creditPath = "/fotos/" + id + ".txt";
+  const extensions = ["jpg","jpeg","png","webp"];
 
-  const testImg = new Image();
+  function tryNext(i){
+    if(i >= extensions.length) return;
 
-  testImg.onload = function () {
+    const imgPath = "/fotos/" + id + "." + extensions[i];
+    const creditPath = "/fotos/" + id + ".txt";
 
-    const img = document.createElement("img");
-    img.src = imgPath;
-    img.className = "cafe-foto";
-    cafe.prepend(img);
+    const testImg = new Image();
 
-    // credit laden
-    fetch(creditPath)
-      .then(r => r.ok ? r.text() : null)
-      .then(name => {
-        if (name) {
-          const credit = document.createElement("div");
-          credit.className = "foto-credit";
-          credit.innerText = "Foto: " + name.trim();
-          img.after(credit);
-        }
-      });
-  };
+    testImg.onload = function () {
 
-  testImg.src = imgPath;
+      const img = document.createElement("img");
+      img.src = imgPath;
+      img.className = "cafe-foto";
+      cafe.prepend(img);
+
+      fetch(creditPath)
+        .then(r => r.ok ? r.text() : null)
+        .then(name => {
+          if (name) {
+            const credit = document.createElement("div");
+            credit.className = "foto-credit";
+            credit.innerText = "Foto: " + name.trim();
+            img.after(credit);
+          }
+        });
+    };
+
+    testImg.onerror = function(){
+      tryNext(i+1);
+    };
+
+    testImg.src = imgPath;
+  }
+
+  tryNext(0);
 });
 </script>
-
-
     
 </body>
 </html>
