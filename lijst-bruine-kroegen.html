@@ -587,16 +587,27 @@ document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
   const img = document.createElement("img");
   img.className = "cafe-foto";
 
+  // eerst lokale foto proberen
   img.src = localImage;
 
   img.onerror = function() {
-    const search = encodeURIComponent(name + " brown cafe bar interior netherlands");
-    img.src = "https://source.unsplash.com/600x400/?" + search;
+
+    // fallback via Wikipedia thumbnail API (snel en stopt altijd)
+    const search = encodeURIComponent(name + " Amsterdam cafe");
+    img.src = "https://commons.wikimedia.org/w/index.php?title=Special:MediaSearch&go=Go&type=image&search=" + search;
+
+    // tweede fallback als ook dat geen directe afbeelding is
+    setTimeout(() => {
+      if (!img.complete || img.naturalWidth === 0) {
+        img.src = "https://picsum.photos/600/400?random=" + id;
+      }
+    }, 1200);
   };
 
   cafe.prepend(img);
 });
 </script>
+
 
     
 </body>
