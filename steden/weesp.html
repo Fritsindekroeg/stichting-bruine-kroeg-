@@ -62,8 +62,8 @@
    
  
 <script>
+/* === 1. functie die 1 café laadt === */
 function loadCafe(cafe){
-
 
   const id = cafe.dataset.cafe;
   const extensions = ["jpg","jpeg","png","webp"];
@@ -103,6 +103,10 @@ function loadCafe(cafe){
   }
 
   tryNext(0);
+}
+
+
+/* === 2. observer: laad pas als zichtbaar === */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -112,11 +116,13 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
+
+/* === 3. koppel alle cafés aan observer === */
 document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
   observer.observe(cafe);
 });
-
 </script>
+
     
 </body>
 </html>
