@@ -58,7 +58,8 @@
     
  
 <script>
-document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
+function loadCafe(cafe){
+
 
   const id = cafe.dataset.cafe;
   const extensions = ["jpg","jpeg","png","webp"];
@@ -98,7 +99,19 @@ document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
   }
 
   tryNext(0);
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      loadCafe(entry.target);
+      observer.unobserve(entry.target);
+    }
+  });
 });
+
+document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
+  observer.observe(cafe);
+});
+
 </script>
     
 </body>
