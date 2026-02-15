@@ -38,13 +38,13 @@
     <div class="city-section">
       <h2>Amsterdam</h2>
 
-      <div class="cafe">
+      <div class="cafe" data-cafe="in-t-aepjen">
       <h3 id="in-t-aepjen">In 't Aepjen</h3>
 <p>In 't Aepjen aan de Zeedijk is gevestigd in een van de laatste houten panden van Amsterdam uit 1550. Het verhaal gaat dat zeelieden hier vroeger hun verblijf betaalden met exotische aapjes die vol ongedierte zaten, wat de uitdrukking "in de aap gelogeerd" zou verklaren door de jeuk die de gasten kregen. De barman kan hier prachtig en vol passie over vertellen, om vervolgens ruiterlijk toe te geven dat het vooral een schitterende legende is die historisch gezien helemaal niet waar blijkt te zijn.</p>
 <p class="adres"><strong>Adres:</strong> Zeedijk 1</p>
 </div>
 
-      <div class="cafe">
+      <div class="cafe" data-cafe="de-amstel">
 <h3 id="de-amstel">De Amstel</h3>
 <p>Op de hoek van de Amstelkade en de Berkel-straat zit sinds de bouw van het blok rond 1930 een café. De Amstel is een eenvoudige onvervalste bruine kroeg met een grote halfronde bar en een biljart.</p>
 <p class="adres"><strong>Adres:</strong> Amstelkade 39</p>
@@ -576,5 +576,28 @@ De geschiedenis van het café gaat terug tot 1901. Bas Lubberhuizen nam het caf�
 </div>
     
   </div>
+<script>
+document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
+
+  const id = cafe.dataset.cafe;
+  const name = cafe.querySelector("h3").innerText;
+
+  const localImage = "/fotos/" + id + ".jpg";
+
+  const img = document.createElement("img");
+  img.className = "cafe-foto";
+
+  img.src = localImage;
+
+  img.onerror = function() {
+    const search = encodeURIComponent(name + " brown cafe bar interior netherlands");
+    img.src = "https://source.unsplash.com/600x400/?" + search;
+  };
+
+  cafe.prepend(img);
+});
+</script>
+
+    
 </body>
 </html>
