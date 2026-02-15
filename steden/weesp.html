@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Bruine kroegen in Weesp – Stichting De Bruine Kroeg</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
 
+<body>
+  <div style="max-width:900px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <img src="../logo2.JPG" alt="Logo Stichting De Bruine Kroeg" style="max-width:400px;">
+    </div>
+
+     <nav>
+      <a href="../index.html">Home</a> |
+      <a href="../bruine-kroeg.html">Bruine Kroeg</a> |
+      <a href="../evenementen.html">Evenementen</a> |
+      <a href="../lijst-bruine-kroegen.html">Lijst Bruine Kroegen</a> |
+      <a href="../kaart-bruine-kroegen.html">Kaart</a> |
+      <a href="../over-contact.html">Over & Contact</a>
+    </nav>
+    <hr>
+
+    <h1>Bruine Kroegen in Weesp</h1>
+<div class="terug-balk">
+  <a href="../lijst-bruine-kroegen.html" class="terug-knop">
+    ← Terug naar overzicht met steden
+  </a>
+</div>
+
+ <!-- WEESP -->
+    <div class="city-section">
+      <h2>Weesp</h2>
+
+      <div class="cafe" data-cafe="cafe-bijna-thuis">
+      <h3 id="cafe-bijna-thuis">Café Bijna Thuis</h3>
+<p>Café Bijna Thuis aan de Nieuwstad in Weesp doet zijn naam eer aan met een zeer warme en laagdrempelige huiskamersfeer.</p>
+<p class="adres"><strong>Adres:</strong> Nieuwstad 58</p>
+</div>
+
+  <div class="cafe" data-cafe="cafe-de-heksenketel">
+<h3 id="cafe-de-heksenketel">Café de Heksenketel</h3>
+<p>Café de Heksenketel in Weesp is een sfeervolle plek die vooral geliefd is om zijn unieke ligging aan de Kom. Het terras is speels opgezet en biedt een prachtig uitzicht over het water, wat het een van de gezelligste plekken in het centrum maakt. De informele sfeer en de gastvrije bediening maken dit café de perfecte locatie voor een ontspannen borrel midden in het historische hart van Weesp.</p>
+<p class="adres"><strong>Adres:</strong> Achteromstraat 8</p>
+          </div>
+      
+        <div class="cafe" data-cafe="cafe-t-helletje">
+<h3 id="cafe-t-helletje">Café 't Helletje</h3>
+<p>Café 't Helletje aan de Stationsweg is een karakteristiek en gastvrij café direct tegenover het station van Weesp. Het is een geliefde pleisterplaats voor zowel forenzen als lokale bewoners, waar de nuchtere Weesper gezelligheid en een gemoedelijke sfeer centraal staan. Of je nu komt voor een snelle kop koffie voor de trein of een ontspannen biertje na het werk, de ongedwongen ambiance maakt het een ideaal rustpunt in de stationsomgeving. Eigenaar Pieter Kors is de drijvende kracht; niet alleen voor 't Helletje, maar voor Weesp in zijn geheel.</p>
+<p class="adres"><strong>Adres:</strong> Stationsweg 13</p>
+          </div>
+
+          <div class="cafe" data-cafe="cafe-toeters-en-bellen">
+<h3 id="cafe-toeters-en-bellen">Café Toeters en bellen</h3>
+<p>afé Toeters en Bellen aan de Herengracht is het meest bruisende café van Weesp waar een breed publiek, en met name veel jongeren, op afkomt. Met de kenmerkende levendige sfeer is dit dé plek voor gezelligheid tot in de late uurtjes. Het terras aan het water biedt een prachtig uitzicht over de Vecht en de Kom, wat het een favoriete hotspot maakt in het hart van de stad.</p>
+<p class="adres"><strong>Adres:</strong> Herengracht 1</p>
+</div>
+    
+  </div>
+   
+ 
+<script>
+document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
+
+  const id = cafe.dataset.cafe;
+  const extensions = ["jpg","jpeg","png","webp"];
+
+  function tryNext(i){
+    if(i >= extensions.length) return;
+
+    const imgPath = "/fotos/" + id + "." + extensions[i];
+    const creditPath = "/fotos/" + id + ".txt";
+
+    const testImg = new Image();
+
+    testImg.onload = function () {
+
+      const img = document.createElement("img");
+      img.src = imgPath;
+      img.className = "cafe-foto";
+      cafe.prepend(img);
+
+      fetch(creditPath)
+        .then(r => r.ok ? r.text() : null)
+        .then(name => {
+          if (name) {
+            const credit = document.createElement("div");
+            credit.className = "foto-credit";
+            credit.innerText = "Foto: " + name.trim();
+            img.after(credit);
+          }
+        });
+    };
+
+    testImg.onerror = function(){
+      tryNext(i+1);
+    };
+
+    testImg.src = imgPath;
+  }
+
+  tryNext(0);
+});
+</script>
+    
+</body>
+</html>
