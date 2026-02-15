@@ -251,5 +251,12 @@ div[style*="max-width"] {
   margin-bottom: 12px;
   display: block;
 }
+.foto-credit {
+  font-size: 0.8em;
+  color: #6b6b6b;
+  font-style: italic;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
 
 
