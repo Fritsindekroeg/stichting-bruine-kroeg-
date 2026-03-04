@@ -1,14 +1,16 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "EB Garamond", serif;
   line-height: 1.6;
   color: #222;
 }
-
 nav {
   text-align: center;
   margin-bottom: 30px;
 }
 
+nav, nav a {
+  font-family: Arial, Helvetica, sans-serif;
+}
 nav a {
   text-decoration: none;
   color: #000;
