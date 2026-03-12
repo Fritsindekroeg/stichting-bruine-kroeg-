@@ -3,91 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <title>Stichting De Bruine Kroeg</title>
-
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
 <style>
-
-body{
-    font-family:'EB Garamond', serif;
-    background:#f5f5f5;
-    margin:0;
+body {
+    font-family: 'EB Garamond', serif;
+    background: #f9f7f1;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
 }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
-.logo{
-    text-align:center;
-    margin-bottom:20px;
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.logo img{
-    max-width:400px;
+.logo img {
+    max-width: 400px;
 }
 
-nav{
-    text-align:center;
-    margin-bottom:30px;
+nav {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-nav a{
-    text-decoration:none;
-    color:#333;
-    margin:0 8px;
+nav a {
+    text-decoration: none;
+    color: #5a4630; /* bruine kleur consistent met andere pagina's */
+    margin: 0 10px;
+    font-weight: 500;
 }
 
-h1{
-    text-align:center;
-    margin-bottom:40px;
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3e2c1c;
 }
 
 /* GRID MET 9 BLOKKEN */
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-.box{
-    background:white;
-    padding:25px;
-    border-radius:6px;
-    text-align:center;
-    text-decoration:none;
-    color:#333;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    transition:0.2s;
+.box {
+    background: #fff9f0; /* zachte beige tint passend bij andere pagina's */
+    padding: 25px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #3e2c1c; /* donkere bruine tekstkleur */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: 0.2s;
 }
 
-.box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 6px 16px rgba(0,0,0,0.15);
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.box h2{
-    margin-top:0;
+.box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-footer{
-    margin-top:60px;
-    text-align:center;
-    font-size:14px;
+.box p {
+    margin: 0;
 }
 
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
 <div class="logo">
-<img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg">
+    <img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg">
 </div>
 
 <nav>
@@ -157,20 +167,14 @@ footer{
 </div>
 
 <footer>
-
 <p>De oprichting van Stichting De Bruine Kroeg is mede mogelijk gemaakt door</p>
-
 <p><strong>XYZ-fonds</strong></p>
-
 <p><strong>Sponsoren</strong></p>
-
 <p>Sponsor A<br>
 Sponsor B<br>
 Sponsor C</p>
-
 </footer>
 
 </div>
-
 </body>
 </html>
