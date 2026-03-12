@@ -1,1 +1,231 @@
-<!DOCTYPE html> <html lang="nl"> <head> <meta charset="UTF-8"> <title>Kaart Bruine Kroegen – Stichting De Bruine Kroeg</title> <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet"> <link rel="stylesheet" href="style.css"> <!-- Leaflet CSS --> <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> <style> #kaart { height: 550px; margin-top: 30px; border: 1px solid #ccc; border-radius: 6px; } </style> </head> <body> <div style="max-width:900px; margin:0 auto;"> <div style="text-align:center; margin-bottom:20px;"> <img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg" style="max-width:400px;"> </div> <nav> <a href="index.html">Home</a> | <a href="doelstellingen.html">Doelstellingen</a> | <a href="organisatie.html">Organisatie</a> | <a href="bruine-kroeg.html">Bruine Kroeg</a> | <a href="evenementen.html">Evenementen</a> | <a href="lijst-bruine-kroegen.html">Lijst Bruine Kroegen</a> | <a href="kaart-bruine-kroegen.html">Kaart</a> | <a href="erfgoed.html">Erfgoed</a> | <a href="informatie.html">Informatie</a> | <a href="contact.html">Contact</a> </nav> <hr> <h1>Kaart van Bruine Kroegen</h1> <p> Op deze kaart zijn de door Stichting De Bruine Kroeg geselecteerde traditionele cafés weergegeven. U kunt in- en uitzoomen van Nederland tot op straatniveau. Klik op een markering voor meer informatie of om het café in de lijst te bekijken. </p> <div id="kaart"></div> </div> <!-- Leaflet JS --> <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> <script> var kaart = L.map('kaart'); L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap-bijdragers' }).addTo(kaart); var bounds = []; /* ========================= ALLE KROEGEN ========================= */ var kroegen = [ {naam:"In 't Aepjen",stad:"Amsterdam",coords:[52.3763121,4.9001456],link:"steden/amsterdam.html#in-t-aepjen"}, {naam:"De Amstel",stad:"Amsterdam",coords:[52.3486333,4.9031498],link:"steden/amsterdam.html#de-amstel"}, {naam:"Café Anno 1890",stad:"Amsterdam",coords:[52.3223145,4.8572432],link:"steden/amsterdam.html#cafe-anno-1890"}, {naam:"'t Binnepretje",stad:"Amsterdam",coords:[52.3814757,4.8560893],link:"steden/amsterdam.html#t-binnepretje"}, {naam:"De Blauwe Druif",stad:"Amsterdam",coords:[52.3804361,4.8910498],link:"steden/amsterdam.html#de-blauwe-druif"}, {naam:"De Blauwe Parade",stad:"Amsterdam",coords:[52.3739576,4.8906138],link:"steden/amsterdam.html#de-blauwe-parade"}, {naam:"Brandon",stad:"Amsterdam",coords:[52.3754007,4.8864147],link:"steden/amsterdam.html#brandon"}, {naam:"Brel",stad:"Amsterdam",coords:[52.3841424,4.8702538],link:"steden/amsterdam.html#brel"}, {naam:"Het Bruine Paard",stad:"Amsterdam",coords:[52.3782120,4.8859084],link:"steden/amsterdam.html#het-bruine-paard"}, {naam:"Chris",stad:"Amsterdam",coords:[52.3742568,4.8815665],link:"steden/amsterdam.html#chris"}, {naam:"Chris Scholten",stad:"Amsterdam",coords:[52.3542908,4.9014532],link:"steden/amsterdam.html#chris-scholten"}, {naam:"Dijk 120",stad:"Amsterdam",coords:[52.3735190,4.9001390],link:"steden/amsterdam.html#dijk-120"}, {naam:"Café ’t Doktertje",stad:"Amsterdam",coords:[52.3692540,4.8908258],link:"steden/amsterdam.html#cafe-t-doktertje"}, {naam:"De Drie Fleschjes",stad:"Amsterdam",coords:[52.3743114,4.8923128],link:"steden/amsterdam.html#de-drie-fleschjes"}, {naam:"Café De Druif",stad:"Amsterdam",coords:[52.3700544,4.9106101],link:"steden/amsterdam.html#cafe-de-druif"}, {naam:"Eddy Bar",stad:"Amsterdam",coords:[52.3554212,4.8908045],link:"steden/amsterdam.html#eddy-bar"}, {naam:"Eijlders",stad:"Amsterdam",coords:[52.3649045,4.8824617],link:"steden/amsterdam.html#eijlders"}, {naam:"Eik en Linde",stad:"Amsterdam",coords:[52.3665415,4.9109737],link:"steden/amsterdam.html#eik-en-linde"}, {naam:"Elsa's Café",stad:"Amsterdam",coords:[52.3531732,4.9318944],link:"steden/amsterdam.html#elsas-cafe"}, {naam:"Engelse Reet",stad:"Amsterdam",coords:[52.3695417,4.8908519],link:"steden/amsterdam.html#engelse-reet"}, {naam:"Café De Figuranten",stad:"Amsterdam",coords:[52.3605629,4.8594397],link:"steden/amsterdam.html#cafe-de-figuranten"}, {naam:"De Fluiter",stad:"Amsterdam",coords:[52.3792998,4.8568986],link:"steden/amsterdam.html#de-fluiter"}, {naam:"Café Freddy",stad:"Amsterdam",coords:[52.3566102,4.8920926],link:"steden/amsterdam.html#cafe-freddy"}, {naam:"De Gaeper",stad:"Amsterdam",coords:[52.3682500,4.8967709],link:"steden/amsterdam.html#de-gaepr"}, {naam:"Gijs de Rooij",stad:"Amsterdam",coords:[52.3635979,4.9316324],link:"steden/amsterdam.html#gijs-de-rooij"}, {naam:"De Gouden Florijn",stad:"Amsterdam",coords:[52.3738136,4.8816835],link:"steden/amsterdam.html#de-gouden-florijn"}, {naam:"Bar Guzzo",stad:"Amsterdam",coords:[52.3708862,4.9163574],link:"steden/amsterdam.html#bar-guzzo"}, {naam:"Hans",stad:"Amsterdam",coords:[52.3536620,4.8560080],link:"steden/amsterdam.html#hans"}, {naam:"Café De Hegeraad",stad:"Amsterdam",coords:[52.3793796,4.8861097],link:"steden/amsterdam.html#hegeraad"}, {naam:"Heilig Leven",stad:"Amsterdam",coords:[52.3914745,4.8783391],link:"steden/amsterdam.html#heilig-leven"}, {naam:"Hoppe",stad:"Amsterdam",coords:[52.3687949,4.8885771],link:"steden/amsterdam.html#hoppe"}, {naam:"De Kaaiman",stad:"Amsterdam",coords:[52.3920259,4.8774372],link:"steden/amsterdam.html#de-kaaiman"}, {naam:"Café Karpershoek",stad:"Amsterdam",coords:[52.3781227,4.8967626],link:"steden/amsterdam.html#cafe-karpershoek"}, {naam:"De Kat in de Wijngaert",stad:"Amsterdam",coords:[52.3803048,4.8841132],link:"steden/amsterdam.html#de-kat-in-de-wijngaert"}, {naam:"Proeflokaal 't Kelkje",stad:"Amsterdam",coords:[52.3712816,4.8964124],link:"steden/amsterdam.html#proeflokaal-t-kelkje"}, {naam:"Knibbel Knabbel Knuisje",stad:"Amsterdam",coords:[52.3697389,4.8495597],link:"steden/amsterdam.html#knibbel-knabbel-knuisje"}, {naam:"Café Kontakt",stad:"Amsterdam",coords:[52.3720253,4.8596383],link:"steden/amsterdam.html#cafe-kontakt"}, {naam:"Lange Leo",stad:"Amsterdam",coords:[52.3690616,4.8885766],link:"steden/amsterdam.html#lange-leo"}, {naam:"Café De Laurierboom",stad:"Amsterdam",coords:[52.3722773,4.8810122],link:"steden/amsterdam.html#cafe-de-laurierboom"}, {naam:"t Lommertje",stad:"Amsterdam",coords:[52.3786227,4.8505237],link:"steden/amsterdam.html#t-lommertje"}, {naam:"Los",stad:"Amsterdam",coords:[52.3664000,4.8957754],link:"steden/amsterdam.html#los"}, {naam:"Café Louis Bar",stad:"Amsterdam",coords:[52.3762674,4.8996592],link:"steden/amsterdam.html#cafe-louis-bar"}, {naam:"Café Lowietje",stad:"Amsterdam",coords:[52.3803359,4.8823301],link:"steden/amsterdam.html#lowietje"}, {naam:"'t Mandje",stad:"Amsterdam",coords:[52.3748150,4.9009830],link:"steden/amsterdam.html#t-mandje"}, {naam:"Marktzicht",stad:"Amsterdam",coords:[52.3752269,4.8709778],link:"steden/amsterdam.html#marktzicht"}, {naam:"'t Monumentje",stad:"Amsterdam",coords:[52.3785147,4.8830999],link:"steden/amsterdam.html#t-monumentje"}, {naam:"Mulder",stad:"Amsterdam",coords:[52.3597197,4.8912477],link:"steden/amsterdam.html#mulder"}, {naam:"Café De Nieuwe Stek",stad:"Amsterdam",coords:[52.3610412,4.9282816],link:"steden/amsterdam.html#de-nieuwe-stek"}, {naam:"Nieuwland",stad:"Amsterdam",coords:[52.3619364,4.9284686],link:"steden/amsterdam.html#nieuwland"}, {naam:"De Ooievaar",stad:"Amsterdam",coords:[52.3762843,4.8999403],link:"steden/amsterdam.html#de-ooievaar"}, {naam:"Oosterling",stad:"Amsterdam",coords:[52.3610742,4.8992555],link:"steden/amsterdam.html#oosterling"}, {naam:"Café ’t Papeneiland",stad:"Amsterdam",coords:[52.3804606,4.8879944],link:"steden/amsterdam.html#papeneiland"}, {naam:"Café Pierewaaier",stad:"Amsterdam",coords:[52.3717036,4.8793151],link:"steden/amsterdam.html#cafe-pierewaaier"}, {naam:"De Poort",stad:"Amsterdam",coords:[52.3822345,4.8881636],link:"steden/amsterdam.html#de-poort"}, {naam:"Quelle",stad:"Amsterdam",coords:[52.3618546,4.8647467],link:"steden/amsterdam.html#quelle"}, {naam:"Café Reijnders",stad:"Amsterdam",coords:[52.3646188,4.8828907],link:"steden/amsterdam.html#cafe-reijnders"}, {naam:"De Roode Laars",stad:"Amsterdam",coords:[52.3759723,4.9005464],link:"steden/amsterdam.html#de-roode-laars"}, {naam:"De Roosenboom",stad:"Amsterdam",coords:[52.3534450,4.8322314],link:"steden/amsterdam.html#de-roosenboom"}, {naam:"Ruk en Pluk",stad:"Amsterdam",coords:[52.3574362,4.9266870],link:"steden/amsterdam.html#ruk-en-pluk"}, {naam:"Café Saarein",stad:"Amsterdam",coords:[52.3702870,4.8802861],link:"steden/amsterdam.html#cafe-saarein"}, {naam:"Scharrebier",stad:"Amsterdam",coords:[52.3704414,4.9111074],link:"steden/amsterdam.html#scharrebier"}, {naam:"Schumich",stad:"Amsterdam",coords:[52.3794513,4.8942218],link:"steden/amsterdam.html#schumich"}, {naam:"'t Sluisje",stad:"Amsterdam",coords:[52.3912178,4.9382277],link:"steden/amsterdam.html#t-sluisje"}, {naam:"Café 't Smalle",stad:"Amsterdam",coords:[52.3767194,4.8841388],link:"steden/amsterdam.html#cafe-t-smalle"}, {naam:"Sportpark",stad:"Amsterdam",coords:[52.3747914,4.8577787],link:"steden/amsterdam.html#sportpark"}, {naam:"De Twee Zwaantjes",stad:"Amsterdam",coords:[52.3763480,4.8842005],link:"steden/amsterdam.html#de-twee-zwaantjes"}, {naam:"Café Welling",stad:"Amsterdam",coords:[52.3559611,4.8772825],link:"steden/amsterdam.html#cafe-welling"}, {naam:"Westerdok",stad:"Amsterdam",coords:[52.3893192,4.8912520],link:"steden/amsterdam.html#westerdok"}, {naam:"In de Wildeman",stad:"Amsterdam",coords:[52.3761636,4.8951567],link:"steden/amsterdam.html#in-de-wildeman"}, {naam:"Café van Wou",stad:"Amsterdam",coords:[52.3566949,4.8999592],link:"steden/amsterdam.html#cafe-van-wou"}, {naam:"Wynand Fockink",stad:"Amsterdam",coords:[52.3723195,4.8952995],link:"steden/amsterdam.html#wynand-fockink"}, {naam:"De Zeepost",stad:"Amsterdam",coords:[52.3767509,4.9019175],link:"steden/amsterdam.html#de-zeepost"}, {naam:"De Zwart",stad:"Amsterdam",coords:[52.3688850,4.8885540],link:"steden/amsterdam.html#de-zwart"}, /* ROTTERDAM */ {naam:"Café ’t Haventje",stad:"Rotterdam",coords:[51.9111827,4.4926794],link:"steden/rotterdam.html#cafe-t-haventje"}, {naam:"Café De Pui",stad:"Rotterdam",coords:[51.9230271,4.5002764],link:"steden/rotterdam.html#cafe-de-pui"}, /* UTRECHT */ {naam:"Café Vredenburg",stad:"Utrecht",coords:[52.0930353,5.1124134],link:"steden/utrecht.html#cafe-vredenburg"}, /* WEESP */ {naam:"Café Bijna Thuis",stad:"Weesp",coords:[52.3065633,5.0412022],link:"steden/weesp.html#cafe-bijna-thuis"}, {naam:"Café de Heksenketel",stad:"Weesp",coords:[52.3086929,5.0417616],link:"steden/weesp.html#cafe-de-heksenketel"}, {naam:"Café 't Helletje",stad:"Weesp",coords:[52.3096725,5.0430642],link:"steden/weesp.html#cafe-t-helletje"}, {naam:"Café Toeters en bellen",stad:"Weesp",coords:[52.3092508,5.0426827],link:"steden/weesp.html#cafe-toeters-en-bellen"} ]; /* ========================= MARKERS PLAATSEN ========================= */ var markers = []; kroegen.forEach(function(kroeg) { var marker = L.marker(kroeg.coords) .addTo(kaart) .bindPopup( "<strong>" + kroeg.naam + "</strong><br>" + kroeg.stad + "<br>" + "<a href='" + kroeg.link + "'>Bekijk in lijst</a>" ); markers.push(marker); }); // kaart automatisch passend maken voor alle pins var group = new L.featureGroup(markers); kaart.fitBounds(group.getBounds(), {padding:[50,50]}); /* automatisch inzoomen op alles */ kaart.fitBounds(bounds,{padding:[40,40]}); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Kaart Bruine Kroegen – Stichting De Bruine Kroeg</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<style>
+body {
+    font-family: 'EB Garamond', serif;
+    background: #f9f7f1;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 400px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a4630;
+    margin: 0 8px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3e2c1c;
+}
+
+p {
+    margin: 12px 0;
+}
+
+#kaart {
+    height: 550px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="logo">
+    <img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg">
+</div>
+
+<nav>
+<a href="index.html">Home</a> |
+<a href="doelstellingen.html">Doelstellingen</a> |
+<a href="organisatie.html">Organisatie</a> |
+<a href="bruine-kroeg.html">Bruine Kroeg</a> |
+<a href="evenementen.html">Evenementen</a> |
+<a href="lijst-bruine-kroegen.html">Lijst</a> |
+<a href="kaart-bruine-kroegen.html">Kaart</a> |
+<a href="erfgoed.html">Erfgoed</a> |
+<a href="informatie.html">Informatie</a> |
+<a href="contact.html">Contact</a>
+</nav>
+
+<hr>
+
+<h1>Kaart van Bruine Kroegen</h1>
+
+<p>
+Op deze kaart zijn de door Stichting De Bruine Kroeg geselecteerde
+traditionele cafés weergegeven. U kunt in- en uitzoomen van
+Nederland tot op straatniveau. Klik op een markering voor meer
+informatie of om het café in de lijst te bekijken.
+</p>
+
+<div id="kaart"></div>
+
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Kaart initialiseren
+var kaart = L.map('kaart');
+
+// OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap-bijdragers'
+}).addTo(kaart);
+
+// =========================
+// ALLE KROEGEN
+// =========================
+var kroegen = [
+  // --- AMSTERDAM ---
+  {naam:"In 't Aepjen",stad:"Amsterdam",coords:[52.3763121,4.9001456],link:"steden/amsterdam.html#in-t-aepjen"},
+  {naam:"De Amstel",stad:"Amsterdam",coords:[52.3486333,4.9031498],link:"steden/amsterdam.html#de-amstel"},
+  {naam:"Café Anno 1890",stad:"Amsterdam",coords:[52.3223145,4.8572432],link:"steden/amsterdam.html#cafe-anno-1890"},
+  {naam:"'t Binnepretje",stad:"Amsterdam",coords:[52.3814757,4.8560893],link:"steden/amsterdam.html#t-binnepretje"},
+  {naam:"De Blauwe Druif",stad:"Amsterdam",coords:[52.3804361,4.8910498],link:"steden/amsterdam.html#de-blauwe-druif"},
+  {naam:"De Blauwe Parade",stad:"Amsterdam",coords:[52.3739576,4.8906138],link:"steden/amsterdam.html#de-blauwe-parade"},
+  {naam:"Brandon",stad:"Amsterdam",coords:[52.3754007,4.8864147],link:"steden/amsterdam.html#brandon"},
+  {naam:"Brel",stad:"Amsterdam",coords:[52.3841424,4.8702538],link:"steden/amsterdam.html#brel"},
+  {naam:"Het Bruine Paard",stad:"Amsterdam",coords:[52.3782120,4.8859084],link:"steden/amsterdam.html#het-bruine-paard"},
+  {naam:"Chris",stad:"Amsterdam",coords:[52.3742568,4.8815665],link:"steden/amsterdam.html#chris"},
+  {naam:"Chris Scholten",stad:"Amsterdam",coords:[52.3542908,4.9014532],link:"steden/amsterdam.html#chris-scholten"},
+  {naam:"Dijk 120",stad:"Amsterdam",coords:[52.3735190,4.9001390],link:"steden/amsterdam.html#dijk-120"},
+  {naam:"Café ’t Doktertje",stad:"Amsterdam",coords:[52.3692540,4.8908258],link:"steden/amsterdam.html#cafe-t-doktertje"},
+  {naam:"De Drie Fleschjes",stad:"Amsterdam",coords:[52.3743114,4.8923128],link:"steden/amsterdam.html#de-drie-fleschjes"},
+  {naam:"Café De Druif",stad:"Amsterdam",coords:[52.3700544,4.9106101],link:"steden/amsterdam.html#cafe-de-druif"},
+  {naam:"Eddy Bar",stad:"Amsterdam",coords:[52.3554212,4.8908045],link:"steden/amsterdam.html#eddy-bar"},
+  {naam:"Eijlders",stad:"Amsterdam",coords:[52.3649045,4.8824617],link:"steden/amsterdam.html#eijlders"},
+  {naam:"Eik en Linde",stad:"Amsterdam",coords:[52.3665415,4.9109737],link:"steden/amsterdam.html#eik-en-linde"},
+  {naam:"Elsa's Café",stad:"Amsterdam",coords:[52.3531732,4.9318944],link:"steden/amsterdam.html#elsas-cafe"},
+  {naam:"Engelse Reet",stad:"Amsterdam",coords:[52.3695417,4.8908519],link:"steden/amsterdam.html#engelse-reet"},
+  {naam:"Café De Figuranten",stad:"Amsterdam",coords:[52.3605629,4.8594397],link:"steden/amsterdam.html#cafe-de-figuranten"},
+  {naam:"De Fluiter",stad:"Amsterdam",coords:[52.3792998,4.8568986],link:"steden/amsterdam.html#de-fluiter"},
+  {naam:"Café Freddy",stad:"Amsterdam",coords:[52.3566102,4.8920926],link:"steden/amsterdam.html#cafe-freddy"},
+  {naam:"De Gaeper",stad:"Amsterdam",coords:[52.3682500,4.8967709],link:"steden/amsterdam.html#de-gaepr"},
+  {naam:"Gijs de Rooij",stad:"Amsterdam",coords:[52.3635979,4.9316324],link:"steden/amsterdam.html#gijs-de-rooij"},
+  {naam:"De Gouden Florijn",stad:"Amsterdam",coords:[52.3738136,4.8816835],link:"steden/amsterdam.html#de-gouden-florijn"},
+  {naam:"Bar Guzzo",stad:"Amsterdam",coords:[52.3708862,4.9163574],link:"steden/amsterdam.html#bar-guzzo"},
+  {naam:"Hans",stad:"Amsterdam",coords:[52.3536620,4.8560080],link:"steden/amsterdam.html#hans"},
+  {naam:"Café De Hegeraad",stad:"Amsterdam",coords:[52.3793796,4.8861097],link:"steden/amsterdam.html#hegeraad"},
+  {naam:"Heilig Leven",stad:"Amsterdam",coords:[52.3914745,4.8783391],link:"steden/amsterdam.html#heilig-leven"},
+  {naam:"Hoppe",stad:"Amsterdam",coords:[52.3687949,4.8885771],link:"steden/amsterdam.html#hoppe"},
+  {naam:"De Kaaiman",stad:"Amsterdam",coords:[52.3920259,4.8774372],link:"steden/amsterdam.html#de-kaaiman"},
+  {naam:"Café Karpershoek",stad:"Amsterdam",coords:[52.3781227,4.8967626],link:"steden/amsterdam.html#cafe-karpershoek"},
+  {naam:"De Kat in de Wijngaert",stad:"Amsterdam",coords:[52.3803048,4.8841132],link:"steden/amsterdam.html#de-kat-in-de-wijngaert"},
+  {naam:"Proeflokaal 't Kelkje",stad:"Amsterdam",coords:[52.3712816,4.8964124],link:"steden/amsterdam.html#proeflokaal-t-kelkje"},
+  {naam:"Knibbel Knabbel Knuisje",stad:"Amsterdam",coords:[52.3697389,4.8495597],link:"steden/amsterdam.html#knibbel-knabbel-knuisje"},
+  {naam:"Café Kontakt",stad:"Amsterdam",coords:[52.3720253,4.8596383],link:"steden/amsterdam.html#cafe-kontakt"},
+  {naam:"Lange Leo",stad:"Amsterdam",coords:[52.3690616,4.8885766],link:"steden/amsterdam.html#lange-leo"},
+  {naam:"Café De Laurierboom",stad:"Amsterdam",coords:[52.3722773,4.8810122],link:"steden/amsterdam.html#cafe-de-laurierboom"},
+  {naam:"'t Lommertje",stad:"Amsterdam",coords:[52.3786227,4.8505237],link:"steden/amsterdam.html#t-lommertje"},
+  {naam:"Los",stad:"Amsterdam",coords:[52.3664000,4.8957754],link:"steden/amsterdam.html#los"},
+  {naam:"Café Louis Bar",stad:"Amsterdam",coords:[52.3762674,4.8996592],link:"steden/amsterdam.html#cafe-louis-bar"},
+  {naam:"Café Lowietje",stad:"Amsterdam",coords:[52.3803359,4.8823301],link:"steden/amsterdam.html#lowietje"},
+  {naam:"'t Mandje",stad:"Amsterdam",coords:[52.3748150,4.9009830],link:"steden/amsterdam.html#t-mandje"},
+  {naam:"Marktzicht",stad:"Amsterdam",coords:[52.3752269,4.8709778],link:"steden/amsterdam.html#marktzicht"},
+  {naam:"'t Monumentje",stad:"Amsterdam",coords:[52.3785147,4.8830999],link:"steden/amsterdam.html#t-monumentje"},
+  {naam:"Mulder",stad:"Amsterdam",coords:[52.3597197,4.8912477],link:"steden/amsterdam.html#mulder"},
+  {naam:"Café De Nieuwe Stek",stad:"Amsterdam",coords:[52.3610412,4.9282816],link:"steden/amsterdam.html#de-nieuwe-stek"},
+  {naam:"Nieuwland",stad:"Amsterdam",coords:[52.3619364,4.9284686],link:"steden/amsterdam.html#nieuwland"},
+  {naam:"De Ooievaar",stad:"Amsterdam",coords:[52.3762843,4.8999403],link:"steden/amsterdam.html#de-ooievaar"},
+  {naam:"Oosterling",stad:"Amsterdam",coords:[52.3610742,4.8992555],link:"steden/amsterdam.html#oosterling"},
+  {naam:"Café ’t Papeneiland",stad:"Amsterdam",coords:[52.3804606,4.8879944],link:"steden/amsterdam.html#papeneiland"},
+  {naam:"Café Pierewaaier",stad:"Amsterdam",coords:[52.3717036,4.8793151],link:"steden/amsterdam.html#cafe-pierewaaier"},
+  {naam:"De Poort",stad:"Amsterdam",coords:[52.3822345,4.8881636],link:"steden/amsterdam.html#de-poort"},
+  {naam:"Quelle",stad:"Amsterdam",coords:[52.3618546,4.8647467],link:"steden/amsterdam.html#quelle"},
+  {naam:"Café Reijnders",stad:"Amsterdam",coords:[52.3646188,4.8828907],link:"steden/amsterdam.html#cafe-reijnders"},
+  {naam:"De Roode Laars",stad:"Amsterdam",coords:[52.3759723,4.9005464],link:"steden/amsterdam.html#de-roode-laars"},
+  {naam:"De Roosenboom",stad:"Amsterdam",coords:[52.3534450,4.8322314],link:"steden/amsterdam.html#de-roosenboom"},
+  {naam:"Ruk en Pluk",stad:"Amsterdam",coords:[52.3574362,4.9266870],link:"steden/amsterdam.html#ruk-en-pluk"},
+  {naam:"Café Saarein",stad:"Amsterdam",coords:[52.3702870,4.8802861],link:"steden/amsterdam.html#cafe-saarein"},
+  {naam:"Scharrebier",stad:"Amsterdam",coords:[52.3704414,4.9111074],link:"steden/amsterdam.html#scharrebier"},
+  {naam:"Schumich",stad:"Amsterdam",coords:[52.3794513,4.8942218],link:"steden/amsterdam.html#schumich"},
+  {naam:"'t Sluisje",stad:"Amsterdam",coords:[52.3912178,4.9382277],link:"steden/amsterdam.html#t-sluisje"},
+  {naam:"Café 't Smalle",stad:"Amsterdam",coords:[52.3767194,4.8841388],link:"steden/amsterdam.html#cafe-t-smalle"},
+  {naam:"Sportpark",stad:"Amsterdam",coords:[52.3747914,4.8577787],link:"steden/amsterdam.html#sportpark"},
+  {naam:"De Twee Zwaantjes",stad:"Amsterdam",coords:[52.3763480,4.8842005],link:"steden/amsterdam.html#de-twee-zwaantjes"},
+  {naam:"Café Welling",stad:"Amsterdam",coords:[52.3559611,4.8772825],link:"steden/amsterdam.html#cafe-welling"},
+  {naam:"Westerdok",stad:"Amsterdam",coords:[52.3893192,4.8912520],link:"steden/amsterdam.html#westerdok"},
+  {naam:"In de Wildeman",stad:"Amsterdam",coords:[52.3761636,4.8951567],link:"steden/amsterdam.html#in-de-wildeman"},
+  {naam:"Café van Wou",stad:"Amsterdam",coords:[52.3566949,4.8999592],link:"steden/amsterdam.html#cafe-van-wou"},
+  {naam:"Wynand Fockink",stad:"Amsterdam",coords:[52.3723195,4.8952995],link:"steden/amsterdam.html#wynand-fockink"},
+  {naam:"De Zeepost",stad:"Amsterdam",coords:[52.3767509,4.9019175],link:"steden/amsterdam.html#de-zeepost"},
+  {naam:"De Zwart",stad:"Amsterdam",coords:[52.3688850,4.8885540],link:"steden/amsterdam.html#de-zwart"},
+
+  // --- ROTTERDAM ---
+  {naam:"Café ’t Haventje",stad:"Rotterdam",coords:[51.9111827,4.4926794],link:"steden/rotterdam.html#cafe-t-haventje"},
+  {naam:"Café De Pui",stad:"Rotterdam",coords:[51.9230271,4.5002764],link:"steden/rotterdam.html#cafe-de-pui"},
+
+  // --- UTRECHT ---
+  {naam:"Café Vredenburg",stad:"Utrecht",coords:[52.0930353,5.1124134],link:"steden/utrecht.html#cafe-vredenburg"},
+
+  // --- WEESP ---
+  {naam:"Café Bijna Thuis",stad:"Weesp",coords:[52.3065633,5.0412022],link:"steden/weesp.html#cafe-bijna-thuis"},
+  {naam:"Café de Heksenketel",stad:"Weesp",coords:[52.3086929,5.0417616],link:"steden/weesp.html#cafe-de-heksenketel"},
+  {naam:"Café 't Helletje",stad:"Weesp",coords:[52.3096725,5.0430642],link:"steden/weesp.html#cafe-t-helletje"},
+  {naam:"Café Toeters en bellen",stad:"Weesp",coords:[52.3092508,5.0426827],link:"steden/weesp.html#cafe-toeters-en-bellen"}
+];
+
+// =========================
+// MARKERS PLAATSEN
+// =========================
+var markers = [];
+kroegen.forEach(function(kroeg) {
+  var marker = L.marker(kroeg.coords)
+    .addTo(kaart)
+    .bindPopup(
+      "<strong>" + kroeg.naam + "</strong><br>" +
+      kroeg.stad + "<br>" +
+      "<a href='" + kroeg.link + "'>Bekijk in lijst</a>"
+    );
+  markers.push(marker);
+});
+
+// kaart automatisch passend maken voor alle pins
+var group = new L.featureGroup(markers);
+kaart.fitBounds(group.getBounds(), {padding:[50,50]});
+</script>
+
+</body>
+</html>
