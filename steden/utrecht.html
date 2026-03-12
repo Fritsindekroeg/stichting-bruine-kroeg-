@@ -1,114 +1,202 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>Bruine kroegen in Utrecht – Stichting De Bruine Kroeg</title>
-  <link rel="stylesheet" href="../style.css">
+<meta charset="UTF-8">
+<title>Bruine Kroegen in Utrecht – Stichting De Bruine Kroeg</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'EB Garamond', serif;
+    background: #f9f7f1;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 400px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a4630;
+    margin: 0 8px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3e2c1c;
+}
+
+.terug-balk {
+    margin-bottom: 25px;
+}
+
+.terug-balk a {
+    display: inline-block;
+    background-color: #5a4630;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.terug-balk a:hover {
+    background-color: #443423;
+}
+
+.city-section {
+    margin-bottom: 50px;
+}
+
+.cafe {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cafe h3 {
+    margin-top: 0;
+    color: #3e2c1c;
+}
+
+.cafe p {
+    margin: 8px 0;
+}
+
+.cafe .adres {
+    font-style: italic;
+    color: #5a4630;
+}
+
+.cafe-foto {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.foto-credit {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 10px;
+}
+</style>
 </head>
 
 <body>
-  <div style="max-width:900px; margin:0 auto;">
+<div class="container">
 
-    <div style="text-align:center; margin-bottom:20px;">
-      <img src="../logo2.JPG" alt="Logo Stichting De Bruine Kroeg" style="max-width:400px;">
-    </div>
-
-     <nav>
-      <a href="../index.html">Home</a> |
-      <a href="../bruine-kroeg.html">Bruine Kroeg</a> |
-      <a href="../evenementen.html">Evenementen</a> |
-      <a href="../lijst-bruine-kroegen.html">Lijst Bruine Kroegen</a> |
-      <a href="../kaart-bruine-kroegen.html">Kaart</a> |
-      <a href="../over-contact.html">Over & Contact</a>
-    </nav>
-    <hr>
-
-    <h1>Bruine Kroegen in Utrecht</h1>
-<div class="terug-balk">
-  <a href="../lijst-bruine-kroegen.html" class="terug-knop">
-    ← Terug naar overzicht met steden
-  </a>
+<div class="logo">
+    <img src="../logo2.JPG" alt="Logo Stichting De Bruine Kroeg">
 </div>
 
-  <!-- UTRECHT -->
-    <div class="city-section">
-      <h2>Utrecht</h2>
+<nav>
+<a href="../index.html">Home</a> |
+<a href="../doelstellingen.html">Doelstellingen</a> |
+<a href="../organisatie.html">Organisatie</a> |
+<a href="../bruine-kroeg.html">Bruine Kroeg</a> |
+<a href="../evenementen.html">Evenementen</a> |
+<a href="../lijst-bruine-kroegen.html">Lijst</a> |
+<a href="../kaart-bruine-kroegen.html">Kaart</a> |
+<a href="../erfgoed.html">Erfgoed</a> |
+<a href="../informatie.html">Informatie</a> |
+<a href="../contact.html">Contact</a>
+</nav>
 
-      <div class="cafe" data-cafe="cafe-vredenburg">
-      <h3 id="cafe-vredenburg">Café Vredenburg</h3>
-      <p>
+<hr>
+
+<h1>Bruine Kroegen in Utrecht</h1>
+
+<div class="terug-balk">
+    <a href="../lijst-bruine-kroegen.html">← Terug naar overzicht met steden</a>
+</div>
+
+<div class="city-section">
+
+    <div class="cafe" data-cafe="cafe-vredenburg">
+        <h3 id="cafe-vredenburg">Café Vredenburg</h3>
+        <p>
         Een authentiek bruin café aan het Vredenburgplein, een oase van rust
         te midden van de stadsdrukte. Met een geschiedenis van meer dan 270 jaar
         claimt dit café het oudste van Utrecht te zijn. De bar zelf is al ruim
         170 jaar oud.
-      </p>
-      <p class="adres"><strong>Adres:</strong> Vredenburg 39</p>
+        </p>
+        <p class="adres"><strong>Adres:</strong> Vredenburg 39</p>
     </div>
- </div>
-   
- 
+
+</div>
+</div>
+
 <script>
-/* === 1. functie die 1 café laadt === */
 function loadCafe(cafe){
-
-  const id = cafe.dataset.cafe;
-  const extensions = ["jpg","jpeg","png","webp"];
-
-  function tryNext(i){
-    if(i >= extensions.length) return;
-
-    const imgPath = "/fotos/" + id + "." + extensions[i];
-    const creditPath = "/fotos/" + id + ".txt";
-
-    const testImg = new Image();
-
-    testImg.onload = function () {
-
-      const img = document.createElement("img");
-      img.src = imgPath;
-      img.className = "cafe-foto";
-      cafe.prepend(img);
-
-      fetch(creditPath)
-        .then(r => r.ok ? r.text() : null)
-        .then(name => {
-          if (name) {
-            const credit = document.createElement("div");
-            credit.className = "foto-credit";
-            credit.innerText = "Foto: " + name.trim();
-            img.after(credit);
-          }
-        });
-    };
-
-    testImg.onerror = function(){
-      tryNext(i+1);
-    };
-
-    testImg.src = imgPath;
-  }
-
-  tryNext(0);
+    const id = cafe.dataset.cafe;
+    const extensions = ["jpg","jpeg","png","webp"];
+    function tryNext(i){
+        if(i >= extensions.length) return;
+        const imgPath = "/fotos/" + id + "." + extensions[i];
+        const creditPath = "/fotos/" + id + ".txt";
+        const testImg = new Image();
+        testImg.onload = function () {
+            const img = document.createElement("img");
+            img.src = imgPath;
+            img.className = "cafe-foto";
+            cafe.prepend(img);
+            fetch(creditPath)
+                .then(r => r.ok ? r.text() : null)
+                .then(name => {
+                    if (name) {
+                        const credit = document.createElement("div");
+                        credit.className = "foto-credit";
+                        credit.innerText = "Foto: " + name.trim();
+                        img.after(credit);
+                    }
+                });
+        };
+        testImg.onerror = function(){ tryNext(i+1); };
+        testImg.src = imgPath;
+    }
+    tryNext(0);
 }
 
-
-/* === 2. observer: laad pas als zichtbaar === */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      loadCafe(entry.target);
-      observer.unobserve(entry.target);
-    }
-  });
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            loadCafe(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
 });
 
-
-/* === 3. koppel alle cafés aan observer === */
 document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
-  observer.observe(cafe);
+    observer.observe(cafe);
 });
 </script>
 
-    
 </body>
 </html>
