@@ -512,67 +512,49 @@ De geschiedenis van het café gaat terug tot 1901. Bas Lubberhuizen nam het caf�
 
  
 <script>
-/* === 1. functie die 1 café laadt === */
 function loadCafe(cafe){
-
-  const id = cafe.dataset.cafe;
-  const extensions = ["jpg","jpeg","png","webp"];
-
-  function tryNext(i){
-    if(i >= extensions.length) return;
-
-    const imgPath = "/fotos/" + id + "." + extensions[i];
-    const creditPath = "/fotos/" + id + ".txt";
-
-    const testImg = new Image();
-
-    testImg.onload = function () {
-
-      const img = document.createElement("img");
-      img.src = imgPath;
-      img.className = "cafe-foto";
-      cafe.prepend(img);
-
-      fetch(creditPath)
-        .then(r => r.ok ? r.text() : null)
-        .then(name => {
-          if (name) {
-            const credit = document.createElement("div");
-            credit.className = "foto-credit";
-            credit.innerText = "Foto: " + name.trim();
-            img.after(credit);
-          }
-        });
-    };
-
-    testImg.onerror = function(){
-      tryNext(i+1);
-    };
-
-    testImg.src = imgPath;
-  }
-
-  tryNext(0);
+    const id = cafe.dataset.cafe;
+    const extensions = ["jpg","jpeg","png","webp"];
+    function tryNext(i){
+        if(i >= extensions.length) return;
+        const imgPath = "/fotos/" + id + "." + extensions[i];
+        const creditPath = "/fotos/" + id + ".txt";
+        const testImg = new Image();
+        testImg.onload = function () {
+            const img = document.createElement("img");
+            img.src = imgPath;
+            img.className = "cafe-foto";
+            cafe.prepend(img);
+            fetch(creditPath)
+                .then(r => r.ok ? r.text() : null)
+                .then(name => {
+                    if (name) {
+                        const credit = document.createElement("div");
+                        credit.className = "foto-credit";
+                        credit.innerText = "Foto: " + name.trim();
+                        img.after(credit);
+                    }
+                });
+        };
+        testImg.onerror = function(){ tryNext(i+1); };
+        testImg.src = imgPath;
+    }
+    tryNext(0);
 }
 
-
-/* === 2. observer: laad pas als zichtbaar === */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      loadCafe(entry.target);
-      observer.unobserve(entry.target);
-    }
-  });
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            loadCafe(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
 });
 
-
-/* === 3. koppel alle cafés aan observer === */
 document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
-  observer.observe(cafe);
+    observer.observe(cafe);
 });
 </script>
 
-    
 </body>
 </html>
