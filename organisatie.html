@@ -1,82 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>Stichting De Bruine Kroeg</title>
- <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Stichting De Bruine Kroeg - Organisatie</title>
 
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    font-family:'EB Garamond', serif;
+    background:#f5f5f5;
+    margin:0;
+    color:#333;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo img{
+    max-width:400px;
+}
+
+nav{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 8px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* GRID VOOR ORGANISATIE BLOKKEN */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:20px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:6px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition:0.2s;
+}
+
+.box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 6px 16px rgba(0,0,0,0.15);
+}
+
+.box h2{
+    margin-top:0;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.box p{
+    margin:5px 0;
+    font-size:16px;
+}
+
+section{
+    margin-bottom:40px;
+}
+
+footer{
+    margin-top:60px;
+    text-align:center;
+    font-size:14px;
+}
+
+</style>
 </head>
-  <body>
-    <div style="max-width:900px; margin:0 auto;">
 
-<div style="text-align:center; margin-bottom:20px;">
-  <img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg" style="max-width:400px;">
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg">
 </div>
 
-  <nav>
-      <a href="index.html">Home</a> |
-      <a href="doelstellingen.html">Doelstellingen</a> |
-      <a href="organisatie.html">Organisatie</a> |
-      <a href="bruine-kroeg.html">Bruine Kroeg</a> |
-      <a href="evenementen.html">Evenementen</a> |
-      <a href="lijst-bruine-kroegen.html">Lijst Bruine Kroegen</a> |
-      <a href="kaart-bruine-kroegen.html">Kaart</a> |
-      <a href="erfgoed.html">Erfgoed</a> |
-      <a href="informatie.html">Informatie</a> |
-      <a href="over-contact.html">Over & Contact</a>
-    </nav>
+<nav>
+<a href="index.html">Home</a> |
+<a href="doelstellingen.html">Doelstellingen</a> |
+<a href="organisatie.html">Organisatie</a> |
+<a href="bruine-kroeg.html">Bruine Kroeg</a> |
+<a href="evenementen.html">Evenementen</a> |
+<a href="lijst-bruine-kroegen.html">Lijst</a> |
+<a href="kaart-bruine-kroegen.html">Kaart</a> |
+<a href="erfgoed.html">Erfgoed</a> |
+<a href="informatie.html">Informatie</a> |
+<a href="contact.html">Contact</a>
+</nav>
 
 <hr>
 
-  
-  <h1>Organisatie</h1>
+<h1>Organisatie</h1>
 
-Stichting De Bruine Kroeg bestaat uit een team van vrijwilligers.
+<p>Stichting De Bruine Kroeg bestaat uit een team van vrijwilligers. Naast het bestuur functioneert een groep toezichthouders en wordt het dagelijks werk uitgevoerd door coördinatoren die elk een onderdeel onder hun hoede nemen: kenmerken van de Bruine Kroeg, lijst van Bruine Kroegen, evenementen en informatie, erfgoed.</p>
 
-Naast het bestuur functioneert een groep toezichthouders en wordt het dagelijks werk uitgevoerd door coördinatoren die elk een onderdeel onder hun hoede nemen: kenmerken van de Bruine Kroeg, lijst van Bruine Kroegen, evenementen en informatie, erfgoed.
+<p>Aanmeldingen en opmerkingen van geïnteresseerden komen terecht bij de coördinatoren. Zij bereiden de besluitvorming voor, de toezichthouder van het betreffende onderdeel geeft zijn/haar mening en daarna wordt door het bestuur besloten of de informatie wordt opgenomen op ons platform.</p>
 
+<!-- GRID MET BESTUURSLEDEN, TOEZICHTHOUDERS EN COÖRDINATOREN -->
 
-Aanmeldingen en opmerkingen van geïnteresseerden komen terecht bij de coördinatoren. Zij bereiden de besluitvorming voor, de toezichthouder van het betreffende onderdeel geeft zijn/haar mening en daarna wordt door het bestuur besloten of de informatie wordt opgenomen op ons platform.
-
-
-Bestuursleden
-
-Willem Pijffers, voorzitter
-
-Inge Molenaar, secretaris
-
-Frits Böhm, penningmeester
-
-
-Toezichthouders
-
-Kenmerken Bruine Kroeg en lijst Bruine Kroegen: XXX
-
-Evenementen en informatie: YYY
-
-Erfgoed: ZZZ
-
-
-Coördinatoren
-
-Kenmerken Bruine Kroeg: AAA (+mailadres)
-
-Lijst Bruine Kroegen: BBB (+ mailadres)
-
-Evenementen: CCC (+mailadres)
-
-Pers/podcast informatie: DDD (+mailadres)
-
-Erfgoed: EEE (+mailadres)
-
-
-Voorstellen, aanmeldingen van cafés, of opmerkingen kunnen worden ingediend bij de coördinator van het betreffende onderdeel.
- 
+<section>
+<h2>Bestuursleden</h2>
+<div class="grid">
+<div class="box">
+<h2>Willem Pijffers</h2>
+<p>Voorzitter</p>
 </div>
+<div class="box">
+<h2>Inge Molenaar</h2>
+<p>Secretaris</p>
+</div>
+<div class="box">
+<h2>Frits Böhm</h2>
+<p>Penningmeester</p>
+</div>
+</div>
+</section>
 
-  
+<section>
+<h2>Toezichthouders</h2>
+<div class="grid">
+<div class="box">
+<h2>Kenmerken & Lijst Bruine Kroegen</h2>
+<p>XXX</p>
+</div>
+<div class="box">
+<h2>Evenementen & Informatie</h2>
+<p>YYY</p>
+</div>
+<div class="box">
+<h2>Erfgoed</h2>
+<p>ZZZ</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Coördinatoren</h2>
+<div class="grid">
+<div class="box">
+<h2>Kenmerken Bruine Kroeg</h2>
+<p>AAA<br>Email: aaa@mail.nl</p>
+</div>
+<div class="box">
+<h2>Lijst Bruine Kroegen</h2>
+<p>BBB<br>Email: bbb@mail.nl</p>
+</div>
+<div class="box">
+<h2>Evenementen</h2>
+<p>CCC<br>Email: ccc@mail.nl</p>
+</div>
+<div class="box">
+<h2>Pers / Podcast informatie</h2>
+<p>DDD<br>Email: ddd@mail.nl</p>
+</div>
+<div class="box">
+<h2>Erfgoed</h2>
+<p>EEE<br>Email: eee@mail.nl</p>
+</div>
+</div>
+</section>
+
+<p>Voorstellen, aanmeldingen van cafés, of opmerkingen kunnen worden ingediend bij de coördinator van het betreffende onderdeel.</p>
+
+<footer>
+<p>De oprichting van Stichting De Bruine Kroeg is mede mogelijk gemaakt door <strong>XYZ-fonds</strong></p>
+<p><strong>Sponsoren:</strong> Sponsor A, Sponsor B, Sponsor C</p>
+</footer>
+
+</div>
 </body>
-  
 </html>
