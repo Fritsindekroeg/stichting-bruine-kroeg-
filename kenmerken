@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Kenmerken - Stichting De Bruine Kroeg</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'EB Garamond', serif;
+    background: #f9f7f1;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 400px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a4630;
+    margin: 0 8px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3e2c1c;
+}
+
+h2 {
+    color: #b88b5c;
+    margin-top: 35px;
+}
+
+p {
+    margin: 12px 0;
+}
+
+ul {
+    margin: 12px 0 12px 25px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="logo">
+    <img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg">
+</div>
+
+<nav>
+<a href="index.html">Home</a> |
+<a href="doelstellingen.html">Doelstellingen</a> |
+<a href="organisatie.html">Organisatie</a> |
+<a href="geschiedenis.html">Geschiedenis</a> |
+<a href="evenementen.html">Evenementen</a> |
+<a href="lijst-bruine-kroegen.html">Lijst</a> |
+<a href="kaart-bruine-kroegen.html">Kaart</a> |
+<a href="erfgoed.html">Erfgoed</a> |
+<a href="informatie.html">Informatie</a> |
+<a href="contact.html">Contact</a>
+</nav>
+
+<hr>
+
+<h1>Kenmerken</h1>
+
+<p>
+Om te beslissen of een café het predicaat ‘Bruine Kroeg’ of ‘traditioneel café’ kan krijgen,
+hanteren wij een aantal criteria.
+</p>
+
+<p>
+Daarbij gaan wij uit van vier categorieën:
+</p>
+
+<ul>
+<li>uiterlijke kenmerken</li>
+<li>personeel</li>
+<li>functie</li>
+<li>traditie</li>
+</ul>
+
+<p>
+Onder elke categorie vallen verschillende kenmerken.
+Geen café voldoet aan al deze kenmerken, maar per categorie moet wel aan minstens één kenmerk worden voldaan.
+Of dat voldoende is om te worden opgenomen op ons platform, is per café ter beoordeling aan de Stichting.
+</p>
+
+<h2>Uiterlijke kenmerken</h2>
+
+<p>
+Bij een Bruin Café wordt vooral gedacht aan bruine lambrisering, een interieur met koper en gekleurde vensterramen,
+en de naam van het café in krulletters op de voorruit.
+</p>
+
+<p>Eveneens klassiek zijn:</p>
+
+<ul>
+<li>een bar met een monumentale bierkraan</li>
+<li>een stamtafel</li>
+<li>Perzische kleedjes op de tafels</li>
+<li>gekookte eieren op de bar</li>
+<li>een houten vloer met strooizand</li>
+<li>een bel boven de bar voor de slotronde of om een rondje aan te bieden</li>
+</ul>
+
+<p>
+Sommige oude cafés hebben een drankorgel (rij vaten voor verschillende likeuren)
+of een loket waar sterke drank kan worden gekocht.
+</p>
+
+<p>
+Als je vindt dat deze kenmerken moeten worden uitgebreid, of als je een café wilt aanmelden,
+neem dan contact op.
+</p>
+
+<h2>Personeel</h2>
+
+<p>
+Het is belangrijk hoe een Bruine Kroeg eruitziet, maar even belangrijk is hoe de sfeer wordt bepaald.
+De rol van de kastelein is hierbij doorslaggevend.
+</p>
+
+<p>
+In een Bruine Kroeg wordt de bar bediend door een beperkt aantal personen,
+waaronder bij voorkeur de eigenaar van het café.
+</p>
+
+<p>
+De kasteleins kennen hun vaste klanten, weten wat zij drinken en dragen bij aan de gespreksonderwerpen.
+Zij vormen de ‘ziel’ van het café.
+</p>
+
+<p>
+Als het personeel bestaat uit een telkens wisselend gezelschap van tijdelijke krachten,
+dan staat dat het karakter van de kroeg in de weg.
+</p>
+
+<p>
+Het is belangrijk dat de kasteleins Nederlands spreken, of de streektaal.
+De voertaal in de Nederlandse Bruine Kroeg is niet Engels, Frans of Duits.
+</p>
+
+<p>
+Als je vindt dat deze karakteristieken moeten worden aangepast, of als je een café wilt aanmelden,
+neem dan contact op.
+</p>
+
+<h2>Functie</h2>
+
+<p>
+Een café is een plek waar mensen naartoe gaan om iets te drinken en/of om anderen te ontmoeten.
+De kernwaarden zijn plezier en sociale cohesie.
+</p>
+
+<p>Er zijn verschillende typen cafés:</p>
+
+<ul>
+<li>stamkroeg</li>
+<li>buurtcafé</li>
+<li>activiteitencafé</li>
+<li>eetcafé</li>
+</ul>
+
+<p>
+Een stamkroeg wordt getypeerd door vaste bezoekers en vaak een stamtafel.
+Voor buitenstaanders kan dit type café een gesloten karakter hebben.
+</p>
+
+<p>
+Een buurtcafé richt zich op buurtbewoners van alle leeftijden.
+</p>
+
+<p>
+Een activiteitencafé biedt activiteiten zoals muziek, spel of sport.
+</p>
+
+<p>
+In een eetcafé kun je naast drinken ook een eenvoudige maaltijd bestellen.
+</p>
+
+<p>
+Niet elk van deze cafés is automatisch een Bruine Kroeg;
+daarvoor moet het voldoen aan de kenmerken.
+</p>
+
+<p>
+Onze coördinatoren letten daarom scherp op de functie van een café bij de beoordeling.
+</p>
+
+<p>
+Als je vindt dat deze criteria moeten worden aangepast, of als je een café wilt aanmelden,
+neem dan contact op.
+</p>
+
+<h2>Traditie</h2>
+
+<p>
+Een Bruine Kroeg is een traditioneel café dat zich langzaam ontwikkelt.
+Het interieur verandert geleidelijk en behoudt zijn karakter.
+</p>
+
+<p>
+Dit zorgt voor een authentieke en soms enigszins rommelige sfeer.
+</p>
+
+<p>
+Veel Bruine Kroegen bestaan al lange tijd en dragen hun geschiedenis met zich mee.
+</p>
+
+<p>
+Als criterium hanteert de stichting dat een café minimaal 30 jaar moet bestaan.
+</p>
+
+<p>
+Als je vindt dat dit criterium moet worden aangepast, of als je een café wilt aanmelden,
+neem dan contact op.
+</p>
+
+</div>
+</body>
+</html>
