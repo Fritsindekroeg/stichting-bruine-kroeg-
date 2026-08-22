@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Contact – Stichting De Bruine Kroeg</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
+<style>
+body {
+    font-family: 'EB Garamond', serif;
+    background: #f9f7f1;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 400px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a4630;
+    margin: 0 8px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3e2c1c;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #3e2c1c;
+}
+
+p {
+    margin: 12px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #5a4630;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+form button:hover {
+    background-color: #443423;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="logo">
+    <img src="logo2.JPG" alt="Logo Stichting De Bruine Kroeg">
+</div>
+
+<nav>
+<a href="index.html">Kaart</a> |
+<a href="aanmeldformulier.html">Aanmeldformulier</a> |
+<a href="doelstellingen.html">Doelstellingen</a> |
+<a href="organisatie.html">Organisatie</a> |
+<a href="geschiedenis.html">Geschiedenis</a> |
+<a href="kenmerken.html">Kenmerken</a> |
+<a href="evenementen.html">Evenementen</a> |
+<a href="lijst-bruine-kroegen.html">Lijst</a> |
+<a href="erfgoed.html">Erfgoed</a> |
+<a href="informatie.html">Informatie</a> |
+<a href="contact.html">Contact</a>
+</nav>
+
+<hr>
+
+<h1>Contactgegevens</h1>
+
+
+<h2>Aanmeldformulier Bruine Kroeg</h2>
+
+<p>
+Heeft u een vraag of wilt u contact opnemen met Stichting De Bruine Kroeg? U kunt hieronder een bericht achterlaten.
+</p>
+
+<form action="https://formspree.io/f/mykdzrdz" method="POST">
+  <p>
+    <label>
+      Uw naam:<br>
+      <input type="text" name="naam" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Uw e-mailadres:<br>
+      <input type="email" name="email" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Uw bericht:<br>
+      <textarea name="bericht" rows="5" required></textarea>
+    </label>
+  </p>
+
+  <p>
+    <button type="submit">Versturen</button>
+  </p>
+</form>
+
+</div>
+</body>
+</html>
