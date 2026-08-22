@@ -8,63 +8,8 @@
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-<style>
-body {
-    font-family: 'EB Garamond', serif;
-    background: #f9f7f1;
-    color: #333;
-    margin: 0;
-    line-height: 1.6;
-}
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.logo {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.logo img {
-    max-width: 400px;
-}
-
-nav {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #5a4630;
-    margin: 0 8px;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #3e2c1c;
-}
-
-p {
-    margin: 12px 0;
-}
-
-#kaart {
-    height: 550px;
-    margin-top: 30px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -75,22 +20,22 @@ p {
 </div>
 
 <nav>
-<a href="index.html">Kaart</a> |
-<a href="aanmeldformulier.html">Aanmeldformulier</a> |    
-<a href="doelstellingen.html">Doelstellingen</a> |
-<a href="organisatie.html">Organisatie</a> |
-<a href="geschiedenis.html">Geschiedenis</a> |
-<a href="kenmerken.html">Kenmerken</a> |
-<a href="evenementen.html">Evenementen</a> |
-<a href="lijst-bruine-kroegen.html">Lijst</a> |
-<a href="erfgoed.html">Erfgoed</a> |
-<a href="informatie.html">Informatie</a> |
-<a href="contact.html">Contact</a>
+  <div class="main-nav">
+    <a href="index.html">Kaart</a>
+    <a href="lijst-bruine-kroegen.html">Lijst</a>
+    <a href="kenmerken.html">Kenmerken</a>
+    <a href="aanmeldformulier.html">Aanmeldformulier</a>
+  </div>
 </nav>
 
 <hr>
 
-<h1>Kaart van Bruine Kroegen</h1>
+<div class="page-hero">
+  <h1>Kaart van Bruine Kroegen</h1>
+  <div class="page-illustration beer">
+    <img src="beer.png" alt="">
+  </div>
+</div>
 
 <p>
 Op deze kaart zijn de door Stichting De Bruine Kroeg geselecteerde
@@ -218,5 +163,11 @@ var group = new L.featureGroup(markers);
 kaart.fitBounds(group.getBounds(), {padding:[50,50]});
 </script>
 
+<div class="footer-nav">
+  <a href="doelstellingen.html">Doelstellingen</a>
+  <a href="organisatie.html">Organisatie</a>
+  <a href="geschiedenis.html">Geschiedenis</a>
+  <a href="contact.html">Contact</a>
+</div>
 </body>
 </html>

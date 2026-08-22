@@ -5,165 +5,8 @@
 <title>Aanmeldformulier – Stichting De Bruine Kroeg</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
-<style>
-body {
-    font-family: 'EB Garamond', serif;
-    background: #f9f7f1;
-    color: #333;
-    margin: 0;
-    line-height: 1.6;
-}
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.logo {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.logo img {
-    max-width: 400px;
-}
-
-nav {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #5a4630;
-    margin: 0 14px;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.main-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Menu op telefoon */
-@media (max-width: 600px) {
-    .main-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .main-nav a {
-        font-size: 21px;
-        margin: 0;
-    }
-}
-
-.main-nav a:hover {
-    text-decoration: underline;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #3e2c1c;
-}
-
-h2 {
-    margin-top: 40px;
-    color: #3e2c1c;
-}
-
-p {
-    margin: 12px 0;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 8px 10px;
-    margin-top: 4px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-family: 'EB Garamond', serif;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-form button {
-    background-color: #5a4630;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: 0.2s;
-}
-
-form button:hover {
-    background-color: #443423;
-}
-
-.checkbox-group {
-    margin: 10px 0 25px 0;
-}
-
-.checkbox-group label {
-    display: block;
-    margin: 6px 0;
-    cursor: pointer;
-}
-
-.checkbox-group input[type="checkbox"],
-.checkbox-group input[type="radio"] {
-    width: auto;
-    margin-right: 8px;
-}
-
-.sub-question {
-    margin-left: 25px;
-}
-
-.form-section {
-    margin-top: 35px;
-}
-
-.form-section h2 {
-    margin-bottom: 10px;
-}
-
-.hint {
-    font-size: 15px;
-    color: #666;
-}
-
-/* Aanvullende vragen eetcafé */
-#eetcafe-vragen {
-    display: none;
-}
-
-/* Navigatie onderaan */
-.footer-nav {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    font-size: 14px;
-}
-
-.footer-nav a {
-    text-decoration: none;
-    color: #8a7a68;
-    margin: 0 10px;
-}
-
-.footer-nav a:hover {
-    text-decoration: underline;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -175,17 +18,22 @@ form button:hover {
 
 <!-- Hoofdnavigatie -->
 <nav>
-    <div class="main-nav">
-        <a href="index.html">Kaart</a>
-        <a href="lijst-bruine-kroegen.html">Lijst</a>
-        <a href="kenmerken.html">Kenmerken</a>
-        <a href="aanmeldformulier.html">Aanmeldformulier</a>
-    </div>
+  <div class="main-nav">
+    <a href="index.html">Kaart</a>
+    <a href="lijst-bruine-kroegen.html">Lijst</a>
+    <a href="kenmerken.html">Kenmerken</a>
+    <a href="aanmeldformulier.html">Aanmeldformulier</a>
+  </div>
 </nav>
 
 <hr>
 
-<h1>Aanmeldformulier Bruine Kroeg</h1>
+<div class="page-hero">
+  <h1>Aanmeldformulier Bruine Kroeg</h1>
+  <div class="page-illustration wine">
+    <img src="wine.png" alt="">
+  </div>
+</div>
 
 <form action="https://formspree.io/f/mykdzrdz" method="POST">
 
