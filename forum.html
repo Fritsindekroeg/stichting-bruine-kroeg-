@@ -3,11 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <title>Forum – Stichting De Bruine Kroeg</title>
+
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+.forum-box {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.forum-box input[type="text"],
+.forum-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #c8b9a5;
+  border-radius: 4px;
+  font-family: 'EB Garamond', serif;
+  font-size: 17px;
+}
+
+.forum-box textarea {
+  resize: vertical;
+}
+
+.forum-box button {
+  background: #5a4630;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.forum-box button:hover {
+  background: #443423;
+}
+
+.forum-comments {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.forum-comment {
+  background: #fff;
+  border: 1px solid #e0d8ce;
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+}
+
+.forum-comment-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.forum-comment-author {
+  font-weight: bold;
+  color: #3e2c1c;
+}
+
+.forum-comment-date {
+  color: #777;
+  font-size: 14px;
+}
+
+.forum-comment-body {
+  margin: 0;
+  white-space: pre-wrap;
+}
+</style>
+
 </head>
 
 <body>
+
 <div class="container">
 
 <div class="logo">
@@ -39,6 +115,7 @@
   </p>
 </div>
 
+
 <div class="forum-box">
 
   <h2>Discussieer mee</h2>
@@ -51,16 +128,26 @@
   <form method="POST"
         action="https://ziscus.bruinekroeg.workers.dev/submit">
 
-   <input type="hidden" name="slug" value="forum">
-<input type="hidden" name="redirect" value="https://bruinekroeg.com/forum.html">
+    <input type="hidden" name="slug" value="forum">
+
+    <input type="hidden"
+           name="redirect"
+           value="https://bruinekroeg.com/forum.html">
+
     <p>
       <label for="author">Naam</label><br>
-      <input type="text" id="author" name="author" required>
+      <input type="text"
+             id="author"
+             name="author"
+             required>
     </p>
 
     <p>
       <label for="body">Bericht</label><br>
-      <textarea id="body" name="body" rows="5" required></textarea>
+      <textarea id="body"
+                name="body"
+                rows="5"
+                required></textarea>
     </p>
 
     <button type="submit">Plaatsen</button>
@@ -68,6 +155,18 @@
   </form>
 
 </div>
+
+
+<div class="forum-comments">
+
+  <h2>Berichten</h2>
+
+  <div id="comments">
+    Berichten worden geladen...
+  </div>
+
+</div>
+
 
 <div class="footer-nav">
   <a href="doelstellingen.html">Doelstellingen</a>
@@ -77,5 +176,70 @@
 </div>
 
 </div>
+
+
+<script>
+
+fetch('https://ziscus.bruinekroeg.workers.dev/comments/forum')
+
+  .then(response => response.json())
+
+  .then(comments => {
+
+    const container = document.getElementById('comments');
+
+    if (!comments.length) {
+      container.innerHTML = '<p>Nog geen berichten. Wees de eerste!</p>';
+      return;
+    }
+
+    container.innerHTML = '';
+
+    comments.forEach(comment => {
+
+      const article = document.createElement('article');
+      article.className = 'forum-comment';
+
+      const header = document.createElement('div');
+      header.className = 'forum-comment-header';
+
+      const author = document.createElement('strong');
+      author.className = 'forum-comment-author';
+      author.textContent = comment.author;
+
+      const date = document.createElement('span');
+      date.className = 'forum-comment-date';
+
+      const d = new Date(comment.created_at);
+
+      date.textContent = d.toLocaleDateString('nl-NL');
+
+      header.appendChild(author);
+      header.appendChild(date);
+
+      const body = document.createElement('p');
+      body.className = 'forum-comment-body';
+      body.textContent = comment.body;
+
+      article.appendChild(header);
+      article.appendChild(body);
+
+      container.appendChild(article);
+
+    });
+
+  })
+
+  .catch(error => {
+
+    document.getElementById('comments').innerHTML =
+      '<p>De berichten konden momenteel niet worden geladen.</p>';
+
+    console.error(error);
+
+  });
+
+</script>
+
 </body>
 </html>
