@@ -68,6 +68,7 @@ form input, form textarea {
     border: 1px solid #ccc;
     font-family: 'EB Garamond', serif;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 form button {
@@ -84,6 +85,40 @@ form button {
 
 form button:hover {
     background-color: #443423;
+}
+
+.checkbox-group {
+    margin: 10px 0 25px 0;
+}
+
+.checkbox-group label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"],
+.checkbox-group input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.sub-question {
+    margin-left: 25px;
+}
+
+.form-section {
+    margin-top: 35px;
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+}
+
+.hint {
+    font-size: 15px;
+    color: #666;
+    margin-top: -5px;
 }
 </style>
 </head>
@@ -111,40 +146,220 @@ form button:hover {
 
 <hr>
 
-<h1>Contactgegevens</h1>
-
-
-<h2>Aanmeldformulier Bruine Kroeg</h2>
-
-<p>
-Heeft u een vraag of wilt u contact opnemen met Stichting De Bruine Kroeg? U kunt hieronder een bericht achterlaten.
-</p>
+<h1>Aanmeldformulier Bruine Kroeg</h1>
 
 <form action="https://formspree.io/f/mykdzrdz" method="POST">
-  <p>
-    <label>
-      Uw naam:<br>
-      <input type="text" name="naam" required>
-    </label>
-  </p>
 
-  <p>
-    <label>
-      Uw e-mailadres:<br>
-      <input type="email" name="email" required>
-    </label>
-  </p>
+  <!-- Algemene gegevens -->
+  <div class="form-section">
+    <h2>Algemene gegevens</h2>
 
-  <p>
-    <label>
-      Uw bericht:<br>
-      <textarea name="bericht" rows="5" required></textarea>
-    </label>
-  </p>
+    <p>
+      <label>
+        Naam van het café:<br>
+        <input type="text" name="naam_cafe" required>
+      </label>
+    </p>
 
-  <p>
-    <button type="submit">Versturen</button>
-  </p>
+    <p class="hint">Wanneer is het café als café in gebruik genomen?</p>
+
+    <div class="checkbox-group">
+      <label>
+        <input type="radio" name="periode_cafe" value="Voor 1990" required>
+        Was al in gebruik als café vóór 1990
+      </label>
+
+      <label>
+        <input type="radio" name="periode_cafe" value="Na 1990">
+        Na 1990 als café in gebruik genomen
+      </label>
+    </div>
+
+    <p>
+      <label>
+        Plaats:<br>
+        <input type="text" name="plaats" required>
+      </label>
+    </p>
+  </div>
+
+
+  <!-- Toegankelijkheid -->
+  <div class="form-section">
+    <h2>Toegankelijkheid</h2>
+    <p class="hint">Meerdere antwoorden mogelijk</p>
+
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="toegankelijkheid[]" value="Vrij toegankelijk vanaf de straat">
+        Vrij toegankelijk vanaf de straat
+      </label>
+
+      <label>
+        <input type="checkbox" name="toegankelijkheid[]" value="Toegang via ontvangstruimte / (hotel)lobby">
+        Toegang via ontvangstruimte / (hotel)lobby
+      </label>
+
+      <label>
+        <input type="checkbox" name="toegankelijkheid[]" value="Gelegen op een straathoek">
+        Gelegen op een straathoek
+      </label>
+    </div>
+  </div>
+
+
+  <!-- Type café -->
+  <div class="form-section">
+    <h2>Type café</h2>
+    <p class="hint">Meerdere antwoorden mogelijk</p>
+
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="type_cafe[]" value="Stamcafé">
+        Stamcafé
+      </label>
+
+      <label>
+        <input type="checkbox" name="type_cafe[]" value="Buurtcafé">
+        Buurtcafé
+      </label>
+
+      <label>
+        <input type="checkbox" name="type_cafe[]" value="Muziekcafé">
+        Muziekcafé
+      </label>
+
+      <label>
+        <input type="checkbox" name="type_cafe[]" value="Eetcafé">
+        Eetcafé (onderstaande aanvullende vragen invullen)
+      </label>
+    </div>
+
+    <div class="checkbox-group sub-question">
+      <label>
+        <input type="checkbox" name="eetcafe_kenmerken[]" value="Ruimte gevuld met klaarstaande gedekte tafels">
+        Ruimte gevuld met klaarstaande gedekte tafels
+      </label>
+
+      <label>
+        <input type="checkbox" name="eetcafe_kenmerken[]" value="Café is overwegend ingericht voor eters">
+        Café is overwegend ingericht voor eters
+      </label>
+
+      <label>
+        <input type="checkbox" name="eetcafe_kenmerken[]" value="Café biedt beperkte mogelijkheid om een dagschotel te bestellen">
+        Café biedt beperkte mogelijkheid om een dagschotel te bestellen
+      </label>
+    </div>
+  </div>
+
+
+  <!-- Uiterlijke kenmerken -->
+  <div class="form-section">
+    <h2>Uiterlijke kenmerken</h2>
+    <p class="hint">Aanwezige kenmerken aankruisen</p>
+
+    <div class="checkbox-group">
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Bruine lambrisering">
+        Bruine lambrisering
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Glas-in-loodramen">
+        Glas-in-loodramen
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Houten vloer met zand">
+        Houten vloer met zand
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Granitovloer">
+        Granitovloer
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Traditionele bierkraan">
+        Traditionele bierkraan
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Stamtafel">
+        Stamtafel
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Leestafel">
+        Leestafel
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Perzische kleedjes op de tafels">
+        Perzische kleedjes op de tafels
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Bel boven de bar">
+        Bel boven de bar
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Likeurvaten tegen de wand">
+        Likeurvaten tegen de wand
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Gekookte eieren op de bar">
+        Gekookte eieren op de bar
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Biljarttafel">
+        Biljarttafel
+      </label>
+
+      <label>
+        <input type="checkbox" name="uiterlijke_kenmerken[]" value="Geen achtergrondmuziek">
+        Geen achtergrondmuziek
+      </label>
+
+    </div>
+  </div>
+
+
+  <!-- Contactgegevens -->
+  <div class="form-section">
+    <h2>Uw gegevens</h2>
+
+    <p>
+      <label>
+        Uw naam:<br>
+        <input type="text" name="naam" required>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        Uw e-mailadres:<br>
+        <input type="email" name="email" required>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        Uw bericht:<br>
+        <textarea name="bericht" rows="5"></textarea>
+      </label>
+    </p>
+
+    <p>
+      <button type="submit">Versturen</button>
+    </p>
+  </div>
+
 </form>
 
 </div>
