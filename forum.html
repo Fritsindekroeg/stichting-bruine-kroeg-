@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <title>Forum – Stichting De Bruine Kroeg</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <div class="container">
 
@@ -26,6 +27,7 @@
 <hr>
 
 <h1>Forum</h1>
+
 <img src="champagne.png" alt="" class="page-illustration champagne">
 
 <div class="forum-intro">
@@ -38,25 +40,33 @@
 </div>
 
 <div class="forum-box">
+
   <h2>Discussieer mee</h2>
-  <p>
-    Het forum wordt gekoppeld aan GitHub Discussions via Giscus. Daarmee
-    kunnen bezoekers onderwerpen starten en op elkaar reageren.
-  </p>
-
-  <!--
-    Giscus moet nog éénmalig aan de GitHub-repository worden gekoppeld.
-    Hiervoor zijn de repositorynaam, repository-ID en Discussions-category-ID nodig.
-    Zodra die bekend zijn, kan het onderstaande blok worden geactiveerd.
-  -->
 
   <p>
-    <strong>Forum binnenkort beschikbaar.</strong>
+    Deel je favoriete bruine kroeg, vertel een mooi verhaal,
+    of vraag andere liefhebbers om tips.
   </p>
-  <p>
-    We werken aan een laagdrempelige plek waar bezoekers met elkaar kunnen
-    praten over bruine kroegen.
-  </p>
+
+  <form method="POST"
+        action="https://ziscus.bruinekroeg.workers.dev/submit">
+
+    <input type="hidden" name="slug" value="forum">
+
+    <p>
+      <label for="author">Naam</label><br>
+      <input type="text" id="author" name="author" required>
+    </p>
+
+    <p>
+      <label for="body">Bericht</label><br>
+      <textarea id="body" name="body" rows="5" required></textarea>
+    </p>
+
+    <button type="submit">Plaatsen</button>
+
+  </form>
+
 </div>
 
 <div class="footer-nav">
