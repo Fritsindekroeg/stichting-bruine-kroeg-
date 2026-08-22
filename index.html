@@ -8,8 +8,64 @@
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
+<style>
+body {
+    font-family: 'EB Garamond', serif;
+    background: #f9f7f1;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
 
-  <link rel="stylesheet" href="style.css">
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 400px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a4630;
+    margin: 0 8px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3e2c1c;
+}
+
+p {
+    margin: 12px 0;
+}
+
+#kaart {
+    height: 550px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,19 +79,17 @@
   <div class="main-nav">
     <a href="index.html">Kaart</a>
     <a href="lijst-bruine-kroegen.html">Lijst</a>
-    <a href="kenmerken.html">Kenmerken</a>
+    <a href="wat-is-een-bruine-kroeg.html">Wat is een Bruine Kroeg</a>
     <a href="aanmeldformulier.html">Aanmeldformulier</a>
+    <a href="forum.html">Forum</a>
   </div>
 </nav>
 
 <hr>
 
-<div class="page-hero">
-  <h1>Kaart van Bruine Kroegen</h1>
-  <div class="page-illustration beer">
-    <img src="beer.png" alt="">
-  </div>
-</div>
+<h1>Kaart van Bruine Kroegen</h1>
+
+<img src="bier.png" alt="" class="page-illustration beer">
 
 <p>
 Op deze kaart zijn de door Stichting De Bruine Kroeg geselecteerde
@@ -44,14 +98,118 @@ Nederland tot op straatniveau. Klik op een markering voor meer
 informatie of om het café in de lijst te bekijken.
 </p>
 
+<div class="site-search">
+  <label for="site-search-input">Zoek een stad of bruine kroeg</label>
+  <div class="site-search-row">
+    <input id="site-search-input" type="search" placeholder="Bijvoorbeeld Amsterdam of Chris" autocomplete="off">
+    <button type="button" id="site-search-button">Zoeken</button>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
 <div id="kaart"></div>
 
+<div class="footer-nav">
+  <a href="doelstellingen.html">Doelstellingen</a>
+  <a href="organisatie.html">Organisatie</a>
+  <a href="geschiedenis.html">Geschiedenis</a>
+  <a href="contact.html">Contact</a>
+</div>
 </div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
+
+// =========================
+// ZOEKEN OP STAD OF KROEG
+// =========================
+var stedenZoek = {
+  "amsterdam": "steden/amsterdam.html",
+  "rotterdam": "steden/rotterdam.html",
+  "utrecht": "steden/utrecht.html",
+  "weesp": "steden/weesp.html",
+  "maastricht": "steden/maastricht.html"
+};
+
+var zoekInput = document.getElementById('site-search-input');
+var zoekButton = document.getElementById('site-search-button');
+var zoekResultaten = document.getElementById('search-results');
+
+function escapeHtml(value) {
+  return value.replace(/[&<>"']/g, function(ch) {
+    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'})[ch];
+  });
+}
+
+function zoekSite() {
+  var q = zoekInput.value.trim().toLowerCase();
+  zoekResultaten.innerHTML = '';
+
+  if (!q) {
+    zoekResultaten.style.display = 'none';
+    return;
+  }
+
+  var resultaten = [];
+
+  Object.keys(stedenZoek).forEach(function(stad) {
+    if (stad.indexOf(q) !== -1) {
+      resultaten.push({
+        naam: stad.charAt(0).toUpperCase() + stad.slice(1),
+        type: 'stad',
+        link: stedenZoek[stad]
+      });
+    }
+  });
+
+  kroegen.forEach(function(kroeg) {
+    if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
+      resultaten.push({
+        naam: kroeg.naam,
+        type: 'café',
+        link: kroeg.link
+      });
+    }
+  });
+
+  if (resultaten.length === 0) {
+    zoekResultaten.innerHTML = '<a href="#" onclick="return false;">Geen resultaten gevonden</a>';
+  } else {
+    resultaten.slice(0, 10).forEach(function(item) {
+      var a = document.createElement('a');
+      a.href = item.link;
+      a.innerHTML = escapeHtml(item.naam) +
+        ' <span class="search-type">(' + item.type + ')</span>';
+      zoekResultaten.appendChild(a);
+    });
+  }
+
+  zoekResultaten.style.display = 'block';
+}
+
+zoekInput.addEventListener('input', zoekSite);
+zoekButton.addEventListener('click', zoekSite);
+
+zoekInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    var eerste = zoekResultaten.querySelector('a');
+    if (eerste && eerste.getAttribute('href') !== '#') {
+      window.location.href = eerste.getAttribute('href');
+    } else {
+      zoekSite();
+    }
+  }
+});
+
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('.site-search')) {
+    zoekResultaten.style.display = 'none';
+  }
+});
+
 // Kaart initialiseren
 var kaart = L.map('kaart');
 
@@ -163,11 +321,6 @@ var group = new L.featureGroup(markers);
 kaart.fitBounds(group.getBounds(), {padding:[50,50]});
 </script>
 
-<div class="footer-nav">
-  <a href="doelstellingen.html">Doelstellingen</a>
-  <a href="organisatie.html">Organisatie</a>
-  <a href="geschiedenis.html">Geschiedenis</a>
-  <a href="contact.html">Contact</a>
-</div>
+<link rel="stylesheet" href="style.css">
 </body>
 </html>
