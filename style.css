@@ -596,4 +596,13 @@ div[style*="max-width"] {
     font-size: 17px;
     margin: 5px 8px;
   }
+.kaart-toelichting {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.kaart-toelichting p {
+    margin: 0;
+}
+  
 }
