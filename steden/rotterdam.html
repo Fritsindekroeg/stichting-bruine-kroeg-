@@ -254,5 +254,17 @@ document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
   }
 })();
 </script>
+<script>
+(function () {
+  var cafe = new URLSearchParams(window.location.search).get("cafe");
+  if (!cafe) return;
+  var target = document.querySelector('[data-cafe="' + cafe + '"]');
+  if (target) {
+    setTimeout(function () {
+      target.scrollIntoView({block:"start"});
+    }, 50);
+  }
+})();
+</script>
 </body>
 </html>

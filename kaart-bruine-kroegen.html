@@ -89,7 +89,18 @@ p {
 
 <h1>Kaart van Bruine Kroegen</h1>
 
- <div id="kaart"></div>
+ <div class="site-search">
+  <label for="site-search-input">Zoek een stad of bruine kroeg</label>
+  <div class="site-search-row">
+    <input id="site-search-input" type="search"
+           placeholder="Bijvoorbeeld Amsterdam of Hoppe"
+           autocomplete="off">
+    <button type="button" id="site-search-button">Zoeken</button>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+<div id="kaart"></div>
 
 <div class="kaart-toelichting">
     <p>
@@ -202,6 +213,159 @@ var kroegen = [
   {naam:"Café 't Helletje",stad:"Weesp",coords:[52.3096725,5.0430642],link:"steden/weesp.html#cafe-t-helletje"},
   {naam:"Café Toeters en bellen",stad:"Weesp",coords:[52.3092508,5.0426827],link:"steden/weesp.html#cafe-toeters-en-bellen"}
 ];
+<script>
+(function () {
+  var kroegen = [
+
+  // --- AMSTERDAM ---
+  {naam:"In 't Aepjen",stad:"Amsterdam",coords:[52.3763121,4.9001456],link:"steden/amsterdam.html#in-t-aepjen"},
+  {naam:"De Amstel",stad:"Amsterdam",coords:[52.3486333,4.9031498],link:"steden/amsterdam.html#de-amstel"},
+  {naam:"Café Anno 1890",stad:"Amsterdam",coords:[52.3223145,4.8572432],link:"steden/amsterdam.html#cafe-anno-1890"},
+  {naam:"'t Binnepretje",stad:"Amsterdam",coords:[52.3814757,4.8560893],link:"steden/amsterdam.html#t-binnepretje"},
+  {naam:"De Blauwe Druif",stad:"Amsterdam",coords:[52.3804361,4.8910498],link:"steden/amsterdam.html#de-blauwe-druif"},
+  {naam:"Brandon",stad:"Amsterdam",coords:[52.3754007,4.8864147],link:"steden/amsterdam.html#brandon"},
+  {naam:"Het Bruine Paard",stad:"Amsterdam",coords:[52.3782120,4.8859084],link:"steden/amsterdam.html#het-bruine-paard"},
+  {naam:"Chris",stad:"Amsterdam",coords:[52.3742568,4.8815665],link:"steden/amsterdam.html#chris"},
+  {naam:"Chris Scholten",stad:"Amsterdam",coords:[52.3542908,4.9014532],link:"steden/amsterdam.html#chris-scholten"},
+  {naam:"Dijk 120",stad:"Amsterdam",coords:[52.3735190,4.9001390],link:"steden/amsterdam.html#dijk-120"},
+  {naam:"Café ’t Doktertje",stad:"Amsterdam",coords:[52.3692540,4.8908258],link:"steden/amsterdam.html#cafe-t-doktertje"},
+  {naam:"De Drie Fleschjes",stad:"Amsterdam",coords:[52.3743114,4.8923128],link:"steden/amsterdam.html#de-drie-fleschjes"},
+  {naam:"Café De Druif",stad:"Amsterdam",coords:[52.3700544,4.9106101],link:"steden/amsterdam.html#cafe-de-druif"},
+  {naam:"Eddy Bar",stad:"Amsterdam",coords:[52.3554212,4.8908045],link:"steden/amsterdam.html#eddy-bar"},
+  {naam:"Eijlders",stad:"Amsterdam",coords:[52.3649045,4.8824617],link:"steden/amsterdam.html#eijlders"},
+  {naam:"Eik en Linde",stad:"Amsterdam",coords:[52.3665415,4.9109737],link:"steden/amsterdam.html#eik-en-linde"},
+  {naam:"Eland",stad:"Amsterdam",coords:[52.37003892199419,4.882316654456816],link:"steden/amsterdam.html#eland"},
+  {naam:"Elsa's Café",stad:"Amsterdam",coords:[52.3531732,4.9318944],link:"steden/amsterdam.html#elsas-cafe"},
+  {naam:"Engelse Reet",stad:"Amsterdam",coords:[52.3695417,4.8908519],link:"steden/amsterdam.html#engelse-reet"},
+  {naam:"De Fluiter",stad:"Amsterdam",coords:[52.3792998,4.8568986],link:"steden/amsterdam.html#de-fluiter"},
+  {naam:"De Gaeper",stad:"Amsterdam",coords:[52.3682500,4.8967709],link:"steden/amsterdam.html#de-gaepr"},
+  {naam:"Gijs de Rooij",stad:"Amsterdam",coords:[52.3635979,4.9316324],link:"steden/amsterdam.html#gijs-de-rooij"},
+  {naam:"De Gouden Florijn",stad:"Amsterdam",coords:[52.3738136,4.8816835],link:"steden/amsterdam.html#de-gouden-florijn"},
+  {naam:"Hans",stad:"Amsterdam",coords:[52.3536620,4.8560080],link:"steden/amsterdam.html#hans"},
+  {naam:"Café De Hegeraad",stad:"Amsterdam",coords:[52.3793796,4.8861097],link:"steden/amsterdam.html#hegeraad"},
+  {naam:"Heilig Leven",stad:"Amsterdam",coords:[52.3914745,4.8783391],link:"steden/amsterdam.html#heilig-leven"},
+  {naam:"Hermes",stad:"Amsterdam",coords:[52.35283756125418,4.889157092398292],link:"steden/amsterdam.html#hermes"},
+  {naam:"Heuvel",stad:"Amsterdam",coords:[52.362596574488435,4.887923535706524],link:"steden/amsterdam.html#heuvel"},
+  {naam:"Hoppe",stad:"Amsterdam",coords:[52.3687949,4.8885771],link:"steden/amsterdam.html#hoppe"},
+  {naam:"De Kaaiman",stad:"Amsterdam",coords:[52.3920259,4.8774372],link:"steden/amsterdam.html#de-kaaiman"},
+  {naam:"Café Karpershoek",stad:"Amsterdam",coords:[52.3781227,4.8967626],link:"steden/amsterdam.html#cafe-karpershoek"},
+  {naam:"De Kat in de Wijngaert",stad:"Amsterdam",coords:[52.3803048,4.8841132],link:"steden/amsterdam.html#de-kat-in-de-wijngaert"},
+  {naam:"Proeflokaal 't Kelkje",stad:"Amsterdam",coords:[52.3712816,4.8964124],link:"steden/amsterdam.html#proeflokaal-t-kelkje"},
+  {naam:"Krom",stad:"Amsterdam",coords:[52.36305977775503,4.898421292020936],link:"steden/amsterdam.html#krom"},
+  {naam:"Café De Laurierboom",stad:"Amsterdam",coords:[52.3722773,4.8810122],link:"steden/amsterdam.html#cafe-de-laurierboom"},
+  {naam:"'t Lommertje",stad:"Amsterdam",coords:[52.3786227,4.8505237],link:"steden/amsterdam.html#t-lommertje"},
+  {naam:"Café Louis Bar",stad:"Amsterdam",coords:[52.3762674,4.8996592],link:"steden/amsterdam.html#cafe-louis-bar"},
+  {naam:"Café Lowietje",stad:"Amsterdam",coords:[52.3803359,4.8823301],link:"steden/amsterdam.html#lowietje"},
+  {naam:"Marktzicht",stad:"Amsterdam",coords:[52.3752269,4.8709778],link:"steden/amsterdam.html#marktzicht"},
+  {naam:"'t Monumentje",stad:"Amsterdam",coords:[52.3785147,4.8830999],link:"steden/amsterdam.html#t-monumentje"},
+  {naam:"Mulder",stad:"Amsterdam",coords:[52.3597197,4.8912477],link:"steden/amsterdam.html#mulder"},
+  {naam:"De Ooievaar",stad:"Amsterdam",coords:[52.3762843,4.8999403],link:"steden/amsterdam.html#de-ooievaar"},
+  {naam:"Oosterling",stad:"Amsterdam",coords:[52.3610742,4.8992555],link:"steden/amsterdam.html#oosterling"},
+  {naam:"Café ’t Papeneiland",stad:"Amsterdam",coords:[52.3804606,4.8879944],link:"steden/amsterdam.html#papeneiland"},
+  {naam:"Pieper",stad:"Amsterdam",coords:[52.36627800873316, 4.882360233779918],link:"steden/amsterdam.html#pieper"},
+  {naam:"Café Pierewaaier",stad:"Amsterdam",coords:[52.3717036,4.8793151],link:"steden/amsterdam.html#cafe-pierewaaier"},
+  {naam:"De Poort",stad:"Amsterdam",coords:[52.3822345,4.8881636],link:"steden/amsterdam.html#de-poort"},
+  {naam:"Quelle",stad:"Amsterdam",coords:[52.3618546,4.8647467],link:"steden/amsterdam.html#quelle"},
+  {naam:"De Roode Laars",stad:"Amsterdam",coords:[52.3759723,4.9005464],link:"steden/amsterdam.html#de-roode-laars"},
+  {naam:"De Roosenboom",stad:"Amsterdam",coords:[52.3534450,4.8322314],link:"steden/amsterdam.html#de-roosenboom"},
+  {naam:"Ruk en Pluk",stad:"Amsterdam",coords:[52.3574362,4.9266870],link:"steden/amsterdam.html#ruk-en-pluk"},
+  {naam:"Café Saarein",stad:"Amsterdam",coords:[52.3702870,4.8802861],link:"steden/amsterdam.html#cafe-saarein"},
+  {naam:"Scharrebier",stad:"Amsterdam",coords:[52.3704414,4.9111074],link:"steden/amsterdam.html#scharrebier"},
+  {naam:"Schumich",stad:"Amsterdam",coords:[52.3794513,4.8942218],link:"steden/amsterdam.html#schumich"},
+  {naam:"'t Sluisje",stad:"Amsterdam",coords:[52.3912178,4.9382277],link:"steden/amsterdam.html#t-sluisje"},
+  {naam:"Café 't Smalle",stad:"Amsterdam",coords:[52.3767194,4.8841388],link:"steden/amsterdam.html#cafe-t-smalle"},
+  {naam:"Sportpark",stad:"Amsterdam",coords:[52.3747914,4.8577787],link:"steden/amsterdam.html#sportpark"},
+  {naam:"De Twee Zwaantjes",stad:"Amsterdam",coords:[52.3763480,4.8842005],link:"steden/amsterdam.html#de-twee-zwaantjes"},
+  {naam:"Café Welling",stad:"Amsterdam",coords:[52.3559611,4.8772825],link:"steden/amsterdam.html#cafe-welling"},
+  {naam:"Westerdok",stad:"Amsterdam",coords:[52.3893192,4.8912520],link:"steden/amsterdam.html#westerdok"},
+  {naam:"In de Wildeman",stad:"Amsterdam",coords:[52.3761636,4.8951567],link:"steden/amsterdam.html#in-de-wildeman"},
+  {naam:"Café van Wou",stad:"Amsterdam",coords:[52.3566949,4.8999592],link:"steden/amsterdam.html#cafe-van-wou"},
+  {naam:"De Zwart",stad:"Amsterdam",coords:[52.3688850,4.8885540],link:"steden/amsterdam.html#de-zwart"},
+
+  // --- ROTTERDAM ---
+  {naam:"Café ’t Haventje",stad:"Rotterdam",coords:[51.9111827,4.4926794],link:"steden/rotterdam.html#cafe-t-haventje"},
+  {naam:"Café De Pui",stad:"Rotterdam",coords:[51.9230271,4.5002764],link:"steden/rotterdam.html#cafe-de-pui"},
+
+  // --- UTRECHT ---
+  {naam:"Café Vredenburg",stad:"Utrecht",coords:[52.0930353,5.1124134],link:"steden/utrecht.html#cafe-vredenburg"},
+
+  // --- WEESP ---
+  {naam:"Café Bijna Thuis",stad:"Weesp",coords:[52.3065633,5.0412022],link:"steden/weesp.html#cafe-bijna-thuis"},
+  {naam:"Café de Heksenketel",stad:"Weesp",coords:[52.3086929,5.0417616],link:"steden/weesp.html#cafe-de-heksenketel"},
+  {naam:"Café 't Helletje",stad:"Weesp",coords:[52.3096725,5.0430642],link:"steden/weesp.html#cafe-t-helletje"},
+  {naam:"Café Toeters en bellen",stad:"Weesp",coords:[52.3092508,5.0426827],link:"steden/weesp.html#cafe-toeters-en-bellen"}
+  ];
+
+  var steden = {
+    "amsterdam": "steden/amsterdam.html",
+    "rotterdam": "steden/rotterdam.html",
+    "utrecht": "steden/utrecht.html",
+    "weesp": "steden/weesp.html",
+    "maastricht": "steden/maastricht.html"
+  };
+
+  var input = document.getElementById("site-search-input");
+  var button = document.getElementById("site-search-button");
+  var results = document.getElementById("search-results");
+
+  function zoek() {
+    var q = input.value.trim().toLowerCase();
+    results.innerHTML = "";
+
+    if (!q) {
+      results.style.display = "none";
+      return;
+    }
+
+    var found = [];
+
+    Object.keys(steden).forEach(function (stad) {
+      if (stad.indexOf(q) !== -1) {
+        found.push({
+          naam: stad.charAt(0).toUpperCase() + stad.slice(1),
+          type: "stad",
+          href: steden[stad]
+        });
+      }
+    });
+
+    kroegen.forEach(function (kroeg) {
+      if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
+        var parts = kroeg.link.split("#");
+        found.push({
+          naam: kroeg.naam,
+          type: "café",
+          href: parts[0] + "?cafe=" + parts[1]
+        });
+      }
+    });
+
+    if (!found.length) {
+      results.textContent = "Geen resultaten gevonden";
+    } else {
+      found.slice(0, 10).forEach(function (item) {
+        var a = document.createElement("a");
+        a.href = item.href;
+        a.textContent = item.naam + " (" + item.type + ")";
+        results.appendChild(a);
+      });
+    }
+
+    results.style.display = "block";
+  }
+
+  input.addEventListener("input", zoek);
+  button.addEventListener("click", zoek);
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      var first = results.querySelector("a");
+      if (first) window.location.href = first.href;
+    }
+  });
+})();
+</script>
+
 
 // =========================
 // MARKERS PLAATSEN

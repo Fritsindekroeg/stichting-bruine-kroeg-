@@ -393,5 +393,53 @@ footer {
 
 
 
+<script>
+(function () {
+  var input = document.getElementById("site-search-input");
+  var button = document.getElementById("site-search-button");
+  var results = document.getElementById("search-results");
+  var links = Array.prototype.slice.call(results.querySelectorAll("a.search-item"));
+
+  function zoek() {
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+
+    links.forEach(function (link) {
+      var name = (link.getAttribute("data-search-name") || "").toLowerCase();
+      var city = (link.getAttribute("data-search-city") || "").toLowerCase();
+      var match = q && (name.indexOf(q) !== -1 || city.indexOf(q) !== -1);
+
+      link.style.display = match && shown < 10 ? "block" : "none";
+      if (match && shown < 10) shown++;
+    });
+
+    if (!q) {
+      results.style.display = "none";
+      return;
+    }
+
+    if (shown === 0) {
+      results.innerHTML = "";
+      var none = document.createElement("div");
+      none.className = "search-no-result";
+      none.textContent = "Geen resultaten gevonden";
+      results.appendChild(none);
+    }
+
+    results.style.display = "block";
+  }
+
+  input.addEventListener("input", zoek);
+  button.addEventListener("click", zoek);
+
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      var first = results.querySelector("a.search-item[style*='block']");
+      if (first) window.location.href = first.href;
+    }
+  });
+})();
+</script>
 </body>
 </html>
