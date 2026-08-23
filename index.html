@@ -139,33 +139,35 @@ footer {
 
 <h2 class="steden-heading">Ontdek per stad</h2>
 
-<div class="steden-grid">
-    <a href="steden/amsterdam.html" class="stad-kaart">
-      <span class="stad-naam">Amsterdam</span>
-      <span class="stad-link">Ontdek de kroegen →</span>
-    </a>
-    <a href="steden/rotterdam.html" class="stad-kaart">
-      <span class="stad-naam">Rotterdam</span>
-      <span class="stad-link">Ontdek de kroegen →</span>
-    </a>
-    <a href="steden/utrecht.html" class="stad-kaart">
-      <span class="stad-naam">Utrecht</span>
-      <span class="stad-link">Ontdek de kroegen →</span>
-    </a>
-    <a href="steden/weesp.html" class="stad-kaart">
-      <span class="stad-naam">Weesp</span>
-      <span class="stad-link">Ontdek de kroegen →</span>
-    </a>
+<div class="steden-lijst">
+  <a href="steden/amsterdam.html" class="stad-regel">
+    <span class="stad-regel-naam">Amsterdam</span>
+    <span class="stad-regel-info" data-city-count="Amsterdam"></span>
+    <span class="stad-regel-pijl">→</span>
+  </a>
+  <a href="steden/rotterdam.html" class="stad-regel">
+    <span class="stad-regel-naam">Rotterdam</span>
+    <span class="stad-regel-info" data-city-count="Rotterdam"></span>
+    <span class="stad-regel-pijl">→</span>
+  </a>
+  <a href="steden/utrecht.html" class="stad-regel">
+    <span class="stad-regel-naam">Utrecht</span>
+    <span class="stad-regel-info" data-city-count="Utrecht"></span>
+    <span class="stad-regel-pijl">→</span>
+  </a>
+  <a href="steden/weesp.html" class="stad-regel">
+    <span class="stad-regel-naam">Weesp</span>
+    <span class="stad-regel-info" data-city-count="Weesp"></span>
+    <span class="stad-regel-pijl">→</span>
+  </a>
 </div>
-
 <div class="kroegen-info">
-  <h2>Een bruine kroeg is meer dan een café</h2>
   <p>
-    Een goede bruine kroeg heeft karakter. Een plek waar het interieur,
-    de geschiedenis en de sfeer samenkomen en waar je je meteen thuis voelt.
+    Een bruine kroeg is meer dan een café: het zijn plekken met karakter,
+    geschiedenis en een sfeer waarin je je meteen thuis voelt.
   </p>
   <a href="wat-is-een-bruine-kroeg.html" class="info-link">
-    Wat is een Bruine Kroeg? →
+    Lees wat wij verstaan onder een bruine kroeg →
   </a>
 </div>
 
@@ -193,6 +195,7 @@ var stedenZoek = {
 };
 
 var kroegen = [
+
 
   // --- AMSTERDAM ---
   {naam:"In 't Aepjen",stad:"Amsterdam",coords:[52.3763121,4.9001456],link:"steden/amsterdam.html#in-t-aepjen"},
@@ -276,6 +279,25 @@ var kroegen = [
 var zoekInput = document.getElementById('site-search-input');
 var zoekButton = document.getElementById('site-search-button');
 var zoekResultaten = document.getElementById('search-results');
+var stadAantallen = {
+  "Amsterdam": 0,
+  "Rotterdam": 0,
+  "Utrecht": 0,
+  "Weesp": 0
+};
+
+kroegen.forEach(function(kroeg) {
+  if (stadAantallen.hasOwnProperty(kroeg.stad)) {
+    stadAantallen[kroeg.stad]++;
+  }
+});
+
+document.querySelectorAll('[data-city-count]').forEach(function(element) {
+  var stad = element.getAttribute('data-city-count');
+  var aantal = stadAantallen[stad] || 0;
+  element.textContent = aantal + (aantal === 1 ? ' kroeg' : ' kroegen');
+});
+
 
 function escapeHtml(value) {
   return value.replace(/[&<>"']/g, function(ch) {
@@ -315,13 +337,16 @@ function zoekSite() {
   });
 
   if (resultaten.length === 0) {
-    zoekResultaten.innerHTML = '<a href="#" onclick="return false;">Geen resultaten gevonden</a>';
+    zoekResultaten.innerHTML = '<span class="search-no-result">Geen resultaten gevonden</span>';
   } else {
     resultaten.slice(0, 10).forEach(function(item) {
       var a = document.createElement('a');
       a.href = item.link;
-      a.innerHTML = escapeHtml(item.naam) +
-        ' <span class="search-type">(' + item.type + ')</span>';
+      a.textContent = item.naam;
+      a.setAttribute('data-type', item.type);
+      a.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
       zoekResultaten.appendChild(a);
     });
   }
@@ -336,8 +361,8 @@ zoekInput.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
     event.preventDefault();
     var eerste = zoekResultaten.querySelector('a');
-    if (eerste && eerste.getAttribute('href') !== '#') {
-      window.location.href = eerste.getAttribute('href');
+    if (eerste) {
+      window.location.assign(eerste.href);
     } else {
       zoekSite();
     }
