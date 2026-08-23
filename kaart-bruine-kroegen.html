@@ -92,9 +92,7 @@ p {
  <div class="site-search">
   <label for="site-search-input">Zoek een stad of bruine kroeg</label>
   <div class="site-search-row">
-    <input id="site-search-input" type="search"
-           placeholder="Bijvoorbeeld Amsterdam of Hoppe"
-           autocomplete="off">
+    <input id="site-search-input" type="search" placeholder="Bijvoorbeeld Amsterdam of Hoppe" autocomplete="off">
     <button type="button" id="site-search-button">Zoeken</button>
   </div>
   <div id="search-results" class="search-results"></div>
@@ -213,6 +211,26 @@ var kroegen = [
   {naam:"Café 't Helletje",stad:"Weesp",coords:[52.3096725,5.0430642],link:"steden/weesp.html#cafe-t-helletje"},
   {naam:"Café Toeters en bellen",stad:"Weesp",coords:[52.3092508,5.0426827],link:"steden/weesp.html#cafe-toeters-en-bellen"}
 ];
+
+// =========================
+// MARKERS PLAATSEN
+// =========================
+var markers = [];
+kroegen.forEach(function(kroeg) {
+  var marker = L.marker(kroeg.coords)
+    .addTo(kaart)
+    .bindPopup(
+      "<strong>" + kroeg.naam + "</strong><br>" +
+      kroeg.stad + "<br>" +
+      "<a href='" + kroeg.link + "'>Bekijk in lijst</a>"
+    );
+  markers.push(marker);
+});
+
+// kaart automatisch passend maken voor alle pins
+var group = new L.featureGroup(markers);
+kaart.fitBounds(group.getBounds(), {padding:[50,50]});
+</script>
 <script>
 (function () {
   var kroegen = [
@@ -300,15 +318,19 @@ var kroegen = [
     "amsterdam": "steden/amsterdam.html",
     "rotterdam": "steden/rotterdam.html",
     "utrecht": "steden/utrecht.html",
-    "weesp": "steden/weesp.html",
-    "maastricht": "steden/maastricht.html"
+    "weesp": "steden/weesp.html"
   };
 
   var input = document.getElementById("site-search-input");
   var button = document.getElementById("site-search-button");
   var results = document.getElementById("search-results");
 
-  function zoek() {
+  function cafeUrl(link) {
+    var hash = link.indexOf("#");
+    return hash === -1 ? link : link.substring(0, hash) + "?cafe=" + link.substring(hash + 1);
+  }
+
+  function search() {
     var q = input.value.trim().toLowerCase();
     results.innerHTML = "";
 
@@ -319,72 +341,39 @@ var kroegen = [
 
     var found = [];
 
-    Object.keys(steden).forEach(function (stad) {
-      if (stad.indexOf(q) !== -1) {
-        found.push({
-          naam: stad.charAt(0).toUpperCase() + stad.slice(1),
-          type: "stad",
-          href: steden[stad]
-        });
+    Object.keys(steden).forEach(function (city) {
+      if (city.indexOf(q) !== -1) {
+        found.push({name: city.charAt(0).toUpperCase()+city.slice(1), type:"stad", href:steden[city]});
       }
     });
 
-    kroegen.forEach(function (kroeg) {
-      if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
-        var parts = kroeg.link.split("#");
-        found.push({
-          naam: kroeg.naam,
-          type: "café",
-          href: parts[0] + "?cafe=" + parts[1]
-        });
+    kroegen.forEach(function (cafe) {
+      if (cafe.naam.toLowerCase().indexOf(q) !== -1) {
+        found.push({name:cafe.naam, type:"café", href:cafeUrl(cafe.link)});
       }
     });
 
-    if (!found.length) {
-      results.textContent = "Geen resultaten gevonden";
-    } else {
-      found.slice(0, 10).forEach(function (item) {
-        var a = document.createElement("a");
-        a.href = item.href;
-        a.textContent = item.naam + " (" + item.type + ")";
-        results.appendChild(a);
-      });
-    }
+    found.slice(0,10).forEach(function (item) {
+      var a=document.createElement("a");
+      a.href=item.href;
+      a.textContent=item.name+" ("+item.type+")";
+      results.appendChild(a);
+    });
 
-    results.style.display = "block";
+    if (!found.length) results.textContent="Geen resultaten gevonden";
+    results.style.display="block";
   }
 
-  input.addEventListener("input", zoek);
-  button.addEventListener("click", zoek);
-  input.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      var first = results.querySelector("a");
-      if (first) window.location.href = first.href;
+  input.addEventListener("input", search);
+  button.addEventListener("click", search);
+  input.addEventListener("keydown", function(e) {
+    if(e.key==="Enter") {
+      e.preventDefault();
+      var first=results.querySelector("a");
+      if(first) window.location.href=first.href;
     }
   });
 })();
-</script>
-
-
-// =========================
-// MARKERS PLAATSEN
-// =========================
-var markers = [];
-kroegen.forEach(function(kroeg) {
-  var marker = L.marker(kroeg.coords)
-    .addTo(kaart)
-    .bindPopup(
-      "<strong>" + kroeg.naam + "</strong><br>" +
-      kroeg.stad + "<br>" +
-      "<a href='" + kroeg.link + "'>Bekijk in lijst</a>"
-    );
-  markers.push(marker);
-});
-
-// kaart automatisch passend maken voor alle pins
-var group = new L.featureGroup(markers);
-kaart.fitBounds(group.getBounds(), {padding:[50,50]});
 </script>
 </body>
 </html>
