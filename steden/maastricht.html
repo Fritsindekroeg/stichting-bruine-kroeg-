@@ -127,5 +127,19 @@ document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
   }
 })();
 </script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var cafe = params.get("cafe");
+  if (!cafe) return;
+
+  var target = document.querySelector('.cafe[data-cafe="' + CSS.escape(cafe) + '"]');
+  if (target) {
+    window.setTimeout(function () {
+      target.scrollIntoView({ block: "start" });
+    }, 50);
+  }
+})();
+</script>
 </body>
 </html>

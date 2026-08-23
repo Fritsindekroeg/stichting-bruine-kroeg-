@@ -119,7 +119,88 @@ informatie of om het café in de lijst te bekijken.
 </div>
 
 <!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function () {
+  var stedenZoek = {
+    "amsterdam": "steden/amsterdam.html",
+    "rotterdam": "steden/rotterdam.html",
+    "utrecht": "steden/utrecht.html",
+    "weesp": "steden/weesp.html",
+    "maastricht": "steden/maastricht.html"
+  };
+
+  var zoekInput = document.getElementById("site-search-input");
+  var zoekButton = document.getElementById("site-search-button");
+  var zoekResultaten = document.getElementById("search-results");
+
+  function toonResultaten() {
+    var q = zoekInput.value.trim().toLowerCase();
+    zoekResultaten.innerHTML = "";
+
+    if (!q) {
+      zoekResultaten.style.display = "none";
+      return;
+    }
+
+    var resultaten = [];
+
+    Object.keys(stedenZoek).forEach(function (stad) {
+      if (stad.indexOf(q) !== -1) {
+        resultaten.push({
+          naam: stad.charAt(0).toUpperCase() + stad.slice(1),
+          type: "stad",
+          link: stedenZoek[stad]
+        });
+      }
+    });
+
+    kroegen.forEach(function (kroeg) {
+      if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
+        resultaten.push({
+          naam: kroeg.naam,
+          type: "café",
+          link: kroeg.link.replace(/#.*$/, "") + "?cafe=" + kroeg.link.split("#")[1]
+        });
+      }
+    });
+
+    if (!resultaten.length) {
+      var none = document.createElement("div");
+      none.className = "search-no-result";
+      none.textContent = "Geen resultaten gevonden";
+      zoekResultaten.appendChild(none);
+    } else {
+      resultaten.slice(0, 10).forEach(function (item) {
+        var a = document.createElement("a");
+        a.href = item.link;
+        a.textContent = item.naam + " (" + item.type + ")";
+        zoekResultaten.appendChild(a);
+      });
+    }
+
+    zoekResultaten.style.display = "block";
+  }
+
+  zoekInput.addEventListener("input", toonResultaten);
+  zoekButton.addEventListener("click", toonResultaten);
+
+  zoekInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      var eerste = zoekResultaten.querySelector("a");
+      if (eerste) {
+        window.location.href = eerste.href;
+      }
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".site-search")) {
+      zoekResultaten.style.display = "none";
+    }
+  });
+})();
+</script>
 
 <script>
 
@@ -134,22 +215,21 @@ var stedenZoek = {
   "maastricht": "steden/maastricht.html"
 };
 
-var zoekInput = document.getElementById('site-search-input');
-var zoekButton = document.getElementById('site-search-button');
-var zoekResultaten = document.getElementById('search-results');
+var zoekInput = document.getElementById("site-search-input");
+var zoekButton = document.getElementById("site-search-button");
+var zoekResultaten = document.getElementById("search-results");
 
-function escapeHtml(value) {
-  return value.replace(/[&<>"']/g, function(ch) {
-    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'})[ch];
-  });
+function maakCafeLink(link) {
+  var parts = link.split("#");
+  return parts[0] + "?cafe=" + parts[1];
 }
 
 function zoekSite() {
   var q = zoekInput.value.trim().toLowerCase();
-  zoekResultaten.innerHTML = '';
+  zoekResultaten.innerHTML = "";
 
   if (!q) {
-    zoekResultaten.style.display = 'none';
+    zoekResultaten.style.display = "none";
     return;
   }
 
@@ -159,7 +239,7 @@ function zoekSite() {
     if (stad.indexOf(q) !== -1) {
       resultaten.push({
         naam: stad.charAt(0).toUpperCase() + stad.slice(1),
-        type: 'stad',
+        type: "stad",
         link: stedenZoek[stad]
       });
     }
@@ -169,45 +249,43 @@ function zoekSite() {
     if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
       resultaten.push({
         naam: kroeg.naam,
-        type: 'café',
-        link: kroeg.link
+        type: "café",
+        link: maakCafeLink(kroeg.link)
       });
     }
   });
 
-  if (resultaten.length === 0) {
-    zoekResultaten.innerHTML = '<a href="#" onclick="return false;">Geen resultaten gevonden</a>';
+  if (!resultaten.length) {
+    var none = document.createElement("div");
+    none.className = "search-no-result";
+    none.textContent = "Geen resultaten gevonden";
+    zoekResultaten.appendChild(none);
   } else {
     resultaten.slice(0, 10).forEach(function(item) {
-      var a = document.createElement('a');
+      var a = document.createElement("a");
       a.href = item.link;
-      a.innerHTML = escapeHtml(item.naam) +
-        ' <span class="search-type">(' + item.type + ')</span>';
+      a.textContent = item.naam + " (" + item.type + ")";
       zoekResultaten.appendChild(a);
     });
   }
 
-  zoekResultaten.style.display = 'block';
+  zoekResultaten.style.display = "block";
 }
 
-zoekInput.addEventListener('input', zoekSite);
-zoekButton.addEventListener('click', zoekSite);
+zoekInput.addEventListener("input", zoekSite);
+zoekButton.addEventListener("click", zoekSite);
 
-zoekInput.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
+zoekInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
     event.preventDefault();
-    var eerste = zoekResultaten.querySelector('a');
-    if (eerste && eerste.getAttribute('href') !== '#') {
-      window.location.href = eerste.getAttribute('href');
-    } else {
-      zoekSite();
-    }
+    var first = zoekResultaten.querySelector("a");
+    if (first) window.location.href = first.href;
   }
 });
 
-document.addEventListener('click', function(event) {
-  if (!event.target.closest('.site-search')) {
-    zoekResultaten.style.display = 'none';
+document.addEventListener("click", function(event) {
+  if (!event.target.closest(".site-search")) {
+    zoekResultaten.style.display = "none";
   }
 });
 
