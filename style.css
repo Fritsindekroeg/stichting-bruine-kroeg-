@@ -421,6 +421,144 @@ button:hover { background: #5f3923; }
   border-radius: 8px;
 }
 
+
+/* KROEGEN HOMEPAGE */
+.kroegen-intro {
+  max-width: 700px;
+  margin: -5px auto 28px;
+  text-align: center;
+}
+
+.kroegen-intro .page-illustration {
+  margin-bottom: 8px;
+}
+
+.kroegen-lead {
+  margin: 0 auto;
+  max-width: 650px;
+  color: #5a4a40;
+  font-size: 1.25em;
+  line-height: 1.65;
+}
+
+.steden-heading {
+  border: none;
+  margin: 42px 0 18px;
+  padding: 0;
+  text-align: center;
+  font-size: 1.65em;
+  color: #3a2f2a;
+}
+
+.steden-heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 10px auto 0;
+  background: #d6c7b4;
+}
+
+.steden-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.stad-kaart {
+  min-height: 105px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f6f0e5;
+  border: 1px solid #d7c8b3;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(65,45,30,.05);
+}
+
+.stad-kaart:hover {
+  background: #eee4d4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(65,45,30,.09);
+}
+
+.stad-naam {
+  display: block;
+  font-size: 1.45em;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.stad-link {
+  display: block;
+  margin-top: 5px;
+  color: #7a604a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .82em;
+  font-weight: 600;
+}
+
+.kroegen-info {
+  max-width: 700px;
+  margin: 48px auto 28px;
+  padding: 25px 30px;
+  background: #fff;
+  border-left: 4px solid #9a7654;
+  border-top: 1px solid #e5dfd6;
+  border-right: 1px solid #e5dfd6;
+  border-bottom: 1px solid #e5dfd6;
+  border-radius: 4px;
+}
+
+.kroegen-info h2 {
+  border: none;
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 1.55em;
+}
+
+.kroegen-info p {
+  margin: 0 0 12px;
+  color: #5b5049;
+}
+
+.info-link {
+  color: #704b32;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}
+
+.lijst-toelichting {
+  max-width: 700px;
+  margin: 30px auto;
+  color: #6b625c;
+  font-size: .98em;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .steden-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kroegen-lead {
+    font-size: 1.15em;
+  }
+
+  .kroegen-info {
+    padding: 20px;
+  }
+}
+
+
 /* MOBIEL */
 @media (max-width: 600px) {
   .container { padding: 20px 15px; }
