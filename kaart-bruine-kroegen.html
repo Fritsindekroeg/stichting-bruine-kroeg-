@@ -222,7 +222,7 @@ kroegen.forEach(function(kroeg) {
     .bindPopup(
       "<strong>" + kroeg.naam + "</strong><br>" +
       kroeg.stad + "<br>" +
-      "<a href='" + kroeg.link + "'>Bekijk in lijst</a>"
+      "<a href='" + kroeg.link.replace("#", "?cafe=") + "'>Bekijk in lijst</a>"
     );
   markers.push(marker);
 });
