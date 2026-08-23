@@ -612,20 +612,6 @@ document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
 });
 </script>
 <script>
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  const cafe = params.get("cafe");
-  if (!cafe) return;
-
-  const target = document.querySelector('.cafe[data-cafe="' + CSS.escape(cafe) + '"]');
-  if (target) {
-    window.setTimeout(function () {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  }
-})();
-</script>
-<script>
 window.addEventListener("load", function () {
   var cafe = new URLSearchParams(window.location.search).get("cafe");
   if (!cafe) return;
@@ -637,6 +623,33 @@ window.addEventListener("load", function () {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   }
+});
+</script>
+<script>
+window.addEventListener("load", function () {
+  var cafe = new URLSearchParams(window.location.search).get("cafe");
+  if (!cafe) return;
+
+  var target = document.querySelector('[data-cafe="' + cafe + '"]');
+  if (!target) return;
+
+  var attempts = 0;
+
+  function positionCafe() {
+    attempts++;
+
+    var y = target.getBoundingClientRect().top + window.pageYOffset - 20;
+    window.scrollTo(0, y);
+
+    // Café photos are loaded lazily. They can change the page height/position
+    // after the first scroll, so repeat the positioning while they load.
+    if (attempts < 12) {
+      window.setTimeout(positionCafe, 250);
+    }
+  }
+
+  // Give the page a moment after load before the first positioning.
+  window.setTimeout(positionCafe, 100);
 });
 </script>
 </body>
