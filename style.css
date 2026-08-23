@@ -615,3 +615,43 @@ button:hover { background: #5f3923; }
   color: #7a6a60;
   font-size: 17px;
 }
+
+
+/* Bruine Kroegen - intro block */
+.kroegen-uitleg {
+  max-width: 720px;
+  margin: 34px auto 30px;
+  padding: 24px 30px;
+  background: #f5f0e7;
+  border-top: 1px solid #d9cdbd;
+  border-bottom: 1px solid #d9cdbd;
+  text-align: center;
+}
+
+.kroegen-uitleg h2 {
+  margin: 0 0 8px;
+  padding: 0;
+  border: none;
+  font-size: 1.7em;
+  color: #3a2f2a;
+}
+
+.kroegen-uitleg p {
+  max-width: 650px;
+  margin: 0 auto 12px;
+  color: #5b5049;
+  font-size: 1.08em;
+  line-height: 1.65;
+}
+
+.kroegen-uitleg a {
+  color: #704b32;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kroegen-uitleg a:hover {
+  text-decoration: underline;
+}
