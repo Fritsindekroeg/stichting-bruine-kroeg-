@@ -119,180 +119,12 @@ informatie of om het café in de lijst te bekijken.
 </div>
 
 <!-- Leaflet JS -->
-<script>
-(function () {
-  var stedenZoek = {
-    "amsterdam": "steden/amsterdam.html",
-    "rotterdam": "steden/rotterdam.html",
-    "utrecht": "steden/utrecht.html",
-    "weesp": "steden/weesp.html",
-    "maastricht": "steden/maastricht.html"
-  };
-
-  var zoekInput = document.getElementById("site-search-input");
-  var zoekButton = document.getElementById("site-search-button");
-  var zoekResultaten = document.getElementById("search-results");
-
-  function toonResultaten() {
-    var q = zoekInput.value.trim().toLowerCase();
-    zoekResultaten.innerHTML = "";
-
-    if (!q) {
-      zoekResultaten.style.display = "none";
-      return;
-    }
-
-    var resultaten = [];
-
-    Object.keys(stedenZoek).forEach(function (stad) {
-      if (stad.indexOf(q) !== -1) {
-        resultaten.push({
-          naam: stad.charAt(0).toUpperCase() + stad.slice(1),
-          type: "stad",
-          link: stedenZoek[stad]
-        });
-      }
-    });
-
-    kroegen.forEach(function (kroeg) {
-      if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
-        resultaten.push({
-          naam: kroeg.naam,
-          type: "café",
-          link: kroeg.link.replace(/#.*$/, "") + "?cafe=" + kroeg.link.split("#")[1]
-        });
-      }
-    });
-
-    if (!resultaten.length) {
-      var none = document.createElement("div");
-      none.className = "search-no-result";
-      none.textContent = "Geen resultaten gevonden";
-      zoekResultaten.appendChild(none);
-    } else {
-      resultaten.slice(0, 10).forEach(function (item) {
-        var a = document.createElement("a");
-        a.href = item.link;
-        a.textContent = item.naam + " (" + item.type + ")";
-        zoekResultaten.appendChild(a);
-      });
-    }
-
-    zoekResultaten.style.display = "block";
-  }
-
-  zoekInput.addEventListener("input", toonResultaten);
-  zoekButton.addEventListener("click", toonResultaten);
-
-  zoekInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      var eerste = zoekResultaten.querySelector("a");
-      if (eerste) {
-        window.location.href = eerste.href;
-      }
-    }
-  });
-
-  document.addEventListener("click", function (event) {
-    if (!event.target.closest(".site-search")) {
-      zoekResultaten.style.display = "none";
-    }
-  });
-})();
-</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-
-// =========================
-// ZOEKEN OP STAD OF KROEG
-// =========================
-var stedenZoek = {
-  "amsterdam": "steden/amsterdam.html",
-  "rotterdam": "steden/rotterdam.html",
-  "utrecht": "steden/utrecht.html",
-  "weesp": "steden/weesp.html",
-  "maastricht": "steden/maastricht.html"
-};
-
-var zoekInput = document.getElementById("site-search-input");
-var zoekButton = document.getElementById("site-search-button");
-var zoekResultaten = document.getElementById("search-results");
-
-function maakCafeLink(link) {
-  var parts = link.split("#");
-  return parts[0] + "?cafe=" + parts[1];
-}
-
-function zoekSite() {
-  var q = zoekInput.value.trim().toLowerCase();
-  zoekResultaten.innerHTML = "";
-
-  if (!q) {
-    zoekResultaten.style.display = "none";
-    return;
-  }
-
-  var resultaten = [];
-
-  Object.keys(stedenZoek).forEach(function(stad) {
-    if (stad.indexOf(q) !== -1) {
-      resultaten.push({
-        naam: stad.charAt(0).toUpperCase() + stad.slice(1),
-        type: "stad",
-        link: stedenZoek[stad]
-      });
-    }
-  });
-
-  kroegen.forEach(function(kroeg) {
-    if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
-      resultaten.push({
-        naam: kroeg.naam,
-        type: "café",
-        link: maakCafeLink(kroeg.link)
-      });
-    }
-  });
-
-  if (!resultaten.length) {
-    var none = document.createElement("div");
-    none.className = "search-no-result";
-    none.textContent = "Geen resultaten gevonden";
-    zoekResultaten.appendChild(none);
-  } else {
-    resultaten.slice(0, 10).forEach(function(item) {
-      var a = document.createElement("a");
-      a.href = item.link;
-      a.textContent = item.naam + " (" + item.type + ")";
-      zoekResultaten.appendChild(a);
-    });
-  }
-
-  zoekResultaten.style.display = "block";
-}
-
-zoekInput.addEventListener("input", zoekSite);
-zoekButton.addEventListener("click", zoekSite);
-
-zoekInput.addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    var first = zoekResultaten.querySelector("a");
-    if (first) window.location.href = first.href;
-  }
-});
-
-document.addEventListener("click", function(event) {
-  if (!event.target.closest(".site-search")) {
-    zoekResultaten.style.display = "none";
-  }
-});
-
 // Kaart initialiseren
 var kaart = L.map('kaart');
 
-// OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap-bijdragers'
 }).addTo(kaart);
@@ -301,6 +133,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // ALLE KROEGEN
 // =========================
 var kroegen = [
+
   // --- AMSTERDAM ---
   {naam:"In 't Aepjen",stad:"Amsterdam",coords:[52.3763121,4.9001456],link:"steden/amsterdam.html#in-t-aepjen"},
   {naam:"De Amstel",stad:"Amsterdam",coords:[52.3486333,4.9031498],link:"steden/amsterdam.html#de-amstel"},
@@ -381,6 +214,90 @@ var kroegen = [
 ];
 
 // =========================
+// ZOEKEN OP STAD OF KROEG
+// =========================
+(function () {
+  var stedenZoek = {
+    "amsterdam": "steden/amsterdam.html",
+    "rotterdam": "steden/rotterdam.html",
+    "utrecht": "steden/utrecht.html",
+    "weesp": "steden/weesp.html",
+    "maastricht": "steden/maastricht.html"
+  };
+
+  var input = document.getElementById("site-search-input");
+  var button = document.getElementById("site-search-button");
+  var results = document.getElementById("search-results");
+
+  function cafeUrl(link) {
+    var parts = link.split("#");
+    return parts[0] + "?cafe=" + parts[1];
+  }
+
+  function zoek() {
+    var q = input.value.trim().toLowerCase();
+    results.innerHTML = "";
+
+    if (!q) {
+      results.style.display = "none";
+      return;
+    }
+
+    var found = [];
+
+    Object.keys(stedenZoek).forEach(function (stad) {
+      if (stad.indexOf(q) !== -1) {
+        found.push({
+          naam: stad.charAt(0).toUpperCase() + stad.slice(1),
+          type: "stad",
+          href: stedenZoek[stad]
+        });
+      }
+    });
+
+    kroegen.forEach(function (kroeg) {
+      if (kroeg.naam.toLowerCase().indexOf(q) !== -1) {
+        found.push({
+          naam: kroeg.naam,
+          type: "café",
+          href: cafeUrl(kroeg.link)
+        });
+      }
+    });
+
+    if (!found.length) {
+      results.textContent = "Geen resultaten gevonden";
+    } else {
+      found.slice(0, 10).forEach(function (item) {
+        var a = document.createElement("a");
+        a.href = item.href;
+        a.textContent = item.naam + " (" + item.type + ")";
+        results.appendChild(a);
+      });
+    }
+
+    results.style.display = "block";
+  }
+
+  input.addEventListener("input", zoek);
+  button.addEventListener("click", zoek);
+
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      var first = results.querySelector("a");
+      if (first) window.location.href = first.href;
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".site-search")) {
+      results.style.display = "none";
+    }
+  });
+})();
+
+// =========================
 // MARKERS PLAATSEN
 // =========================
 var markers = [];
@@ -398,6 +315,7 @@ kroegen.forEach(function(kroeg) {
 // kaart automatisch passend maken voor alle pins
 var group = new L.featureGroup(markers);
 kaart.fitBounds(group.getBounds(), {padding:[50,50]});
+
 </script>
 </body>
 </html>

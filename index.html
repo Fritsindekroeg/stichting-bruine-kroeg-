@@ -391,67 +391,7 @@ footer {
 </div>
 </div>
 
-<script>
-(function () {
-  var input = document.getElementById("site-search-input");
-  var button = document.getElementById("site-search-button");
-  var results = document.getElementById("search-results");
-  var links = Array.prototype.slice.call(results.querySelectorAll(".search-item"));
 
-  // The city counts use the same café links as the search.
-  var counts = {};
-  links.forEach(function (link) {
-    var city = link.getAttribute("data-search-city");
-    if (city) counts[city] = (counts[city] || 0) + 1;
-  });
-
-  document.querySelectorAll("[data-city-count]").forEach(function (el) {
-    var city = el.getAttribute("data-city-count");
-    var n = counts[city.toLowerCase()] || 0;
-    el.textContent = n + (n === 1 ? " kroeg" : " kroegen");
-  });
-
-  function search() {
-    var q = input.value.trim().toLowerCase();
-    var shown = 0;
-
-    links.forEach(function (link) {
-      var name = (link.textContent || "").toLowerCase();
-      var city = (link.getAttribute("data-search-city") || "").toLowerCase();
-
-      if (q && shown < 10 && (name.indexOf(q) !== -1 || city.indexOf(q) !== -1)) {
-        link.style.display = "block";
-        shown++;
-      } else {
-        link.style.display = "none";
-      }
-    });
-
-    var none = results.querySelector(".search-no-result");
-    if (none) none.style.display = (q && shown === 0) ? "block" : "none";
-    results.style.display = q ? "block" : "none";
-  }
-
-  input.addEventListener("input", search);
-  button.addEventListener("click", search);
-
-  input.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      var first = links.find(function (link) {
-        return link.style.display === "block";
-      });
-      if (first) window.location.href = first.href;
-    }
-  });
-
-  document.addEventListener("click", function (event) {
-    if (!event.target.closest(".site-search")) {
-      results.style.display = "none";
-    }
-  });
-})();
-</script>
 
 </body>
 </html>

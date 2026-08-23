@@ -639,5 +639,17 @@ document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
   }
 })();
 </script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var cafe = params.get("cafe");
+  if (!cafe) return;
+
+  var target = document.querySelector('[data-cafe="' + cafe + '"]');
+  if (target) {
+    window.scrollTo(0, target.getBoundingClientRect().top + window.pageYOffset - 20);
+  }
+})();
+</script>
 </body>
 </html>
