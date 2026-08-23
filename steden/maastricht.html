@@ -128,42 +128,18 @@ document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
 })();
 </script>
 <script>
-(function () {
-  var params = new URLSearchParams(window.location.search);
-  var cafe = params.get("cafe");
-  if (!cafe) return;
-
-  var target = document.querySelector('.cafe[data-cafe="' + CSS.escape(cafe) + '"]');
-  if (target) {
-    window.setTimeout(function () {
-      target.scrollIntoView({ block: "start" });
-    }, 50);
-  }
-})();
-</script>
-<script>
-(function () {
-  var params = new URLSearchParams(window.location.search);
-  var cafe = params.get("cafe");
-  if (!cafe) return;
-
-  var target = document.querySelector('[data-cafe="' + cafe + '"]');
-  if (target) {
-    window.scrollTo(0, target.getBoundingClientRect().top + window.pageYOffset - 20);
-  }
-})();
-</script>
-<script>
-(function () {
+window.addEventListener("load", function () {
   var cafe = new URLSearchParams(window.location.search).get("cafe");
   if (!cafe) return;
+
   var target = document.querySelector('[data-cafe="' + cafe + '"]');
+
   if (target) {
     setTimeout(function () {
-      target.scrollIntoView({block:"start"});
-    }, 50);
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   }
-})();
+});
 </script>
 </body>
 </html>
