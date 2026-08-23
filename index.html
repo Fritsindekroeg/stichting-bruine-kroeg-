@@ -91,7 +91,142 @@ footer {
     color: #555;
 }
 </style>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
+
+<style>
+/* Kroegen homepage - page-specific layout */
+.kroegen-uitleg {
+  max-width: 760px;
+  margin: 34px auto 22px;
+  padding: 0 8px;
+  text-align: center;
+}
+.kroegen-uitleg-titel {
+  display: block;
+  color: #3a2f2a;
+  font-family: "EB Garamond", serif;
+  font-size: 1.35em;
+  font-weight: 600;
+}
+.kroegen-uitleg-tekst {
+  display: block;
+  margin: 2px 0 6px;
+  color: #6b5d52;
+  font-size: 1.05em;
+}
+.kroegen-uitleg a {
+  color: #704b32;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .88em;
+  font-weight: 700;
+  text-decoration: none;
+}
+.kroegen-uitleg a:hover { text-decoration: underline; }
+
+.steden-heading {
+  border: none !important;
+  margin: 36px 0 14px !important;
+  padding: 0 !important;
+  text-align: center;
+  font-size: 1.65em;
+}
+.steden-heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 9px auto 0;
+  background: #d6c7b4;
+}
+
+.steden-lijst {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd4c8;
+}
+.stad-regel {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) auto 28px !important;
+  align-items: center !important;
+  gap: 18px;
+  width: 100%;
+  padding: 17px 8px;
+  border-bottom: 1px solid #ddd4c8;
+  color: #3a2f2a !important;
+  text-decoration: none !important;
+  background: transparent;
+}
+.stad-regel:hover {
+  background: #f5f0e7;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.stad-regel-naam {
+  display: block !important;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.stad-regel-info {
+  display: block !important;
+  color: #806c5c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85em;
+  white-space: nowrap;
+}
+.stad-regel-pijl {
+  display: block !important;
+  color: #7a4a2e;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 78px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+.search-results a {
+  display: block !important;
+  width: 100%;
+  padding: 11px 15px;
+  color: #3e2c1c !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #eee;
+  font-size: 17px;
+}
+.search-results a:hover { background: #f5f1e8; }
+.search-results a::after {
+  content: attr(data-type);
+  margin-left: 8px;
+  color: #8a7868;
+  font-size: .82em;
+  font-style: italic;
+}
+.search-no-result {
+  display: block;
+  padding: 11px 15px;
+  color: #7a6a60;
+}
+
+@media (max-width: 600px) {
+  .stad-regel {
+    grid-template-columns: minmax(0,1fr) auto !important;
+  }
+  .stad-regel-pijl {
+    display: none !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -137,6 +272,12 @@ footer {
   <div id="search-results" class="search-results"></div>
 </div>
 
+<div class="kroegen-uitleg">
+  <span class="kroegen-uitleg-titel">Op zoek naar een bruine kroeg?</span>
+  <span class="kroegen-uitleg-tekst">Kies een stad of zoek direct op de naam van een café.</span>
+  <a href="wat-is-een-bruine-kroeg.html">Wat is een Bruine Kroeg? →</a>
+</div>
+
 <h2 class="steden-heading">Ontdek per stad</h2>
 
 <div class="steden-lijst">
@@ -161,22 +302,6 @@ footer {
     <span class="stad-regel-pijl">→</span>
   </a>
 </div>
-<div class="kroegen-info">
-  <p>
-    Een bruine kroeg is meer dan een café: het zijn plekken met karakter,
-    geschiedenis en een sfeer waarin je je meteen thuis voelt.
-  </p>
-  <a href="wat-is-een-bruine-kroeg.html" class="info-link">
-    Lees wat wij verstaan onder een bruine kroeg →
-  </a>
-</div>
-
-<p class="lijst-toelichting">
-  Onze selectie is nog in ontwikkeling en dus bij lange na niet volledig.
-  Ken je een café dat volgens jou niet in onze lijst mag ontbreken?
-  Laat het ons weten via het contactformulier.
-</p>
-
 <div class="footer-nav">
   <a href="doelstellingen.html">Doelstellingen</a>
   <a href="organisatie.html">Organisatie</a>
@@ -344,9 +469,10 @@ function zoekSite() {
       a.href = item.link;
       a.textContent = item.naam;
       a.setAttribute('data-type', item.type);
-      a.addEventListener('click', function(event) {
-        event.stopPropagation();
-      });
+      a.onclick = function(event) {
+        event.preventDefault();
+        window.location.href = item.link;
+      };
       zoekResultaten.appendChild(a);
     });
   }
@@ -362,7 +488,7 @@ zoekInput.addEventListener('keydown', function(event) {
     event.preventDefault();
     var eerste = zoekResultaten.querySelector('a');
     if (eerste) {
-      window.location.assign(eerste.href);
+      window.location.href = eerste.getAttribute('href');
     } else {
       zoekSite();
     }
