@@ -462,9 +462,8 @@ button:hover { background: #5f3923; }
 
 /* BIERGLAS-ILLUSTRATIES */
 .beer-title {
-  display: block;
-  width: 46px;
-  height: 58px;
+  width: 55px;
+  height: 65px;
   object-fit: contain;
   margin: -8px auto 18px;
 }
