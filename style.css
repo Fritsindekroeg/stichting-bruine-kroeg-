@@ -2,9 +2,13 @@
    STICHTING DE BRUINE KROEG - CENTRALE STYLESHEET
    ========================================================= */
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -20,7 +24,9 @@ body {
   padding: 30px 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "EB Garamond", serif;
   color: #3a2f2a;
 }
@@ -44,10 +50,19 @@ p {
   line-height: 1.75;
 }
 
-ul { margin: 15px 0 15px 25px; }
-li { margin-bottom: 10px; }
+ul {
+  margin: 15px 0 15px 25px;
+}
 
-/* LOGO */
+li {
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .logo {
   text-align: center;
   margin-bottom: 30px;
@@ -60,7 +75,11 @@ li { margin-bottom: 10px; }
   height: auto;
 }
 
-/* HOOFDMENU */
+
+/* =========================================================
+   HOOFDMENU
+   ========================================================= */
+
 nav {
   text-align: center;
   margin-bottom: 30px;
@@ -84,14 +103,20 @@ nav a {
   line-height: 1.5;
 }
 
-.main-nav a { margin: 0; }
+.main-nav a {
+  margin: 0;
+}
 
 .main-nav a:hover,
 nav a:hover {
   text-decoration: underline;
 }
 
-/* ONDERMENU */
+
+/* =========================================================
+   ONDERMENU
+   ========================================================= */
+
 .footer-nav {
   text-align: center;
   margin: 55px 0 20px;
@@ -113,7 +138,11 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ILLUSTRATIES */
+
+/* =========================================================
+   ILLUSTRATIES
+   ========================================================= */
+
 .page-illustration {
   display: block;
   width: auto;
@@ -131,7 +160,11 @@ nav a:hover {
   max-height: 90px;
 }
 
-/* KAART */
+
+/* =========================================================
+   KAART
+   ========================================================= */
+
 #kaart {
   height: 550px;
   margin-top: 30px;
@@ -147,7 +180,11 @@ nav a:hover {
   margin: 0;
 }
 
-/* ZOEKEN */
+
+/* =========================================================
+   ZOEKEN
+   ========================================================= */
+
 .site-search {
   max-width: 700px;
   margin: 25px auto 28px;
@@ -221,7 +258,11 @@ nav a:hover {
   margin-left: 5px;
 }
 
-/* STEDEN */
+
+/* =========================================================
+   STEDEN
+   ========================================================= */
+
 .city-section {
   margin-top: 60px;
   margin-bottom: 50px;
@@ -292,7 +333,11 @@ nav a:hover {
   border-color: #b7a781;
 }
 
-/* CAFE BLOKKEN */
+
+/* =========================================================
+   CAFE BLOKKEN
+   ========================================================= */
+
 .cafe {
   background: #fff;
   padding: 18px 22px;
@@ -339,7 +384,11 @@ nav a:hover {
   font-style: italic;
 }
 
-/* FORMULIER */
+
+/* =========================================================
+   FORMULIER
+   ========================================================= */
+
 form {
   max-width: 700px;
   margin: 20px auto;
@@ -378,7 +427,11 @@ textarea:focus {
   box-shadow: 0 0 0 2px rgba(122,74,46,.15);
 }
 
-/* KNOPPEN */
+
+/* =========================================================
+   KNOPPEN
+   ========================================================= */
+
 button {
   padding: 10px 25px;
   background: #7a4a2e;
@@ -394,7 +447,11 @@ button:hover {
   background: #5f3923;
 }
 
-/* QUOTE */
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
 .intro-quote {
   position: relative;
   max-width: 700px;
@@ -431,7 +488,11 @@ button:hover {
   font-style: normal;
 }
 
-/* FORUM */
+
+/* =========================================================
+   FORUM
+   ========================================================= */
+
 .forum-intro {
   max-width: 700px;
   margin: 0 auto 30px;
@@ -446,7 +507,11 @@ button:hover {
   border-radius: 8px;
 }
 
-/* KROEGEN HOMEPAGE */
+
+/* =========================================================
+   KROEGEN HOMEPAGE
+   ========================================================= */
+
 .kroegen-intro {
   max-width: 700px;
   margin: -5px auto 28px;
@@ -483,34 +548,48 @@ button:hover {
   background: #d6c7b4;
 }
 
-/* BIERGLAS-ILLUSTRATIES */
+
+/* =========================================================
+   BIERGLAS-ILLUSTRATIES
+   ========================================================= */
+
+/* Groot bierglas onder de paginatitel */
 .beer-title {
-  width: 200px;
-  height: 250px;
+  width: 80px;
+  height: 95px;
   max-width: none;
   max-height: none;
   object-fit: contain;
-  margin: -8px auto 18px;
+  margin: -5px auto 4px;
 }
 
+/* Titel "Ontdek per stad" met twee glazen */
 .steden-title-with-beers {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
-  margin: 42px 0 14px;
+  margin: 35px 0 14px;
 }
 
 .steden-title-with-beers .steden-heading {
   margin: 0;
 }
 
+/* Kleine glazen naast "Ontdek per stad" */
 .section-beer {
-  width: 32px;
-  height: 42px;
+  width: 45px;
+  height: 55px;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   flex: 0 0 auto;
 }
+
+
+/* =========================================================
+   STEDENLIJST
+   ========================================================= */
 
 .steden-lijst {
   max-width: 760px;
@@ -587,7 +666,13 @@ button:hover {
   text-align: center;
 }
 
+
+/* =========================================================
+   MOBIEL - BASIS
+   ========================================================= */
+
 @media (max-width: 600px) {
+
   .steden-grid {
     grid-template-columns: 1fr;
   }
@@ -599,10 +684,7 @@ button:hover {
   .kroegen-info {
     padding: 20px;
   }
-}
 
-/* MOBIEL */
-@media (max-width: 600px) {
   .container {
     width: 100%;
     padding: 16px 12px;
@@ -646,6 +728,7 @@ button:hover {
     line-height: 1.6;
   }
 
+  /* Het algemene wijnglas / andere illustraties */
   .page-illustration,
   .page-illustration.beer,
   .page-illustration.wine,
@@ -724,6 +807,11 @@ button:hover {
   }
 }
 
+
+/* =========================================================
+   ZOEKRESULTATEN
+   ========================================================= */
+
 .search-results a::after {
   content: attr(data-type);
   margin-left: 8px;
@@ -739,7 +827,11 @@ button:hover {
   font-size: 17px;
 }
 
-/* Bruine Kroegen - intro block */
+
+/* =========================================================
+   BRUINE KROEGEN - INTRO BLOCK
+   ========================================================= */
+
 .kroegen-uitleg {
   max-width: 720px;
   margin: 34px auto 30px;
@@ -778,7 +870,11 @@ button:hover {
   text-decoration: underline;
 }
 
-/* KAART - leesbare café-namen op de kaart */
+
+/* =========================================================
+   KAART - LEESBARE CAFÉNAMEN
+   ========================================================= */
+
 .cafe-label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -797,17 +893,13 @@ button:hover {
   border-top-color: #8d7764;
 }
 
-@media (max-width: 600px) {
-  .cafe-label {
-    font-size: 15px;
-    padding: 4px 7px;
-  }
-}
 
 /* =========================================================
-   MOBIEL - betere leesbaarheid zonder desktop-layout te wijzigen
+   MOBIEL - LETTERGROOTTE EN LEESBAARHEID
    ========================================================= */
+
 @media (max-width: 600px) {
+
   body {
     font-size: 18px;
     line-height: 1.65;
@@ -898,17 +990,30 @@ button:hover {
   .kaart-toelichting p {
     font-size: 17px;
   }
-}
 
-/* =========================================================
-   BIERGLAS - MOBIEL
-   ========================================================= */
+  /* =====================================================
+     BIERGLAS OP MOBIEL
+     ===================================================== */
 
-@media (max-width: 600px) {
   .beer-title {
-    width: 110px;
-    height: 130px;
+    width: 70px;
+    height: 82px;
     max-width: none;
     max-height: none;
+    object-fit: contain;
+    margin: -2px auto 3px;
+  }
+
+  .section-beer {
+    width: 38px;
+    height: 48px;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .steden-title-with-beers {
+    gap: 12px;
+    margin: 30px 0 12px;
   }
 }
