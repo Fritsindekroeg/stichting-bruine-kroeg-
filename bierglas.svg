@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" role="img" aria-label="Bierglas">
+  <g fill="none" stroke="#8b4f2f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M25 28h70l-6 91c-1 12-9 18-29 18s-28-6-29-18z"/>
+    <path d="M28 28c0-10 7-17 17-17h30c10 0 17 7 17 17"/>
+    <path d="M25 28h70"/>
+    <path d="M95 47h8c11 0 16 8 16 18s-5 18-16 18h-10"/>
+    <path d="M18 137h84"/>
+    <path d="M28 50h64"/>
+  </g>
+</svg>

@@ -459,6 +459,35 @@ button:hover { background: #5f3923; }
   background: #d6c7b4;
 }
 
+
+/* BIERGLAS-ILLUSTRATIES */
+.beer-title {
+  display: block;
+  width: 46px;
+  height: 58px;
+  object-fit: contain;
+  margin: -8px auto 18px;
+}
+
+.steden-title-with-beers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 42px 0 14px;
+}
+
+.steden-title-with-beers .steden-heading {
+  margin: 0;
+}
+
+.section-beer {
+  width: 32px;
+  height: 42px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
 .steden-lijst {
   max-width: 760px;
   margin: 0 auto;
