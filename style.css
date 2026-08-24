@@ -551,54 +551,125 @@ button:hover { background: #5f3923; }
 
 /* MOBIEL */
 @media (max-width: 600px) {
-  .container { padding: 20px 15px; }
+  .container {
+    width: 100%;
+    padding: 16px 12px;
+  }
 
-  .logo { margin-bottom: 25px; }
+  .logo {
+    margin-bottom: 18px;
+  }
 
-  .logo img { max-width: 280px; }
+  .logo img {
+    width: 100%;
+    max-width: 230px;
+  }
 
   .main-nav {
-    flex-direction: column;
-    gap: 7px;
+    flex-direction: row;
+    gap: 4px 14px;
+    padding: 0 4px;
   }
 
   .main-nav a,
   nav a {
-    display: block;
+    display: inline-block;
     margin: 0;
-    font-size: 21px;
+    font-size: 17px;
+    line-height: 1.35;
   }
 
   h1 {
-    margin-top: 30px;
-    font-size: 2em;
+    margin: 24px 0 18px;
+    font-size: 1.85em;
+    line-height: 1.15;
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.02em;
+    line-height: 1.6;
   }
 
   .page-illustration,
   .page-illustration.beer,
   .page-illustration.wine,
   .page-illustration.champagne {
-    max-width: 60px;
-    max-height: 70px;
-    margin-bottom: 20px;
+    max-width: 55px;
+    max-height: 65px;
+    margin-bottom: 14px;
   }
 
-  .site-search-row { flex-direction: column; }
+  .site-search {
+    margin-top: 18px;
+  }
 
-  .site-search button { width: 100%; }
+  .site-search label {
+    font-size: 17px;
+  }
 
-  .search-results { top: 112px; }
+  .site-search-row {
+    flex-direction: column;
+  }
 
-  #kaart { height: 450px; }
+  .site-search input {
+    font-size: 18px;
+    min-height: 48px;
+  }
 
-  .footer-nav { margin-top: 45px; }
+  .site-search button {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .search-results {
+    top: 126px;
+  }
+
+  #kaart {
+    height: 68vh;
+    min-height: 430px;
+    max-height: 650px;
+    margin-top: 22px;
+  }
+
+  .kaart-toelichting {
+    margin-top: 16px;
+  }
+
+  .stad-regel {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: 10px;
+    padding: 15px 4px;
+  }
+
+  .stad-regel-naam {
+    font-size: 1.35em;
+  }
+
+  .stad-regel-info {
+    font-size: .82em;
+  }
+
+  .footer-nav {
+    margin-top: 40px;
+  }
 
   .footer-nav a {
-    font-size: 17px;
-    margin: 5px 8px;
+    font-size: 16px;
+    margin: 4px 7px;
   }
 
-  .forum-box { padding: 18px; }
+  .forum-box {
+    padding: 18px;
+  }
+
+  .cafe {
+    padding: 15px 16px;
+  }
 }
 
 .search-results a::after {
@@ -654,4 +725,30 @@ button:hover { background: #5f3923; }
 
 .kroegen-uitleg a:hover {
   text-decoration: underline;
+}
+
+/* KAART - leesbare café-namen op de kaart */
+.cafe-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #2f2622;
+  background: rgba(255,255,255,.96);
+  border: 1px solid #8d7764;
+  border-radius: 5px;
+  padding: 3px 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+  white-space: nowrap;
+}
+
+.cafe-label.leaflet-tooltip-top:before {
+  border-top-color: #8d7764;
+}
+
+@media (max-width: 600px) {
+  .cafe-label {
+    font-size: 15px;
+    padding: 4px 7px;
+  }
 }

@@ -425,5 +425,52 @@ footer {
   });
 })();
 </script>
+
+<script>
+/* Dynamische aantallen cafés per stad.
+   De aantallen worden rechtstreeks uit de stadspagina's gelezen.
+   Daardoor veranderen ze automatisch wanneer een café wordt toegevoegd
+   of verwijderd uit de betreffende stadspagina. */
+(function () {
+  var cityRows = document.querySelectorAll("[data-city-count]");
+
+  var cityPages = {
+    "Amsterdam": "steden/amsterdam.html",
+    "Rotterdam": "steden/rotterdam.html",
+    "Utrecht": "steden/utrecht.html",
+    "Weesp": "steden/weesp.html"
+  };
+
+  function setCount(row, count) {
+    row.textContent = count + " " + (count === 1 ? "café" : "cafés");
+  }
+
+  Array.prototype.forEach.call(cityRows, function (row) {
+    var city = row.getAttribute("data-city-count");
+    var page = cityPages[city];
+
+    if (!page) return;
+
+    fetch(page)
+      .then(function (response) {
+        if (!response.ok) throw new Error("Pagina niet gevonden");
+        return response.text();
+      })
+      .then(function (html) {
+        var doc = new DOMParser().parseFromString(html, "text/html");
+        var count = doc.querySelectorAll(".cafe").length;
+        setCount(row, count);
+      })
+      .catch(function () {
+        /* Fallback: tel de cafés uit de zoeklijst als de stadspagina
+           niet kan worden opgehaald. */
+        var count = document.querySelectorAll(
+          '.search-item[data-search-city="' + city.toLowerCase() + '"]'
+        ).length;
+        setCount(row, count);
+      });
+  });
+})();
+</script>
 </body>
 </html>

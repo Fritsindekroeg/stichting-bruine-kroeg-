@@ -219,6 +219,13 @@ var markers = [];
 kroegen.forEach(function(kroeg) {
   var marker = L.marker(kroeg.coords)
     .addTo(kaart)
+    .bindTooltip(kroeg.naam, {
+      permanent: true,
+      direction: "top",
+      offset: [0, -8],
+      className: "cafe-label",
+      opacity: 0.96
+    })
     .bindPopup(
       "<strong>" + kroeg.naam + "</strong><br>" +
       kroeg.stad + "<br>" +
@@ -230,6 +237,26 @@ kroegen.forEach(function(kroeg) {
 // kaart automatisch passend maken voor alle pins
 var group = new L.featureGroup(markers);
 kaart.fitBounds(group.getBounds(), {padding:[50,50]});
+
+/* Op een overzichtskaart worden de namen verborgen om overlap te voorkomen.
+   Zodra de bezoeker voldoende inzoomt, worden de café-namen zichtbaar.
+   Op mobiel begint dit iets eerder zodat namen goed leesbaar blijven. */
+function updateCafeLabels() {
+  var zoom = kaart.getZoom();
+  var threshold = window.innerWidth <= 600 ? 12 : 13;
+  var showLabels = zoom >= threshold;
+
+  markers.forEach(function (marker) {
+    if (showLabels) {
+      marker.openTooltip();
+    } else {
+      marker.closeTooltip();
+    }
+  });
+}
+
+kaart.on("zoomend", updateCafeLabels);
+updateCafeLabels();
 </script>
 <script>
 (function () {
