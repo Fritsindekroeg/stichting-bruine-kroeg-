@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" role="img" aria-label="Bierglas">
+  <g fill="none" stroke="#8b4f2f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- schuim -->
+    <path d="M25 39 C23 31 28 25 35 25 C37 16 45 12 52 16 C57 8 67 8 73 16 C81 12 91 16 92 25 C99 25 104 31 101 39"/>
+    <!-- glas -->
+    <path d="M24 38 L29 119 C30 130 38 136 60 136 C82 136 90 130 91 119 L96 38 Z"/>
+    <path d="M24 38 H96"/>
+    <!-- handvat -->
+    <path d="M96 55 H103 C113 55 117 62 117 72 C117 82 113 89 103 89 H94"/>
+    <!-- bierlijn -->
+    <path d="M28 58 H92"/>
+    <!-- voet -->
+    <path d="M45 143 H75"/>
+  </g>
+</svg>
