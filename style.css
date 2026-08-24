@@ -752,3 +752,100 @@ button:hover { background: #5f3923; }
     padding: 4px 7px;
   }
 }
+
+
+/* =========================================================
+   MOBIEL - betere leesbaarheid zonder desktop-layout te wijzigen
+   ========================================================= */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px 16px 30px;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    max-width: 290px;
+  }
+
+  nav {
+    margin-bottom: 24px;
+  }
+
+  .main-nav {
+    gap: 8px 16px;
+  }
+
+  .main-nav a,
+  nav a {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 28px 0 20px;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 1.55em;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.08em;
+    line-height: 1.65;
+  }
+
+  .site-search {
+    margin: 22px auto 24px;
+  }
+
+  .site-search label {
+    font-size: 19px;
+  }
+
+  .site-search-row {
+    gap: 7px;
+  }
+
+  .site-search input {
+    min-width: 0;
+    padding: 12px 13px;
+    font-size: 18px;
+  }
+
+  .site-search button,
+  #site-search-button {
+    padding: 11px 15px;
+    font-size: 17px;
+  }
+
+  .search-results a {
+    padding: 12px 14px;
+    font-size: 18px;
+  }
+
+  .footer-nav a {
+    font-size: 16px;
+  }
+
+  #kaart {
+    height: 62vh;
+    min-height: 480px;
+    max-height: 700px;
+  }
+
+  .kaart-toelichting p {
+    font-size: 17px;
+  }
+}

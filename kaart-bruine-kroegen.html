@@ -2,6 +2,7 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Kaart Bruine Kroegen – Stichting De Bruine Kroeg</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
@@ -60,6 +61,7 @@ p {
 
 #kaart {
     height: 550px;
+    touch-action: none;
     margin-top: 30px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -122,7 +124,12 @@ p {
 
 <script>
 // Kaart initialiseren
-var kaart = L.map('kaart');
+var kaart = L.map('kaart', {
+  touchZoom: true,
+  doubleClickZoom: true,
+  scrollWheelZoom: true,
+  maxZoom: 19
+});
 
 // OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -243,12 +250,19 @@ kaart.fitBounds(group.getBounds(), {padding:[50,50]});
    Op mobiel begint dit iets eerder zodat namen goed leesbaar blijven. */
 function updateCafeLabels() {
   var zoom = kaart.getZoom();
-  var threshold = window.innerWidth <= 600 ? 12 : 13;
+  var isMobile = window.innerWidth <= 600;
+  var threshold = isMobile ? 12 : 13;
   var showLabels = zoom >= threshold;
 
   markers.forEach(function (marker) {
     if (showLabels) {
       marker.openTooltip();
+      var tooltip = marker.getTooltip();
+      if (tooltip && tooltip._contentNode) {
+        var size = isMobile ? Math.min(19, 15 + Math.max(0, zoom - 12) * 0.8) : Math.min(17, 14 + Math.max(0, zoom - 13) * 0.6);
+        tooltip._contentNode.style.fontSize = size + 'px';
+        tooltip._contentNode.style.padding = isMobile ? '5px 8px' : '4px 7px';
+      }
     } else {
       marker.closeTooltip();
     }
@@ -256,6 +270,10 @@ function updateCafeLabels() {
 }
 
 kaart.on("zoomend", updateCafeLabels);
+window.addEventListener("resize", function () {
+  kaart.invalidateSize();
+  updateCafeLabels();
+});
 updateCafeLabels();
 </script>
 <script>
