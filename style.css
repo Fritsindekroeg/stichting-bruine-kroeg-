@@ -87,7 +87,9 @@ nav a {
 .main-nav a { margin: 0; }
 
 .main-nav a:hover,
-nav a:hover { text-decoration: underline; }
+nav a:hover {
+  text-decoration: underline;
+}
 
 /* ONDERMENU */
 .footer-nav {
@@ -107,7 +109,9 @@ nav a:hover { text-decoration: underline; }
   margin: 5px 12px;
 }
 
-.footer-nav a:hover { text-decoration: underline; }
+.footer-nav a:hover {
+  text-decoration: underline;
+}
 
 /* ILLUSTRATIES */
 .page-illustration {
@@ -139,7 +143,9 @@ nav a:hover { text-decoration: underline; }
   margin: 20px 0 30px;
 }
 
-.kaart-toelichting p { margin: 0; }
+.kaart-toelichting p {
+  margin: 0;
+}
 
 /* ZOEKEN */
 .site-search {
@@ -201,8 +207,13 @@ nav a:hover { text-decoration: underline; }
   font-size: 17px;
 }
 
-.search-results a:last-child { border-bottom: none; }
-.search-results a:hover { background: #f5f1e8; }
+.search-results a:last-child {
+  border-bottom: none;
+}
+
+.search-results a:hover {
+  background: #f5f1e8;
+}
 
 .search-results .search-type {
   color: #7a6a60;
@@ -257,9 +268,13 @@ nav a:hover { text-decoration: underline; }
   transition: .2s;
 }
 
-.stad-kaart:hover { background: #e9dfc9; }
+.stad-kaart:hover {
+  background: #e9dfc9;
+}
 
-.terug-balk { margin: 10px 0 25px; }
+.terug-balk {
+  margin: 10px 0 25px;
+}
 
 .terug-knop {
   display: inline-block;
@@ -292,8 +307,14 @@ nav a:hover { text-decoration: underline; }
   box-shadow: 0 6px 14px rgba(0,0,0,.08);
 }
 
-.cafe h3 { margin-top: 0; color: #2f2622; }
-.cafe p { margin: 8px 0; }
+.cafe h3 {
+  margin-top: 0;
+  color: #2f2622;
+}
+
+.cafe p {
+  margin: 8px 0;
+}
 
 .cafe .adres {
   margin-top: 10px;
@@ -345,7 +366,9 @@ textarea {
   font-size: 1em;
 }
 
-textarea { min-height: 120px; }
+textarea {
+  min-height: 120px;
+}
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -367,7 +390,9 @@ button {
   cursor: pointer;
 }
 
-button:hover { background: #5f3923; }
+button:hover {
+  background: #5f3923;
+}
 
 /* QUOTE */
 .intro-quote {
@@ -421,7 +446,6 @@ button:hover { background: #5f3923; }
   border-radius: 8px;
 }
 
-
 /* KROEGEN HOMEPAGE */
 .kroegen-intro {
   max-width: 700px;
@@ -459,11 +483,12 @@ button:hover { background: #5f3923; }
   background: #d6c7b4;
 }
 
-
 /* BIERGLAS-ILLUSTRATIES */
 .beer-title {
   width: 200px;
   height: 250px;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   margin: -8px auto 18px;
 }
@@ -575,7 +600,6 @@ button:hover { background: #5f3923; }
     padding: 20px;
   }
 }
-
 
 /* MOBIEL */
 @media (max-width: 600px) {
@@ -715,7 +739,6 @@ button:hover { background: #5f3923; }
   font-size: 17px;
 }
 
-
 /* Bruine Kroegen - intro block */
 .kroegen-uitleg {
   max-width: 720px;
@@ -780,7 +803,6 @@ button:hover { background: #5f3923; }
     padding: 4px 7px;
   }
 }
-
 
 /* =========================================================
    MOBIEL - betere leesbaarheid zonder desktop-layout te wijzigen
@@ -875,5 +897,18 @@ button:hover { background: #5f3923; }
 
   .kaart-toelichting p {
     font-size: 17px;
+  }
+}
+
+/* =========================================================
+   BIERGLAS - MOBIEL
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .beer-title {
+    width: 110px;
+    height: 130px;
+    max-width: none;
+    max-height: none;
   }
 }
