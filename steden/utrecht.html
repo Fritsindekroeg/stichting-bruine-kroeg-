@@ -244,5 +244,55 @@ window.addEventListener("load", function () {
   window.setTimeout(positionCafe, 100);
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Link bij ieder café naar precies dezelfde café-pin op de kaart.
+  document.querySelectorAll(".cafe[data-cafe]").forEach(function (cafe) {
+    var slug = cafe.getAttribute("data-cafe");
+    if (!slug || cafe.querySelector(".kaart-link")) return;
+
+    var link = document.createElement("a");
+    link.className = "kaart-link";
+    link.href = "../kaart-bruine-kroegen.html?cafe=" + encodeURIComponent(slug);
+    link.textContent = "📍 Bekijk dit café op de kaart";
+    link.setAttribute("aria-label", "Bekijk dit café op de kaart");
+
+    var adres = cafe.querySelector(".adres");
+    if (adres) {
+      adres.insertAdjacentElement("afterend", link);
+    } else {
+      cafe.appendChild(link);
+    }
+  });
+
+  // Zwevende knop om tijdens het scrollen snel naar boven te gaan.
+  var topButton = document.createElement("button");
+  topButton.id = "naar-boven";
+  topButton.type = "button";
+  topButton.textContent = "↑ Naar boven";
+  topButton.setAttribute("aria-label", "Ga naar bovenaan de pagina");
+  document.body.appendChild(topButton);
+
+  function updateTopButton() {
+    if (window.scrollY > 500) {
+      topButton.classList.add("zichtbaar");
+    } else {
+      topButton.classList.remove("zichtbaar");
+    }
+  }
+
+  window.addEventListener("scroll", updateTopButton, { passive: true });
+  updateTopButton();
+
+  topButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
+</script>
+
 </body>
 </html>

@@ -1017,3 +1017,65 @@ button:hover {
     margin: 30px 0 12px;
   }
 }
+
+
+/* =========================================================
+   LINK VAN CAFÉ NAAR DE KAART
+   ========================================================= */
+
+.kaart-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: #704b32;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kaart-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   VASTE KNOP "NAAR BOVEN"
+   ========================================================= */
+
+#naar-boven {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  display: none;
+  border: none;
+  border-radius: 22px;
+  padding: 10px 15px;
+  background: #5a4630;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+
+#naar-boven.zichtbaar {
+  display: block;
+}
+
+#naar-boven:hover {
+  background: #443423;
+}
+
+@media (max-width: 600px) {
+  #naar-boven {
+    right: 14px;
+    bottom: 14px;
+    padding: 10px 13px;
+    font-size: 14px;
+  }
+
+  .kaart-link {
+    font-size: 15px;
+  }
+}

@@ -246,6 +246,38 @@ kroegen.forEach(function(kroeg) {
 var group = new L.featureGroup(markers);
 kaart.fitBounds(group.getBounds(), {padding:[50,50]});
 
+// =========================================================
+// CAFÉ DIRECT OPENEN VIA ?cafe=slug
+// =========================================================
+// Hierdoor opent bijvoorbeeld:
+// kaart-bruine-kroegen.html?cafe=hoppe
+// direct op de juiste pin.
+var cafeParam = new URLSearchParams(window.location.search).get("cafe");
+
+if (cafeParam) {
+  var gevondenCafe = kroegen.find(function (cafe) {
+    var hashPos = cafe.link.indexOf("#");
+    if (hashPos === -1) return false;
+    return cafe.link.substring(hashPos + 1) === cafeParam;
+  });
+
+  if (gevondenCafe) {
+    kaart.setView(gevondenCafe.coords, 18);
+
+    var gevondenMarker = markers[kroegen.indexOf(gevondenCafe)];
+    if (gevondenMarker) {
+      setTimeout(function () {
+        gevondenMarker.openPopup();
+        document.getElementById("kaart").scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 300);
+    }
+  }
+}
+
+
 /* Op een overzichtskaart worden de namen verborgen om overlap te voorkomen.
    Zodra de bezoeker voldoende inzoomt, worden de café-namen zichtbaar.
    Op mobiel begint dit iets eerder zodat namen goed leesbaar blijven. */
