@@ -114,3 +114,30 @@ nav { border-top:0; padding-top:0; }
 /* Vector originals retain their own red, wine-red and blue inks. */
 .page-illustration, .page-illustration.beer-title, .page-illustration.beer,
 .page-illustration.wine, .page-illustration.champagne, .section-beer { filter:none; }
+
+/* Homepage: search and city selection together, explanation secondary. */
+.homepage h1 { margin:22px 0 10px; font-size:clamp(34px,4vw,48px); }
+.homepage .page-illustration.beer-title { width:64px; max-width:64px; max-height:65px; margin:0 auto 12px; }
+.homepage .site-search { margin:16px auto 22px; }
+.homepage .steden-title-with-beers { margin:20px 0 16px; }
+.homepage .uitleg-inklapbaar { max-width:860px; margin:28px auto 0; padding:0; text-align:left; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:transparent; }
+.uitleg-inklapbaar summary { cursor:pointer; padding:16px 4px; color:var(--green); font-size:21px; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:15px; }
+.uitleg-inklapbaar summary::-webkit-details-marker { display:none; }
+.uitleg-inklapbaar summary::after { content:"+"; font-family:Arial,sans-serif; font-size:20px; }
+.uitleg-inklapbaar[open] summary::after { content:"−"; }
+.uitleg-inklapbaar summary:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+.homepage .uitleg-inklapbaar p { max-width:none; margin:0 4px 14px; }
+.homepage .uitleg-inklapbaar a { display:inline-block; margin:0 4px 18px; font-size:14px; }
+.homepage .footer-nav { margin-top:32px; }
+@media(max-width:700px) { .homepage h1 { margin:18px 0 8px; } .homepage .site-search { margin:12px auto 18px; } .homepage .steden-title-with-beers { margin:16px 0; } }
+
+/* Collapsible explanation matches the city heading. */
+.homepage .uitleg-inklapbaar { border:0; text-align:center; margin-top:34px; }
+.uitleg-inklapbaar summary { position:relative; display:block; padding:12px 24px 22px; font-size:30px; font-weight:500; }
+.uitleg-titelrij { display:flex; justify-content:center; align-items:center; gap:14px; }
+.uitleg-titeltekst { position:relative; }
+.uitleg-inklapbaar summary::before { content:""; position:absolute; width:70px; height:1px; background:var(--gold); left:calc(50% - 35px); bottom:10px; }
+.uitleg-inklapbaar summary::after { content:"+"; position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:18px; color:var(--muted); }
+.uitleg-inklapbaar[open] summary::after { content:"−"; }
+.homepage .uitleg-inklapbaar p { max-width:680px; margin:8px auto 14px; }
+@media(max-width:700px) { .uitleg-inklapbaar summary { font-size:25px; padding-left:18px; padding-right:18px; } .uitleg-titelrij { gap:10px; } .uitleg-titelrij .section-beer { width:30px; height:36px; } }
