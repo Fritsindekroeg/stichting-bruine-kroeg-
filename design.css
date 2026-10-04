@@ -1,0 +1,116 @@
+/* Visual theme: all editorial content and existing behaviours are retained. */
+:root { --paper:#f6f2e9; --ink:#302c24; --green:#263e34; --muted:#756a59; --line:#d9cfbd; --gold:#a4874d; }
+body { background:var(--paper); color:var(--ink); font-size:19px; line-height:1.7; border-top:5px solid var(--green); }
+.container { max-width:1080px; padding:36px 40px 46px; }
+.logo { margin:0 auto 28px; }
+.logo img { max-width:310px; }
+nav { margin:0 0 30px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.main-nav { gap:8px 28px; }
+.main-nav a, nav a { font-size:14px; font-weight:600; color:var(--green); padding:9px 0; letter-spacing:.025em; text-underline-offset:7px; }
+.main-nav a[aria-current="page"] { box-shadow:0 2px var(--gold); }
+.container > hr { display:none; }
+h1 { color:var(--green); font-size:clamp(38px,5vw,62px); font-weight:500; letter-spacing:-.025em; line-height:1.12; margin:45px 0 20px; }
+h2 { color:var(--green); font-size:30px; font-weight:500; border-bottom:1px solid var(--line); margin-top:38px; }
+h3 { font-size:29px; font-weight:500; color:var(--green); line-height:1.25; }
+p { font-size:1.08em; line-height:1.75; }
+a { color:var(--green); text-underline-offset:4px; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+.page-illustration, .page-illustration.beer-title { max-width:46px; max-height:58px; width:auto; height:auto; margin:0 auto 30px; }
+.site-search { max-width:760px; padding:25px; background:#fffdf8; border:1px solid var(--line); border-radius:8px; margin:32px auto; box-shadow:0 8px 25px #302c2406; }
+.site-search label { font-family:Arial,Helvetica,sans-serif; font-size:13px; letter-spacing:.035em; margin-bottom:12px; color:var(--green); }
+.site-search-row { gap:10px; }
+.site-search input { min-width:0; border-color:var(--line); border-radius:4px; padding:14px; font-size:18px; }
+button, #site-search-button { background:var(--green); border-radius:4px; font-size:14px; font-weight:600; padding:14px 24px; }
+button:hover { background:#3a5548; }
+.site-search .search-results { top:calc(100% - 22px); left:25px; right:25px; border-color:var(--line); }
+.kroegen-uitleg { max-width:680px; padding:24px 10px 32px; margin:25px auto 36px; border:0; background:transparent; }
+.kroegen-uitleg h2 { font-size:32px; }
+.kroegen-uitleg p { color:var(--muted); }
+.kroegen-uitleg a { color:var(--green); font-size:13px; }
+.steden-title-with-beers { margin:34px 0 20px; gap:14px; }
+.section-beer { width:25px; height:34px; }
+.steden-heading { color:var(--green); font-size:30px; }
+.steden-heading::after { background:var(--gold); height:1px; }
+.steden-lijst { display:grid; grid-template-columns:1fr 1fr; gap:14px; border:0; max-width:860px; }
+.steden-lijst .stad-regel { grid-template-columns:minmax(0,1fr) auto 22px !important; padding:25px 24px; gap:12px; border:1px solid var(--line); border-radius:5px; background:#fffdf8; transition:background .2s,border-color .2s; }
+.steden-lijst .stad-regel:hover { padding:25px 24px; background:#eae5d8; border-color:var(--gold); }
+.stad-regel-naam { font-size:27px; font-weight:500; }
+.stad-regel-info { font-size:12px; color:var(--muted); }
+.stad-regel-pijl { color:var(--green); }
+.city-section { padding:0; margin:30px auto; max-width:860px; }
+.city-section:empty { display:none; }
+.cafe { padding:30px; margin:25px 0; border:1px solid var(--line); background:#fffdf8; border-radius:5px; box-shadow:none; }
+.cafe:hover { transform:none; box-shadow:none; }
+.cafe h3 { margin-bottom:18px; }
+.cafe-foto { border-radius:3px; margin:18px 0 12px; }
+.foto-credit { color:var(--muted); }
+.cafe .adres { border-top:1px solid var(--line); padding-top:14px; color:var(--muted); }
+.kaart-link, .terug-balk a { font-family:Arial,Helvetica,sans-serif; font-size:13px; color:var(--green); }
+#kaart { border:1px solid var(--line); border-radius:6px; box-shadow:0 10px 30px #302c240c; }
+form, .forum-box { background:#fffdf8; border-color:var(--line); padding:32px; border-radius:6px; }
+form label { color:var(--ink); }
+input[type="text"], input[type="email"], textarea, select { background:white; border:1px solid var(--line); border-radius:4px; font-size:18px; }
+input[type="checkbox"], input[type="radio"] { accent-color:var(--green); }
+.footer-nav { margin:65px 0 5px; padding-top:25px; border-color:var(--line); }
+.footer-nav a { font-size:12px; font-weight:500; letter-spacing:.03em; color:var(--muted); padding:8px 0; }
+#naar-boven { background:var(--green); }
+@media(max-width:700px) {
+ body { font-size:18px; }
+ .container { padding:24px 20px 32px; }
+ .logo img { max-width:245px; }
+ nav { padding:10px 0; margin-bottom:22px; }
+ .main-nav { gap:2px 18px; }
+ .main-nav a, nav a { font-size:13px; line-height:1.5; min-height:38px; }
+ h1 { margin:30px 0 18px; }
+ .site-search { padding:18px; }
+ .site-search-row { flex-direction:column; }
+ .site-search label { font-size:13px; }
+ .site-search button { min-height:46px; }
+ .site-search .search-results { left:18px; right:18px; top:calc(100% - 16px); }
+ .steden-lijst { grid-template-columns:1fr; gap:10px; }
+ .steden-lijst .stad-regel, .steden-lijst .stad-regel:hover { padding:20px; }
+ .stad-regel-pijl { display:block !important; }
+ .kroegen-uitleg { padding:12px 0 20px; }
+ .cafe, form, .forum-box { padding:22px 18px; }
+ .footer-nav a { font-size:12px; margin:3px 8px; }
+ .intro-quote { margin-left:15px; margin-right:15px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+
+/* Letterhead identity: original wordmark and fine stationery rules. */
+:root { --paper:#faf8f3; --green:#45453e; --gold:#b44a3d; --line:#d7d2c8; }
+body { border-top:0; }
+.logo { display:flex; align-items:center; gap:24px; margin-bottom:25px; }
+.logo::after { content:""; height:1px; background:var(--line); flex:1; }
+.logo img { width:365px; max-width:62%; height:auto; mix-blend-mode:multiply; }
+nav { border-top:0; padding-top:0; }
+.main-nav a[aria-current="page"] { box-shadow:0 2px var(--gold); }
+@media(max-width:700px) { .logo { gap:14px; } .logo img { width:300px; max-width:85%; } }
+
+/* Original drink illustrations: readable scale and stronger line weight. */
+.page-illustration,
+.page-illustration.beer-title,
+.page-illustration.beer,
+.page-illustration.wine,
+.page-illustration.champagne {
+  width:110px;
+  height:auto;
+  max-width:110px;
+  max-height:120px;
+  object-fit:contain;
+  margin:12px auto 34px;
+  filter:drop-shadow(.35px 0 0 #ed2923) drop-shadow(-.35px 0 0 #ed2923);
+}
+.section-beer { width:48px; height:48px; filter:drop-shadow(.3px 0 0 #ed2923) drop-shadow(-.3px 0 0 #ed2923); }
+@media(max-width:700px) {
+  .page-illustration,
+  .page-illustration.beer-title,
+  .page-illustration.beer,
+  .page-illustration.wine,
+  .page-illustration.champagne { width:92px; max-width:92px; max-height:105px; margin:10px auto 28px; }
+  .section-beer { width:40px; height:42px; }
+}
+
+/* Vector originals retain their own red, wine-red and blue inks. */
+.page-illustration, .page-illustration.beer-title, .page-illustration.beer,
+.page-illustration.wine, .page-illustration.champagne, .section-beer { filter:none; }
