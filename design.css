@@ -76,3 +76,13 @@ input[type="checkbox"], input[type="radio"] { accent-color:var(--green); }
  .intro-quote { margin-left:15px; margin-right:15px; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+
+/* Letterhead identity: original wordmark and fine stationery rules. */
+:root { --paper:#faf8f3; --green:#45453e; --gold:#b44a3d; --line:#d7d2c8; }
+body { border-top:0; }
+.logo { display:flex; align-items:center; gap:24px; margin-bottom:25px; }
+.logo::after { content:""; height:1px; background:var(--line); flex:1; }
+.logo img { width:365px; max-width:62%; height:auto; mix-blend-mode:multiply; }
+nav { border-top:0; padding-top:0; }
+.main-nav a[aria-current="page"] { box-shadow:0 2px var(--gold); }
+@media(max-width:700px) { .logo { gap:14px; } .logo img { width:300px; max-width:85%; } }
