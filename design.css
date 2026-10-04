@@ -86,3 +86,27 @@ body { border-top:0; }
 nav { border-top:0; padding-top:0; }
 .main-nav a[aria-current="page"] { box-shadow:0 2px var(--gold); }
 @media(max-width:700px) { .logo { gap:14px; } .logo img { width:300px; max-width:85%; } }
+
+/* Original drink illustrations: readable scale and stronger line weight. */
+.page-illustration,
+.page-illustration.beer-title,
+.page-illustration.beer,
+.page-illustration.wine,
+.page-illustration.champagne {
+  width:110px;
+  height:auto;
+  max-width:110px;
+  max-height:120px;
+  object-fit:contain;
+  margin:12px auto 34px;
+  filter:drop-shadow(.35px 0 0 #ed2923) drop-shadow(-.35px 0 0 #ed2923);
+}
+.section-beer { width:48px; height:48px; filter:drop-shadow(.3px 0 0 #ed2923) drop-shadow(-.3px 0 0 #ed2923); }
+@media(max-width:700px) {
+  .page-illustration,
+  .page-illustration.beer-title,
+  .page-illustration.beer,
+  .page-illustration.wine,
+  .page-illustration.champagne { width:92px; max-width:92px; max-height:105px; margin:10px auto 28px; }
+  .section-beer { width:40px; height:42px; }
+}
