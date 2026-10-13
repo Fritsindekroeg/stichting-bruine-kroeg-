@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<link rel="icon" type="image/png" href="favicon.png?v=2">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Afmeldformulier – Stichting De Bruine Kroeg</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'EB Garamond', serif;
+    background: #f9f7f1;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 400px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #5a4630;
+    margin: 0 14px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Menu op telefoon */
+@media (max-width: 600px) {
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .main-nav a {
+        font-size: 21px;
+        margin: 0;
+    }
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3e2c1c;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #3e2c1c;
+}
+
+p {
+    margin: 12px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #5a4630;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+form button:hover {
+    background-color: #443423;
+}
+
+.checkbox-group {
+    margin: 10px 0 25px 0;
+}
+
+.checkbox-group label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"],
+.checkbox-group input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.sub-question {
+    margin-left: 25px;
+}
+
+.form-section {
+    margin-top: 35px;
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+}
+
+.hint {
+    font-size: 15px;
+    color: #666;
+}
+
+/* Aanvullende vragen eetcafé */
+#eetcafe-vragen {
+    display: none;
+}
+
+/* Navigatie onderaan */
+.footer-nav {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #8a7a68;
+    margin: 0 10px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+</style>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="design.css?v=21">
+</head>
+
+<body class="aanmeldpagina afmeldpagina">
+<div class="container">
+
+<div class="logo">
+    <img src="logo-briefpapier.png" alt="Logo Stichting De Bruine Kroeg">
+</div>
+
+<!-- Hoofdnavigatie -->
+<nav aria-label="Hoofdmenu">
+  <div class="main-nav nieuw-menu">
+    <div class="menu-kroegen"><a class="menu-home" href="index.html">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart en Aanmeldformulier</span></summary><div class="submenu">
+      <a href="kaart-bruine-kroegen.html">Kaart</a>
+      <a href="aanmeldformulier.html">Aanmeldformulier</a>
+    </div></details></div>
+    <a href="wat-is-een-bruine-kroeg.html">Wat is een Bruine Kroeg</a>
+    <details class="menu-groep"><summary>Achtergronden</summary><div class="submenu">
+      <a href="erfgoed.html">Erfgoed</a>
+      <a href="geschiedenis.html">Geschiedenis</a>
+      <a href="informatie.html">Informatie</a>
+    </div></details>
+  </div>
+</nav>
+
+<hr>
+
+<h1>Afmeldformulier Bruine Kroeg</h1>
+<img src="bier-origineel.svg" alt="" class="page-illustration">
+<div class="aanmeld-toelichting">
+<p>Als er goede redenen zijn om een café van de lijst af te halen, stuur dan een volledig ingevuld afmeldformulier in.</p>
+<p>De melding wordt beoordeeld door Stichting De Bruine Kroeg en bij akkoord wordt het café afgevoerd van onze website.</p>
+<p>De beoordeling neemt één tot twee weken in beslag.</p>
+<p>De melder wordt op de hoogte gehouden.</p>
+</div>
+<form id="afmeldformulier" action="https://formspree.io/f/mykdzrdz" method="POST">
+<input type="hidden" name="soort_melding" value="Afmelding bruine kroeg">
+<input type="hidden" name="_subject" value="Afmelding Bruine Kroeg">
+<p><label for="afmeld-cafe">Naam café</label><input id="afmeld-cafe" name="naam_cafe" type="text" required></p>
+<p><label for="afmeld-plaats">Plaats</label><input id="afmeld-plaats" name="plaats" type="text" required></p>
+<fieldset class="afmeld-redenen"><legend>Reden afmelding (aankruisen wat van toepassing is)</legend>
+<label><input type="checkbox" name="reden_afmelding[]" value="café is opgeheven"><span>café is opgeheven</span></label>
+<label><input type="checkbox" name="reden_afmelding[]" value="café is ingrijpend verbouwd"><span>café is ingrijpend verbouwd</span></label>
+<label><input type="checkbox" name="reden_afmelding[]" value="nieuwe eigenaar"><span>nieuwe eigenaar</span></label>
+<label><input type="checkbox" name="reden_afmelding[]" value="café voldoet niet aan de kenmerken van een bruine kroeg"><span>café voldoet niet aan de kenmerken van een bruine kroeg</span></label>
+</fieldset>
+<p><label for="afmeld-toelichting">Toelichting</label><textarea id="afmeld-toelichting" name="toelichting" rows="5" required></textarea></p>
+<p><label for="afmeld-naam">Uw naam</label><input id="afmeld-naam" name="naam" type="text" autocomplete="name" required></p>
+<p><label for="afmeld-email">Uw e-mailadres</label><input id="afmeld-email" name="email" type="email" autocomplete="email" required></p>
+<button type="submit">Afmelding versturen</button>
+</form>
+<script>
+(function () {
+ const params = new URLSearchParams(window.location.search);
+ document.getElementById('afmeld-cafe').value = params.get('cafe') || '';
+ document.getElementById('afmeld-plaats').value = params.get('plaats') || '';
+ const reasons = Array.from(document.querySelectorAll('.afmeld-redenen input'));
+ function validateReasons() {
+  reasons[0].setCustomValidity(reasons.some(input => input.checked) ? '' : 'Kruis ten minste één reden voor afmelding aan.');
+ }
+ reasons.forEach(input => input.addEventListener('change', validateReasons));
+ validateReasons();
+})();
+</script>
+<div class="footer-nav">
+  <a href="organisatie.html">Organisatie</a>
+  <a href="doelstellingen.html">Doelstellingen</a>
+  <a href="forum.html">Forum</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+</div>
+
+
+
+</body>
+</html>

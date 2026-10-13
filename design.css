@@ -233,3 +233,20 @@ nav { border-top:0; padding-top:0; }
 .aanmeldpagina .aanmeld-toelichting .aanmeld-beoordeling p:last-child { color:#000; font-size:18px; font-weight:400; line-height:1.4; margin:0 0 10px; }
 .aanmeldpagina .aanmeld-toelichting .aanmeld-beoordeling { border-top:0; margin:0; padding:0; }
 .aanmeldpagina .aanmeld-toelichting .aanmeld-beoordeling p:last-child { margin-bottom:0; }
+
+.cafe-titelrij { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:18px; }
+.cafe .cafe-titelrij h3 { margin:0; }
+.afmelden-knop { display:inline-block; flex-shrink:0; border:1px solid var(--line); border-radius:4px; padding:6px 12px; color:var(--muted); background:#faf8f3; font:400 12px/1.5 Arial,Helvetica,sans-serif; text-decoration:none; }
+.afmelden-knop:hover { color:#9e4136; border-color:#9e4136; }
+.afmeldpagina form { max-width:760px; margin:0 auto; box-sizing:border-box; }
+.afmeldpagina form label { display:block; }
+.afmeldpagina form input[type="text"], .afmeldpagina form input[type="email"], .afmeldpagina form textarea { width:100%; box-sizing:border-box; }
+.afmeld-redenen { margin:24px 0; padding:18px; border:1px solid var(--line); }
+.afmeld-redenen legend { padding:0 6px; font-size:19px; }
+.afmeldpagina .afmeld-redenen label { display:flex; align-items:flex-start; gap:10px; margin:10px 0; font-size:18px; line-height:1.4; }
+.afmeld-redenen input { margin-top:5px; flex-shrink:0; }
+@media(max-width:500px) { .cafe-titelrij { gap:10px; } .cafe-titelrij h3 { font-size:25px; } }
+
+.afmeldpagina .afmeld-redenen label { display:grid; grid-template-columns:18px minmax(0,1fr); gap:10px; width:100%; font-weight:400; }
+.afmeldpagina .afmeld-redenen input[type="checkbox"] { width:18px; height:18px; min-width:18px; max-width:18px; padding:0; margin:3px 0 0; }
+.afmeldpagina .afmeld-redenen label span { min-width:0; overflow-wrap:break-word; }

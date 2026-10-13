@@ -72,7 +72,7 @@ p {
 }
 </style>
   <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="design.css?v=14">
+<link rel="stylesheet" href="design.css?v=20">
 </head>
 
 <body>
@@ -249,7 +249,8 @@ kroegen.forEach(function(kroeg) {
     .bindPopup(
       "<strong>" + kroeg.naam + "</strong><br>" +
       kroeg.stad + "<br>" +
-      "<a href='" + kroeg.link.replace("#", "?cafe=") + "'>Bekijk in lijst</a>"
+      "<a href='" + kroeg.link.replace("#", "?cafe=") + "'>Bekijk in lijst</a>" +
+      "<br><a class='afmelden-knop' href='afmeldformulier.html?cafe=" + encodeURIComponent(kroeg.naam) + "&amp;plaats=" + encodeURIComponent(kroeg.stad) + "'>Afmelden</a>"
     );
   markers.push(marker);
 });
