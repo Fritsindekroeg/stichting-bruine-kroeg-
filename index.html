@@ -264,7 +264,7 @@ footer {
 
 </style>
 
-<link rel="stylesheet" href="design.css?v=6">
+<link rel="stylesheet" href="design.css?v=14">
 </head>
 
 <body class="homepage">
@@ -274,20 +274,32 @@ footer {
     <img src="logo-briefpapier.png" alt="Logo Stichting De Bruine Kroeg">
 </div>
 
-<nav>
-  <div class="main-nav">
-    <a href="index.html" aria-current="page" data-search-name="kroegen">Kroegen</a>
-    <a href="kaart-bruine-kroegen.html" data-search-name="kaart">Kaart</a>
-    <a href="wat-is-een-bruine-kroeg.html" data-search-name="wat is een bruine kroeg">Wat is een Bruine Kroeg</a>
-    <a href="aanmeldformulier.html" data-search-name="aanmeldformulier">Aanmeldformulier</a>
-    <a href="forum.html" data-search-name="forum">Forum</a>
+<nav aria-label="Hoofdmenu">
+  <div class="main-nav nieuw-menu">
+    <div class="menu-kroegen"><a class="menu-home" href="index.html" aria-current="page">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart en Aanmeldformulier</span></summary><div class="submenu">
+      <a href="kaart-bruine-kroegen.html">Kaart</a>
+      <a href="aanmeldformulier.html">Aanmeldformulier</a>
+    </div></details></div>
+    <a href="wat-is-een-bruine-kroeg.html">Wat is een Bruine Kroeg</a>
+    <details class="menu-groep"><summary>Achtergronden</summary><div class="submenu">
+      <a href="erfgoed.html">Erfgoed</a>
+      <a href="geschiedenis.html">Geschiedenis</a>
+      <a href="informatie.html">Informatie</a>
+    </div></details>
   </div>
 </nav>
 
 <hr>
 
+<section class="homepage-fotogedeelte" aria-label="Stichting De Bruine Kroeg">
+<p class="stichting-missie">Stichting De Bruine Kroeg zet zich in voor<br><span class="missie-rood"><strong>bescherming en behoud van traditionele bruine cafés.</strong></span></p>
+
 <h1>Bruine Kroegen</h1>
-<img src="bier-origineel.svg" alt="" class="page-illustration beer-title">
+<div class="homepage-aanmelden">
+  <img src="bier-origineel.svg" alt="" class="page-illustration beer-title">
+  <a class="aanmelden-knop" href="aanmeldformulier.html">Kroeg aanmelden</a>
+  <img src="bier-origineel.svg" alt="" class="page-illustration beer-title">
+</div>
 
 <div class="site-search">
   <label for="site-search-input">Zoek een stad of bruine kroeg</label>
@@ -306,54 +318,13 @@ footer {
 
 
 
-<div class="steden-title-with-beers">
-  <img src="bier-origineel.svg" alt="" class="section-beer">
-  <h2 class="steden-heading" id="steden">Ontdek per stad</h2>
-  <img src="bier-origineel.svg" alt="" class="section-beer">
-</div>
 
-<div class="steden-lijst">
-  <a href="steden/amsterdam.html" class="stad-regel">
-    <span class="stad-regel-naam">Amsterdam</span>
-    <span class="stad-regel-info" data-city-count="Amsterdam"></span>
-    <span class="stad-regel-pijl">→</span>
-  </a>
-  <a href="steden/rotterdam.html" class="stad-regel">
-    <span class="stad-regel-naam">Rotterdam</span>
-    <span class="stad-regel-info" data-city-count="Rotterdam"></span>
-    <span class="stad-regel-pijl">→</span>
-  </a>
-  <a href="steden/utrecht.html" class="stad-regel">
-    <span class="stad-regel-naam">Utrecht</span>
-    <span class="stad-regel-info" data-city-count="Utrecht"></span>
-    <span class="stad-regel-pijl">→</span>
-  </a>
-  <a href="steden/weesp.html" class="stad-regel">
-    <span class="stad-regel-naam">Weesp</span>
-    <span class="stad-regel-info" data-city-count="Weesp"></span>
-    <span class="stad-regel-pijl">→</span>
-  </a>
-</div>
-<details class="kroegen-uitleg uitleg-inklapbaar">
-  <summary>
-    <span class="uitleg-titelrij">
-      <img src="bier-origineel.svg" alt="" class="section-beer">
-      <span class="uitleg-titeltekst">Wat is een Bruine Kroeg?</span>
-      <img src="bier-origineel.svg" alt="" class="section-beer">
-    </span>
-  </summary>
-  <p>
-    Een bruine kroeg is meer dan een café. Het is een plek met karakter,
-    geschiedenis en een eigen sfeer — waar het interieur, de stamgasten
-    en het verhaal van de kroeg samenkomen.
-  </p>
-  <a href="wat-is-een-bruine-kroeg.html" data-search-name="lees wat een bruine kroeg bijzonder maakt →">Lees wat een bruine kroeg bijzonder maakt →</a>
-</details>
+</section>
 <div class="footer-nav">
   <a href="doelstellingen.html" data-search-name="doelstellingen">Doelstellingen</a>
   <a href="organisatie.html" data-search-name="organisatie">Organisatie</a>
-  <a href="geschiedenis.html" data-search-name="geschiedenis">Geschiedenis</a>
   <a href="contact.html" data-search-name="contact">Contact</a>
+  <a href="forum.html">Forum</a>
 </div>
 </div>
 <script>

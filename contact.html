@@ -90,7 +90,7 @@ form button:hover {
 }
 </style>
   <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="design.css?v=4">
+<link rel="stylesheet" href="design.css?v=14">
 </head>
 
 <body>
@@ -100,13 +100,18 @@ form button:hover {
     <img src="logo-briefpapier.png" alt="Logo Stichting De Bruine Kroeg">
 </div>
 
-<nav>
-  <div class="main-nav">
-    <a href="index.html">Kroegen</a>
-    <a href="kaart-bruine-kroegen.html">Kaart</a>
+<nav aria-label="Hoofdmenu">
+  <div class="main-nav nieuw-menu">
+    <div class="menu-kroegen"><a class="menu-home" href="index.html">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart en Aanmeldformulier</span></summary><div class="submenu">
+      <a href="kaart-bruine-kroegen.html">Kaart</a>
+      <a href="aanmeldformulier.html">Aanmeldformulier</a>
+    </div></details></div>
     <a href="wat-is-een-bruine-kroeg.html">Wat is een Bruine Kroeg</a>
-    <a href="aanmeldformulier.html">Aanmeldformulier</a>
-    <a href="forum.html">Forum</a>
+    <details class="menu-groep"><summary>Achtergronden</summary><div class="submenu">
+      <a href="erfgoed.html">Erfgoed</a>
+      <a href="geschiedenis.html">Geschiedenis</a>
+      <a href="informatie.html">Informatie</a>
+    </div></details>
   </div>
 </nav>
 
@@ -166,8 +171,8 @@ Heeft u een vraag of wilt u contact opnemen met Stichting De Bruine Kroeg? U kun
 <div class="footer-nav">
   <a href="doelstellingen.html">Doelstellingen</a>
   <a href="organisatie.html">Organisatie</a>
-  <a href="geschiedenis.html">Geschiedenis</a>
   <a href="contact.html" aria-current="page">Contact</a>
+  <a href="forum.html">Forum</a>
 </div>
 </div>
 </body>
