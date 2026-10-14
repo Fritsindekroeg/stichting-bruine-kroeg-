@@ -274,3 +274,6 @@ nav { border-top:0; padding-top:0; }
  .homepage .homepage-fotogedeelte .site-search { padding:18px; }
  .homepage .footer-nav { padding:18px 0; }
 }
+
+/* Keep the roofline visible at every screen width. */
+.homepage .homepage-fotogedeelte { background-position:center top; }
