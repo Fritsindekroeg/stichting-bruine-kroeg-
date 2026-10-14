@@ -255,3 +255,22 @@ nav { border-top:0; padding-top:0; }
 .logo .logo-home img { display:block; width:100%; max-width:100%; height:auto; }
 @media(max-width:700px) { .logo .logo-home { width:300px; max-width:85%; } }
 .stedenoverzicht .steden-lijst { margin-top:28px; margin-bottom:36px; }
+
+/* Spacious homepage scaled to the screen instead of a narrow fixed column. */
+.homepage .container { width:94%; max-width:1640px; min-height:100vh; min-height:100svh; box-sizing:border-box; padding:28px 0 0; display:flex; flex-direction:column; }
+.homepage .logo { width:100%; margin-bottom:18px; }
+.homepage nav { flex-shrink:0; padding-bottom:18px; }
+.homepage .homepage-fotogedeelte { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:clamp(30px,5vh,64px) 36px; min-height:480px; box-sizing:border-box; }
+.homepage .homepage-fotogedeelte .stichting-missie { width:100%; max-width:1000px; box-sizing:border-box; margin:0 auto 30px; font-size:clamp(24px,2.15vw,32px); }
+.homepage .homepage-fotogedeelte h1 { font-size:clamp(40px,3.6vw,58px); }
+.homepage .homepage-fotogedeelte .site-search { width:100%; max-width:860px; box-sizing:border-box; margin:16px auto 0; }
+.homepage .footer-nav { flex-shrink:0; margin:0; padding:22px 0 24px; }
+@media(min-width:1500px) { .homepage .homepage-fotogedeelte { background-position:center 58%; } }
+@media(max-width:700px) {
+ .homepage .container { width:100%; padding:20px 16px 0; }
+ .homepage .logo { margin-bottom:12px; }
+ .homepage .homepage-fotogedeelte { margin:0 -16px; min-height:0; padding:30px 20px; }
+ .homepage .homepage-fotogedeelte .stichting-missie { font-size:23px; margin-bottom:26px; }
+ .homepage .homepage-fotogedeelte .site-search { padding:18px; }
+ .homepage .footer-nav { padding:18px 0; }
+}
