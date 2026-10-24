@@ -1,0 +1,999 @@
+[
+  {
+    "id": "oranje-bierhuis",
+    "name": "Oranje Bierhuis",
+    "city": "Leeuwarden",
+    "province": "Friesland",
+    "address": "Auckamastraatje 2",
+    "since": null,
+    "description": "Historisch café aan het Gouverneursplein in de binnenstad van Leeuwarden, met een terras aan het plein.",
+    "photo": null,
+    "coords": [
+      53.201889,
+      5.79575
+    ],
+    "sources": [
+      "https://www.oranjebierhuis.nl/",
+      "https://www.visitleeuwarden.com/nl/locaties/2085684033/oranje-bierhuis"
+    ],
+    "notes": [
+      "Historische bronnen noemen circa 1770 als begin horeca en 1857 als zekere cafévermelding; daarom geen exact sindsjaar ingevuld. Coördinaten afkomstig van routekoppeling officiële toeristische locatiepagina."
+    ],
+    "website": "https://www.oranjebierhuis.nl/",
+    "coordinate_source": "https://www.visitleeuwarden.com/nl/locaties/2085684033/oranje-bierhuis",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "stad-en-lande",
+    "name": "Café-Slijterij Stad en Lande",
+    "city": "Delfzijl",
+    "province": "Groningen",
+    "address": "Oude Schans 36",
+    "since": null,
+    "description": "Café en slijterij aan de Oude Schans in het centrum van Delfzijl.",
+    "photo": null,
+    "coords": [
+      53.32938596,
+      6.9252304
+    ],
+    "sources": [
+      "https://www.cafestadenlande.nl/"
+    ],
+    "notes": [
+      "Officiële website bevat oude agenda-informatie; oprichtingsjaar niet bevestigd."
+    ],
+    "website": "https://www.cafestadenlande.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Oude%20Schans%2036%20Delfzijl&rows=30",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "t-zielhoes",
+    "name": "Café 't Zielhoes",
+    "city": "Usquert",
+    "province": "Groningen",
+    "address": "Zijlweg 4",
+    "since": "1979",
+    "description": "Bruin café in het voormalige sluiswachtershuis bij de haven van Noordpolderzijl, aan de voet van de zeedijk.",
+    "photo": null,
+    "coords": [
+      53.43257222,
+      6.58294641
+    ],
+    "sources": [
+      "https://www.zielhoes.nl/",
+      "https://www.visitgroningen.nl/nl/locaties/3562465248/t-zielhoes",
+      "https://noorderland.nl/artikel/490490/t-zielhoes-een-gronings-cafe-met-een-ziel"
+    ],
+    "notes": [
+      "Sinds 1979 betreft opening na restauratie; eerder werd hier ook drank geschonken. Foto bevat het officiële cafélogo."
+    ],
+    "website": "https://www.zielhoes.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Zijlweg%204%20Usquert&rows=30",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "de-viever",
+    "name": "Café De Viever",
+    "city": "Roermond",
+    "province": "Limburg",
+    "address": "Gebroek 144",
+    "since": null,
+    "description": "Café aan Gebroek in Roermond.",
+    "photo": null,
+    "coords": [
+      51.183296,
+      6.00191927
+    ],
+    "sources": [
+      "https://www.facebook.com/pages/Cafe-de-Viever/302623346517384"
+    ],
+    "notes": [],
+    "website": "https://www.cafedeviever.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Gebroek+144+Roermond&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "de-muis",
+    "name": "Café De Muis",
+    "city": "Geldrop",
+    "province": "Noord-Brabant",
+    "address": "Hulst 145",
+    "since": null,
+    "description": "Café aan de Hulst in Geldrop.",
+    "photo": null,
+    "coords": [
+      51.43080752,
+      5.54224275
+    ],
+    "sources": [
+      "https://www.bedrijvenregister.nl/geldrop/cafe-de-muis"
+    ],
+    "notes": [
+      "Geldrop is Noord-Brabant, not user Limburg grouping."
+    ],
+    "website": null,
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Hulst+145+Geldrop&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "taverne",
+    "name": "Café Taverne",
+    "city": "Tilburg",
+    "province": "Noord-Brabant",
+    "address": "Bredaseweg 68",
+    "since": null,
+    "description": "Café aan de Bredaseweg met biljarten, darten en evenementen.",
+    "photo": null,
+    "coords": [
+      51.55517969,
+      5.07688702
+    ],
+    "sources": [
+      "https://www.cafetavernetilburg.nl/contact/"
+    ],
+    "notes": [],
+    "website": "https://www.cafetavernetilburg.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Bredaseweg+68+Tilburg&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "weemoed",
+    "name": "Café Weemoed",
+    "city": "Tilburg",
+    "province": "Noord-Brabant",
+    "address": "Heuvel 12",
+    "since": "1984",
+    "description": "Bruin café aan de Heuvel, met ruimte voor gesprekken, schaken en livemuziek.",
+    "photo": null,
+    "coords": [
+      51.55735413,
+      5.09187044
+    ],
+    "sources": [
+      "https://www.cafeweemoed.nl/"
+    ],
+    "notes": [
+      "Official venue photo; no explicit reuse licence found. Verify image appearance before use."
+    ],
+    "website": "https://www.cafeweemoed.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Heuvel+12+Tilburg&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "sportzicht",
+    "name": "Café Sportzicht",
+    "city": "Aalsmeer",
+    "province": "Noord-Holland",
+    "address": "Sportlaan 44",
+    "since": "1934",
+    "description": "Familiecafé aan de Sportlaan, met een lange biljarttraditie en een huiskamerfunctie voor Aalsmeer.",
+    "photo": null,
+    "coords": [
+      52.26634096,
+      4.76558583
+    ],
+    "sources": [
+      "https://sportzicht.nl/"
+    ],
+    "notes": [
+      "Official venue photo; no explicit reuse licence found. Verify image appearance before use."
+    ],
+    "website": "https://sportzicht.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Sportlaan+44+Aalsmeer&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "t-monumentje",
+    "name": "'t Monumentje",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Westerstraat 120",
+    "description": "Café 't Monumentje tref je in — hoe kan het ook anders — een monumentaal pand uit de 17e eeuw. Sinds 1988 wordt elk najaar een drie maanden durend backgammon-toernooi georganiseerd: de finale is altijd spannend.",
+    "since": "1988",
+    "photo": null,
+    "coords": [
+      52.3785147,
+      4.8830999
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.monumentje.nl/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "brandon",
+    "name": "Brandon",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Keizersgracht 157",
+    "description": "Cafe Brandon is een van de oudste kroegen van de stad; al sinds 1626 drinken Amsterdammers hier een biertje. Eind vorige eeuw staat het lange tijd leeg, omdat de vorige eigenaars hun cafe niet kwijt willen. Het bordje 'Niet te koop, niet te huur' dat in het lege café hing, hangt er nu nog steeds.",
+    "since": "1626",
+    "photo": null,
+    "coords": [
+      52.3754007,
+      4.8864147
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.amsterdam-dance-event.nl/en/venues/cafe-brandon/1438533/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Opening1626 according to official ADE venue profile."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "cafe-de-druif",
+    "name": "Café De Druif",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Rapenburgerplein 83",
+    "description": "Een historisch café aan het Rapenburgerplein, bekend om de imposante jenevervaten\n        en de uitgesproken maritieme sfeer. De locatie wordt al sinds 1585 in verband gebracht\n        met een distilleerderij. Volgens de overlevering was admiraal Piet Hein hier een vaste gast.\n        Of dat historisch klopt is onzeker, maar de sfeer ademt onmiskenbaar de 17e eeuw.",
+    "since": "1863",
+    "photo": null,
+    "coords": [
+      52.3700544,
+      4.9106101
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.amsterdam.nl/nieuws/achtergrond/oudste-kroeg/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Municipal historical research contradicts claimed1585.",
+      "Downloaded candidate rejected visual QA: logo or damaged background graphic, not suitable venue photo."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "cafe-van-wou",
+    "name": "Café van Wou",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Van Woustraat 25",
+    "description": "Dichtbij de Albert Cuypmarkt vind je dit typische biljart- en klaverjascafé. De eigenaresse, die nog een café in De Pijp en het centrum bezit, is een van de weinige vrouwelijke kroegbazen in de stad.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.3566949,
+      4.8999592
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "cafe-t-doktertje",
+    "name": "Café ’t Doktertje",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Rozenboomsteeg 4",
+    "description": "Een van de kleinste en meest karaktervolle proeflokalen van Amsterdam, verscholen\n        in een steegje bij het Spui. Opgericht in 1798 door een chirurgijn, waaraan het café\n        zijn naam dankt. Al generaties lang in handen van de familie Beems. Het interieur\n        vormt een levend museum van curiosa en herinneringen.",
+    "since": null,
+    "photo": "fotos/cafe-t-doktertje.jpeg",
+    "coords": [
+      52.369254,
+      4.8908258
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "chris",
+    "name": "Chris",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Bloemstraat 42",
+    "description": "Het oudste café van de Jordaan is te vinden in de schaduw van de Westerkerk. Cafe Chris opende z'n deuren in 1624, en sindsdien blijft het bier én de gezelligheid hier stromen.",
+    "since": "1882",
+    "photo": null,
+    "coords": [
+      52.3742568,
+      4.8815665
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.amsterdam.nl/nieuws/achtergrond/oudste-kroeg/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Cafe claims1624; municipal historical research documents first pub1882."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "chris-scholten",
+    "name": "Chris Scholten",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Van Woustraat 104",
+    "description": "Het café is vernoemd naar Chris Scholten. De droom van deze stukadoor en ober kwam in 1977 in vervulling, toen hij zijn eigen café opende. Zijn dochter, opgegroeid in het café, en schoonzoon runnen de kroeg nog op zijn wijze.",
+    "since": "1977",
+    "photo": null,
+    "coords": [
+      52.3542908,
+      4.9014532
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://cafechrisscholten.nl/",
+      "https://www.instagram.com/cafechrisscholten/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "de-blauwe-druif",
+    "name": "De Blauwe Druif",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Haarlemmerstraat 91-H",
+    "description": "Café de Blauwe Druif is een van de oudste bruine kroegen van Amsterdam (sinds 1790). Het is een pretentieloos baken van gezelligheid in de Haarlemmerstraat waar de tijd heeft stilgestaan.",
+    "since": "1790",
+    "photo": null,
+    "coords": [
+      52.3804361,
+      4.8910498
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.21horeca.com/nl/cafe-de-blauwe-druif/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "de-drie-fleschjes",
+    "name": "De Drie Fleschjes",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Gravenstraat 18",
+    "description": "De Drie Fleschjes aan de Gravenstraat is een prachtig proeflokaal dat al sinds 1650 de Amsterdamse jenevercultuur in ere houdt. De muren zijn van bedekt met authentieke drankvaten, waar vaste gasten door de eeuwen heen hun eigen voorraadje bewaarden.",
+    "since": "1650",
+    "photo": "fotos/de-drie-fleschjes.jpeg",
+    "coords": [
+      52.3743114,
+      4.8923128
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "eland",
+    "name": "De Eland",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Prinsengracht 296",
+    "description": "Café De Eland is een traditioneel bruin café aan de Prinsengracht in de Amsterdamse Jordaan. Het café bestaat al sinds de 19e eeuw en staat bekend om zijn klassieke interieur en ongedwongen sfeer. Bezoekers kunnen er terecht voor een drankje, waaronder verschillende bieren, in een authentieke Amsterdamse omgeving. Dankzij de centrale ligging is Café De Eland zowel populair bij buurtbewoners als bij bezoekers die de Jordaan verkennen.",
+    "since": "jaren 1860",
+    "photo": null,
+    "coords": [
+      52.37003892199419,
+      4.882316654456816
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.heineken.com/nl/nl/pub-museums"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "de-fluiter",
+    "name": "De Fluiter",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Admiraal de Ruijterweg 270",
+    "description": "Een echt donkerbruin café met biljart waar jong en oud uit de buurt samenkomen. Als een echte kastelein staat eigenaresse Jet bijna altijd zelf achter de bar, waar ze iedereen persoonlijk verwelkomt. Door de warme houten inrichting en gezellige sfeer ga je gegarandeerd fluitend naar huis.",
+    "since": null,
+    "photo": "fotos/de-fluiter.jpeg",
+    "coords": [
+      52.3792998,
+      4.8568986
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "de-ooievaar",
+    "name": "De Ooievaar",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Sint Olofspoort 1",
+    "description": "'Naveltje bloot', 'Bruids-tranen' en 'Hansje in de Kelder': een greep uit de traditionele likeuren die het proeflokaal van de distilleerderij Van Wees schenkt, volgens traditioneel recept gestookt.",
+    "since": null,
+    "photo": "fotos/de-ooievaar.jpeg",
+    "coords": [
+      52.3762843,
+      4.8999403
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "de-zwart",
+    "name": "De Zwart",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Spuistraat 334",
+    "description": "Wie in De Zwart is geweest herinnert zich vooral de mooie vloer uit 1930. Het café zelf stamt uit 1921 en is vernoemd naar oprichter Onno de Zwart.",
+    "since": null,
+    "photo": "fotos/de-zwart.jpeg",
+    "coords": [
+      52.368885,
+      4.888554
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "eik-en-linde",
+    "name": "Eik en Linde",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Plantage Middenlaan 22-A",
+    "description": "Het café bestaat al sinds 1772, maar week door de uitbreiding van Artis uit naar het huidige pand. De oude locatie is nu een wolvenverblijf. Na de oorlog kwamen hier veel schrijvers en werden VPRO-programma's opgenomen.",
+    "since": "1772",
+    "photo": "fotos/eik-en-linde.jpeg",
+    "coords": [
+      52.3665415,
+      4.9109737
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "engelse-reet",
+    "name": "Engelse Reet",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Begijnensteeg 4",
+    "description": "In 2023 door de Paroollezers uitgeroepen tot de meest monumentale kroeg van de stad. Laat je niet misleiden door de naam: reet is oud-Nederlands voor kier en verwijst naar het smalle steegje waar het café in ligt.",
+    "since": null,
+    "photo": "fotos/engelse-reet.jpeg",
+    "coords": [
+      52.3695417,
+      4.8908519
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "gijs-de-rooij",
+    "name": "Gijs de Rooij",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Javastraat 1",
+    "description": "Café-biljart Gijs de Rooij is sinds 1947 een begrip in Amsterdam-Oost. Raak ouderwets een balletje op het verwarmde biljart, vermaak jezelf met darts of geniet van een goed gesprek aan de bar.",
+    "since": "1947",
+    "photo": null,
+    "coords": [
+      52.3635979,
+      4.9316324
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.cafegijsderooy.nl/",
+      "https://javakaart.amsterdam/cafe-gijs-de-rooy/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "hans",
+    "name": "Hans",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Amstelveenseweg 69-H",
+    "description": "Een ouderwets gezellige kroeg, waar de Perzische kleedjes nog op tafel liggen. Als je wilt dobbelen, kaarten of een biljartje leggen ben je hier aan het juiste adres. Vergeet de kroegkat niet een aai te geven.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.353662,
+      4.856008
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Voormalige website cafe-hans.nl verwijst nu naar casinoreclame; daarom uitgesloten als bron."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "hegeraad",
+    "name": "Hegeraad",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Noordermarkt 34",
+    "description": "Café Hegeraad was tot begin 20e eeuw een klein café met aansluitend een woonhuis. De opkamer is erbij getrokken waardoor het café een echt huiskamergevoel heeft.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.3793796,
+      4.8861097
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "hermes",
+    "name": "Hermes",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Ceintuurbaan 55",
+    "description": "Café Hermes is een authentiek bruin café aan de Ceintuurbaan in de Amsterdamse wijk De Pijp.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.35283756125418,
+      4.889157092398292
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://cafehermes.nl/HOME/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Eigen website noemt horecabestemming sinds1900; geen bewezen oprichtingsjaar van café Hermes."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "heuvel",
+    "name": "Heuvel",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Prinsengracht 568",
+    "description": "Café Heuvel is een traditioneel Amsterdams buurtcafé met een informele sfeer. Tijdens Koningsdag staat mede-eigenaar Robert ten Brink er regelmatig zelf achter de tap om bier te schenken.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.362596574488435,
+      4.887923535706524
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://cafeheuvel.nl/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "krom",
+    "name": "Krom",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Utrechtsestraat 76",
+    "description": "Het café staat bekend om zijn authentieke art-deco-interieur, informele sfeer en ruime terras.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.36305977775503,
+      4.898421292020936
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Official interior gallery consists of book-layout scans and closeups, rejected as cafe listing photograph."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "oosterling",
+    "name": "Oosterling",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Utrechtsestraat 140",
+    "description": "Vanaf 1735 werd in dit pand door de VOC koffie, thee en specerijen verkocht. Vanaf 1820 werd het een café en slijterij. Oosterling is het enige café in Amsterdam dat nog een slijterijvergunning heeft.",
+    "since": "1820",
+    "photo": null,
+    "coords": [
+      52.3610742,
+      4.8992555
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.amsterdam.nl/stadsarchief/stukken/binnenkijken/oosterling/",
+      "https://www.cafeoosterling.nl/geschiedenis.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Municipal archive says cafe since1820; own site labels1877 for family business.",
+      "Candidate1937 is drawing, rejected. Actual1960 photo download denied403."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "papeneiland",
+    "name": "Papeneiland",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Prinsengracht 2",
+    "description": "Sinds 1896 zit in dit pand een café. De naam verwijst naar het noordelijke stukje van de Jordaan, waar vroeger een klooster stond. Bill Clinton at in 2011 in Papeneiland een stuk appeltaart, wat de taart in één klap wereldberoemd maakte.",
+    "since": "1896",
+    "photo": null,
+    "coords": [
+      52.3804606,
+      4.8879944
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.papeneiland.nl/Geschiedenis.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "1642 is building date; own history dates licensed cafe to1896.",
+      "Downloaded candidate rejected visual QA: logo or damaged background graphic, not suitable venue photo."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "pieper",
+    "name": "Pieper",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Prinsengracht 424",
+    "description": "Café Pieper is een van de oudste bruine cafés van Amsterdam en gaat terug tot 1665. Het authentieke interieur en de ligging aan de Prinsen- en Leidsegracht maken het al generaties lang een geliefde ontmoetingsplek.",
+    "since": "1665",
+    "photo": null,
+    "coords": [
+      52.36627800873316,
+      4.882360233779918
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/de-pieper"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "scharrebier",
+    "name": "Scharrebier",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Rapenburgerplein 1",
+    "description": "Op deze plek vonden 17e-eeuwse zeemanslieden al troost in een glas scharrebier: goedkoop bier verdund met water. Vandaag de dag drink je kwaliteitsbieren in het café en kun je vanaf het terras genieten van het uitzicht op de Scharrebiersluis.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.3704414,
+      4.9111074
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://scharrebier.nl/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "schumich",
+    "name": "Schumich",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Singel 6",
+    "description": "Schumich is opgericht in 1910 en sinds 1970 in bezit van dezelfde familie. Het interieur straalt de gemoedelijkheid van een bruine kroeg uit met biljart, voetbalmemorabilia en een belhokje.",
+    "since": "1970",
+    "photo": null,
+    "coords": [
+      52.3794513,
+      4.8942218
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "t-kroegie",
+    "name": "’t Kroegie",
+    "city": "Hoorn",
+    "province": "Noord-Holland",
+    "address": "Kerkplein 1",
+    "since": null,
+    "description": "Café aan het Kerkplein in de historische binnenstad van Hoorn.",
+    "photo": null,
+    "coords": [
+      52.64009963,
+      5.06011356
+    ],
+    "sources": [
+      "https://www.inhoorn.nl/locatie/t-kroegie/",
+      "https://www.streekomroepwestfriesland.nl/nieuwe-uitbater-voor-t-kroegie-in-hoorn-ik-heb-er-verschrikkelijk-veel-zin-in/"
+    ],
+    "notes": [
+      "New operator announced 1 October 2026, reopening planned later October; opening not independently confirmed."
+    ],
+    "website": "https://www.kroegie.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Kerkplein+1+Hoorn&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "sligting",
+    "name": "Café Sligting",
+    "city": "Overveen",
+    "province": "Noord-Holland",
+    "address": "Zijlweg 18",
+    "since": "1905",
+    "description": "Historisch café-biljart aan de Zijlweg in Overveen, met verzamelingen die aan eerdere uitbaters herinneren.",
+    "photo": null,
+    "coords": [
+      52.38794733,
+      4.6085799
+    ],
+    "sources": [
+      "https://cafesligting.nl/",
+      "https://cafesligting.nl/geschiedenis/"
+    ],
+    "notes": [
+      "User requested Haarlem; official address is Overveen. Since 1905 is cafe at this building, name Sligting adopted after WWII.",
+      "Official venue photo; no explicit reuse licence found. Verify image appearance before use."
+    ],
+    "website": "https://cafesligting.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Zijlweg+18+Overveen&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "cafe-t-helletje",
+    "name": "Café 't Helletje",
+    "city": "Weesp",
+    "province": "Noord-Holland",
+    "address": "Stationsweg 13",
+    "description": "Café 't Helletje aan de Stationsweg is een karakteristiek en gastvrij café direct tegenover het station van Weesp. De nuchtere Weesper gezelligheid en een gemoedelijke sfeer staan centraal. Eigenaar Pieter Kors is de drijvende kracht.",
+    "since": "1880",
+    "photo": "fotos/cafe-t-helletje.jpeg",
+    "coords": [
+      52.3096725,
+      5.0430642
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/weesp.html",
+      "https://onh.nl/verhaal/de-bruine-kroeg-in-amsterdam"
+    ],
+    "previous_city": "Weesp",
+    "year": 2026,
+    "notes": [
+      "In aangeleverde lijst Amsterdam; bestaande café ligt in Weesp, gemeente Amsterdam."
+    ],
+    "updated_at": "2026-05-09"
+  },
+  {
+    "id": "de-leugenbanke",
+    "name": "Café De Leugenbanke",
+    "city": "Deventer",
+    "province": "Overijssel",
+    "address": "Welle 11",
+    "since": null,
+    "description": "Café aan de Welle in de binnenstad van Deventer.",
+    "photo": null,
+    "coords": [
+      52.25156929,
+      6.15347645
+    ],
+    "sources": [
+      "https://zoek.officielebekendmakingen.nl/gmb-2024-327744.pdf",
+      "https://deventer.opendi.nl/358475.html",
+      "https://www.oozo.nl/bedrijven/deventer/binnenstad/centrum/223911/cafe-de-leugenbanke"
+    ],
+    "notes": [
+      "CONTROLE NODIG: gemeentelijke publicatie uit 2024 noemt café op Welle 11; bedrijvenregisteraggregator noemt inactieve inschrijving op Waterstraat 22. Huidige exploitatie niet primair bevestigd.",
+      "Deventer ligt in Overijssel, niet Gelderland."
+    ],
+    "website": null,
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Welle%2011%20Deventer&rows=30",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "het-bolwerk",
+    "name": "Café Het Bolwerk",
+    "city": "Enschede",
+    "province": "Overijssel",
+    "address": "Stadsgravenstraat 21",
+    "since": "1904",
+    "description": "Café in de Stadsgravenstraat, sinds 1904 een ontmoetingsplek in de binnenstad. Het Bolwerk is onder meer verbonden met dichter Willem Wilmink.",
+    "photo": null,
+    "coords": [
+      52.22143395,
+      6.89505799
+    ],
+    "sources": [
+      "https://www.cafehetbolwerk.nl/",
+      "https://www.uitinenschede.nl/locaties/het-bolwerk"
+    ],
+    "notes": [
+      "Enschede ligt in Overijssel, niet Gelderland."
+    ],
+    "website": "https://www.cafehetbolwerk.nl/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Stadsgravenstraat%2021%20Enschede&rows=30",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "de-tagrijn",
+    "name": "Café De Tagrijn",
+    "city": "Zwolle",
+    "province": "Overijssel",
+    "address": "Buitenkant 8",
+    "since": "1976",
+    "description": "Bruin café aan de Thorbeckegracht, gebouwd op de fundamenten van de voormalige Zwanentoren. Het café heeft een terras aan het water.",
+    "photo": null,
+    "coords": [
+      52.51415082,
+      6.09075628
+    ],
+    "sources": [
+      "https://cafedetagrijn.com/contact/",
+      "https://cafedetagrijn.com/geschiedenis/"
+    ],
+    "notes": [],
+    "website": "https://cafedetagrijn.com/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Buitenkant%208%20Zwolle&rows=30",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "charlois",
+    "name": "Café Charlois",
+    "city": "Rotterdam",
+    "province": "Zuid-Holland",
+    "address": "Katendrechtse Lagedijk 300",
+    "since": null,
+    "description": "Buurtcafé op de hoek van de Katendrechtse Lagedijk en de Klaverstraat, met biljart, darts en een terras.",
+    "photo": null,
+    "coords": [
+      51.89034606,
+      4.47761195
+    ],
+    "sources": [
+      "https://likejewijk.nl/carnisse/wijknieuws/carnisse-kanjers-van-het-100-jaar-oude-cafe-charlois/",
+      "https://zoek.officielebekendmakingen.nl/gmb-2025-362144"
+    ],
+    "notes": [
+      "1926 inferred from 100-year anniversary in March 2026. Old domain cafe-charlois.nl redirects to unrelated gambling page; omitted."
+    ],
+    "website": null,
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Katendrechtse+Lagedijk+300+Rotterdam&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "kleiweg",
+    "name": "Café Kleiweg",
+    "city": "Rotterdam",
+    "province": "Zuid-Holland",
+    "address": "Kleiweg 249 B",
+    "since": null,
+    "description": "Buurtcafé in Hillegersberg met een biljarttafel, sportuitzendingen en filosofische cafébijeenkomsten.",
+    "photo": null,
+    "coords": [
+      51.94493391,
+      4.47070528
+    ],
+    "sources": [
+      "https://zoek.officielebekendmakingen.nl/gmb-2018-110315.pdf",
+      "https://www.hetdenklokaal.nl/rotterdam",
+      "https://www.rotterdam.info/nl/visit/guide/bruine-kroegen-met-een-echt-rotterdams-karakter"
+    ],
+    "notes": [],
+    "website": "https://www.instagram.com/cafekleiweg/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Kleiweg+249+B+Rotterdam&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  },
+  {
+    "id": "timmer",
+    "name": "Café Timmer",
+    "city": "Rotterdam",
+    "province": "Zuid-Holland",
+    "address": "Oude Binnenweg 120",
+    "since": "1870",
+    "description": "Historisch bruin café aan de Oude Binnenweg, met houten meubels en een breed publiek.",
+    "photo": null,
+    "coords": [
+      51.91755093,
+      4.47532809
+    ],
+    "sources": [
+      "https://www.rotterdam.info/nl/visit/finder-locations/cafe-timmer",
+      "https://www.debuik.nl/rotterdam/restaurant/cafe-timmer"
+    ],
+    "notes": [
+      "Since 1870 comes from De Buik; own site currently empty WordPress, omitted."
+    ],
+    "website": null,
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Oude+Binnenweg+120+Rotterdam&rows=1&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  }
+]

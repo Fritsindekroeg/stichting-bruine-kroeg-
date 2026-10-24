@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Bruine Kroegen in Rotterdam – Stichting De Bruine Kroeg</title>
+<title>Bruine kroegen in Rotterdam – Stichting De Bruine Kroeg</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
 <style>
@@ -39,7 +39,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #5a4630;
+    color: #5a4630; /* bruine kleur consistent met andere pagina's */
     margin: 0 8px;
     font-weight: 500;
 }
@@ -50,72 +50,224 @@ nav a:hover {
 
 h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #3e2c1c;
 }
 
-.terug-balk {
-    margin-bottom: 25px;
+p {
+    margin: 12px 0;
 }
 
-.terug-balk a {
-    display: inline-block;
-    background-color: #5a4630;
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px;
+ul {
+    margin: 12px 0 12px 25px;
 }
 
-.terug-balk a:hover {
-    background-color: #443423;
+.steden-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
 }
 
-.city-section {
-    margin-bottom: 50px;
-}
-
-.cafe {
-    background: #fff;
+.stad-kaart {
+    display: block;
+    background: #fff9f0; /* lichte beige tint passend bij andere pagina's */
     padding: 20px;
-    margin-bottom: 25px;
+    text-align: center;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.cafe h3 {
-    margin-top: 0;
+    text-decoration: none;
     color: #3e2c1c;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: 0.2s;
 }
 
-.cafe p {
-    margin: 8px 0;
+.stad-kaart:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.cafe .adres {
-    font-style: italic;
-    color: #5a4630;
-}
-
-.cafe-foto {
-    max-width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.foto-credit {
-    font-size: 12px;
-    color: #777;
-    margin-bottom: 10px;
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #555;
 }
 </style>
-  <link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../design.css?v=22">
+  <link rel="stylesheet" href="../style.css?v=3">
+
+<style>
+/* Kroegen homepage - page-specific layout */
+.kroegen-uitleg {
+  max-width: 760px;
+  margin: 34px auto 22px;
+  padding: 4px 8px 8px;
+  text-align: center;
+}
+.kroegen-uitleg-titel {
+  display: block;
+  color: #3a2f2a;
+  font-family: "EB Garamond", serif;
+  font-size: 1.35em;
+  font-weight: 600;
+}
+.kroegen-uitleg-tekst {
+  display: block;
+  margin: 2px 0 6px;
+  color: #6b5d52;
+  font-size: 1.05em;
+}
+.kroegen-uitleg a {
+  color: #704b32;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .88em;
+  font-weight: 700;
+  text-decoration: none;
+}
+.kroegen-uitleg a:hover { text-decoration: underline; }
+
+.steden-heading {
+  border: none !important;
+  margin: 36px 0 14px !important;
+  padding: 0 !important;
+  text-align: center;
+  font-size: 1.65em;
+}
+.steden-heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 9px auto 0;
+  background: #d6c7b4;
+}
+
+.steden-lijst {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd4c8;
+}
+.stad-regel {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) auto 28px !important;
+  align-items: center !important;
+  gap: 18px;
+  width: 100%;
+  padding: 17px 8px;
+  border-bottom: 1px solid #ddd4c8;
+  color: #3a2f2a !important;
+  text-decoration: none !important;
+  background: transparent;
+}
+.stad-regel:hover {
+  background: #f5f0e7;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.stad-regel-naam {
+  display: block !important;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.stad-regel-info {
+  display: block !important;
+  color: #806c5c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85em;
+  white-space: nowrap;
+}
+.stad-regel-pijl {
+  display: block !important;
+  color: #7a4a2e;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 78px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+.search-results a {
+  display: block !important;
+  width: 100%;
+  padding: 11px 15px;
+  color: #3e2c1c !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #eee;
+  font-size: 17px;
+}
+.search-results a:hover { background: #f5f1e8; }
+.search-results a::after {
+  content: attr(data-type);
+  margin-left: 8px;
+  color: #8a7868;
+  font-size: .82em;
+  font-style: italic;
+}
+.search-no-result {
+  display: block;
+  padding: 11px 15px;
+  color: #7a6a60;
+}
+
+@media (max-width: 600px) {
+  .stad-regel {
+    grid-template-columns: minmax(0,1fr) auto !important;
+  }
+  .stad-regel-pijl {
+    display: none !important;
+  }
+}
+
+
+/* Homepage: rustige uitleg, in dezelfde stijl als de rest van de site */
+.kroegen-uitleg {
+  background: transparent;
+  border-top: none;
+  border-bottom: 1px solid #ddd4c8;
+  box-shadow: none;
+}
+
+.kroegen-uitleg-titel {
+  font-size: 1.45em;
+}
+
+@media (max-width: 600px) {
+  .kroegen-uitleg {
+    margin: 28px auto 18px;
+    padding: 4px 2px 12px;
+  }
+
+  .kroegen-uitleg-titel {
+    font-size: 1.45em;
+  }
+
+  .kroegen-uitleg-tekst {
+    font-size: 1.05em;
+    line-height: 1.6;
+  }
+
+  .kroegen-uitleg a {
+    font-size: .95em;
+  }
+}
+
+</style>
+
+<link rel="stylesheet" href="../design.css?v=selectie-20261024d">
 </head>
 
-<body>
-<div class="container">
+<body class="catalogpagina"><div class="container">
 
 <div class="logo">
     <a class="logo-home" href="../index.html" aria-label="Naar de hoofdpagina"><img src="../logo-briefpapier.png" alt="Logo Stichting De Bruine Kroeg"></a>
@@ -123,7 +275,7 @@ h1 {
 
 <nav aria-label="Hoofdmenu">
   <div class="main-nav nieuw-menu">
-    <div class="menu-kroegen"><a class="menu-home" href="../index.html">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart, Aanmeldformulier en Kroegen per stad</span></summary><div class="submenu">
+    <div class="menu-kroegen"><a class="menu-home" href="../index.html" aria-current="page">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart, Aanmeldformulier en Kroegen per stad</span></summary><div class="submenu">
       <a href="../kaart-bruine-kroegen.html">Kaart</a>
       <a href="../aanmeldformulier.html">Aanmeldformulier</a>
       <a href="../kroegen-per-stad.html">Kroegen per stad</a>
@@ -139,181 +291,21 @@ h1 {
 
 <hr>
 
-<h1>Bruine Kroegen in Rotterdam</h1>
-
-<img src="../bier-origineel.svg" alt="" class="page-illustration">
-<div class="terug-balk">
-    <a href="../index.html">← Terug naar de hoofdpagina</a>
-</div>
-
-<div class="city-section">
-
-    <div class="cafe" data-cafe="cafe-t-haventje">
-        <div class="cafe-titelrij"><h3 id="cafe-t-haventje">Café ’t Haventje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+%E2%80%99t+Haventje&amp;plaats=Rotterdam">Afmelden</a></div>
-        <p>
-        Een authentiek café-biljart op het Noordereiland, met uitzicht op het water en
-        passerende schepen. Het café ademt de sfeer van de Rotterdamse haven en fungeert
-        als no-nonsense buurtkroeg waar bewoners al generaties samenkomen voor een kopstoot
-        en een goed gesprek.
-        </p>
-        <p class="adres"><strong>Adres:</strong> Prins Hendrikkade 129</p>
-    </div>
-
-    <div class="cafe" data-cafe="cafe-de-pui">
-        <div class="cafe-titelrij"><h3 id="cafe-de-pui">Café De Pui</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+De+Pui&amp;plaats=Rotterdam">Afmelden</a></div>
-        <p>
-        Een iconisch bruin café in de wijk Kralingen, met een warme houten inrichting
-        en een gemêleerd publiek. Het karakteristieke hoekpand kent een lange
-        horecageschiedenis. Ooit een klassieke pijpela, nu een proeflokaal dat verleden
-        en heden moeiteloos met elkaar verbindt.
-        </p>
-        <p class="adres"><strong>Adres:</strong> Oostzeedijk Beneden 221A-B</p>
-    </div>
-
-</div>
-
-<div class="footer-nav">
-  <a href="../organisatie.html">Organisatie</a>
-  <a href="../doelstellingen.html">Doelstellingen</a>
+<header class="catalog-paginakop"><p>Zuid-Holland</p><h1>Bruine kroegen in Rotterdam</h1><a href="../index.html">← Terug naar de hoofdpagina</a><a href="../kroegen-per-stad.html">Alle plaatsen →</a></header><div class="catalog-lijst"><article class="cafe catalog-cafe" data-cafe="charlois" id="charlois">
+<div class="catalog-locatie"><span>Zuid-Holland</span><span>Rotterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-10-24">24 oktober 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Charlois&amp;plaats=Rotterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Café Charlois</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Katendrechtse Lagedijk 300</dd></div></dl>
+<div class="catalog-beschrijving"><p>Buurtcafé op de hoek van de Katendrechtse Lagedijk en de Klaverstraat, met biljart, darts en een terras.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=charlois">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="kleiweg" id="kleiweg">
+<div class="catalog-locatie"><span>Zuid-Holland</span><span>Rotterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-10-24">24 oktober 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Kleiweg&amp;plaats=Rotterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Café Kleiweg</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Kleiweg 249 B</dd></div></dl>
+<div class="catalog-beschrijving"><p>Buurtcafé in Hillegersberg met een biljarttafel, sportuitzendingen en filosofische cafébijeenkomsten.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=kleiweg">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="timmer" id="timmer">
+<div class="catalog-locatie"><span>Zuid-Holland</span><span>Rotterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-10-24">24 oktober 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Timmer&amp;plaats=Rotterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Café Timmer</h2><dl><div><dt>Sinds</dt><dd>1870</dd></div><div><dt>Straat</dt><dd>Oude Binnenweg 120</dd></div></dl>
+<div class="catalog-beschrijving"><p>Historisch bruin café aan de Oude Binnenweg, met houten meubels en een breed publiek.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=timmer">Bekijk op de kaart →</a></div></article></div><div class="footer-nav">
+  <a href="../organisatie.html" data-search-name="organisatie">Organisatie</a>
+  <a href="../doelstellingen.html" data-search-name="doelstellingen">Doelstellingen</a>
   <a href="../forum.html">Forum</a>
-  <a href="../contact.html">Contact</a>
-</div>
-</div>
-
-<script>
-function loadCafe(cafe){
-    const id = cafe.dataset.cafe;
-    const extensions = ["jpg","jpeg","png","webp"];
-    function tryNext(i){
-        if(i >= extensions.length) return;
-        const imgPath = "/fotos/" + id + "." + extensions[i];
-        const creditPath = "/fotos/" + id + ".txt";
-        const testImg = new Image();
-        testImg.onload = function () {
-            const img = document.createElement("img");
-            img.src = imgPath;
-            img.className = "cafe-foto";
-            cafe.prepend(img);
-            fetch(creditPath)
-                .then(r => r.ok ? r.text() : null)
-                .then(name => {
-                    if (name) {
-                        const credit = document.createElement("div");
-                        credit.className = "foto-credit";
-                        credit.innerText = "Foto: " + name.trim();
-                        img.after(credit);
-                    }
-                });
-        };
-        testImg.onerror = function(){ tryNext(i+1); };
-        testImg.src = imgPath;
-    }
-    tryNext(0);
-}
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            loadCafe(entry.target);
-            observer.unobserve(entry.target);
-        }
-    });
-});
-
-document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
-    observer.observe(cafe);
-});
-</script>
-<script>
-window.addEventListener("load", function () {
-  var cafe = new URLSearchParams(window.location.search).get("cafe");
-  if (!cafe) return;
-
-  var target = document.querySelector('[data-cafe="' + cafe + '"]');
-
-  if (target) {
-    setTimeout(function () {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  }
-});
-</script>
-<script>
-window.addEventListener("load", function () {
-  var cafe = new URLSearchParams(window.location.search).get("cafe");
-  if (!cafe) return;
-
-  var target = document.querySelector('[data-cafe="' + cafe + '"]');
-  if (!target) return;
-
-  var attempts = 0;
-
-  function positionCafe() {
-    attempts++;
-
-    var y = target.getBoundingClientRect().top + window.pageYOffset - 20;
-    window.scrollTo(0, y);
-
-    // Café photos are loaded lazily. They can change the page height/position
-    // after the first scroll, so repeat the positioning while they load.
-    if (attempts < 12) {
-      window.setTimeout(positionCafe, 250);
-    }
-  }
-
-  // Give the page a moment after load before the first positioning.
-  window.setTimeout(positionCafe, 100);
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Link bij ieder café naar precies dezelfde café-pin op de kaart.
-  document.querySelectorAll(".cafe[data-cafe]").forEach(function (cafe) {
-    var slug = cafe.getAttribute("data-cafe");
-    if (!slug || cafe.querySelector(".kaart-link")) return;
-
-    var link = document.createElement("a");
-    link.className = "kaart-link";
-    link.href = "../kaart-bruine-kroegen.html?cafe=" + encodeURIComponent(slug);
-    link.textContent = "📍 Bekijk dit café op de kaart";
-    link.setAttribute("aria-label", "Bekijk dit café op de kaart");
-
-    var adres = cafe.querySelector(".adres");
-    if (adres) {
-      adres.insertAdjacentElement("afterend", link);
-    } else {
-      cafe.appendChild(link);
-    }
-  });
-
-  // Zwevende knop om tijdens het scrollen snel naar boven te gaan.
-  var topButton = document.createElement("button");
-  topButton.id = "naar-boven";
-  topButton.type = "button";
-  topButton.textContent = "↑ Naar boven";
-  topButton.setAttribute("aria-label", "Ga naar bovenaan de pagina");
-  document.body.appendChild(topButton);
-
-  function updateTopButton() {
-    if (window.scrollY > 200) {
-      topButton.classList.add("zichtbaar");
-    } else {
-      topButton.classList.remove("zichtbaar");
-    }
-  }
-
-  window.addEventListener("scroll", updateTopButton, { passive: true });
-  updateTopButton();
-
-  topButton.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-});
-</script>
-
-</body>
-</html>
+  <a href="../contact.html" data-search-name="contact">Contact</a>
+</div></div><button id="naar-boven" type="button" aria-label="Ga naar bovenaan de pagina" hidden>↑ Naar boven</button><script>const topButton=document.getElementById('naar-boven');function updateTopButton(){topButton.hidden=window.scrollY<=200;}window.addEventListener('scroll',updateTopButton,{passive:true});updateTopButton();topButton.addEventListener('click',function(){window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});window.addEventListener('load',function(){const id=new URLSearchParams(location.search).get('cafe')||decodeURIComponent(location.hash.slice(1));const target=id&&document.getElementById(id);if(target)target.scrollIntoView({block:'start'});});</script></body></html>

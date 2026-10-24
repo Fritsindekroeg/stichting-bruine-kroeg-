@@ -157,7 +157,7 @@ nav { border-top:0; padding-top:0; }
 .homepage .homepage-fotogedeelte {
   display:flow-root;
   padding:26px 34px 30px;
-  background:linear-gradient(rgba(250,248,243,.58),rgba(250,248,243,.58)),url("papeneiland-homepage.jpg") center center / cover no-repeat;
+  background:linear-gradient(rgba(250,248,243,.48),rgba(250,248,243,.48)),url("papeneiland-homepage.jpg") center center / cover no-repeat;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
@@ -277,3 +277,52 @@ nav { border-top:0; padding-top:0; }
 
 /* Keep the roofline visible at every screen width. */
 .homepage .homepage-fotogedeelte { background-position:center top; }
+
+/* Café selection: location, photograph, review line, then café details. */
+.catalogpagina .container { max-width:1160px; }
+.catalog-paginakop { text-align:center; margin:30px auto 34px; }
+.catalog-paginakop > p { font:12px/1.5 Arial,Helvetica,sans-serif; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); }
+.catalog-paginakop h1 { margin:12px 0 20px; }
+.catalog-paginakop > a { display:inline-block; margin:0 16px 8px; font:13px/1.5 Arial,Helvetica,sans-serif; }
+.catalog-lijst { max-width:920px; margin:0 auto; display:grid; gap:38px; }
+.cafe.catalog-cafe { margin:0; padding:0; overflow:hidden; background:#fffdf8; border:1px solid var(--line); border-radius:5px; scroll-margin-top:24px; }
+.catalog-locatie { padding:18px 28px; display:flex; gap:12px; flex-wrap:wrap; border-bottom:1px solid var(--line); font:13px/1.5 Arial,Helvetica,sans-serif; }
+.catalog-locatie span:first-child { color:var(--muted); }
+.catalog-locatie span+span::before { content:"/"; color:#aaa091; margin-right:12px; }
+.catalog-foto { display:block; width:100%; height:340px; object-fit:cover; object-position:center; margin:0; }
+.ontbrekende-foto { background:#eeebe3; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:15px; color:var(--muted); font:13px/1.5 Arial,Helvetica,sans-serif; }
+.ontbrekende-foto img { width:70px; height:74px; opacity:.6; }
+.catalog-meta { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:14px 28px; border-bottom:1px solid var(--line); font:12px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.catalog-inhoud { padding:25px 28px 30px; }
+.catalog-inhoud h2 { font-size:34px; margin:0 0 20px; border:0; padding:0; }
+.catalog-inhoud dl { display:grid; grid-template-columns:minmax(160px,1fr) 2fr; gap:20px; margin:0 0 22px; }
+.catalog-inhoud dl > div { min-width:0; }
+.catalog-inhoud dt { font:12px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); margin-bottom:4px; }
+.catalog-inhoud dd { margin:0; font-size:20px; }
+.catalog-beschrijving p { font-size:19px; line-height:1.65; margin:0 0 14px; }
+.catalog-inhoud .kaart-link { display:inline-block; margin-top:8px; }
+.catalog-controle { border-left:2px solid #b44a3d; padding-left:12px; font-size:16px; }
+.catalog-intro { text-align:center; margin:0 auto 30px; }
+.provincie-groep { margin:36px auto; max-width:920px; }
+.provincie-groep > h2 { border:0; margin:0 0 18px; font-size:29px; }
+@media(max-width:700px) {
+ .catalog-foto { height:250px; }
+ .catalog-locatie, .catalog-meta { padding:15px 18px; }
+ .catalog-inhoud { padding:22px 18px; }
+ .catalog-inhoud h2 { font-size:29px; }
+ .catalog-inhoud dl { grid-template-columns:1fr; gap:12px; }
+ .catalog-lijst { gap:26px; }
+ .catalog-paginakop > a { margin:0 8px 8px; }
+}
+
+/* Show the complete photograph of De Drie Fleschjes, preserving its proportions. */
+.catalog-foto.foto-volledig { height:auto; max-height:none; object-fit:contain; }
+
+/* Floating return-to-top control on city pages. */
+#naar-boven { position:fixed; right:24px; bottom:24px; z-index:1000; border:1px solid var(--green); border-radius:5px; padding:12px 18px; color:#fff; background:var(--green); font:600 14px Arial,sans-serif; cursor:pointer; box-shadow:0 3px 12px #0002; }
+#naar-boven[hidden] { display:none; }
+#naar-boven:hover { filter:brightness(1.15); }
+#naar-boven:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+@media(max-width:700px) { #naar-boven { right:16px; bottom:16px; min-height:44px; } }
+
+#naar-boven:not([hidden]) { display:block; }

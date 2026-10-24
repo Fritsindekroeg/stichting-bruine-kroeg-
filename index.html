@@ -264,7 +264,7 @@ footer {
 
 </style>
 
-<link rel="stylesheet" href="design.css?v=24">
+<link rel="stylesheet" href="design.css?v=selectie-20261024d">
 </head>
 
 <body class="homepage">
@@ -306,7 +306,7 @@ footer {
     <input
       type="search"
       id="site-search-input"
-      placeholder="Bijvoorbeeld Amsterdam of Café Hoppe..."
+      placeholder="Bijvoorbeeld Amsterdam of Café De Zwart..."
       autocomplete="off"
     >
     <button type="button" id="site-search-button">Zoeken</button>
@@ -333,13 +333,7 @@ footer {
   var button = document.getElementById("site-search-button");
   var results = document.getElementById("search-results");
 
-  var steden = {
-    "Amsterdam": "steden/amsterdam.html",
-    "Rotterdam": "steden/rotterdam.html",
-    "Utrecht": "steden/utrecht.html",
-    "Weesp": "steden/weesp.html",
-    "Maastricht": "steden/maastricht.html"
-  };
+  var steden = {"Aalsmeer": "steden/aalsmeer.html", "Amsterdam": "steden/amsterdam.html", "Delfzijl": "steden/delfzijl.html", "Deventer": "steden/deventer.html", "Enschede": "steden/enschede.html", "Geldrop": "steden/geldrop.html", "Hoorn": "steden/hoorn.html", "Leeuwarden": "steden/leeuwarden.html", "Overveen": "steden/overveen.html", "Roermond": "steden/roermond.html", "Rotterdam": "steden/rotterdam.html", "Tilburg": "steden/tilburg.html", "Usquert": "steden/usquert.html", "Weesp": "steden/weesp.html", "Zwolle": "steden/zwolle.html"};
 
   function normaliseer(tekst) {
     return (tekst || "")

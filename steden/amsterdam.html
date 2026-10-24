@@ -3,15 +3,12 @@
 <head>
 <link rel="icon" type="image/png" href="../favicon.png?v=2">
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bruine kroegen in Amsterdam – Stichting De Bruine Kroeg</title>
-  <link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../design.css?v=22">
-</head>
+<title>Bruine kroegen in Amsterdam – Stichting De Bruine Kroeg</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 
-<body>
-  <style>
+<style>
 body {
     font-family: 'EB Garamond', serif;
     background: #f9f7f1;
@@ -42,86 +39,243 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #5a4630;
+    color: #5a4630; /* bruine kleur consistent met andere pagina's */
     margin: 0 8px;
     font-weight: 500;
-    font-size: 14px; /* nieuw toegevoegd */
 }
 
 nav a:hover {
     text-decoration: underline;
 }
+
 h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #3e2c1c;
 }
 
-.terug-balk {
-    margin-bottom: 25px;
+p {
+    margin: 12px 0;
 }
 
-.terug-balk a {
-    display: inline-block;
-    background-color: #5a4630;
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px;
+ul {
+    margin: 12px 0 12px 25px;
 }
 
-.terug-balk a:hover {
-    background-color: #443423;
+.steden-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
 }
 
-.city-section {
-    margin-bottom: 50px;
-}
-
-.cafe {
-    background: #fff;
+.stad-kaart {
+    display: block;
+    background: #fff9f0; /* lichte beige tint passend bij andere pagina's */
     padding: 20px;
-    margin-bottom: 25px;
+    text-align: center;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.cafe h3 {
-    margin-top: 0;
+    text-decoration: none;
     color: #3e2c1c;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: 0.2s;
 }
 
-.cafe p {
-    margin: 8px 0;
+.stad-kaart:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.cafe .adres {
-    font-style: italic;
-    color: #5a4630;
-}
-
-.cafe-foto {
-    max-width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.foto-credit {
-    font-size: 12px;
-    color: #777;
-    margin-bottom: 10px;
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #555;
 }
 </style>
-      <div class="container">
+  <link rel="stylesheet" href="../style.css?v=3">
 
-  <div class="logo">
+<style>
+/* Kroegen homepage - page-specific layout */
+.kroegen-uitleg {
+  max-width: 760px;
+  margin: 34px auto 22px;
+  padding: 4px 8px 8px;
+  text-align: center;
+}
+.kroegen-uitleg-titel {
+  display: block;
+  color: #3a2f2a;
+  font-family: "EB Garamond", serif;
+  font-size: 1.35em;
+  font-weight: 600;
+}
+.kroegen-uitleg-tekst {
+  display: block;
+  margin: 2px 0 6px;
+  color: #6b5d52;
+  font-size: 1.05em;
+}
+.kroegen-uitleg a {
+  color: #704b32;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .88em;
+  font-weight: 700;
+  text-decoration: none;
+}
+.kroegen-uitleg a:hover { text-decoration: underline; }
+
+.steden-heading {
+  border: none !important;
+  margin: 36px 0 14px !important;
+  padding: 0 !important;
+  text-align: center;
+  font-size: 1.65em;
+}
+.steden-heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 9px auto 0;
+  background: #d6c7b4;
+}
+
+.steden-lijst {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd4c8;
+}
+.stad-regel {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) auto 28px !important;
+  align-items: center !important;
+  gap: 18px;
+  width: 100%;
+  padding: 17px 8px;
+  border-bottom: 1px solid #ddd4c8;
+  color: #3a2f2a !important;
+  text-decoration: none !important;
+  background: transparent;
+}
+.stad-regel:hover {
+  background: #f5f0e7;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.stad-regel-naam {
+  display: block !important;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.stad-regel-info {
+  display: block !important;
+  color: #806c5c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85em;
+  white-space: nowrap;
+}
+.stad-regel-pijl {
+  display: block !important;
+  color: #7a4a2e;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 78px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+.search-results a {
+  display: block !important;
+  width: 100%;
+  padding: 11px 15px;
+  color: #3e2c1c !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #eee;
+  font-size: 17px;
+}
+.search-results a:hover { background: #f5f1e8; }
+.search-results a::after {
+  content: attr(data-type);
+  margin-left: 8px;
+  color: #8a7868;
+  font-size: .82em;
+  font-style: italic;
+}
+.search-no-result {
+  display: block;
+  padding: 11px 15px;
+  color: #7a6a60;
+}
+
+@media (max-width: 600px) {
+  .stad-regel {
+    grid-template-columns: minmax(0,1fr) auto !important;
+  }
+  .stad-regel-pijl {
+    display: none !important;
+  }
+}
+
+
+/* Homepage: rustige uitleg, in dezelfde stijl als de rest van de site */
+.kroegen-uitleg {
+  background: transparent;
+  border-top: none;
+  border-bottom: 1px solid #ddd4c8;
+  box-shadow: none;
+}
+
+.kroegen-uitleg-titel {
+  font-size: 1.45em;
+}
+
+@media (max-width: 600px) {
+  .kroegen-uitleg {
+    margin: 28px auto 18px;
+    padding: 4px 2px 12px;
+  }
+
+  .kroegen-uitleg-titel {
+    font-size: 1.45em;
+  }
+
+  .kroegen-uitleg-tekst {
+    font-size: 1.05em;
+    line-height: 1.6;
+  }
+
+  .kroegen-uitleg a {
+    font-size: .95em;
+  }
+}
+
+</style>
+
+<link rel="stylesheet" href="../design.css?v=selectie-20261024d">
+</head>
+
+<body class="catalogpagina"><div class="container">
+
+<div class="logo">
     <a class="logo-home" href="../index.html" aria-label="Naar de hoofdpagina"><img src="../logo-briefpapier.png" alt="Logo Stichting De Bruine Kroeg"></a>
-  </div>
+</div>
 
-  <nav aria-label="Hoofdmenu">
+<nav aria-label="Hoofdmenu">
   <div class="main-nav nieuw-menu">
-    <div class="menu-kroegen"><a class="menu-home" href="../index.html">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart, Aanmeldformulier en Kroegen per stad</span></summary><div class="submenu">
+    <div class="menu-kroegen"><a class="menu-home" href="../index.html" aria-current="page">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart, Aanmeldformulier en Kroegen per stad</span></summary><div class="submenu">
       <a href="../kaart-bruine-kroegen.html">Kaart</a>
       <a href="../aanmeldformulier.html">Aanmeldformulier</a>
       <a href="../kroegen-per-stad.html">Kroegen per stad</a>
@@ -135,605 +289,121 @@ h1 {
   </div>
 </nav>
 
-  <hr>
+<hr>
 
-  <h1>Bruine Kroegen in Amsterdam</h1>
-
-<img src="../bier-origineel.svg" alt="" class="page-illustration">
-<div class="terug-balk">
-    <a href="../index.html">← Terug naar de hoofdpagina</a>
-  </div>
-
-  <div class="city-section">
-    <!-- hier komen al je café-divs -->
-  </div>
-
-    
-
-    <!--  AMSTERDAM -->
-    <div class="city-section">     
-
-      <div class="cafe" data-cafe="in-t-aepjen">
-      <div class="cafe-titelrij"><h3 id="in-t-aepjen">In 't Aepjen</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=In+%27t+Aepjen&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>In 't Aepjen aan de Zeedijk is gevestigd in een van de laatste houten panden van Amsterdam uit 1550. Het verhaal gaat dat zeelieden hier vroeger hun verblijf betaalden met exotische aapjes die vol ongedierte zaten, wat de uitdrukking "in de aap gelogeerd" zou verklaren door de jeuk die de gasten kregen. De barman kan hier prachtig en vol passie over vertellen, om vervolgens ruiterlijk toe te geven dat het vooral een schitterende legende is die historisch gezien helemaal niet waar blijkt te zijn.</p>
-<p class="adres"><strong>Adres:</strong> Zeedijk 1</p>
-</div>
-
-      <div class="cafe" data-cafe="de-amstel">
-<div class="cafe-titelrij"><h3 id="de-amstel">De Amstel</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Amstel&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Op de hoek van de Amstelkade en de Berkel-straat zit sinds de bouw van het blok rond 1930 een café. De Amstel is een eenvoudige onvervalste bruine kroeg met een grote halfronde bar en een biljart.</p>
-<p class="adres"><strong>Adres:</strong> Amstelkade 39</p>
-</div>
-      
-           <div class="cafe" data-cafe="cafe-anno-1890">
-<div class="cafe-titelrij"><h3 id="cafe-anno-1890">Cafe Anno 1890</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Cafe+Anno+1890&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>In 1890 werden bij deze kruidenierswinkel stiekem borreltjes vanonder de toog verkocht. Tegenwoordig maakt het café er geen geheim meer van dat een van de leukste cafés van Amsterdam-Zuid is.</p>
-<p class="adres"><strong>Adres:</strong> Amstelveenseweg 1124</p>
-</div>
-      
-             <div class="cafe" data-cafe="t-binnepretje">
-<div class="cafe-titelrij"><h3 id="t-binnepretje">'t Binnepretje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=%27t+Binnepretje&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Deze gezellige buurtkroeg vierde afgelopen augustus haar 30ste jubileum. Voor een drankje en een goede kroeghap ben je bij 't Binnepretje aan het juiste adres.</p>
-<p class="adres"><strong>Adres:</strong> Bos en Lommerweg 133</p>
-</div>
-      
-               <div class="cafe" data-cafe="de-blauwe-druif">
-<div class="cafe-titelrij"><h3 id="de-blauwe-druif">De Blauwe Druif</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Blauwe+Druif&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café de Blauwe Druif is een van de oudste bruine kroegen van Amsterdam (sinds 1790). Het is een pretentieloos baken van gezelligheid in de Haarlemmerstraat waar de tijd heeft stilgestaan.</p>
-<p class="adres"><strong>Adres:</strong> Haarlemmerstraat 91-H</p>
-</div>
-      
-              
-                   <div class="cafe" data-cafe="brandon">
-<div class="cafe-titelrij"><h3 id="brandon">Brandon</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Brandon&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Cafe Brandon is een van de oudste kroegen van de stad; al sinds 1626 drinken Amsterdammers hier een biertje. Eind vorige eeuw staat het lange tijd leeg, omdat de vorige eigenaars hun cafe niet kwijt willen. Het bordje 'Niet te koop, niet te huur' dat in het lege café hing, hangt er nu nog steeds.</p>
-<p class="adres"><strong>Adres:</strong> Keizersgracht 157</p>
-</div>
-      
-    
-                       <div class="cafe" data-cafe="het-bruine-paard">
-<div class="cafe-titelrij"><h3 id="het-bruine-paard">Het Bruine Paard</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Het+Bruine+Paard&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café Het Bruine Paard bevindt zich naast een steile brug. Het verhaal gaat dat op een winterse dag een paard van de dichtbijgelegen brandweerkazerne uitglijdt en in het café terechtkomt. Een naam is geboren.</p>
-<p class="adres"><strong>Adres:</strong> Prinsengracht 44-1</p>
-</div>
-
-
-       <div class="cafe" data-cafe="chris">
-<div class="cafe-titelrij"><h3 id="chris">Chris</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Chris&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het oudste café van de Jordaan is te vinden in de schaduw van de Westerkerk. Cafe Chris opende z'n deuren in 1624, en sindsdien blijft het bier én de gezelligheid hier stromen.</p>
-<p class="adres"><strong>Adres:</strong> Bloemstraat 42</p>
-</div>
-      
-          <div class="cafe" data-cafe="chris-scholten">
-<div class="cafe-titelrij"><h3 id="chris-scholten">Chris Scholten</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Chris+Scholten&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het café is vernoemd naar Chris Scholten. De droom van deze stukadoor en ober kwam in 1977 in vervulling, toen hij zijn eigen café opende. Zijn dochter, opgegroeid in het café, en schoonzoon runnen de kroeg nog op zijn wijze.</p>
-<p class="adres"><strong>Adres:</strong> Van Woustraat 104</p>
-</div>
-
-
-       <div class="cafe" data-cafe="cafe-t-doktertje">
-                 <div class="cafe-titelrij"><h3 id="cafe-t-doktertje">Café ’t Doktertje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+%E2%80%99t+Doktertje&amp;plaats=Amsterdam">Afmelden</a></div>
-      <p>
-        Een van de kleinste en meest karaktervolle proeflokalen van Amsterdam, verscholen
+<header class="catalog-paginakop"><p>Noord-Holland</p><h1>Bruine kroegen in Amsterdam</h1><a href="../index.html">← Terug naar de hoofdpagina</a><a href="../kroegen-per-stad.html">Alle plaatsen →</a></header><div class="catalog-lijst"><article class="cafe catalog-cafe" data-cafe="de-blauwe-druif" id="de-blauwe-druif">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Blauwe+Druif&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>De Blauwe Druif</h2><dl><div><dt>Sinds</dt><dd>1790</dd></div><div><dt>Straat</dt><dd>Haarlemmerstraat 91-H</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café de Blauwe Druif is een van de oudste bruine kroegen van Amsterdam (sinds 1790). Het is een pretentieloos baken van gezelligheid in de Haarlemmerstraat waar de tijd heeft stilgestaan.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=de-blauwe-druif">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="brandon" id="brandon">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Brandon&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Brandon</h2><dl><div><dt>Sinds</dt><dd>1626</dd></div><div><dt>Straat</dt><dd>Keizersgracht 157</dd></div></dl>
+<div class="catalog-beschrijving"><p>Cafe Brandon is een van de oudste kroegen van de stad; al sinds 1626 drinken Amsterdammers hier een biertje. Eind vorige eeuw staat het lange tijd leeg, omdat de vorige eigenaars hun cafe niet kwijt willen. Het bordje &#x27;Niet te koop, niet te huur&#x27; dat in het lege café hing, hangt er nu nog steeds.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=brandon">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="chris" id="chris">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Chris&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Chris</h2><dl><div><dt>Sinds</dt><dd>1882</dd></div><div><dt>Straat</dt><dd>Bloemstraat 42</dd></div></dl>
+<div class="catalog-beschrijving"><p>Het oudste café van de Jordaan is te vinden in de schaduw van de Westerkerk. Cafe Chris opende z&#x27;n deuren in 1624, en sindsdien blijft het bier én de gezelligheid hier stromen.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=chris">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="chris-scholten" id="chris-scholten">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Chris+Scholten&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Chris Scholten</h2><dl><div><dt>Sinds</dt><dd>1977</dd></div><div><dt>Straat</dt><dd>Van Woustraat 104</dd></div></dl>
+<div class="catalog-beschrijving"><p>Het café is vernoemd naar Chris Scholten. De droom van deze stukadoor en ober kwam in 1977 in vervulling, toen hij zijn eigen café opende. Zijn dochter, opgegroeid in het café, en schoonzoon runnen de kroeg nog op zijn wijze.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=chris-scholten">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="cafe-t-doktertje" id="cafe-t-doktertje">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><img class="catalog-foto" src="../fotos/cafe-t-doktertje.jpeg" alt="Café ’t Doktertje in Amsterdam" loading="lazy" decoding="async"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+%E2%80%99t+Doktertje&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Café ’t Doktertje</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Rozenboomsteeg 4</dd></div></dl>
+<div class="catalog-beschrijving"><p>Een van de kleinste en meest karaktervolle proeflokalen van Amsterdam, verscholen
         in een steegje bij het Spui. Opgericht in 1798 door een chirurgijn, waaraan het café
         zijn naam dankt. Al generaties lang in handen van de familie Beems. Het interieur
-        vormt een levend museum van curiosa en herinneringen.
-      </p>
-      <p class="adres"><strong>Adres:</strong> Rozenboomsteeg 4</p>
-</div>
-
-          <div class="cafe" data-cafe="de-drie-fleschjes">
- <div class="cafe-titelrij"><h3 id="de-drie-fleschjes">De Drie Fleschjes</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Drie+Fleschjes&amp;plaats=Amsterdam">Afmelden</a></div>
-      <p>
-       De Drie Fleschjes aan de Gravenstraat is een prachtig proeflokaal dat al sinds 1650 de Amsterdamse jenevercultuur in ere houdt. De muren zijn van bedekt met authentieke drankvaten, waar vaste gasten door de eeuwen heen hun eigen voorraadje bewaarden.
-      </p>
-      <p class="adres"><strong>Adres:</strong> Gravenstraat 18</p>
-</div>
-      
-       <div class="cafe" data-cafe="cafe-de-druif">
- <div class="cafe-titelrij"><h3 id="cafe-de-druif">Café De Druif</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+De+Druif&amp;plaats=Amsterdam">Afmelden</a></div>
-      <p>
-        Een historisch café aan het Rapenburgerplein, bekend om de imposante jenevervaten
+        vormt een levend museum van curiosa en herinneringen.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=cafe-t-doktertje">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="de-drie-fleschjes" id="de-drie-fleschjes">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><img class="catalog-foto foto-volledig" src="../fotos/de-drie-fleschjes.jpeg" alt="De Drie Fleschjes in Amsterdam" width="940" height="893" loading="lazy" decoding="async"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Drie+Fleschjes&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>De Drie Fleschjes</h2><dl><div><dt>Sinds</dt><dd>1650</dd></div><div><dt>Straat</dt><dd>Gravenstraat 18</dd></div></dl>
+<div class="catalog-beschrijving"><p>De Drie Fleschjes aan de Gravenstraat is een prachtig proeflokaal dat al sinds 1650 de Amsterdamse jenevercultuur in ere houdt. De muren zijn van bedekt met authentieke drankvaten, waar vaste gasten door de eeuwen heen hun eigen voorraadje bewaarden.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=de-drie-fleschjes">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="cafe-de-druif" id="cafe-de-druif">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+De+Druif&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Café De Druif</h2><dl><div><dt>Sinds</dt><dd>1863</dd></div><div><dt>Straat</dt><dd>Rapenburgerplein 83</dd></div></dl>
+<div class="catalog-beschrijving"><p>Een historisch café aan het Rapenburgerplein, bekend om de imposante jenevervaten
         en de uitgesproken maritieme sfeer. De locatie wordt al sinds 1585 in verband gebracht
         met een distilleerderij. Volgens de overlevering was admiraal Piet Hein hier een vaste gast.
-        Of dat historisch klopt is onzeker, maar de sfeer ademt onmiskenbaar de 17e eeuw.
-      </p>
-      <p class="adres"><strong>Adres:</strong> Rapenburgerplein 83</p>
-</div>
-
-       <div class="cafe" data-cafe="eddy-bar">
-         <div class="cafe-titelrij"><h3 id="eddy-bar">Eddy Bar</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Eddy+Bar&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het café in De Pijp is al sinds 1975 te vinden aan het Gerard Doustraat. André Hazes kwam er vaak, hij groeide op aan de overkant.</p>
-<p class="adres"><strong>Adres:</strong> Gerard Doustraat 58-H</p>
-</div>
-
-       <div class="cafe" data-cafe="eijlders">
-<div class="cafe-titelrij"><h3 id="eijlders">Eijlders</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Eijlders&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Eijlders opent haar deuren op 24 december 1940 en werd al snel dé ontmoetingsplek voor studenten, kunstenaars en verzetstrijders. Nog steeds worden er wisselexposities gehouden met werk van Amsterdamse kunstenaars.</p>
-<p class="adres"><strong>Adres:</strong> Korte Leidsedwarsstraat 47</p>
-</div>
-
-       <div class="cafe" data-cafe="eik-en-linde">
-<div class="cafe-titelrij"><h3 id="eik-en-linde">Eik en Linde</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Eik+en+Linde&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het café bestaat al sinds 1772, maar week door de uitbreiding van Artis uit naar het huidige pand. De oude locatie is nu een wolvenverblijf. Na de oorlog kwamen hier veel schrijvers en werden VPRO-programma's opgenomen.</p>
-<p class="adres"><strong>Adres:</strong> Plantage Middenlaan 22-A</p>
-</div>
-
-     <div class="cafe" data-cafe="eland">
-<div class="cafe-titelrij"><h3 id="eland">De Eland</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Eland&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café De Eland is een traditioneel bruin café aan de Prinsengracht in de Amsterdamse Jordaan. Het café bestaat al sinds de 19e eeuw en staat bekend om zijn klassieke interieur en ongedwongen sfeer. Bezoekers kunnen er terecht voor een drankje, waaronder verschillende bieren, in een authentieke Amsterdamse omgeving. Dankzij de centrale ligging is Café De Eland zowel populair bij buurtbewoners als bij bezoekers die de Jordaan verkennen.</p>
-<p class="adres"><strong>Adres:</strong> Prinsengracht 296</p>
-</div>
-      
-       <div class="cafe" data-cafe="elsas-cafe">
-<div class="cafe-titelrij"><h3 id="elsas-cafe">Elsa's Café</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Elsa%27s+Caf%C3%A9&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Elsa’s Café op de Middenweg is een legendarisch Ajax-bolwerk in de Watergraafsmeer waar de clubhistorie van de muren druipt. In de tijd van stadion De Meer liepen de supporters na de wedstrijd simpelweg het café in, maar tegenwoordig regelt Elsa’s bij elke thuiswedstrijd een eigen bus die de fans rechtstreeks naar de Johan Cruijff Arena brengt. De barman vertelt je dat de wandeling naar het oude stadion korter was, maar dat de gezelligheid in de bus naar de Arena tegenwoordig minstens zo groot is.</p>
-<p class="adres"><strong>Adres:</strong> Middenweg 73</p>
-</div>
-      
-       <div class="cafe" data-cafe="engelse-reet">
-<div class="cafe-titelrij"><h3 id="engelse-reet">Engelse Reet</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Engelse+Reet&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>In 2023 door de Paroollezers uitgeroepen tot de meest monumentale kroeg van de stad. Laat je niet misleiden door de naam: reet is oud-Nederlands voor kier en verwijst naar het smalle steegje waar het café in ligt.</p>
-<p class="adres"><strong>Adres:</strong> Begijnensteeg 4</p>
-</div>
-
-         <div class="cafe" data-cafe="de-fluiter">
-  <div class="cafe-titelrij"><h3 id="de-fluiter">De Fluiter</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Fluiter&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Een echt donkerbruin café met biljart waar jong en oud uit de buurt samenkomen. Als een echte kastelein staat eigenaresse Jet bijna altijd zelf achter de bar, waar ze iedereen persoonlijk verwelkomt. Door de warme houten inrichting en gezellige sfeer ga je gegarandeerd fluitend naar huis.</p>
-<p class="adres"><strong>Adres:</strong> Admiraal de Ruijterweg 270</p>
-</div>
-
-    
-       <div class="cafe" data-cafe="de-gaeper">
-<div class="cafe-titelrij"><h3 id="de-gaepr">De Gaeper</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Gaeper&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café de Gaeper is een absolute klassieker in het hart van Amsterdam, gelegen aan de sfeervolle Staalstraat. Dit authentieke bruine café ademt historie en gezelligheid, met een prachtig houten interieur dat je direct het gevoel geeft even terug in de tijd te stappen. 
-Of je nu komt voor een goed getapt biertje, een stevige borrelhap of gewoon om mensen te kijken vanaf het terras, de ongedwongen sfeer maakt het een favoriete plek voor zowel Amsterdammers als bezoekers.</p>
-<p class="adres"><strong>Adres:</strong> Staalstraat 4</p>
-</div>
-
-       <div class="cafe" data-cafe="gijs-de-rooij">
-<div class="cafe-titelrij"><h3 id="gijs-de-rooij">Gijs de Rooij</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Gijs+de+Rooij&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café-biljart Gijs de Rooij is sinds 1947 een begrip in Amsterdam-Oost. Raak ouderwets een balletje op het verwarmde biljart, vermaak jezelf met darts of geniet van een goed gesprek aan de bar.</p>
-<p class="adres"><strong>Adres:</strong> Javastraat 1</p>
-</div>
-
-       <div class="cafe" data-cafe="de-gouden-florijn">
-<div class="cafe-titelrij"><h3 id="de-gouden-florijn">De Gouden Florijn</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Gouden+Florijn&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Dit typische Jordanese café zit hier al sinds 1921. Kom langs om een potje voetbal te kijken en bekijk ondertussen de glas-in-lood voorzetramen die kroegbaas Nico zelf maakt.</p>
-<p class="adres"><strong>Adres:</strong> Rozengracht 28</p>
-</div>
-
-         <div class="cafe" data-cafe="hans">
-<div class="cafe-titelrij"><h3 id="hans">Hans</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Hans&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Een ouderwets gezellige kroeg, waar de Perzische kleedjes nog op tafel liggen. Als je wilt dobbelen, kaarten of een biljartje leggen ben je hier aan het juiste adres. Vergeet de kroegkat niet een aai te geven.</p>
-<p class="adres"><strong>Adres:</strong> Amstelveenseweg 69-H</p>
-</div>
-
-     
-       <div class="cafe" data-cafe="hegeraad">
-          <div class="cafe-titelrij"><h3 id="hegeraad">Hegeraad</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Hegeraad&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café Hegeraad was tot begin 20e eeuw een klein café met aansluitend een woonhuis. De opkamer is erbij getrokken waardoor het café een echt huiskamergevoel heeft.</p>
-<p class="adres"><strong>Adres:</strong> Noordermarkt 34</p>
-</div>
-
-       <div class="cafe" data-cafe="heilig-leven">
-<div class="cafe-titelrij"><h3 id="heilig-leven">Heilig Leven</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Heilig+Leven&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Tot de jaren zeventig van de vorige eeuw zat hier een koffiehuis voor dagloners uit het havengebied. De letters aan de gevel herinneren hieraan.</p>
-<p class="adres"><strong>Adres:</strong> Spaarndammerstraat 872</p>
-</div>
-
-
-      <div class="cafe" data-cafe="hermes">
-<div class="cafe-titelrij"><h3 id="hermes">Hermes</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Hermes&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café Hermes is een authentiek bruin café aan de Ceintuurbaan in de Amsterdamse wijk De Pijp.</p>
-<p class="adres"><strong>Adres:</strong> Ceintuurbaan 55</p>
-</div>
-
-      <div class="cafe" data-cafe="cafe-hesp">
-                 <div class="cafe-titelrij"><h3 id="cafe-hesp">Café Hesp</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Hesp&amp;plaats=Amsterdam">Afmelden</a></div>
-      <p>
-        Café Hesp is een van de oudste en bekendste bruine cafés van Amsterdam, gelegen aan de Weesperzijde vlak bij de Berlagebrug. 
-        Waar het ooit begon als staminee voor de lokale arbeiders en schippers, is het in de loop der decennia uitgegroeid tot een echte ontmoetingsplek voor de hele buurt.
-        Van buurtbewoners, studenten en bekende Amsterdammers zoals Schiffmacher tot zakelijke gasten; het loopt er moeiteloos door elkaar heen.
-      </p>
-      <p class="adres"><strong>Adres:</strong>  Weesperzijde 130-131</p>
-</div>
-      
-      <div class="cafe" data-cafe="heuvel">
-<div class="cafe-titelrij"><h3 id="heuvel">Heuvel</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Heuvel&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café Heuvel is een traditioneel Amsterdams buurtcafé met een informele sfeer. Tijdens Koningsdag staat mede-eigenaar Robert ten Brink er regelmatig zelf achter de tap om bier te schenken.</p>
-<p class="adres"><strong>Adres:</strong> Prinsengracht 568</p>
-</div>
-
-       <div class="cafe" data-cafe="cafe-t-hooischip">
-<div class="cafe-titelrij"><h3 id="cafe-t-hooischip">Café 't Hooischip</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+%27t+Hooischip&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>De geschiedenis gaat terug tot het einde van de 19e eeuw. Door de ligging direct aan het water van de Amstel diende het in zijn vroegere jaren als een echt zeemans- en schipperscafé, 
-  waar lokaal vrachtpersoneel en zeelieden binnenstapten voor een stevige borrel.
-'t Hooischip is een knusse, compacte kroeg. Vanaf het terras op de stoep aan de Amstel heb je een prachtig uitzicht over het water en de voorbijvarende bootjes richting de Stopera en de Blauwbrug.</p>
-<p class="adres"><strong>Adres:</strong> Amstel 31</p>
-</div>
-
-
-             <div class="cafe" data-cafe="hoppe">
-<div class="cafe-titelrij"><h3 id="hoppe">Hoppe</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Hoppe&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Sinds 1670 is Café Hoppe aan het Spui dé huiskamer van Amsterdam. Wat begon als een jeneverstokerij, is uitgegroeid tot een monumentaal bruin café waar de geschiedenis bijna tastbaar is.
-Waarom je Hoppe moet bezoeken:
-Authentiek Interieur: Met de donkere houten lambrisering en het zand op de vloer (een eeuwenoude traditie) stap je direct de 17e eeuw binnen.
-De Mix van Amsterdam: Hier staan advocaten in pak schouder aan schouder met studenten en rasechte Amsterdammers.
-De "Staande" Cultuur: Het rechtergedeelte is beroemd om zijn levendige sfeer; hier drink je je biertje of jenever bij voorkeur staand, precies zoals de intellectuelen en handelslieden dat eeuwen geleden al deden.
-Of je nu komt voor een perfect getapt biertje of de legendarische bitterballen: bij Hoppe proef je het Amsterdam dat nooit verandert.</p>
-<p class="adres"><strong>Adres:</strong> Spui 18-20</p>
-</div>
-
-      
-       <div class="cafe" data-cafe="de-kaaiman">
-<div class="cafe-titelrij"><h3 id="de-kaaiman">De Kaaiman</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Kaaiman&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het café/koffiehuis zit hier al sinds het begin van de twintigste eeuw. De naamgever van het café kan je binnen spotten. Met feestdagen krijgt hij (of zij?) een gezellig hoedje op.</p>
-<p class="adres"><strong>Adres:</strong> Spaarndammerdijk 19-A</p>
-    </div>
-
-      <div class="cafe" data-cafe="cafe-karpershoek">
-     <div class="cafe-titelrij"><h3 id="cafe-karpershoek">Café Karpershoek</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Karpershoek&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café Karpershoek zegt het oudste café van Amsterdam te zijn, daterend uit 1606, en ligt pal tegenover het Centraal Station. De vloer lag tot enkele jaren terug bedekt met een dikke laag zand, een traditie uit de tijd dat bezoekers hun pruimtabak en as simpelweg op de grond lieten vallen.</p>
-<p class="adres"><strong>Adres:</strong> Martelaarsgracht 2</p>
-</div>
-
-
-       <div class="cafe" data-cafe="de-kat-in-de-wijngaert">
-     <div class="cafe-titelrij"><h3 id="de-kat-in-de-wijngaert">De Kat in de Wijngaert</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Kat+in+de+Wijngaert&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Een van de oudere cafés van de Jordaan. Voor de deur begon de Palingoproer in 1886, een tweedaagse rel tegen de politie die een stokje probeerde te steken voor een illegaal potje haringtrekken.</p>
-<p class="adres"><strong>Adres:</strong> Lindengracht 160</p>
-</div>
-
-
-       <div class="cafe" data-cafe="proeflokaal-t-kelkje">
-<div class="cafe-titelrij"><h3 id="proeflokaal-t-kelkje">Proeflokaal 't Kelkje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Proeflokaal+%27t+Kelkje&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Proeflokaal ’t Kelkje op de Oudezijds Achterburgwal is een intiem jenever- en likeurlokaal in het hart van de Wallen. Deze authentieke parel ademt 17e-eeuwse nostalgie met zijn historische interieur en enorme passie voor ambachtelijk gedistilleerd. Het is de ideale plek om in alle rust te genieten van een klassiek Amsterdams "kopstootje" terwijl de hectiek van de rosse buurt buiten aan je voorbijtrekt.
-</p>
-<p class="adres"><strong>Adres:</strong> Oudezijds Achterburgwal 164A</p>
-</div>
-
-
-        <div class="cafe" data-cafe="krom">
-<div class="cafe-titelrij"><h3 id="krom">Krom</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Krom&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het café staat bekend om zijn authentieke art-deco-interieur, informele sfeer en ruime terras.</p>
-<p class="adres"><strong>Adres:</strong> Utrechtsestraat 76</p>
-</div>
-
-            <div class="cafe" data-cafe="cafe-de-laurierboom">
-<div class="cafe-titelrij"><h3 id="cafe-de-laurierboom">Café De Laurierboom</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+De+Laurierboom&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Dit gebouw uit 1878 stond voorheen bekend als 'Tapperij en slijterij De Laurierboom'. De gevelsteen herinnert hier nog aan. Tappen doen ze nog steeds, sinds 2006 kan je hier ook schaken.</p>
-<p class="adres"><strong>Adres:</strong> Laurierstraat 76</p>
-</div>
-
-       <div class="cafe" data-cafe="t-lommertje">
-<div class="cafe-titelrij"><h3 id="t-lommertje">'t Lommertje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=%27t+Lommertje&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>'t Lommertje aan de Bos en Lommerweg is een onvervalste buurtkroeg waar de tijd op een prettige manier lijkt stil te staan. In dit authentieke bruine café in Amsterdam-West komt een trouwe schare buurtbewoners samen voor een goed getapt biertje en een potje biljart. De pretentieloze gezelligheid en de nuchtere bediening maken het tot een warm rustpunt in de levendige drukte van BoLo.</p>
-<p class="adres"><strong>Adres:</strong> Bos en Lommerweg 259-H</p>
-</div>
-
-          <div class="cafe" data-cafe="cafe-louis-bar">
-<div class="cafe-titelrij"><h3 id="cafe-louis-bar">Café Louis Bar</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Louis+Bar&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>In 2019 namen vader en dochter het proeflokaal in de Olofspoort over. De vader is inmiddels met pensioen, zijn dochter zet het café voort. De perfecte plek voor een proeverij, met citroen- en bessenjenever van eigen merk.</p>
-<p class="adres"><strong>Adres:</strong> Nieuwebrugsteeg 13</p>
-</div>
-
-       <div class="cafe" data-cafe="lowietje">
-       <div class="cafe-titelrij"><h3 id="lowietje">Lowietje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Lowietje&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Een bezoek aan Lowietje was voor De Cock en zijn collega Vledder cruciaal bij het oplossen van menige moord. In dit bruine café beleef je met haar traditionele aankleding en muziek de oude Jordaan.</p>
-<p class="adres"><strong>Adres:</strong> Derde Goudsbloemdwarsstraat 2</p>
-</div>
-
-    <div class="cafe" data-cafe="cafe-t-mandje">
-<div class="cafe-titelrij"><h3 id="cafe-t-mandje">Café 't Mandje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+%27t+Mandje&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het café werd in 1927 geopend door Bet van Beeren, een legendarische, lesbische horeca-pionier. 
-  Bet creëerde een plek waar iedereen welkom was: homoseksuelen, lesbiennes, prostituees, zeelieden en kunstenaars konden hier in alle vrijheid zichzelf zijn. 
-  Dit maakte 't Mandje een van de allereerste openlijke gaybars ter wereld, lang voordat het Gay Pride-tijdperk aanbrak.
-Bet knipte de das af van mannen die 't Mandje binnenkwamen zonder hun fatsoen te bewaren (of gewoon voor de grap) en hing deze op als trofee aan het plafond.
-Toen Bet in 1967 overleed, hield haar zus Greet de zaak tot 1982 open. Daarna bleef het pand jarenlang gesloten, maar het interieur werd door de familie al die tijd perfect geconserveerd. 
-  Pas in 2008 opende het café na een grondige restauratie opnieuw zijn deuren, precies ingericht zoals Bet het in de jaren '20 achterliet.</p>
-<p class="adres"><strong>Adres:</strong> Zeedijk 63</p>
-</div>
-      
-       <div class="cafe" data-cafe="marktzicht">
-<div class="cafe-titelrij"><h3 id="marktzicht">Marktzicht</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Marktzicht&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>In de buurt van de centrale markthallen in Amsterdam Oud-West ligt dit knusse café. Hier kan je terecht voor een zelfgemaakte gehaktbal of een gezellig praatje met de gasten.</p>
-<p class="adres"><strong>Adres:</strong> Tweede Hugo de Grootstraat 62</p>
-</div>
-
-       <div class="cafe" data-cafe="t-monumentje">
-<div class="cafe-titelrij"><h3 id="t-monumentje">'t Monumentje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=%27t+Monumentje&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café 't Monumentje tref je in — hoe kan het ook anders — een monumentaal pand uit de 17e eeuw. Sinds 1988 wordt elk najaar een drie maanden durend backgammon-toernooi georganiseerd: de finale is altijd spannend.</p>
-<p class="adres"><strong>Adres:</strong> Westerstraat 120</p>
-</div>
-
-       <div class="cafe" data-cafe="mulder">
-<div class="cafe-titelrij"><h3 id="mulder">Mulder</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Mulder&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Als je bij café Mulder naar binnen stapt, lijkt het alsof de tijd heeft stilgestaan. Alleen al door haar glas-in-loodramen, bloemetjesbehang én prachtige mozaïekvloer heb je zin om langer te blijven.</p>
-<p class="adres"><strong>Adres:</strong> Weteringschans 163</p>
-</div>
-
- 
-       <div class="cafe" data-cafe="de-ooievaar">
-<div class="cafe-titelrij"><h3 id="de-ooievaar">De Ooievaar</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Ooievaar&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>'Naveltje bloot', 'Bruids-tranen' en 'Hansje in de Kelder': een greep uit de traditionele likeuren die het proeflokaal van de distilleerderij Van Wees schenkt, volgens traditioneel recept gestookt.</p>
-<p class="adres"><strong>Adres:</strong> Sint Olofspoort 1</p>
-</div>
-
-       <div class="cafe" data-cafe="oosterling">
-<div class="cafe-titelrij"><h3 id="oosterling">Oosterling</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Oosterling&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Vanaf 1735 werd in dit pand door de VOC koffie, thee en specerijen verkocht. Vanaf 1820 werd het een café en slijterij. Oosterling is het enige café in Amsterdam dat nog een slijterijvergunning heeft.</p>
-<p class="adres"><strong>Adres:</strong> Utrechtsestraat 140</p>
-</div>
-
-       <div class="cafe" data-cafe="papeneiland">
-<div class="cafe-titelrij"><h3 id="papeneiland">Papeneiland</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Papeneiland&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Sinds 1896 zit in dit pand een café. De naam verwijst naar het noordelijke stukje van de Jordaan, waar vroeger een klooster stond. Bill Clinton at in 2011 in Papeneiland een stuk appeltaart, wat de taart in één klap wereldberoemd maakte.</p>
-<p class="adres"><strong>Adres:</strong> Prinsengracht 2</p>
-</div>
-
- <div class="cafe" data-cafe="pieper">
-<div class="cafe-titelrij"><h3 id="pieper">Pieper</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Pieper&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café Pieper is een van de oudste bruine cafés van Amsterdam en gaat terug tot 1665. Het authentieke interieur en de ligging aan de Prinsen- en Leidsegracht maken het al generaties lang een geliefde ontmoetingsplek.</p>
-<p class="adres"><strong>Adres:</strong> Prinsengracht 424</p>
-</div>
-      
-       <div class="cafe" data-cafe="cafe-pierewaaier">
-<div class="cafe-titelrij"><h3 id="cafe-pierewaaier">Café Pierewaaier</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Pierewaaier&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Lekker pierewaaien kan je in dit nieuwe café in de Jordaan. Decennialang zwaaiden Zwarte Gerrit en Blonde Sien hier de scepter. Eind 2023 heeft een nieuwe kroegbaas het café nieuw leven ingeblazen.</p>
-<p class="adres"><strong>Adres:</strong> Laurierstraat 101-H</p>
-</div>
-
-       <div class="cafe" data-cafe="de-poort">
-<div class="cafe-titelrij"><h3 id="de-poort">De Poort</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Poort&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Al voor de Tweede Wereldoorlog was hier dit café gevestigd. Vanachter het raam zie je de drukte van de Haarlemmerdijk aan je voorbij trekken. Kijk ook eens naar de overkant, waar een van de mooiste jugendstilgebouwen van Amsterdam staat.</p>
-<p class="adres"><strong>Adres:</strong> Haarlemmerdijk 44</p>
-</div>
-
-       <div class="cafe" data-cafe="quelle">
-<div class="cafe-titelrij"><h3 id="quelle">Quelle</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Quelle&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Quelle aan de Jan Pieter Heijestraat is een levendig trefpunt in het hart van Oud-West waar de Amsterdamse gezelligheid centraal staat. Met zijn ruime terras op een van de leukste hoeken van de buurt is het de ideale plek voor een zonnige borrel of een ongedwongen biertje aan de bar.</p>
-<p class="adres"><strong>Adres:</strong> Jan Pieter Heijestraat 133-135</p>
-</div>
-
-
-       <div class="cafe" data-cafe="de-roode-laars">
-<div class="cafe-titelrij"><h3 id="de-roode-laars">De Roode Laars</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Roode+Laars&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Als je boven de deur kijkt, snap je waar de naam van het café vandaan komt. Een gevelsteen met een rode laars verraadt dat hier vroeger een schoenmaker zat. Het pand is later omgevormd tot café De Roode Laars.</p>
-<p class="adres"><strong>Adres:</strong> Zeedijk 17</p>
-</div>
-
-       <div class="cafe" data-cafe="de-roosenboom">
-<div class="cafe-titelrij"><h3 id="de-roosenboom">De Roosenboom</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Roosenboom&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Voor een café dat in 1999 is opgericht, is De Roosenboom in Slotervaart een schoolvoorbeeld van de bruine kroeg. De familie Rooseboom bestiert het café en heeft het tot een begrip in de wijk gemaakt.</p>
-<p class="adres"><strong>Adres:</strong> Jacques Veltmanstraat 56</p>
-</div>
-
-       <div class="cafe" data-cafe="ruk-en-pluk">
-<div class="cafe-titelrij"><h3 id="ruk-en-pluk">Ruk en Pluk</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Ruk+en+Pluk&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Ruk en Pluk straalt met haar versiering één en al gezelligheid uit, net als haar gezellige barvrouwen. De naam van het café is onschuldiger dan je denkt: het is een uitdrukking die wordt gebruikt bij het plukken van bonen.</p>
-<p class="adres"><strong>Adres:</strong> Linnaeusstraat 48</p>
-</div>
-
-             <div class="cafe" data-cafe="cafe-saarein">
-<div class="cafe-titelrij"><h3 id="cafe-saarein">Café Saarein</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Saarein&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Geopend in 1978, in een tijd dat vrouwen nog niet zonder begeleiding van mannen aan de bar mochten zitten. Vrouwen uit de homo- en vrouwenbeweging kochten een café, zodat vrouwen ongestoord met elkaar konden praten.</p>
-<p class="adres"><strong>Adres:</strong> Elandsstraat 119</p>
-</div>
-      
-       <div class="cafe" data-cafe="scharrebier">
-<div class="cafe-titelrij"><h3 id="scharrebier">Scharrebier</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Scharrebier&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Op deze plek vonden 17e-eeuwse zeemanslieden al troost in een glas scharrebier: goedkoop bier verdund met water. Vandaag de dag drink je kwaliteitsbieren in het café en kun je vanaf het terras genieten van het uitzicht op de Scharrebiersluis.</p>
-<p class="adres"><strong>Adres:</strong> Rapenburgerplein 1</p>
-</div>
-
-       <div class="cafe" data-cafe="schumich">
-<div class="cafe-titelrij"><h3 id="schumich">Schumich</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Schumich&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Schumich is opgericht in 1910 en sinds 1970 in bezit van dezelfde familie. Het interieur straalt de gemoedelijkheid van een bruine kroeg uit met biljart, voetbalmemorabilia en een belhokje.</p>
-<p class="adres"><strong>Adres:</strong> Singel 6</p>
-</div>
-
-       <div class="cafe" data-cafe="t-sluisje">
-<div class="cafe-titelrij"><h3 id="t-sluisje">'t Sluisje</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=%27t+Sluisje&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>De familie De Ruijter zette café 't Sluisje eind 2016 na meer dan een eeuw te koop. Een groep betrokken dijkbewoners kocht het pand uit 1565 en houdt de geschiedenis en kroeg levend.</p>
-<p class="adres"><strong>Adres:</strong> Nieuwendammerdijk 297</p>
-</div>
-
-       <div class="cafe" data-cafe="cafe-t-smalle">
-<div class="cafe-titelrij"><h3 id="cafe-t-smalle">Café 't Smalle</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+%27t+Smalle&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Dit café, in de oude distilleerderij en proeflokaal van Hoppe uit 1790, is in 2024 overgenomen door een duo dat de oude bruine tijden weer wil laten herleven.</p>
-<p class="adres"><strong>Adres:</strong> Egelantiersgracht 12</p>
-</div>
-
-       <div class="cafe" data-cafe="sportpark">
-<div class="cafe-titelrij"><h3 id="sportpark">Sportpark</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Sportpark&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Al bijna 90 jaar bevindt café Sportpark zich op deze locatie. Haar naam dankt ze aan het nabijgelegen sportterrein waar Blauw-Wit speelde. Als Ajax speelt gaat het café een uurtje eerder open.</p>
-         <p class="adres"><strong>Adres:</strong> Jan van Galenstraat 130</p>
-</div>
-
-
-       <div class="cafe" data-cafe="de-twee-zwaantjes">
-<div class="cafe-titelrij"><h3 id="de-twee-zwaantjes">De Twee Zwaantjes</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Twee+Zwaantjes&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het café is een begrip in de Jordaan. Het bestaat al sinds 1928 en staat bekend als muziekcafé. Nog steeds worden veel optredens gegeven waarbij het publiek van visboer tot minister kan meezingen.</p>
-<p class="adres"><strong>Adres:</strong> Prinsengracht 114</p>
-</div>
-
-
-       <div class="cafe" data-cafe="cafe-welling">
-<div class="cafe-titelrij"><h3 id="cafe-welling">Café Welling</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+Welling&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Café Welling is een authentiek Amsterdams buurtcafé.
-De geschiedenis van het café gaat terug tot 1901. Bas Lubberhuizen nam het café over van de heer Welling in 1978, en sindsdien is er weinig meer veranderd.'Een heerlijk oud café, een super aardige barman en altijd een sfeer alsof je bij je broer op bezoek bent. Beter ga je ze niet vinden in Amsterdam.', aldus vaste klant Marijke.</p>
-<p class="adres"><strong>Adres:</strong> Jan Willem Brouwersstraat 32</p>
-</div>
-      
-       <div class="cafe" data-cafe="westerdok">
-<div class="cafe-titelrij"><h3 id="westerdok">Westerdok</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Westerdok&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>In 1899, toen het IJ nog de Zuiderzee was, stond het café er al. Tegenwoordig kan je er goed terecht voor bijzonder speciaalbier en een baken van rust in de schaduw van het station.</p>
-<p class="adres"><strong>Adres:</strong> Westerdoksdijk 715a</p>
-</div>
-
-       <div class="cafe" data-cafe="in-de-wildeman">
-<div class="cafe-titelrij"><h3 id="in-de-wildeman">In de Wildeman</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=In+de+Wildeman&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Het proeflokaal stamt al uit 1690, toen distilleerderij Levert &amp; Co hier gevestigd was. Sinds de jaren 80 is dit kluphuís geliefd bij menig bierdrinker door de uitgebreide kaart.</p>
-<p class="adres"><strong>Adres:</strong> Kolksteeg 3</p>
-</div>
-
-       <div class="cafe" data-cafe="cafe-van-wou">
-<div class="cafe-titelrij"><h3 id="cafe-van-wou">Café van Wou</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+van+Wou&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Dichtbij de Albert Cuypmarkt vind je dit typische biljart- en klaverjascafé. De eigenaresse, die nog een café in De Pijp en het centrum bezit, is een van de weinige vrouwelijke kroegbazen in de stad.</p>
-<p class="adres"><strong>Adres:</strong> Van Woustraat 25</p>
-</div>
-
-
-
-       <div class="cafe" data-cafe="de-zwart">
-<div class="cafe-titelrij"><h3 id="de-zwart">De Zwart</h3><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Zwart&amp;plaats=Amsterdam">Afmelden</a></div>
-<p>Wie in De Zwart is geweest herinnert zich vooral de mooie vloer uit 1930. Het café zelf stamt uit 1921 en is vernoemd naar oprichter Onno de Zwart.</p>
-<p class="adres"><strong>Adres:</strong> Spuistraat 334</p>
-</div>
-  
-<div class="footer-nav">
-  <a href="../organisatie.html">Organisatie</a>
-  <a href="../doelstellingen.html">Doelstellingen</a>
+        Of dat historisch klopt is onzeker, maar de sfeer ademt onmiskenbaar de 17e eeuw.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=cafe-de-druif">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="eik-en-linde" id="eik-en-linde">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><img class="catalog-foto" src="../fotos/eik-en-linde.jpeg" alt="Eik en Linde in Amsterdam" loading="lazy" decoding="async"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Eik+en+Linde&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Eik en Linde</h2><dl><div><dt>Sinds</dt><dd>1772</dd></div><div><dt>Straat</dt><dd>Plantage Middenlaan 22-A</dd></div></dl>
+<div class="catalog-beschrijving"><p>Het café bestaat al sinds 1772, maar week door de uitbreiding van Artis uit naar het huidige pand. De oude locatie is nu een wolvenverblijf. Na de oorlog kwamen hier veel schrijvers en werden VPRO-programma&#x27;s opgenomen.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=eik-en-linde">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="eland" id="eland">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Eland&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>De Eland</h2><dl><div><dt>Sinds</dt><dd>jaren 1860</dd></div><div><dt>Straat</dt><dd>Prinsengracht 296</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café De Eland is een traditioneel bruin café aan de Prinsengracht in de Amsterdamse Jordaan. Het café bestaat al sinds de 19e eeuw en staat bekend om zijn klassieke interieur en ongedwongen sfeer. Bezoekers kunnen er terecht voor een drankje, waaronder verschillende bieren, in een authentieke Amsterdamse omgeving. Dankzij de centrale ligging is Café De Eland zowel populair bij buurtbewoners als bij bezoekers die de Jordaan verkennen.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=eland">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="engelse-reet" id="engelse-reet">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><img class="catalog-foto" src="../fotos/engelse-reet.jpeg" alt="Engelse Reet in Amsterdam" loading="lazy" decoding="async"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Engelse+Reet&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Engelse Reet</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Begijnensteeg 4</dd></div></dl>
+<div class="catalog-beschrijving"><p>In 2023 door de Paroollezers uitgeroepen tot de meest monumentale kroeg van de stad. Laat je niet misleiden door de naam: reet is oud-Nederlands voor kier en verwijst naar het smalle steegje waar het café in ligt.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=engelse-reet">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="de-fluiter" id="de-fluiter">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><img class="catalog-foto" src="../fotos/de-fluiter.jpeg" alt="De Fluiter in Amsterdam" loading="lazy" decoding="async"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Fluiter&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>De Fluiter</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Admiraal de Ruijterweg 270</dd></div></dl>
+<div class="catalog-beschrijving"><p>Een echt donkerbruin café met biljart waar jong en oud uit de buurt samenkomen. Als een echte kastelein staat eigenaresse Jet bijna altijd zelf achter de bar, waar ze iedereen persoonlijk verwelkomt. Door de warme houten inrichting en gezellige sfeer ga je gegarandeerd fluitend naar huis.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=de-fluiter">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="gijs-de-rooij" id="gijs-de-rooij">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Gijs+de+Rooij&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Gijs de Rooij</h2><dl><div><dt>Sinds</dt><dd>1947</dd></div><div><dt>Straat</dt><dd>Javastraat 1</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café-biljart Gijs de Rooij is sinds 1947 een begrip in Amsterdam-Oost. Raak ouderwets een balletje op het verwarmde biljart, vermaak jezelf met darts of geniet van een goed gesprek aan de bar.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=gijs-de-rooij">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="hans" id="hans">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Hans&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Hans</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Amstelveenseweg 69-H</dd></div></dl>
+<div class="catalog-beschrijving"><p>Een ouderwets gezellige kroeg, waar de Perzische kleedjes nog op tafel liggen. Als je wilt dobbelen, kaarten of een biljartje leggen ben je hier aan het juiste adres. Vergeet de kroegkat niet een aai te geven.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=hans">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="hegeraad" id="hegeraad">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Hegeraad&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Hegeraad</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Noordermarkt 34</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café Hegeraad was tot begin 20e eeuw een klein café met aansluitend een woonhuis. De opkamer is erbij getrokken waardoor het café een echt huiskamergevoel heeft.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=hegeraad">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="hermes" id="hermes">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Hermes&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Hermes</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Ceintuurbaan 55</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café Hermes is een authentiek bruin café aan de Ceintuurbaan in de Amsterdamse wijk De Pijp.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=hermes">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="heuvel" id="heuvel">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Heuvel&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Heuvel</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Prinsengracht 568</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café Heuvel is een traditioneel Amsterdams buurtcafé met een informele sfeer. Tijdens Koningsdag staat mede-eigenaar Robert ten Brink er regelmatig zelf achter de tap om bier te schenken.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=heuvel">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="krom" id="krom">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Krom&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Krom</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Utrechtsestraat 76</dd></div></dl>
+<div class="catalog-beschrijving"><p>Het café staat bekend om zijn authentieke art-deco-interieur, informele sfeer en ruime terras.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=krom">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="t-monumentje" id="t-monumentje">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=%27t+Monumentje&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>&#x27;t Monumentje</h2><dl><div><dt>Sinds</dt><dd>1988</dd></div><div><dt>Straat</dt><dd>Westerstraat 120</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café &#x27;t Monumentje tref je in — hoe kan het ook anders — een monumentaal pand uit de 17e eeuw. Sinds 1988 wordt elk najaar een drie maanden durend backgammon-toernooi georganiseerd: de finale is altijd spannend.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=t-monumentje">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="de-ooievaar" id="de-ooievaar">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><img class="catalog-foto" src="../fotos/de-ooievaar.jpeg" alt="De Ooievaar in Amsterdam" loading="lazy" decoding="async"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Ooievaar&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>De Ooievaar</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Sint Olofspoort 1</dd></div></dl>
+<div class="catalog-beschrijving"><p>&#x27;Naveltje bloot&#x27;, &#x27;Bruids-tranen&#x27; en &#x27;Hansje in de Kelder&#x27;: een greep uit de traditionele likeuren die het proeflokaal van de distilleerderij Van Wees schenkt, volgens traditioneel recept gestookt.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=de-ooievaar">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="oosterling" id="oosterling">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Oosterling&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Oosterling</h2><dl><div><dt>Sinds</dt><dd>1820</dd></div><div><dt>Straat</dt><dd>Utrechtsestraat 140</dd></div></dl>
+<div class="catalog-beschrijving"><p>Vanaf 1735 werd in dit pand door de VOC koffie, thee en specerijen verkocht. Vanaf 1820 werd het een café en slijterij. Oosterling is het enige café in Amsterdam dat nog een slijterijvergunning heeft.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=oosterling">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="papeneiland" id="papeneiland">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Papeneiland&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Papeneiland</h2><dl><div><dt>Sinds</dt><dd>1896</dd></div><div><dt>Straat</dt><dd>Prinsengracht 2</dd></div></dl>
+<div class="catalog-beschrijving"><p>Sinds 1896 zit in dit pand een café. De naam verwijst naar het noordelijke stukje van de Jordaan, waar vroeger een klooster stond. Bill Clinton at in 2011 in Papeneiland een stuk appeltaart, wat de taart in één klap wereldberoemd maakte.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=papeneiland">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="pieper" id="pieper">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Pieper&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Pieper</h2><dl><div><dt>Sinds</dt><dd>1665</dd></div><div><dt>Straat</dt><dd>Prinsengracht 424</dd></div></dl>
+<div class="catalog-beschrijving"><p>Café Pieper is een van de oudste bruine cafés van Amsterdam en gaat terug tot 1665. Het authentieke interieur en de ligging aan de Prinsen- en Leidsegracht maken het al generaties lang een geliefde ontmoetingsplek.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=pieper">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="scharrebier" id="scharrebier">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Scharrebier&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Scharrebier</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Rapenburgerplein 1</dd></div></dl>
+<div class="catalog-beschrijving"><p>Op deze plek vonden 17e-eeuwse zeemanslieden al troost in een glas scharrebier: goedkoop bier verdund met water. Vandaag de dag drink je kwaliteitsbieren in het café en kun je vanaf het terras genieten van het uitzicht op de Scharrebiersluis.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=scharrebier">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="schumich" id="schumich">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Schumich&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Schumich</h2><dl><div><dt>Sinds</dt><dd>1970</dd></div><div><dt>Straat</dt><dd>Singel 6</dd></div></dl>
+<div class="catalog-beschrijving"><p>Schumich is opgericht in 1910 en sinds 1970 in bezit van dezelfde familie. Het interieur straalt de gemoedelijkheid van een bruine kroeg uit met biljart, voetbalmemorabilia en een belhokje.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=schumich">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="cafe-van-wou" id="cafe-van-wou">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=Caf%C3%A9+van+Wou&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>Café van Wou</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Van Woustraat 25</dd></div></dl>
+<div class="catalog-beschrijving"><p>Dichtbij de Albert Cuypmarkt vind je dit typische biljart- en klaverjascafé. De eigenaresse, die nog een café in De Pijp en het centrum bezit, is een van de weinige vrouwelijke kroegbazen in de stad.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=cafe-van-wou">Bekijk op de kaart →</a></div></article><article class="cafe catalog-cafe" data-cafe="de-zwart" id="de-zwart">
+<div class="catalog-locatie"><span>Noord-Holland</span><span>Amsterdam</span></div>
+<div class="catalog-media"><img class="catalog-foto" src="../fotos/de-zwart.jpeg" alt="De Zwart in Amsterdam" loading="lazy" decoding="async"><div class="catalog-meta"><span>Gegevens d.d. <time datetime="2026-05-09">9 mei 2026</time></span><a class="afmelden-knop" href="../afmeldformulier.html?cafe=De+Zwart&amp;plaats=Amsterdam">Afmelden</a></div></div>
+<div class="catalog-inhoud"><h2>De Zwart</h2><dl><div><dt>Sinds</dt><dd>Nog te bevestigen</dd></div><div><dt>Straat</dt><dd>Spuistraat 334</dd></div></dl>
+<div class="catalog-beschrijving"><p>Wie in De Zwart is geweest herinnert zich vooral de mooie vloer uit 1930. Het café zelf stamt uit 1921 en is vernoemd naar oprichter Onno de Zwart.</p></div><a class="kaart-link" href="../kaart-bruine-kroegen.html?cafe=de-zwart">Bekijk op de kaart →</a></div></article></div><div class="footer-nav">
+  <a href="../organisatie.html" data-search-name="organisatie">Organisatie</a>
+  <a href="../doelstellingen.html" data-search-name="doelstellingen">Doelstellingen</a>
   <a href="../forum.html">Forum</a>
-  <a href="../contact.html">Contact</a>
-</div>
-</div> <!-- einde container -->
- 
-<script>
-function loadCafe(cafe){
-    const id = cafe.dataset.cafe;
-    const extensions = ["jpg","jpeg","png","webp"];
-    function tryNext(i){
-        if(i >= extensions.length) return;
-        const imgPath = "/fotos/" + id + "." + extensions[i];
-        const creditPath = "/fotos/" + id + ".txt";
-        const testImg = new Image();
-        testImg.onload = function () {
-            const img = document.createElement("img");
-            img.src = imgPath;
-            img.className = "cafe-foto";
-            cafe.prepend(img);
-            fetch(creditPath)
-                .then(r => r.ok ? r.text() : null)
-                .then(name => {
-                    if (name) {
-                        const credit = document.createElement("div");
-                        credit.className = "foto-credit";
-                        credit.innerText = "Foto: " + name.trim();
-                        img.after(credit);
-                    }
-                });
-        };
-        testImg.onerror = function(){ tryNext(i+1); };
-        testImg.src = imgPath;
-    }
-    tryNext(0);
-}
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            loadCafe(entry.target);
-            observer.unobserve(entry.target);
-        }
-    });
-});
-
-document.querySelectorAll(".cafe[data-cafe]").forEach(cafe => {
-    observer.observe(cafe);
-});
-</script>
-<script>
-window.addEventListener("load", function () {
-  var cafe = new URLSearchParams(window.location.search).get("cafe");
-  if (!cafe) return;
-
-  var target = document.querySelector('[data-cafe="' + cafe + '"]');
-
-  if (target) {
-    setTimeout(function () {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
-  }
-});
-</script>
-<script>
-window.addEventListener("load", function () {
-  var cafe = new URLSearchParams(window.location.search).get("cafe");
-  if (!cafe) return;
-
-  var target = document.querySelector('[data-cafe="' + cafe + '"]');
-  if (!target) return;
-
-  var attempts = 0;
-
-  function positionCafe() {
-    attempts++;
-
-    var y = target.getBoundingClientRect().top + window.pageYOffset - 20;
-    window.scrollTo(0, y);
-
-    // Café photos are loaded lazily. They can change the page height/position
-    // after the first scroll, so repeat the positioning while they load.
-    if (attempts < 12) {
-      window.setTimeout(positionCafe, 250);
-    }
-  }
-
-  // Give the page a moment after load before the first positioning.
-  window.setTimeout(positionCafe, 100);
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Link bij ieder café naar precies dezelfde café-pin op de kaart.
-  document.querySelectorAll(".cafe[data-cafe]").forEach(function (cafe) {
-    var slug = cafe.getAttribute("data-cafe");
-    if (!slug || cafe.querySelector(".kaart-link")) return;
-
-    var link = document.createElement("a");
-    link.className = "kaart-link";
-    link.href = "../kaart-bruine-kroegen.html?cafe=" + encodeURIComponent(slug);
-    link.textContent = "📍 Bekijk dit café op de kaart";
-    link.setAttribute("aria-label", "Bekijk dit café op de kaart");
-
-    var adres = cafe.querySelector(".adres");
-    if (adres) {
-      adres.insertAdjacentElement("afterend", link);
-    } else {
-      cafe.appendChild(link);
-    }
-  });
-
-  // Zwevende knop om tijdens het scrollen snel naar boven te gaan.
-  var topButton = document.createElement("button");
-  topButton.id = "naar-boven";
-  topButton.type = "button";
-  topButton.textContent = "↑ Naar boven";
-  topButton.setAttribute("aria-label", "Ga naar bovenaan de pagina");
-  document.body.appendChild(topButton);
-
-  function updateTopButton() {
-    if (window.scrollY > 200) {
-      topButton.classList.add("zichtbaar");
-    } else {
-      topButton.classList.remove("zichtbaar");
-    }
-  }
-
-  window.addEventListener("scroll", updateTopButton, { passive: true });
-  updateTopButton();
-
-  topButton.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-});
-</script>
-
-</body>
-</html>
+  <a href="../contact.html" data-search-name="contact">Contact</a>
+</div></div><button id="naar-boven" type="button" aria-label="Ga naar bovenaan de pagina" hidden>↑ Naar boven</button><script>const topButton=document.getElementById('naar-boven');function updateTopButton(){topButton.hidden=window.scrollY<=200;}window.addEventListener('scroll',updateTopButton,{passive:true});updateTopButton();topButton.addEventListener('click',function(){window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});window.addEventListener('load',function(){const id=new URLSearchParams(location.search).get('cafe')||decodeURIComponent(location.hash.slice(1));const target=id&&document.getElementById(id);if(target)target.scrollIntoView({block:'start'});});</script></body></html>
