@@ -198,7 +198,7 @@
     "address": "Westerstraat 120",
     "description": "Café 't Monumentje tref je in — hoe kan het ook anders — een monumentaal pand uit de 17e eeuw. Sinds 1988 wordt elk najaar een drie maanden durend backgammon-toernooi georganiseerd: de finale is altijd spannend.",
     "since": null,
-    "photo": null,
+    "photo": "fotos/amsterdam-t-monumentje-20261025.jpeg",
     "coords": [
       52.3785147,
       4.8830999
@@ -212,7 +212,8 @@
     "notes": [
       "1988 betreft backgammontoernooi; oprichtingsjaar nog te bevestigen."
     ],
-    "updated_at": "2026-10-24"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "brandon",
@@ -222,7 +223,7 @@
     "address": "Keizersgracht 157",
     "description": "Cafe Brandon is een van de oudste kroegen van de stad; al sinds 1626 drinken Amsterdammers hier een biertje. Eind vorige eeuw staat het lange tijd leeg, omdat de vorige eigenaars hun cafe niet kwijt willen. Het bordje 'Niet te koop, niet te huur' dat in het lege café hing, hangt er nu nog steeds.",
     "since": "1626",
-    "photo": null,
+    "photo": "fotos/amsterdam-brandon-20261025.jpeg",
     "coords": [
       52.3754007,
       4.8864147
@@ -236,7 +237,8 @@
     "notes": [
       "Opening1626 according to official ADE venue profile."
     ],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "cafe-de-druif",
@@ -246,7 +248,7 @@
     "address": "Rapenburgerplein 83",
     "description": "Een historisch café aan het Rapenburgerplein, bekend om de imposante jenevervaten\n        en de uitgesproken maritieme sfeer. De locatie wordt al sinds 1585 in verband gebracht\n        met een distilleerderij. Volgens de overlevering was admiraal Piet Hein hier een vaste gast.\n        Of dat historisch klopt is onzeker, maar de sfeer ademt onmiskenbaar de 17e eeuw.",
     "since": "1863",
-    "photo": null,
+    "photo": "fotos/amsterdam-cafe-de-druif-20261025.jpeg",
     "coords": [
       52.3700544,
       4.9106101
@@ -261,7 +263,8 @@
       "Municipal historical research contradicts claimed1585.",
       "Downloaded candidate rejected visual QA: logo or damaged background graphic, not suitable venue photo."
     ],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "cafe-van-wou",
@@ -315,7 +318,7 @@
     "address": "Bloemstraat 42",
     "description": "Het oudste café van de Jordaan is te vinden in de schaduw van de Westerkerk. Cafe Chris opende z'n deuren in 1624, en sindsdien blijft het bier én de gezelligheid hier stromen.",
     "since": "1624",
-    "photo": null,
+    "photo": "fotos/amsterdam-chris-20261025.jpeg",
     "coords": [
       52.3742568,
       4.8815665
@@ -330,7 +333,8 @@
       "Cafe claims1624; municipal historical research documents first pub1882.",
       "Sinds aangepast op aanwijzing Stichting De Bruine Kroeg, 24 oktober 2026."
     ],
-    "updated_at": "2026-10-24"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "chris-scholten",
@@ -363,7 +367,7 @@
     "address": "Haarlemmerstraat 91-H",
     "description": "Café de Blauwe Druif is een van de oudste bruine kroegen van Amsterdam (sinds 1790). Het is een pretentieloos baken van gezelligheid in de Haarlemmerstraat waar de tijd heeft stilgestaan.",
     "since": "1790",
-    "photo": null,
+    "photo": "fotos/amsterdam-de-blauwe-druif-20261025.jpeg",
     "coords": [
       52.3804361,
       4.8910498
@@ -375,7 +379,8 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "de-drie-fleschjes",
@@ -406,7 +411,7 @@
     "address": "Prinsengracht 296",
     "description": "Café De Eland is een traditioneel bruin café aan de Prinsengracht in de Amsterdamse Jordaan. Het café bestaat al sinds de 19e eeuw en staat bekend om zijn klassieke interieur en ongedwongen sfeer. Bezoekers kunnen er terecht voor een drankje, waaronder verschillende bieren, in een authentieke Amsterdamse omgeving. Dankzij de centrale ligging is Café De Eland zowel populair bij buurtbewoners als bij bezoekers die de Jordaan verkennen.",
     "since": "jaren 1860",
-    "photo": null,
+    "photo": "fotos/amsterdam-eland-20261025.jpeg",
     "coords": [
       52.37003892199419,
       4.882316654456816
@@ -418,7 +423,8 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "de-fluiter",
@@ -535,7 +541,7 @@
     "address": "Javastraat 1",
     "description": "Café-biljart Gijs de Rooij is sinds 1947 een begrip in Amsterdam-Oost. Raak ouderwets een balletje op het verwarmde biljart, vermaak jezelf met darts of geniet van een goed gesprek aan de bar.",
     "since": "1947",
-    "photo": null,
+    "photo": "fotos/amsterdam-gijs-de-rooij-20261025.jpeg",
     "coords": [
       52.3635979,
       4.9316324
@@ -548,7 +554,8 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "hans",
@@ -581,7 +588,7 @@
     "address": "Noordermarkt 34",
     "description": "Café Hegeraad was tot begin 20e eeuw een klein café met aansluitend een woonhuis. De opkamer is erbij getrokken waardoor het café een echt huiskamergevoel heeft.",
     "since": null,
-    "photo": null,
+    "photo": "fotos/amsterdam-hegeraad-20261025.jpeg",
     "coords": [
       52.3793796,
       4.8861097
@@ -592,7 +599,8 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "hermes",
@@ -626,7 +634,7 @@
     "address": "Prinsengracht 568",
     "description": "Café Heuvel is een traditioneel Amsterdams buurtcafé met een informele sfeer. Tijdens Koningsdag staat mede-eigenaar Robert ten Brink er regelmatig zelf achter de tap om bier te schenken.",
     "since": null,
-    "photo": null,
+    "photo": "fotos/amsterdam-heuvel-20261025.jpeg",
     "coords": [
       52.362596574488435,
       4.887923535706524
@@ -638,7 +646,8 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "krom",
@@ -648,7 +657,7 @@
     "address": "Utrechtsestraat 76",
     "description": "Het café staat bekend om zijn authentieke art-deco-interieur, informele sfeer en ruime terras.",
     "since": null,
-    "photo": null,
+    "photo": "fotos/amsterdam-krom-20261025.jpeg",
     "coords": [
       52.36305977775503,
       4.898421292020936
@@ -661,7 +670,8 @@
     "notes": [
       "Official interior gallery consists of book-layout scans and closeups, rejected as cafe listing photograph."
     ],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "oosterling",
@@ -671,7 +681,7 @@
     "address": "Utrechtsestraat 140",
     "description": "Vanaf 1735 werd in dit pand door de VOC koffie, thee en specerijen verkocht. Vanaf 1820 werd het een café en slijterij. Oosterling is het enige café in Amsterdam dat nog een slijterijvergunning heeft.",
     "since": "1820",
-    "photo": null,
+    "photo": "fotos/amsterdam-oosterling-20261025.jpeg",
     "coords": [
       52.3610742,
       4.8992555
@@ -687,7 +697,8 @@
       "Municipal archive says cafe since1820; own site labels1877 for family business.",
       "Candidate1937 is drawing, rejected. Actual1960 photo download denied403."
     ],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "papeneiland",
@@ -697,7 +708,7 @@
     "address": "Prinsengracht 2",
     "description": "Sinds 1896 zit in dit pand een café. De naam verwijst naar het noordelijke stukje van de Jordaan, waar vroeger een klooster stond. Bill Clinton at in 2011 in Papeneiland een stuk appeltaart, wat de taart in één klap wereldberoemd maakte.",
     "since": "1896",
-    "photo": null,
+    "photo": "fotos/amsterdam-papeneiland-20261025.jpeg",
     "coords": [
       52.3804606,
       4.8879944
@@ -712,7 +723,8 @@
       "1642 is building date; own history dates licensed cafe to1896.",
       "Downloaded candidate rejected visual QA: logo or damaged background graphic, not suitable venue photo."
     ],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "pieper",
@@ -722,7 +734,7 @@
     "address": "Prinsengracht 424",
     "description": "Café Pieper is een van de oudste bruine cafés van Amsterdam en gaat terug tot 1665. Het authentieke interieur en de ligging aan de Prinsen- en Leidsegracht maken het al generaties lang een geliefde ontmoetingsplek.",
     "since": "1665",
-    "photo": null,
+    "photo": "fotos/amsterdam-pieper-20261025.jpeg",
     "coords": [
       52.36627800873316,
       4.882360233779918
@@ -734,7 +746,8 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "scharrebier",
@@ -744,7 +757,7 @@
     "address": "Rapenburgerplein 1",
     "description": "Op deze plek vonden 17e-eeuwse zeemanslieden al troost in een glas scharrebier: goedkoop bier verdund met water. Vandaag de dag drink je kwaliteitsbieren in het café en kun je vanaf het terras genieten van het uitzicht op de Scharrebiersluis.",
     "since": null,
-    "photo": null,
+    "photo": "fotos/amsterdam-scharrebier-20261025.jpeg",
     "coords": [
       52.3704414,
       4.9111074
@@ -756,7 +769,8 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [],
-    "updated_at": "2026-05-09"
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "schumich",
