@@ -995,29 +995,6 @@
     ]
   },
   {
-    "id": "cafe-de-pui",
-    "name": "Café De Pui",
-    "city": "Rotterdam",
-    "province": "Zuid-Holland",
-    "address": "Oostzeedijk Beneden 221A-B",
-    "description": "Een iconisch bruin café in de wijk Kralingen, met een warme houten inrichting\n        en een gemêleerd publiek. Het karakteristieke hoekpand kent een lange\n        horecageschiedenis. Ooit een klassieke pijpela, nu een proeflokaal dat verleden\n        en heden moeiteloos met elkaar verbindt.",
-    "since": null,
-    "photo": null,
-    "coords": [
-      51.9230271,
-      4.5002764
-    ],
-    "sources": [
-      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/rotterdam.html"
-    ],
-    "previous_city": "Rotterdam",
-    "updated_at": "2026-10-26",
-    "year": 2026,
-    "notes": [
-      "Teruggeplaatst op verzoek van Stichting De Bruine Kroeg, 26 oktober 2026."
-    ]
-  },
-  {
     "id": "de-harmonie",
     "name": "De Harmonie",
     "city": "Deventer",
@@ -1141,6 +1118,28 @@
       "https://www.proefwageningen.nl/nl/locaties/3943006547/jojo-s-cafe"
     ],
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Bevrijdingsstraat+7+Wageningen&rows=1&fq=type%3Aadres",
+    "notes": [],
+    "year": 2026,
+    "updated_at": "2026-10-26"
+  },
+  {
+    "id": "de-pul",
+    "name": "Café de Pul",
+    "city": "Zwolle",
+    "province": "Overijssel",
+    "address": "Kamperstraat 38",
+    "since": null,
+    "description": "Klein bruin café aan de Kamperstraat in de binnenstad van Zwolle, met een ongedwongen sfeer.",
+    "photo": null,
+    "coords": [
+      52.51196105,
+      6.0885705
+    ],
+    "sources": [
+      "https://gastvrijzwolle.nl/deelnemers/cafe-de-pul",
+      "https://zoek.officielebekendmakingen.nl/gmb-2025-49961.pdf"
+    ],
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Kamperstraat+38+Zwolle&rows=1&fq=type%3Aadres",
     "notes": [],
     "year": 2026,
     "updated_at": "2026-10-26"
