@@ -1,0 +1,50 @@
+[
+  {
+    "id": "brandon",
+    "name": "Brandon",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Keizersgracht 157",
+    "description": "Cafe Brandon is een van de oudste kroegen van de stad; al sinds 1626 drinken Amsterdammers hier een biertje. Eind vorige eeuw staat het lange tijd leeg, omdat de vorige eigenaars hun cafe niet kwijt willen. Het bordje 'Niet te koop, niet te huur' dat in het lege café hing, hangt er nu nog steeds.",
+    "since": "1626",
+    "photo": "fotos/amsterdam-brandon-20261025.jpeg",
+    "coords": [
+      52.3754007,
+      4.8864147
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
+      "https://www.amsterdam-dance-event.nl/en/venues/cafe-brandon/1438533/"
+    ],
+    "previous_city": "Amsterdam",
+    "year": 2026,
+    "notes": [
+      "Opening1626 according to official ADE venue profile."
+    ],
+    "updated_at": "2026-10-25",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
+  },
+  {
+    "id": "de-tagrijn",
+    "name": "Café De Tagrijn",
+    "city": "Zwolle",
+    "province": "Overijssel",
+    "address": "Buitenkant 8",
+    "since": "1976",
+    "description": "Bruin café aan de Thorbeckegracht, gebouwd op de fundamenten van de voormalige Zwanentoren. Het café heeft een terras aan het water.",
+    "photo": null,
+    "coords": [
+      52.51415082,
+      6.09075628
+    ],
+    "sources": [
+      "https://cafedetagrijn.com/contact/",
+      "https://cafedetagrijn.com/geschiedenis/"
+    ],
+    "notes": [],
+    "website": "https://cafedetagrijn.com/",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Buitenkant%208%20Zwolle&rows=30",
+    "year": 2026,
+    "updated_at": "2026-10-24"
+  }
+]
