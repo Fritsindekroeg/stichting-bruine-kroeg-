@@ -216,31 +216,6 @@
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
-    "id": "brandon",
-    "name": "Brandon",
-    "city": "Amsterdam",
-    "province": "Noord-Holland",
-    "address": "Keizersgracht 157",
-    "description": "Cafe Brandon is een van de oudste kroegen van de stad; al sinds 1626 drinken Amsterdammers hier een biertje. Eind vorige eeuw staat het lange tijd leeg, omdat de vorige eigenaars hun cafe niet kwijt willen. Het bordje 'Niet te koop, niet te huur' dat in het lege café hing, hangt er nu nog steeds.",
-    "since": "1626",
-    "photo": "fotos/amsterdam-brandon-20261025.jpeg",
-    "coords": [
-      52.3754007,
-      4.8864147
-    ],
-    "sources": [
-      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://www.amsterdam-dance-event.nl/en/venues/cafe-brandon/1438533/"
-    ],
-    "previous_city": "Amsterdam",
-    "year": 2026,
-    "notes": [
-      "Opening1626 according to official ADE venue profile."
-    ],
-    "updated_at": "2026-10-25",
-    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
-  },
-  {
     "id": "cafe-de-druif",
     "name": "Café De Druif",
     "city": "Amsterdam",
@@ -923,29 +898,6 @@
     "updated_at": "2026-10-24"
   },
   {
-    "id": "de-tagrijn",
-    "name": "Café De Tagrijn",
-    "city": "Zwolle",
-    "province": "Overijssel",
-    "address": "Buitenkant 8",
-    "since": "1976",
-    "description": "Bruin café aan de Thorbeckegracht, gebouwd op de fundamenten van de voormalige Zwanentoren. Het café heeft een terras aan het water.",
-    "photo": null,
-    "coords": [
-      52.51415082,
-      6.09075628
-    ],
-    "sources": [
-      "https://cafedetagrijn.com/contact/",
-      "https://cafedetagrijn.com/geschiedenis/"
-    ],
-    "notes": [],
-    "website": "https://cafedetagrijn.com/",
-    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Buitenkant%208%20Zwolle&rows=30",
-    "year": 2026,
-    "updated_at": "2026-10-24"
-  },
-  {
     "id": "charlois",
     "name": "Café Charlois",
     "city": "Rotterdam",
@@ -1018,5 +970,179 @@
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Oude+Binnenweg+120+Rotterdam&rows=1&fq=type%3Aadres",
     "year": 2026,
     "updated_at": "2026-10-24"
+  },
+  {
+    "id": "de-amstel",
+    "name": "De Amstel",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Amstelkade 39",
+    "description": "Op de hoek van de Amstelkade en de Berkel-straat zit sinds de bouw van het blok rond 1930 een café. De Amstel is een eenvoudige onvervalste bruine kroeg met een grote halfronde bar en een biljart.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      52.3486333,
+      4.9031498
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html"
+    ],
+    "previous_city": "Amsterdam",
+    "updated_at": "2026-10-26",
+    "year": 2026,
+    "notes": [
+      "Teruggeplaatst op verzoek van Stichting De Bruine Kroeg, 26 oktober 2026."
+    ]
+  },
+  {
+    "id": "cafe-de-pui",
+    "name": "Café De Pui",
+    "city": "Rotterdam",
+    "province": "Zuid-Holland",
+    "address": "Oostzeedijk Beneden 221A-B",
+    "description": "Een iconisch bruin café in de wijk Kralingen, met een warme houten inrichting\n        en een gemêleerd publiek. Het karakteristieke hoekpand kent een lange\n        horecageschiedenis. Ooit een klassieke pijpela, nu een proeflokaal dat verleden\n        en heden moeiteloos met elkaar verbindt.",
+    "since": null,
+    "photo": null,
+    "coords": [
+      51.9230271,
+      4.5002764
+    ],
+    "sources": [
+      "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/rotterdam.html"
+    ],
+    "previous_city": "Rotterdam",
+    "updated_at": "2026-10-26",
+    "year": 2026,
+    "notes": [
+      "Teruggeplaatst op verzoek van Stichting De Bruine Kroeg, 26 oktober 2026."
+    ]
+  },
+  {
+    "id": "de-harmonie",
+    "name": "De Harmonie",
+    "city": "Deventer",
+    "province": "Overijssel",
+    "address": "Papenstraat 71",
+    "since": null,
+    "description": "Buurtcafé in de Papenstraat in het historische Noordenbergkwartier van Deventer.",
+    "photo": null,
+    "coords": [
+      52.25401494,
+      6.15286518
+    ],
+    "sources": [
+      "https://www.uitagenda.nl/locaties/cafe-de-harmonie"
+    ],
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Papenstraat+71+Deventer&rows=1&fq=type%3Aadres",
+    "notes": [],
+    "year": 2026,
+    "updated_at": "2026-10-26"
+  },
+  {
+    "id": "de-korenbeurs",
+    "name": "De Korenbeurs",
+    "city": "Zutphen",
+    "province": "Gelderland",
+    "address": "Zaadmarkt 84",
+    "since": null,
+    "description": "Café aan de Zaadmarkt in de binnenstad van Zutphen, met een terras voor een drankje buiten.",
+    "photo": null,
+    "coords": [
+      52.14060004,
+      6.19680926
+    ],
+    "sources": [
+      "https://www.inzutphen.nl/nl/locaties/3541025950/cafe-de-korenbeurs"
+    ],
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Zaadmarkt+84+Zutphen&rows=1&fq=type%3Aadres",
+    "notes": [],
+    "year": 2026,
+    "updated_at": "2026-10-26"
+  },
+  {
+    "id": "t-kroegje",
+    "name": "’t Kroegje",
+    "city": "Zwolle",
+    "province": "Overijssel",
+    "address": "Steenstraat 9",
+    "since": null,
+    "description": "Klein café in de Steenstraat, midden in de historische binnenstad van Zwolle.",
+    "photo": null,
+    "coords": [
+      52.51351019,
+      6.09184746
+    ],
+    "sources": [
+      "https://gastvrijzwolle.nl/deelnemers/cafe-t-kroegje"
+    ],
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Steenstraat+9+Zwolle&rows=1&fq=type%3Aadres",
+    "notes": [],
+    "year": 2026,
+    "updated_at": "2026-10-26"
+  },
+  {
+    "id": "t-oale-nust",
+    "name": "’t Oale Nust",
+    "city": "Uithuizen",
+    "province": "Groningen",
+    "address": "Hoofdstraat-West 50",
+    "since": null,
+    "description": "Dorpscafé aan de Hoofdstraat-West in Uithuizen, met een ongedwongen sfeer.",
+    "photo": null,
+    "coords": [
+      53.40823841,
+      6.66855868
+    ],
+    "sources": [
+      "https://www.facebook.com/p/Bar-t-Oale-Nust-100051591505780/",
+      "https://zoek.officielebekendmakingen.nl/gmb-2021-390997.html"
+    ],
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Hoofdstraat-West+50+Uithuizen&rows=1&fq=type%3Aadres",
+    "notes": [],
+    "year": 2026,
+    "updated_at": "2026-10-26"
+  },
+  {
+    "id": "stationskoffiehuis",
+    "name": "Stationskoffiehuis Radstaake",
+    "city": "Voorst",
+    "province": "Gelderland",
+    "address": "Rijksstraatweg 190",
+    "since": null,
+    "description": "Traditioneel bruin café aan de Rijksstraatweg in Voorst. De naam Stationskoffiehuis verwijst naar de nabijgelegen spoorlijn en het station dat in 1876 werd geopend.",
+    "photo": null,
+    "coords": [
+      52.1598486,
+      6.14373476
+    ],
+    "sources": [
+      "https://www.historischeverenigingvoorst.nl/images/PDF_KRONIEK/35-03%20%282012%29.pdf",
+      "https://www.compadex.com/nl/businesses/nl/t-stationskoffiehuis-radstaake-08816992-15561216"
+    ],
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Rijksstraatweg+190+Voorst&rows=1&fq=type%3Aadres",
+    "notes": [],
+    "year": 2026,
+    "updated_at": "2026-10-26"
+  },
+  {
+    "id": "jojos-cafe",
+    "name": "Jojo’s café",
+    "city": "Wageningen",
+    "province": "Gelderland",
+    "address": "Bevrijdingsstraat 7",
+    "since": null,
+    "description": "Café aan de Bevrijdingsstraat in Wageningen, vlak bij de binnenstad.",
+    "photo": null,
+    "coords": [
+      51.96784815,
+      5.66729512
+    ],
+    "sources": [
+      "https://www.proefwageningen.nl/nl/locaties/3943006547/jojo-s-cafe"
+    ],
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Bevrijdingsstraat+7+Wageningen&rows=1&fq=type%3Aadres",
+    "notes": [],
+    "year": 2026,
+    "updated_at": "2026-10-26"
   }
 ]
