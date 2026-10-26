@@ -205,7 +205,7 @@
   },
   {
     "id": "t-monumentje",
-    "name": "'t Monumentje",
+    "name": "Café 't Monumentje",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Westerstraat 120",
@@ -226,7 +226,8 @@
     "year": 2026,
     "notes": [
       "1988 betreft backgammontoernooi; oprichtingsjaar nog te bevestigen.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen 't Monumentje. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
@@ -310,7 +311,7 @@
   },
   {
     "id": "chris",
-    "name": "Chris",
+    "name": "Café Chris",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Bloemstraat 42",
@@ -324,21 +325,23 @@
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
       "https://www.amsterdam.nl/nieuws/achtergrond/oudste-kroeg/",
-      "https://onsamsterdam.nl/artikelen/dit-is-de-oudste-kroeg-van-amsterdam"
+      "https://onsamsterdam.nl/artikelen/dit-is-de-oudste-kroeg-van-amsterdam",
+      "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/cafe-chris"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
       "Cafe claims1624; municipal historical research documents first pub1882.",
       "Sinds aangepast op aanwijzing Stichting De Bruine Kroeg, 24 oktober 2026.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Chris. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "chris-scholten",
-    "name": "Chris Scholten",
+    "name": "Café Chris Scholten",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Van Woustraat 104",
@@ -359,13 +362,14 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Chris Scholten. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "de-blauwe-druif",
-    "name": "De Blauwe Druif",
+    "name": "Café De Blauwe Druif",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Haarlemmerstraat 91-H",
@@ -379,19 +383,21 @@
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
       "https://www.21horeca.com/nl/cafe-de-blauwe-druif/",
-      "https://www.gevelstenenvanamsterdam.nl/haarlemmerstraat-91-amsterdam-blauwe-druif/"
+      "https://www.gevelstenenvanamsterdam.nl/haarlemmerstraat-91-amsterdam-blauwe-druif/",
+      "https://haarlemmerbuurtamsterdam.nl/winkels/"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Blauwe Druif. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "de-drie-fleschjes",
-    "name": "De Drie Fleschjes",
+    "name": "Proeflokaal De Drie Fleschjes",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Gravenstraat 18",
@@ -404,18 +410,20 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://www.amsterdam.nl/nieuws/achtergrond/oudste-kroeg/"
+      "https://www.amsterdam.nl/nieuws/achtergrond/oudste-kroeg/",
+      "https://www.dedriefleschjes.nl/"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Drie Fleschjes. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "eland",
-    "name": "De Eland",
+    "name": "Café De Eland",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Prinsengracht 296",
@@ -428,19 +436,21 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://www.heineken.com/nl/nl/pub-museums"
+      "https://www.heineken.com/nl/nl/pub-museums",
+      "https://www.elandsgracht.com/customloc/cafe-de-eland-2/"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Eland. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "de-fluiter",
-    "name": "De Fluiter",
+    "name": "Café De Fluiter",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Admiraal de Ruijterweg 270",
@@ -457,13 +467,14 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Fluiter. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "de-ooievaar",
-    "name": "De Ooievaar",
+    "name": "Proeflokaal De Ooievaar",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Sint Olofspoort 1",
@@ -477,18 +488,20 @@
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
       "https://www.napnieuws.nl/2025/01/23/amsterdam-op-je-bord-2-proeflokaal-de-ooievaar/",
-      "https://de-ooievaar.nl/nl/geschiedenis/"
+      "https://de-ooievaar.nl/nl/geschiedenis/",
+      "https://nieuwmarktbuurt.amsterdam/nieuws/in-de-spotlight/vincent-van-de-ooievaar-over-stamgasten-jenever-en-het-dorpsgevoel-in-de-stad/"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Ooievaar. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "de-zwart",
-    "name": "De Zwart",
+    "name": "Café De Zwart",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Spuistraat 334",
@@ -507,13 +520,14 @@
     "year": 2026,
     "notes": [
       "Sinds aangepast op aanwijzing Stichting De Bruine Kroeg, 24 oktober 2026.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Zwart. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "eik-en-linde",
-    "name": "Eik en Linde",
+    "name": "Café Eik en Linde",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Plantage Middenlaan 22-A",
@@ -532,13 +546,14 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Eik en Linde. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "engelse-reet",
-    "name": "Engelse Reet",
+    "name": "Café De Pilsener Club (De Engelse Reet)",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Begijnensteeg 4",
@@ -551,22 +566,24 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://onsamsterdam.nl/artikelen/125-jaar-pilsener-club-annex-engelse-reet"
+      "https://onsamsterdam.nl/artikelen/125-jaar-pilsener-club-annex-engelse-reet",
+      "https://www.ditjesendatjes.nl/de-engelse-reet-van-emile"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Engelse Reet. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "gijs-de-rooij",
-    "name": "Gijs de Rooij",
+    "name": "Café Gijs de Rooy",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Javastraat 1",
-    "description": "Café-biljart in de Javastraat, in 1947 begonnen door de vader van Gijs de Rooij. De zaak heette eerder Passage. Rond 1971–1972 werd de bar aangepast. Het hoge plafond en het glas-in-lood zijn oudere onderdelen van het interieur.",
+    "description": "Café-biljart in de Javastraat, in 1947 begonnen door de vader van Gijs de Rooy. De zaak heette eerder Passage. Rond 1971–1972 werd de bar aangepast. Het hoge plafond en het glas-in-lood zijn oudere onderdelen van het interieur.",
     "since": "1947",
     "photo": "fotos/amsterdam-gijs-de-rooij-20261025.jpeg",
     "coords": [
@@ -583,14 +600,15 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Gijs de Rooij. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "hans",
-    "name": "Hans",
+    "name": "Café Hans",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Amstelveenseweg 69-H",
@@ -609,13 +627,14 @@
     "year": 2026,
     "notes": [
       "Voormalige website cafe-hans.nl verwijst nu naar casinoreclame; daarom uitgesloten als bron.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Hans. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "hegeraad",
-    "name": "Hegeraad",
+    "name": "Café Hegeraad",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Noordermarkt 34",
@@ -634,14 +653,15 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Hegeraad. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "hermes",
-    "name": "Hermes",
+    "name": "Café Hermes",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Ceintuurbaan 55",
@@ -661,17 +681,18 @@
     "year": 2026,
     "notes": [
       "Eigen website noemt horecabestemming sinds1900; geen bewezen oprichtingsjaar van café Hermes.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Hermes. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "heuvel",
-    "name": "Heuvel",
+    "name": "Café Heuvel",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Prinsengracht 568",
-    "description": "Buurtcafé genoemd naar Jan Heuvel, van wie een portret in de zaak hangt. Na hem dreven zijn broer Joop en vervolgens diens zoon Pierre het café. Paul Bouwman is sinds 2019 betrokken bij de dagelijkse leiding.",
+    "description": "Buurtcafé genoemd naar Jan Heuvel, van wie een portret in de zaak hangt. Na hem dreven zijn broer Joop en vervolgens diens zoon Pierre het café. Robert ten Brink is sinds 2019 mede-eigenaar. Op Koningsdag staat hij ook zelf achter de tap. Paul Bouwman leidt de dagelijkse gang van zaken.",
     "since": null,
     "photo": "fotos/amsterdam-heuvel-20261025.jpeg",
     "coords": [
@@ -680,19 +701,23 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://cafeheuvel.nl/"
+      "https://cafeheuvel.nl/",
+      "https://fccentrum.nl/story/ode-aan-de-bruine-kroeg-cafe-heuvel/",
+      "https://www.rtl.nl/rubrieken/rtl-boulevard/artikel/4648971/robert-ten-brink-opent-zijn-eigen-cafe"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Heuvel. Bestaand id en bestaande foto behouden.",
+      "26 oktober 2026: Robert ten Brink mede-eigenaar sinds 2019 bevestigd door RTL en FC Centrum; aanwezigheid achter de tap op Koningsdag door Frits aangeleverd."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "krom",
-    "name": "Krom",
+    "name": "Café Krom",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Utrechtsestraat 76",
@@ -705,20 +730,22 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://amsterdamopdekaart.nl/1850-1940/Utrechtsestraat/76"
+      "https://amsterdamopdekaart.nl/1850-1940/Utrechtsestraat/76",
+      "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/cafe-krom"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
       "Official interior gallery consists of book-layout scans and closeups, rejected as cafe listing photograph.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Krom. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "oosterling",
-    "name": "Oosterling",
+    "name": "Café Slijterij Oosterling",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Utrechtsestraat 140",
@@ -732,21 +759,23 @@
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
       "https://www.amsterdam.nl/stadsarchief/stukken/binnenkijken/oosterling/",
-      "https://www.cafeoosterling.nl/geschiedenis.html"
+      "https://www.cafeoosterling.nl/geschiedenis.html",
+      "https://www.cafeoosterling.nl/"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
       "Municipal archive says cafe since1820; own site labels1877 for family business.",
       "Candidate1937 is drawing, rejected. Actual1960 photo download denied403.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Oosterling. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "papeneiland",
-    "name": "Papeneiland",
+    "name": "Café 't Papeneiland",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Prinsengracht 2",
@@ -760,21 +789,23 @@
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
       "https://www.papeneiland.nl/Geschiedenis.html",
-      "https://papeneiland.nl/Geschiedenis.html"
+      "https://papeneiland.nl/Geschiedenis.html",
+      "https://www.papeneiland.nl/"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
       "1642 is building date; own history dates licensed cafe to1896.",
       "Downloaded candidate rejected visual QA: logo or damaged background graphic, not suitable venue photo.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Papeneiland. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "pieper",
-    "name": "Pieper",
+    "name": "Café De Pieper",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Prinsengracht 424",
@@ -787,19 +818,21 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/de-pieper"
+      "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/de-pieper",
+      "https://zoek.officielebekendmakingen.nl/gmb-2025-330366.html"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Pieper. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "scharrebier",
-    "name": "Scharrebier",
+    "name": "Café Scharrebier",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Rapenburgerplein 1",
@@ -818,14 +851,15 @@
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Scharrebier. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
     "id": "schumich",
-    "name": "Schumich",
+    "name": "Café Schumich",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Singel 6",
@@ -838,19 +872,21 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://www.nhnieuws.nl/nieuws/352050/docu-nieuw-leven-in-bruine-kroeg-neemt-bruno-22-familiebedrijf-over"
+      "https://www.nhnieuws.nl/nieuws/352050/docu-nieuw-leven-in-bruine-kroeg-neemt-bruno-22-familiebedrijf-over",
+      "https://zoek.officielebekendmakingen.nl/gmb-2025-493987.html"
     ],
     "previous_city": "Amsterdam",
     "year": 2026,
     "notes": [
       "Sinds aangepast op aanwijzing Stichting De Bruine Kroeg, 24 oktober 2026.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Schumich. Bestaand id en bestaande foto behouden."
     ],
     "updated_at": "2026-10-26"
   },
   {
     "id": "t-kroegie",
-    "name": "’t Kroegie",
+    "name": "Café ’t Kroegie",
     "city": "Hoorn",
     "province": "Noord-Holland",
     "address": "Kerkplein 1",
@@ -868,7 +904,8 @@
     ],
     "notes": [
       "New operator announced 1 October 2026, reopening planned later October; opening not independently confirmed.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen ’t Kroegie. Bestaand id en bestaande foto behouden."
     ],
     "website": "https://www.kroegie.nl/",
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Kerkplein+1+Hoorn&rows=1&fq=type%3Aadres",
@@ -1064,12 +1101,12 @@
   },
   {
     "id": "de-amstel",
-    "name": "De Amstel",
+    "name": "Café De Amstel",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Amstelkade 39",
-    "description": "Buurtcafé op de hoek van de Amstelkade en de Berkelstraat, met een grote halfronde bar en een biljart. In 2018 vierde het café zijn tachtigjarig bestaan. Vaste bezoekers vormden er ook een stamgastenkoor.",
-    "since": null,
+    "description": "Buurtcafé op de hoek van de Amstelkade en de Berkelstraat, met een grote halfronde bar en een biljart. Vaste bezoekers vormden er ook een stamgastenkoor.",
+    "since": "1938",
     "photo": null,
     "coords": [
       52.3486333,
@@ -1077,19 +1114,22 @@
     ],
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
-      "https://www.at5.nl/artikelen/184364/BruineC320De20viert20bestaan%3A20ouderwets%2520blijven"
+      "https://www.at5.nl/artikelen/184364/BruineC320De20viert20bestaan%3A20ouderwets%2520blijven",
+      "https://drimble.nl/bedrijf/amsterdam/000005845270/cafe-de-amstel.html"
     ],
     "previous_city": "Amsterdam",
     "updated_at": "2026-10-26",
     "year": 2026,
     "notes": [
       "Teruggeplaatst op verzoek van Stichting De Bruine Kroeg, 26 oktober 2026.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Amstel. Bestaand id en bestaande foto behouden.",
+      "Beginjaar 1938: AT5 bericht op 15 juli 2018 over het tachtigjarig bestaan; bedrijfsvermelding noemt eveneens 1938."
     ]
   },
   {
     "id": "de-harmonie",
-    "name": "De Harmonie",
+    "name": "Café De Harmonie",
     "city": "Deventer",
     "province": "Overijssel",
     "address": "Papenstraat 71",
@@ -1106,14 +1146,15 @@
     ],
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Papenstraat+71+Deventer&rows=1&fq=type%3Aadres",
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Harmonie. Bestaand id en bestaande foto behouden."
     ],
     "year": 2026,
     "updated_at": "2026-10-26"
   },
   {
     "id": "de-korenbeurs",
-    "name": "De Korenbeurs",
+    "name": "Café De Korenbeurs",
     "city": "Zutphen",
     "province": "Gelderland",
     "address": "Zaadmarkt 84",
@@ -1130,14 +1171,15 @@
     ],
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Zaadmarkt+84+Zutphen&rows=1&fq=type%3Aadres",
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Korenbeurs. Bestaand id en bestaande foto behouden."
     ],
     "year": 2026,
     "updated_at": "2026-10-26"
   },
   {
     "id": "t-kroegje",
-    "name": "’t Kroegje",
+    "name": "Café ’t Kroegje",
     "city": "Zwolle",
     "province": "Overijssel",
     "address": "Steenstraat 9",
@@ -1154,14 +1196,15 @@
     ],
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Steenstraat+9+Zwolle&rows=1&fq=type%3Aadres",
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen ’t Kroegje. Bestaand id en bestaande foto behouden."
     ],
     "year": 2026,
     "updated_at": "2026-10-26"
   },
   {
     "id": "t-oale-nust",
-    "name": "’t Oale Nust",
+    "name": "Bar ’t Oale Nust",
     "city": "Uithuizen",
     "province": "Groningen",
     "address": "Hoofdstraat-West 50",
@@ -1177,13 +1220,15 @@
       "https://zoek.officielebekendmakingen.nl/gmb-2021-390997.html"
     ],
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Hoofdstraat-West+50+Uithuizen&rows=1&fq=type%3Aadres",
-    "notes": [],
+    "notes": [
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen ’t Oale Nust. Bestaand id en bestaande foto behouden."
+    ],
     "year": 2026,
     "updated_at": "2026-10-26"
   },
   {
     "id": "stationskoffiehuis",
-    "name": "Stationskoffiehuis Radstaake",
+    "name": "'t Stationskoffiehuis Radstaake",
     "city": "Voorst",
     "province": "Gelderland",
     "address": "Rijksstraatweg 190",
@@ -1200,7 +1245,8 @@
     ],
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Rijksstraatweg+190+Voorst&rows=1&fq=type%3Aadres",
     "notes": [
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Stationskoffiehuis Radstaake. Bestaand id en bestaande foto behouden."
     ],
     "year": 2026,
     "updated_at": "2026-10-26"
