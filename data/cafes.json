@@ -289,7 +289,7 @@
   },
   {
     "id": "cafe-t-doktertje",
-    "name": "Café ’t Doktertje",
+    "name": "Café de Dokter",
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Rozenboomsteeg 4",
@@ -308,7 +308,7 @@
     "notes": [
       "Sinds aangepast op aanwijzing Stichting De Bruine Kroeg, 24 oktober 2026."
     ],
-    "updated_at": "2026-10-24"
+    "updated_at": "2026-10-26"
   },
   {
     "id": "chris",
