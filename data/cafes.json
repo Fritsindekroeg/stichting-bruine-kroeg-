@@ -1262,7 +1262,7 @@
     "province": "Gelderland",
     "address": "Bevrijdingsstraat 7",
     "since": null,
-    "description": "Café aan de Bevrijdingsstraat in Wageningen, vlak bij de binnenstad.",
+    "description": "Stam- en buurtcafé aan de Bevrijdingsstraat in Wageningen. Het interieur heeft bruine lambrisering, glas-in-loodramen en een traditionele bierkraan. Er zijn een stamtafel en een leestafel; op de tafels liggen Perzische kleedjes.\n\nBoven de bar hangt een bel en op de bar staan gekookte eieren. Een kleintje pils is er te bestellen. Hier en daar zijn op de muren nog nicotinevlekken zichtbaar.",
     "photo": null,
     "coords": [
       51.96784815,
@@ -1272,9 +1272,11 @@
       "https://www.proefwageningen.nl/nl/locaties/3943006547/jojo-s-cafe"
     ],
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Bevrijdingsstraat+7+Wageningen&rows=1&fq=type%3Aadres",
-    "notes": [],
+    "notes": [
+      "28 oktober 2026: interieurkenmerken en gebruiken toegevoegd op basis van informatie die Frits van het café heeft ontvangen en in de chat heeft aangeleverd."
+    ],
     "year": 2026,
-    "updated_at": "2026-10-26"
+    "updated_at": "2026-10-28"
   },
   {
     "id": "de-pul",
