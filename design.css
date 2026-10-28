@@ -359,13 +359,14 @@ nav { border-top:0; padding-top:0; }
 
 /* One continuous list, grouped alphabetically by city. */
 .alle-kroegen .lijst-intro { font:20px/1.5 'EB Garamond',serif; text-transform:none; letter-spacing:0; color:var(--ink); max-width:660px; }
-.steden-snelkeuze { max-width:1060px; margin:0 auto 48px; text-align:left; }
-.steden-snelkeuze > p { margin:0 0 12px; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
-.steden-snelkeuze > div { display:flex; flex-wrap:wrap; gap:8px 12px; }
-.steden-snelkeuze a { display:inline-flex; gap:8px; align-items:center; min-height:44px; margin:0; padding:5px 10px; box-sizing:border-box; color:var(--green); font-size:19px; text-decoration:underline; text-underline-offset:4px; border-radius:3px; }
-.steden-snelkeuze a:hover { background:#ede9df; }
+.steden-snelkeuze { max-width:1060px; margin:0 auto 48px; padding:0; border:0; text-align:left; }
+.steden-snelkeuze > h2 { margin:0 0 20px; padding:0; border:0; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.provincies-snelkeuze { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px 30px; }
+.provincie-keuze h3 { margin:0 0 6px; font:600 14px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.provincie-steden { display:flex; flex-wrap:wrap; gap:0 14px; }
+.steden-snelkeuze a { display:inline-flex; align-items:center; min-height:36px; margin:0; padding:3px 0; box-sizing:border-box; color:var(--green); font:400 17px/1.5 Arial,Helvetica,sans-serif; letter-spacing:0; text-decoration:none; border-radius:2px; }
+.steden-snelkeuze a:hover { color:#9e4136; background:transparent; text-decoration:none; }
 .steden-snelkeuze a:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
-.stad-aantal { font:11px/1.4 Arial,Helvetica,sans-serif; color:var(--muted); }
 .stad-groep { max-width:1060px; margin:0 auto 68px; scroll-margin-top:24px; }
 .stad-kop { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px; margin-bottom:22px; }
 .stad-kop h2 { font-size:40px; line-height:1.2; margin:0; padding:0; border:0; }
@@ -373,9 +374,12 @@ nav { border-top:0; padding-top:0; }
 .stad-groep:focus-visible, .catalog-cafe:focus-visible { outline:2px solid var(--green); outline-offset:5px; }
 @media(max-width:760px) {
  .steden-snelkeuze { margin-bottom:36px; }
- .steden-snelkeuze > div { gap:4px 6px; }
- .steden-snelkeuze a { padding:5px 7px; font-size:18px; }
+ .provincies-snelkeuze { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 24px; }
+ .steden-snelkeuze a { min-height:44px; }
  .stad-groep { margin-bottom:48px; }
  .stad-kop { margin-bottom:18px; gap:6px 14px; }
  .stad-kop h2 { font-size:34px; }
+}
+@media(max-width:520px) {
+ .provincies-snelkeuze { grid-template-columns:1fr; gap:18px; }
 }
