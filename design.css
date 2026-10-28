@@ -358,28 +358,35 @@ nav { border-top:0; padding-top:0; }
 .catalog-meta { margin:0; }
 
 /* One continuous list, grouped alphabetically by city. */
-.alle-kroegen .lijst-intro { font:20px/1.5 'EB Garamond',serif; text-transform:none; letter-spacing:0; color:var(--ink); max-width:660px; }
-.steden-snelkeuze { max-width:1060px; margin:0 auto 48px; padding:0; border:0; text-align:left; }
-.steden-snelkeuze > h2 { margin:0 0 20px; padding:0; border:0; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
-.provincies-snelkeuze { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px 30px; }
-.provincie-keuze h3 { margin:0 0 6px; font:600 14px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
-.provincie-steden { display:flex; flex-wrap:wrap; gap:0 14px; }
-.steden-snelkeuze a { display:inline-flex; align-items:center; min-height:36px; margin:0; padding:3px 0; box-sizing:border-box; color:var(--green); font:400 17px/1.5 Arial,Helvetica,sans-serif; letter-spacing:0; text-decoration:none; border-radius:2px; }
-.steden-snelkeuze a:hover { color:#9e4136; background:transparent; text-decoration:none; }
-.steden-snelkeuze a:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
+.alle-kroegen .catalog-paginakop { margin:24px auto 20px; }
+.alle-kroegen .catalog-paginakop h1 { font-size:clamp(34px,4vw,50px); margin:12px 0; }
+.alle-kroegen .catalog-paginakop .page-illustration { width:84px; max-width:84px; max-height:90px; margin:10px auto 14px; }
+.alle-kroegen .lijst-intro { font:19px/1.5 'EB Garamond',serif; text-transform:none; letter-spacing:0; color:var(--ink); max-width:850px; margin-bottom:0; }
+.lijst-snelkeuze { max-width:1060px; margin:0 auto 28px; display:grid; grid-template-columns:minmax(260px,1fr) repeat(2,minmax(150px,200px)); gap:16px; align-items:end; }
+.lijst-snelkeuze[hidden] { display:none; }
+.lijst-selectieveld { display:flex; flex-direction:column; gap:6px; min-width:0; }
+.lijst-selectieveld label { margin:0; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.lijst-selectieveld select { width:100%; min-height:44px; margin:0; padding:9px 30px 9px 12px; box-sizing:border-box; border:1px solid var(--line); border-radius:4px; background-color:#fffdf8; color:var(--ink); font:16px/1.4 Arial,Helvetica,sans-serif; }
+.lijst-selectieveld select:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+.lijst-zoeken { position:relative; width:100%; max-width:none; margin:0; padding:0; min-width:0; border:0; border-radius:0; background:transparent; }
+.lijst-zoeken label { display:block; margin:0 0 6px; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.lijst-zoekrij { display:flex; gap:8px; }
+.lijst-zoekrij input { flex:1; min-width:0; width:100%; min-height:44px; margin:0; padding:9px 12px; border:1px solid var(--line); border-radius:4px; background:#fffdf8; color:var(--ink); box-sizing:border-box; font:16px/1.4 Arial,Helvetica,sans-serif; }
+.lijst-zoekrij button { min-height:44px; margin:0; padding:10px 16px; font:600 14px/1.4 Arial,Helvetica,sans-serif; }
+.lijst-zoekresultaten { position:absolute; top:calc(100% + 6px); left:0; right:0; z-index:1100; max-height:360px; overflow:auto; background:#fffdf8; border:1px solid var(--line); border-radius:4px; box-shadow:0 6px 20px #302c2420; }
+.lijst-zoekresultaten[hidden] { display:none; }
+.lijst-zoekresultaten a { display:block; padding:10px 12px; font:16px/1.5 Arial,Helvetica,sans-serif; text-decoration:none; }
+.lijst-zoekresultaten a:hover, .lijst-zoekresultaten a:focus-visible { background:#ede9df; }
+.lijst-zoekresultaten p { margin:0; padding:10px 12px; font:16px/1.5 Arial,Helvetica,sans-serif; }
 .stad-groep { max-width:1060px; margin:0 auto 68px; scroll-margin-top:24px; }
 .stad-kop { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px; margin-bottom:22px; }
 .stad-kop h2 { font-size:40px; line-height:1.2; margin:0; padding:0; border:0; }
 .stad-kop p { font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); margin:0; }
 .stad-groep:focus-visible, .catalog-cafe:focus-visible { outline:2px solid var(--green); outline-offset:5px; }
 @media(max-width:760px) {
- .steden-snelkeuze { margin-bottom:36px; }
- .provincies-snelkeuze { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 24px; }
- .steden-snelkeuze a { min-height:44px; }
+ .lijst-snelkeuze { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-bottom:24px; }
+ .lijst-zoeken { grid-column:1 / -1; }
  .stad-groep { margin-bottom:48px; }
  .stad-kop { margin-bottom:18px; gap:6px 14px; }
  .stad-kop h2 { font-size:34px; }
-}
-@media(max-width:520px) {
- .provincies-snelkeuze { grid-template-columns:1fr; gap:18px; }
 }
