@@ -1105,7 +1105,7 @@
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Amstelkade 39",
-    "description": "Buurtcafé op de hoek van de Amstelkade en de Berkelstraat, met een grote halfronde bar en een biljart. Vaste bezoekers vormden er ook een stamgastenkoor.",
+    "description": "Buurtcafé op de hoek van de Amstelkade en de Berkelstraat, met een grote halfronde bar en een biljart. Vaste bezoekers vormden er ook een stamgastenkoor.\n\nEigenaar Arie van der Velden is nog vaak achter de toog te vinden en staat bekend als moppentapper. Ook op Radio 538 vertelt hij zijn moppen. In 2024 verscheen zijn moppenboek ‘Vers getapt vanuit Café de Amstel’.",
     "since": "1938",
     "photo": null,
     "coords": [
@@ -1115,16 +1115,20 @@
     "sources": [
       "https://github.com/Fritsindekroeg/stichting-bruine-kroeg-/blob/9d0ed4a170fdd0d6139f2f41feeaab2876464c71/steden/amsterdam.html",
       "https://www.at5.nl/artikelen/184364/BruineC320De20viert20bestaan%3A20ouderwets%2520blijven",
-      "https://drimble.nl/bedrijf/amsterdam/000005845270/cafe-de-amstel.html"
+      "https://drimble.nl/bedrijf/amsterdam/000005845270/cafe-de-amstel.html",
+      "https://www.at5.nl/artikelen/228912/naast-bier-tapt-kroegbaas-arie-ook-moppen-nu-gebundeld-in-een-boek-onvervalst-amsterdams",
+      "https://www.538.nl/radio/gemist/de-mop-van-arie",
+      "https://www.paagman.nl/product/80685872/vers-getapt-vanuit-cafe-de-amstel-door-arie-van-de-velden"
     ],
     "previous_city": "Amsterdam",
-    "updated_at": "2026-10-26",
+    "updated_at": "2026-10-28",
     "year": 2026,
     "notes": [
       "Teruggeplaatst op verzoek van Stichting De Bruine Kroeg, 26 oktober 2026.",
       "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
       "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Amstel. Bestaand id en bestaande foto behouden.",
-      "Beginjaar 1938: AT5 bericht op 15 juli 2018 over het tachtigjarig bestaan; bedrijfsvermelding noemt eveneens 1938."
+      "Beginjaar 1938: AT5 bericht op 15 juli 2018 over het tachtigjarig bestaan; bedrijfsvermelding noemt eveneens 1938.",
+      "28 oktober 2026: op verzoek van Frits eigenaar Arie van der Velden toegevoegd; Radio 538 bevestigt caféwerk en moppenrubriek. Moppenboek uit 2024 bevestigd door AT5 en bibliografische gegevens. Boektitel met vanuit aangehouden op basis van ISBN 9789464916799."
     ]
   },
   {
