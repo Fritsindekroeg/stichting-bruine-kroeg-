@@ -365,9 +365,22 @@ nav { border-top:0; padding-top:0; }
 .lijst-snelkeuze { max-width:1060px; margin:0 auto 28px; display:grid; grid-template-columns:minmax(260px,1fr) repeat(2,minmax(150px,200px)); gap:16px; align-items:end; }
 .lijst-snelkeuze[hidden] { display:none; }
 .lijst-selectieveld { display:flex; flex-direction:column; gap:6px; min-width:0; }
-.lijst-selectieveld label { margin:0; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.lijst-selectieveld label, .lijst-veldlabel { margin:0; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
 .lijst-selectieveld select { width:100%; min-height:44px; margin:0; padding:9px 30px 9px 12px; box-sizing:border-box; border:1px solid var(--line); border-radius:4px; background-color:#fffdf8; color:var(--ink); font:16px/1.4 Arial,Helvetica,sans-serif; }
 .lijst-selectieveld select:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+.provincie-menu { position:relative; min-width:0; }
+.provincie-openen { display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; min-height:44px; margin:0; padding:9px 12px; border:1px solid var(--line); border-radius:4px; background:#fffdf8; color:var(--ink); font:400 16px/1.4 Arial,Helvetica,sans-serif; text-align:left; }
+.provincie-openen:hover { background:#fffdf8; color:var(--ink); }
+#provincie-keuze-tekst { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.provincie-paneel { position:absolute; z-index:1200; top:calc(100% + 6px); left:0; width:min(320px,calc(100vw - 32px)); max-height:min(440px,65vh); overflow:auto; box-sizing:border-box; padding:8px; border:1px solid var(--line); border-radius:4px; background:#fffdf8; box-shadow:0 6px 20px #302c2420; }
+.provincie-paneel[hidden], .provincie-stadlinks[hidden] { display:none; }
+.provincie-paneel > p { margin:4px 6px 8px; font:12px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.provincie-rij { display:flex; justify-content:space-between; align-items:center; width:100%; min-height:40px; margin:0; padding:9px 10px; border:0; border-radius:2px; background:transparent; color:var(--ink); font:400 15px/1.4 Arial,Helvetica,sans-serif; text-align:left; }
+.provincie-rij:hover, .provincie-rij[aria-expanded="true"] { background:#ede9df; color:var(--green); }
+.provincie-rij[aria-expanded="true"] span { transform:rotate(90deg); }
+.provincie-stadlinks { padding:4px 0 8px 12px; }
+.provincie-stadlinks a { display:block; min-height:38px; padding:8px 10px; box-sizing:border-box; border-radius:2px; font:15px/1.4 Arial,Helvetica,sans-serif; text-decoration:none; }
+.provincie-stadlinks a:hover, .provincie-stadlinks a:focus-visible { background:#ede9df; text-decoration:none; }
 .lijst-zoeken { position:relative; width:100%; max-width:none; margin:0; padding:0; min-width:0; border:0; border-radius:0; background:transparent; }
 .lijst-zoeken label { display:block; margin:0 0 6px; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
 .lijst-zoekrij { display:flex; gap:8px; }
