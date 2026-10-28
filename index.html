@@ -264,7 +264,7 @@ footer {
 
 </style>
 
-<link rel="stylesheet" href="design.css?v=rustig-20261026">
+<link rel="stylesheet" href="design.css?v=alle-kroegen-20261028">
 </head>
 
 <body class="homepage">
@@ -276,10 +276,10 @@ footer {
 
 <nav aria-label="Hoofdmenu">
   <div class="main-nav nieuw-menu">
-    <div class="menu-kroegen"><a class="menu-home" href="index.html" aria-current="page">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart, Aanmeldformulier en Kroegen per stad</span></summary><div class="submenu">
+    <div class="menu-kroegen"><a class="menu-home" href="index.html" aria-current="page">Bruine Kroegen</a><details class="menu-groep menu-kroegen-dropdown"><summary aria-label="Submenu Bruine Kroegen"><span class="visueel-verborgen">Kaart, Aanmeldformulier en Alle bruine kroegen</span></summary><div class="submenu">
       <a href="kaart-bruine-kroegen.html">Kaart</a>
       <a href="aanmeldformulier.html">Aanmeldformulier</a>
-      <a href="kroegen-per-stad.html">Kroegen per stad</a>
+      <a href="alle-bruine-kroegen.html">Alle bruine kroegen</a>
     </div></details></div>
     <a href="wat-is-een-bruine-kroeg.html">Wat is een Bruine Kroeg</a>
     <details class="menu-groep"><summary>Achtergronden</summary><div class="submenu">
@@ -333,7 +333,7 @@ footer {
   var button = document.getElementById("site-search-button");
   var results = document.getElementById("search-results");
 
-  var steden = {"Aalsmeer": "steden/aalsmeer.html", "Amsterdam": "steden/amsterdam.html", "Delfzijl": "steden/delfzijl.html", "Deventer": "steden/deventer.html", "Enschede": "steden/enschede.html", "Geldrop": "steden/geldrop.html", "Hoorn": "steden/hoorn.html", "Leeuwarden": "steden/leeuwarden.html", "Overveen": "steden/overveen.html", "Roermond": "steden/roermond.html", "Rotterdam": "steden/rotterdam.html", "Tilburg": "steden/tilburg.html", "Uithuizen": "steden/uithuizen.html", "Usquert": "steden/usquert.html", "Voorst": "steden/voorst.html", "Wageningen": "steden/wageningen.html", "Weesp": "steden/weesp.html", "Zutphen": "steden/zutphen.html", "Zwolle": "steden/zwolle.html"};
+  var steden = {"Aalsmeer": "alle-bruine-kroegen.html#stad-aalsmeer", "Amsterdam": "alle-bruine-kroegen.html#stad-amsterdam", "Delfzijl": "alle-bruine-kroegen.html#stad-delfzijl", "Deventer": "alle-bruine-kroegen.html#stad-deventer", "Enschede": "alle-bruine-kroegen.html#stad-enschede", "Geldrop": "alle-bruine-kroegen.html#stad-geldrop", "Hoorn": "alle-bruine-kroegen.html#stad-hoorn", "Leeuwarden": "alle-bruine-kroegen.html#stad-leeuwarden", "Overveen": "alle-bruine-kroegen.html#stad-overveen", "Roermond": "alle-bruine-kroegen.html#stad-roermond", "Rotterdam": "alle-bruine-kroegen.html#stad-rotterdam", "Tilburg": "alle-bruine-kroegen.html#stad-tilburg", "Uithuizen": "alle-bruine-kroegen.html#stad-uithuizen", "Usquert": "alle-bruine-kroegen.html#stad-usquert", "Voorst": "alle-bruine-kroegen.html#stad-voorst", "Wageningen": "alle-bruine-kroegen.html#stad-wageningen", "Weesp": "alle-bruine-kroegen.html#stad-weesp", "Zutphen": "alle-bruine-kroegen.html#stad-zutphen", "Zwolle": "alle-bruine-kroegen.html#stad-zwolle"};
 
   function normaliseer(tekst) {
     return (tekst || "")
@@ -456,51 +456,6 @@ footer {
 })();
 </script>
 
-<script>
-/* Dynamische aantallen cafés per stad.
-   De aantallen worden rechtstreeks uit de stadspagina's gelezen.
-   Daardoor veranderen ze automatisch wanneer een café wordt toegevoegd
-   of verwijderd uit de betreffende stadspagina. */
-(function () {
-  var cityRows = document.querySelectorAll("[data-city-count]");
 
-  var cityPages = {
-    "Amsterdam": "steden/amsterdam.html",
-    "Rotterdam": "steden/rotterdam.html",
-    "Utrecht": "steden/utrecht.html",
-    "Weesp": "steden/weesp.html"
-  };
-
-  function setCount(row, count) {
-    row.textContent = count + " " + (count === 1 ? "café" : "cafés");
-  }
-
-  Array.prototype.forEach.call(cityRows, function (row) {
-    var city = row.getAttribute("data-city-count");
-    var page = cityPages[city];
-
-    if (!page) return;
-
-    fetch(page)
-      .then(function (response) {
-        if (!response.ok) throw new Error("Pagina niet gevonden");
-        return response.text();
-      })
-      .then(function (html) {
-        var doc = new DOMParser().parseFromString(html, "text/html");
-        var count = doc.querySelectorAll(".cafe").length;
-        setCount(row, count);
-      })
-      .catch(function () {
-        /* Fallback: tel de cafés uit de zoeklijst als de stadspagina
-           niet kan worden opgehaald. */
-        var count = document.querySelectorAll(
-          '.search-item[data-search-city="' + city.toLowerCase() + '"]'
-        ).length;
-        setCount(row, count);
-      });
-  });
-})();
-</script>
 </body>
 </html>

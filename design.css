@@ -331,7 +331,7 @@ nav { border-top:0; padding-top:0; }
 .catalog-lijst { max-width:1060px; gap:48px; }
 .cafe.catalog-cafe { border:1px solid #a6a197; border-radius:6px; box-shadow:0 2px 7px #332c200c; }
 .catalog-cafekop { padding:22px 26px 19px; background:transparent; border-bottom:0; }
-.catalog-cafekop h2 { margin:0 0 8px; padding:0; border:0; font-size:34px; line-height:1.15; color:#292923; }
+.catalog-cafekop h2, .catalog-cafekop h3 { margin:0 0 8px; padding:0; border:0; font-size:34px; line-height:1.15; color:#292923; }
 .catalog-cafekop .catalog-locatie { padding:0; border:0; font-size:13px; color:#42423c; }
 .catalog-cafekop .catalog-locatie span:first-child { color:#42423c; }
 .catalog-samenhang { display:grid; grid-template-columns:minmax(0,44%) minmax(0,1fr); align-items:start; }
@@ -348,7 +348,7 @@ nav { border-top:0; padding-top:0; }
 @media(max-width:760px) {
  .catalog-lijst { gap:32px; }
  .catalog-cafekop { padding:20px 18px 16px; }
- .catalog-cafekop h2 { font-size:30px; }
+ .catalog-cafekop h2, .catalog-cafekop h3 { font-size:30px; }
  .catalog-samenhang { grid-template-columns:1fr; }
  .catalog-media { padding:18px 18px 0; }
  .catalog-inhoud { padding:22px 18px; }
@@ -356,3 +356,26 @@ nav { border-top:0; padding-top:0; }
 }
 
 .catalog-meta { margin:0; }
+
+/* One continuous list, grouped alphabetically by city. */
+.alle-kroegen .lijst-intro { font:20px/1.5 'EB Garamond',serif; text-transform:none; letter-spacing:0; color:var(--ink); max-width:660px; }
+.steden-snelkeuze { max-width:1060px; margin:0 auto 48px; text-align:left; }
+.steden-snelkeuze > p { margin:0 0 12px; font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); }
+.steden-snelkeuze > div { display:flex; flex-wrap:wrap; gap:8px 12px; }
+.steden-snelkeuze a { display:inline-flex; gap:8px; align-items:center; min-height:44px; margin:0; padding:5px 10px; box-sizing:border-box; color:var(--green); font-size:19px; text-decoration:underline; text-underline-offset:4px; border-radius:3px; }
+.steden-snelkeuze a:hover { background:#ede9df; }
+.steden-snelkeuze a:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
+.stad-aantal { font:11px/1.4 Arial,Helvetica,sans-serif; color:var(--muted); }
+.stad-groep { max-width:1060px; margin:0 auto 68px; scroll-margin-top:24px; }
+.stad-kop { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px; margin-bottom:22px; }
+.stad-kop h2 { font-size:40px; line-height:1.2; margin:0; padding:0; border:0; }
+.stad-kop p { font:13px/1.5 Arial,Helvetica,sans-serif; color:var(--muted); margin:0; }
+.stad-groep:focus-visible, .catalog-cafe:focus-visible { outline:2px solid var(--green); outline-offset:5px; }
+@media(max-width:760px) {
+ .steden-snelkeuze { margin-bottom:36px; }
+ .steden-snelkeuze > div { gap:4px 6px; }
+ .steden-snelkeuze a { padding:5px 7px; font-size:18px; }
+ .stad-groep { margin-bottom:48px; }
+ .stad-kop { margin-bottom:18px; gap:6px 14px; }
+ .stad-kop h2 { font-size:34px; }
+}
