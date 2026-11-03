@@ -6,8 +6,8 @@
     "province": "Friesland",
     "address": "Auckamastraatje 2",
     "since": null,
-    "description": "Het Oranje Bierhuis aan het Gouverneursplein heeft een voorgeschiedenis als koffiehuis. In 1857 kwam de zaak in handen van Bouwe Kuipers, die er onder meer Engelse en Belgische bieren verkocht. Het café had vroeger twee afzonderlijke vertrekken, de eerste en de tweede kamer.",
-    "photo": null,
+    "description": "Het Oranje Bierhuis aan het Gouverneursplein heeft een voorgeschiedenis als koffiehuis. In 1857 kwam de zaak in handen van Bouwe Kuipers, die er onder meer Engelse en Belgische bieren verkocht. Het café had vroeger twee afzonderlijke vertrekken, de eerste en de tweede kamer.\n\nIn 1917 werd Ype Schaaf uitbater van het Oranje Bierhuis. In de winter van 1930 organiseerde hij met twee andere caféhouders een eigen Elfstedentocht, met elf cafés als stempelplaatsen.\n\nSinds 2026 is het café in handen van Hendrik en Nakita van der Tol. Zij hebben de traditionele inrichting en het karakter van het café behouden.",
+    "photo": "fotos/leeuwarden-oranje-bierhuis-20261103.jpeg",
     "coords": [
       53.201889,
       5.79575
@@ -20,12 +20,13 @@
     ],
     "notes": [
       "Historische bronnen noemen circa 1770 als begin horeca en 1857 als zekere cafévermelding; daarom geen exact sindsjaar ingevuld. Coördinaten afkomstig van routekoppeling officiële toeristische locatiepagina.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "3 november 2026: foto en informatie over Hendrik en Nakita van der Tol aangeleverd door Frits. Familiegeschiedenis ontleend aan de aangeleverde krantenartikelen ‘Oranje Bierhuis’ van Ype Schaaf en ‘Drie eeuwen een goed pilsje in het Oranje Bierhuis’ van Sybe van der Meulen; publicatiedata niet zichtbaar."
     ],
     "website": "https://www.oranjebierhuis.nl/",
     "coordinate_source": "https://www.visitleeuwarden.com/nl/locaties/2085684033/oranje-bierhuis",
     "year": 2026,
-    "updated_at": "2026-10-26"
+    "updated_at": "2026-11-03"
   },
   {
     "id": "stad-en-lande",
