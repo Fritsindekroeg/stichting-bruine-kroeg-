@@ -974,7 +974,7 @@
     "province": "Overijssel",
     "address": "Welle 11",
     "since": null,
-    "description": "Café aan de Welle in de binnenstad van Deventer.",
+    "description": "Traditioneel bruin café aan de Welle in de historische binnenstad van Deventer, al lange tijd geëxploiteerd door dezelfde familie. De zaak komt voort uit café Nationaal aan Achter de Broederen en verhuisde later naar de huidige locatie aan de IJsselkade.\n\nHet huiskamercafé heeft zijn traditionele inrichting behouden. Aan de voorzijde ligt een terras met uitzicht op de IJssel. Naast koffie, bier, wijn en gedistilleerd zijn er eenvoudige borrelhappen; er worden geen volledige maaltijden geserveerd.",
     "photo": null,
     "coords": [
       52.25156929,
@@ -986,13 +986,13 @@
       "https://www.oozo.nl/bedrijven/deventer/binnenstad/centrum/223911/cafe-de-leugenbanke"
     ],
     "notes": [
-      "CONTROLE NODIG: gemeentelijke publicatie uit 2024 noemt café op Welle 11; bedrijvenregisteraggregator noemt inactieve inschrijving op Waterstraat 22. Huidige exploitatie niet primair bevestigd.",
-      "Deventer ligt in Overijssel, niet Gelderland."
+      "Deventer ligt in Overijssel, niet Gelderland.",
+      "6 november 2026: adres, familie-exploitatie, voorgeschiedenis als café Nationaal, inrichting en aanbod bijgewerkt op basis van door Frits aangeleverde informatie."
     ],
     "website": null,
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Welle%2011%20Deventer&rows=30",
     "year": 2026,
-    "updated_at": "2026-10-24"
+    "updated_at": "2026-11-06"
   },
   {
     "id": "het-bolwerk",
