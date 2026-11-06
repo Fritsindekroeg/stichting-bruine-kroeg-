@@ -1303,5 +1303,28 @@
     ],
     "year": 2026,
     "updated_at": "2026-10-26"
+  },
+  {
+    "id": "de-wetering",
+    "name": "Café de Wetering",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Weteringstraat 37",
+    "since": null,
+    "description": "Café de Wetering is een authentiek Amsterdams bruin café, gevestigd in een karakteristiek 17e-eeuws hoekpand vlak bij het Rijksmuseum en de Spiegelgracht. Beneden verzamelen de stamgasten zich traditioneel rond de kleine, knusse bar. Via een krakende houten trap bereik je de sfeervolle mezzanine (bovenverdieping). Hét absolute middelpunt hier is de werkende, houtgestookte open haard waarrond comfortabele leren stoelen staan. Dit huiskamergevoel, versterkt door zachte klassieke jazz en bordspellen op tafel, maakt het café tot een geliefde, nostalgische schuilplaats in de binnenstad.",
+    "photo": null,
+    "coords": [
+      52.361246,
+      4.888782
+    ],
+    "sources": [
+      "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/de-wetering"
+    ],
+    "notes": [
+      "6 november 2026: op verzoek van Frits toegevoegd met de door hem aangeleverde omschrijving. Adres en coördinaten gecontroleerd via I amsterdam en de bijbehorende Google Maps-routekoppeling. Geen foto of onbevestigd oprichtingsjaar toegevoegd."
+    ],
+    "coordinate_source": "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/de-wetering",
+    "year": 2026,
+    "updated_at": "2026-11-06"
   }
 ]
