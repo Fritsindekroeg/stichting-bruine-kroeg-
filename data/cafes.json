@@ -402,9 +402,9 @@
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Gravenstraat 18",
-    "description": "Proeflokaal voor jenever en likeuren aan de Gravenstraat. In 1618 dreven schilder en kunsthandelaar Barend van Someren en zijn vrouw Leonora hier drankhuis Het Sufflet. De naam De Drie Fleschjes is vanaf 1782 gedocumenteerd. Likeurstokerij H. Bootz liet het pand in 1888 verbouwen.",
+    "description": "De Drie Fleschjes is een proeflokaal voor jenever en likeuren aan de Gravenstraat, met veel vaste gasten, ook van buiten Amsterdam.\n\nTegen de wand staat een drankorgel met vaten die voornamelijk met jenever zijn gevuld. Op de bar staan gekookte eieren. Er is een traditionele bierkraan en je kunt er een kleintje pils bestellen. Het personeel draagt een wit hemd, soms met een schort. Er klinkt geen achtergrondmuziek.\n\nIn 1618 dreven schilder en kunsthandelaar Barend van Someren en zijn vrouw Leonora hier drankhuis Het Sufflet. De naam De Drie Fleschjes is vanaf 1782 gedocumenteerd. Likeurstokerij H. Bootz liet het pand in 1888 verbouwen.",
     "since": null,
-    "photo": "fotos/de-drie-fleschjes.jpeg",
+    "photo": "fotos/de-drie-fleschjes-20261114.jpeg",
     "coords": [
       52.3743114,
       4.8923128
@@ -418,9 +418,10 @@
     "year": 2026,
     "notes": [
       "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
-      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Drie Fleschjes. Bestaand id en bestaande foto behouden."
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Drie Fleschjes. Bestaand id en bestaande foto behouden.",
+      "14 november 2026: beschrijving en foto aangevuld op basis van de aangeleverde informatie van het proeflokaal."
     ],
-    "updated_at": "2026-10-26"
+    "updated_at": "2026-11-14"
   },
   {
     "id": "eland",
