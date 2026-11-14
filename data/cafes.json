@@ -559,7 +559,7 @@
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Begijnensteeg 4",
-    "description": "Herman Willemsen begon in 1893 de Zum Pilsener Club aan het Spui. In 1899 verhuisde het café naar de Begijnensteeg. De familie Van Veen is sinds 1928 aan de zaak verbonden. Het café is ook bekend onder de bijnaam De Engelse Reet.",
+    "description": "Herman Willemsen begon in 1893 de Zum Pilsener Club aan het Spui. In 1899 verhuisde het café naar de Begijnensteeg. De familie Van Veen is sinds 1928 aan de zaak verbonden. Vier generaties uit de familie stonden aan het roer, alle vier met de naam Teun van Veen. Het café is ook bekend onder de bijnaam De Engelse Reet.\n\nDe Pilsener Club is een bruin café zonder bar, maar met een traditionele bierkraan. Het interieur heeft bruine lambrisering, een houten vloer met zand en een stamtafel. Er klinkt geen achtergrondmuziek. Je kunt er een kleintje pils bestellen en in de winter zijn er gekookte eieren.",
     "since": "1893",
     "photo": "fotos/engelse-reet.jpeg",
     "coords": [
@@ -575,9 +575,10 @@
     "year": 2026,
     "notes": [
       "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
-      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Engelse Reet. Bestaand id en bestaande foto behouden."
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen Engelse Reet. Bestaand id en bestaande foto behouden.",
+      "14 november 2026: interieur, gebruiken en familiegeschiedenis aangevuld op basis van informatie van Teun van Veen."
     ],
-    "updated_at": "2026-10-26"
+    "updated_at": "2026-11-14"
   },
   {
     "id": "gijs-de-rooij",
