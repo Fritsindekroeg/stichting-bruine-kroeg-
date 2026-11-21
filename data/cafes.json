@@ -239,7 +239,7 @@
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Rapenburgerplein 83",
-    "description": "Café aan het Rapenburgerplein, met grote jenevervaten in het interieur. In 1863 begon hier een drankhuis, opgezet door een kleermaker en zijn vrouw. Later werd er ook jenever gestookt.",
+    "description": "Café aan het Rapenburgerplein, met grote jenevervaten in het interieur. In 1863 begon hier een drankhuis, opgezet door een kleermaker en zijn vrouw. Later werd er ook jenever gestookt.\n\nDe bruine lambrisering, de traditionele bierkraan en de likeurvaten tegen de wand zijn kenmerkend voor de bruine kroeg. Op de bar staan gekookte eieren, er klinkt geen achtergrondmuziek en je kunt er een kleintje pils bestellen.",
     "since": "1863",
     "photo": "fotos/amsterdam-cafe-de-druif-20261025.jpeg",
     "coords": [
@@ -255,9 +255,10 @@
     "notes": [
       "Municipal historical research contradicts claimed1585.",
       "Downloaded candidate rejected visual QA: logo or damaged background graphic, not suitable venue photo.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "21 november 2026: kenmerken en gebruiken toegevoegd op basis van door Frits aangeleverde informatie."
     ],
-    "updated_at": "2026-10-26",
+    "updated_at": "2026-11-21",
     "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
   },
   {
