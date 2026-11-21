@@ -377,7 +377,7 @@
     "address": "Haarlemmerstraat 91-H",
     "description": "Café op de hoek van de Haarlemmerstraat en de Binnen Brouwersstraat. In de zijgevel zit een oudere gevelsteen met een druiventros en het jaartal 1733. Bij de bouw van het huidige hoekpand in 1910 werd dit onderdeel uit het vorige pand opnieuw ingemetseld.",
     "since": null,
-    "photo": "fotos/amsterdam-de-blauwe-druif-20261025.jpeg",
+    "photo": "fotos/de-blauwe-druif-20261121.png",
     "coords": [
       52.3804361,
       4.8910498
@@ -392,10 +392,11 @@
     "year": 2026,
     "notes": [
       "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
-      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Blauwe Druif. Bestaand id en bestaande foto behouden."
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Blauwe Druif. Bestaand id en bestaande foto behouden.",
+      "21 november 2026: foto vervangen door de door Frits aangeleverde afbeelding; vorige foto bewaard in de repository."
     ],
-    "updated_at": "2026-10-26",
-    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 25 oktober 2026"
+    "updated_at": "2026-11-21",
+    "photo_source": "Aangeleverd door Stichting De Bruine Kroeg, 21 november 2026"
   },
   {
     "id": "de-drie-fleschjes",
