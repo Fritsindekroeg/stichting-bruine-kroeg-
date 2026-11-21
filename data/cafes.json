@@ -481,7 +481,7 @@
     "city": "Amsterdam",
     "province": "Noord-Holland",
     "address": "Sint Olofspoort 1",
-    "description": "Proeflokaal van distilleerderij Van Wees. Er worden jenevers en traditionele likeuren geschonken, waaronder Hansje in de Kelder en Bruidstranen. Het pand dateert uit 1604 en had eerder een winkelbestemming. Het café droeg aanvankelijk de naam Het Kleine Verschil.",
+    "description": "Proeflokaal van distilleerderij Van Wees. Er worden jenevers en traditionele likeuren geschonken, waaronder Hansje in de Kelder en Bruidstranen. Het pand dateert uit 1604 en had eerder een winkelbestemming. Het café droeg aanvankelijk de naam Het Kleine Verschil.\n\nHet interieur heeft bruine lambrisering, glas-in-loodramen en likeurvaten tegen de wand.",
     "since": null,
     "photo": "fotos/de-ooievaar.jpeg",
     "coords": [
@@ -498,9 +498,10 @@
     "year": 2026,
     "notes": [
       "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
-      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Ooievaar. Bestaand id en bestaande foto behouden."
+      "26 oktober 2026: volledige publieksnaam gecontroleerd; voorheen De Ooievaar. Bestaand id en bestaande foto behouden.",
+      "21 november 2026: interieurkenmerken aangevuld op basis van door Frits aangeleverde informatie."
     ],
-    "updated_at": "2026-10-26"
+    "updated_at": "2026-11-21"
   },
   {
     "id": "de-zwart",
