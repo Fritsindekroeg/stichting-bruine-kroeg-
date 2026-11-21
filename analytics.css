@@ -1,0 +1,12 @@
+.statistieken-keuze[hidden] { display:none !important; }
+.statistieken-keuze { position:fixed; z-index:5000; bottom:16px; left:16px; right:16px; box-sizing:border-box; max-width:1000px; margin:0 auto; padding:20px 24px; background:#fffdf8; color:#333; border:1px solid #9d978b; border-radius:6px; box-shadow:0 4px 24px #0002; display:flex; align-items:center; gap:24px; max-height:85vh; overflow:auto; font:15px/1.5 Arial,Helvetica,sans-serif; text-align:left; }
+.statistieken-keuze p { margin:0; font:inherit; color:inherit; }
+.statistieken-keuze .statistieken-titel { font-weight:600; margin-bottom:6px; }
+.statistieken-keuze a { color:#333; text-decoration:underline; }
+.statistieken-acties { display:flex; flex-shrink:0; gap:10px; }
+.statistieken-acties button { appearance:none; box-sizing:border-box; min-width:100px; min-height:44px; margin:0; padding:10px 14px; border:1px solid #666; border-radius:4px; background:#f4f1ea; color:#333; font:16px/1.3 Arial,Helvetica,sans-serif; font-weight:400; cursor:pointer; }
+.statistieken-acties button:hover { background:#e8e3d8; }
+.statistieken-voet { margin:16px auto 24px; padding:0 16px; text-align:center; }
+.statistieken-instellingen { appearance:none; min-height:44px; padding:8px 12px; background:transparent; border:0; color:#555; text-decoration:underline; font:13px/1.5 Arial,Helvetica,sans-serif; font-weight:400; cursor:pointer; }
+.statistieken-keuze button:focus-visible, .statistieken-instellingen:focus-visible, .statistieken-keuze a:focus-visible { outline:2px solid #333; outline-offset:3px; }
+@media(max-width:700px) { .statistieken-keuze { bottom:8px; left:8px; right:8px; padding:16px; flex-direction:column; align-items:stretch; gap:14px; } .statistieken-acties button { flex:1; } }
