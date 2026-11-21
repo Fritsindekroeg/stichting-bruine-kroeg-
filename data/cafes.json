@@ -1006,7 +1006,7 @@
     "province": "Overijssel",
     "address": "Stadsgravenstraat 21",
     "since": "1904",
-    "description": "Café sinds 1904 aan de Stadsgravenstraat, bij de voormalige stadsgracht. Dichter Willem Wilmink behoorde tot de vaste bezoekers. In de zaak hangt een schilderij van het café uit 1910, in bruikleen van de Jacobuskerk.",
+    "description": "Café sinds 1904 aan de Stadsgravenstraat, bij de voormalige stadsgracht. Het Bolwerk was het stamcafé van dichter Willem Wilmink en componist Harry Bannink. In de zaak hangt een schilderij van het café uit 1910, in bruikleen van de Jacobuskerk.\n\nHet café is een ontmoetingsplek voor personeelsgroepen van bedrijven, medewerkers van het MST, serviceclubs, sportverenigingen, fietsclubs en lokale politieke partijen. Ook kunstenaars van ArtEZ en uitgevers komen er regelmatig. Er zijn exposities, boekpresentaties en wekelijks muziek. Naast de oudere vaste bezoekers weten ook jongeren het café te vinden.",
     "photo": null,
     "coords": [
       52.22143395,
@@ -1019,12 +1019,13 @@
     ],
     "notes": [
       "Enschede ligt in Overijssel, niet Gelderland.",
-      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar."
+      "26 oktober 2026: zakelijke beschrijving aangevuld op basis van brononderzoek; betwiste oprichtingsjaren niet gepubliceerd. Gebouw-, naam- en overnamedata zijn geen oprichtingsjaar.",
+      "21 november 2026: ontmoetingsfunctie, bezoekersgroepen en culturele activiteiten aangevuld op basis van door Frits aangeleverde informatie. Naam genormaliseerd naar Harry Bannink."
     ],
     "website": "https://www.cafehetbolwerk.nl/",
     "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Stadsgravenstraat%2021%20Enschede&rows=30",
     "year": 2026,
-    "updated_at": "2026-10-26"
+    "updated_at": "2026-11-21"
   },
   {
     "id": "charlois",
