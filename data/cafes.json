@@ -1332,5 +1332,32 @@
     "coordinate_source": "https://www.iamsterdam.com/uit/agenda/eten-en-drinken/cafes-en-bars/de-wetering",
     "year": 2026,
     "updated_at": "2026-11-06"
+  },
+  {
+    "id": "eddy-bar",
+    "name": "Café Eddy Bar",
+    "city": "Amsterdam",
+    "province": "Noord-Holland",
+    "address": "Gerard Doustraat 58",
+    "since": "1975",
+    "description": "Bruin buurtcafé aan de Gerard Doustraat in De Pijp. Evert en Miep Blom begonnen de Eddy Bar in 1975; hun dochter Femmy nam de zaak later over. André Hazes, die aan de overkant opgroeide, behoorde tot de vaste bezoekers.\n\nNederlandstalige muziek en smartlappen horen bij de zaak. Achterin staan een biljart en dartborden.",
+    "photo": null,
+    "coords": [
+      52.35542181,
+      4.89080434
+    ],
+    "sources": [
+      "https://xxiwilsonxx.wixsite.com/webcafes",
+      "https://indepijp.amsterdam/nl/single-company/cafe-eddy-bar",
+      "https://www.iamsterdam.com/zien-en-doen/eten-en-drinken/borrellocaties",
+      "https://pijpkrant.amsterdam/wp-content/uploads/sites/3/pk_1805_web.pdf"
+    ],
+    "website": "https://xxiwilsonxx.wixsite.com/webcafes",
+    "coordinate_source": "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?q=Gerard+Doustraat+58+Amsterdam&rows=5&fq=type%3Aadres",
+    "year": 2026,
+    "updated_at": "2026-11-26",
+    "notes": [
+      "26 november 2026: op verzoek van Frits toegevoegd. Adres via eigen website en ondernemersplatform De Pijp bevestigd; oprichting en familiegeschiedenis via De Pijp Krant november 2018. Muziek en Hazes-band via I amsterdam; kaartcoördinaten gecontroleerd aan BAG-adres Gerard Doustraat 58-H via PDOK. Geen foto toegevoegd."
+    ]
   }
 ]
